@@ -26,7 +26,7 @@ if(mysqli_connect_errno()){
 <html>
 	<head>
 
-<!-- Style data for each element.  This will need to get stripped out into a standaole css file -->
+<!-- Style data for each element.  This will need to get stripped out into a stand-alone css file -->
 
 		<style>
         	body {
