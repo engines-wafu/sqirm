@@ -23,7 +23,7 @@
 <table>
   <tr style="border:0px">
 <!-- Column 1 -->
-  <td style="width:450px">
+  <td style="width:350px">
   </td>
 <!-- Column 2 -->
   <td style="width:250px; border:0px", id="hazard", align="center">
@@ -37,7 +37,7 @@
       ?>
   </td>
 <!-- Column 3 -->
-  <td style="width:450px">
+  <td style="width:350px">
   </td>
   </tr>
 <!-- Row 2 -->
