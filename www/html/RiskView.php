@@ -49,18 +49,47 @@
       <th>Threats</th>
       <th>Controls</th>
     </tr>
+        <?php
+          $qthr = "SELECT threat.thrDesc, threat.thrID FROM threat INNER JOIN threat_hazard ON threat_hazard.thrID = threat.thrID WHERE threat_hazard.hazID='" . $hazard . "'";
+          $result1 = mysqli_query($db, $qthr);
+          while ($row3 = mysqli_fetch_array($result1)) {
+        	echo '<tr>';
+        	echo '<td>';
+        	echo $row3['thrDesc'];
+        	echo '</td>';
+        	echo '<td>';
+
+        	echo '<table>';
+        	echo '<tr>';
+
+        	$qcon = "SELECT controls.conDesc, controls.conWRAG FROM controls INNER JOIN threat_control ON threat_control.conID = controls.conID WHERE threat_control.thrID ='" . $row3['thrID'] . "' AND controls.conActive ='Y'";
+        	$result2 = mysqli_query($db, $qcon);
+
+        	while ($row5 = mysqli_fetch_array($result2)) {
+        		echo '<tr>';
+        		echo '<td class="' . $row5['conWRAG'] . '">';
+        		echo $row5['conDesc'];
+        		echo '</td>';
+        		echo '</tr>';
+        	}
+        	echo '</tr>';
+        	echo '</table>';
+        	echo '</td>';
+        	echo '</tr>';
+        }
+        ?>
     </table>
   </td>
 <!-- Column 2 -->
   <td>
-      <?php
-        $qtop = "SELECT top_element.topDesc FROM hazard INNER JOIN top_element ON top_element.topID = hazard.topID WHERE hazID='" . $hazard . "'";
-        $result = mysqli_query($connection, $qtop); 
-        
-        while ($row = mysqli_fetch_array($result)) {
-        	echo $row['topDesc'] ;
-        }
-      ?>
+    <?php
+      $qtop = "SELECT top_element.topDesc FROM hazard INNER JOIN top_element ON top_element.topID = hazard.topID WHERE hazID='" . $hazard . "'";
+      $result = mysqli_query($connection, $qtop); 
+      
+      while ($row = mysqli_fetch_array($result)) {
+      	echo $row['topDesc'] ;
+      }
+    ?>
   </td>
 <!-- Column 3 -->
   <td>
