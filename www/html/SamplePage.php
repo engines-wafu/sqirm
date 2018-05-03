@@ -11,9 +11,6 @@
 
   $database = mysqli_select_db($connection, DB_DATABASE);
 
-  /* Ensure that the Employees table exists. */
-  VerifyEmployeesTable($connection, DB_DATABASE); 
-
   /* If input fields are populated, add a row to the Employees table. */
   $employee_name = htmlentities($_POST['Name']);
   $employee_address = htmlentities($_POST['Address']);
