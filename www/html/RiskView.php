@@ -34,7 +34,7 @@
         $result = mysqli_query($connection, $qhaz); 
         
         while ($row = mysqli_fetch_array($result)) {
-        	echo $row['hazID'] . ' ' . $row['hazDesc'];
+          echo $row['hazID'] . ' ' . $row['hazDesc'];
         }
       ?>
       </h2>
@@ -44,7 +44,6 @@
 <!-- Column 3 -->
   </td>
   </tr>
-
 <!-- Row 2 -->
   <tr>
 <!-- Column 1 -->
@@ -62,8 +61,8 @@
         	echo '<td>';
         	echo $row3['thrDesc'];
         	echo '</td>';
+					
         	echo '<td>';
-
         	echo '<table>';
         	echo '<tr>';
 
@@ -97,6 +96,41 @@
     ?>
   </td>
 <!-- Column 3 -->
+  <td>
+    <table>
+    <tr>
+      <th>Controls</th>
+      <th>Consequences</th>
+    </tr>
+    <?php
+      $qcsq = "SELECT consequence.csqDesc, consequence.csqID FROM consequence INNER JOIN hazard_consequence ON consequence.csqID = hazard_consequence.csqID WHERE hazID='" . $hazard . "'";
+      $result1 = mysqli_query($connection, $qcsq);
+      while ($row4 = mysqli_fetch_array($result1)) {
+      	echo '<tr>';
+      	echo '<td>';
+      	echo '<table>';
+      	echo '<tr>';
+      	$qcon = "SELECT controls.conDesc, controls.conWRAG FROM controls INNER JOIN consequence_control ON consequence_control.conID = controls.conID WHERE consequence_control.csqID ='" . $row4['csqID'] . "' AND controls.conActive ='Y'";
+      	$result2 = mysqli_query($connection, $qcon);
+      	while ($row6 = mysqli_fetch_array($result2)) {
+      		echo '<tr>';
+      		echo '<td class="' . $row6['conWRAG'] . '">';
+      		echo $row6['conDesc'];
+      		echo '</td>';
+      		echo '</tr>';
+      	}
+      	echo '</tr>';
+      	echo '</table>';
+      	echo '</td>';
+      	echo '<td>';
+      	echo $row4['csqDesc'];
+      	echo '</td>';
+      	echo '</tr>';
+      }
+    ?>
+
+    </table>
+  </td>
   <td>
     <table>
     <tr>
