@@ -31,6 +31,7 @@
         }
       ?>
       </h2>
+    </table>
   </td>
   <td style="width:350px">
   </td>
