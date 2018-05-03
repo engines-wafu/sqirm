@@ -51,7 +51,7 @@
     </tr>
         <?php
           $qthr = "SELECT threat.thrDesc, threat.thrID FROM threat INNER JOIN threat_hazard ON threat_hazard.thrID = threat.thrID WHERE threat_hazard.hazID='" . $hazard . "'";
-          $result1 = mysqli_query($db, $qthr);
+          $result1 = mysqli_query($connection, $qthr);
           while ($row3 = mysqli_fetch_array($result1)) {
         	echo '<tr>';
         	echo '<td>';
@@ -63,7 +63,7 @@
         	echo '<tr>';
 
         	$qcon = "SELECT controls.conDesc, controls.conWRAG FROM controls INNER JOIN threat_control ON threat_control.conID = controls.conID WHERE threat_control.thrID ='" . $row3['thrID'] . "' AND controls.conActive ='Y'";
-        	$result2 = mysqli_query($db, $qcon);
+        	$result2 = mysqli_query($connection, $qcon);
 
         	while ($row5 = mysqli_fetch_array($result2)) {
         		echo '<tr>';
