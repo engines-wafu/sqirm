@@ -1,6 +1,10 @@
 body {
 	font-family: "Arial";
 }
+#hazard {
+	background: repeating-linear-gradient(45deg, yellow, yellow 4px, #808080 4px, #808080 8px);
+	text-shadow: 1px 1px #808080;
+}
 table, td, body {
 	border-collapse: collapse;
 	padding: 5px;
@@ -19,8 +23,4 @@ th, tr {
 }
 [class*="red"] {
 	background: red;
-}
-#hazard {
-	background: repeating-linear-gradient(45deg, yellow, yellow 4px, #808080 4px, #808080 8px);
-	text-shadow: 1px 1px #808080;
 }
