@@ -128,15 +128,6 @@
       	echo '</tr>';
       }
     ?>
-
-    </table>
-  </td>
-  <td>
-    <table>
-    <tr>
-      <th>Controls</th>
-      <th>Consequences</th>
-    </tr>
     </table>
   </td>
   </tr>
