@@ -42,18 +42,19 @@
 
 <!-- Row 2 -->
   <tr>
-  <td>
 <!-- Column 1 -->
+  <td>
     <tr>
       <th>Threats</th>
       <th>Controls</th>
     </tr>
   </td>
-  <td>
 <!-- Column 2 -->
-  </td>
   <td>
+Middle column
+  </td>
 <!-- Column 3 -->
+  <td>
     <tr>
       <th>Controls</th>
       <th>Consequences</th>
