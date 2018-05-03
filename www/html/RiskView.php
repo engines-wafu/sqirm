@@ -1,5 +1,10 @@
 <?php include "../inc/dbinfo.inc"; ?>
 <html>
+  <head>
+    <style>
+      <?php include "class.css"; ?>
+    </style>
+  </head>
 <body>
 <h1>Bowtie Viewer</h1>
 <?php

@@ -1,0 +1,12 @@
+[class*="white"] {
+	background: white;
+}
+[class*="green"] {
+	background: green;
+}
+[class*="yellow"] {
+	background: yellow;
+}
+[class*="red"] {
+	background: red;
+}
