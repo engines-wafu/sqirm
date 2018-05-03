@@ -27,9 +27,10 @@
         $result = mysqli_query($connection, $qhaz); 
         
         while ($row = mysqli_fetch_array($result)) {
-        	echo $row['hazID'] . '</h2></td>' . '<td><h2>' . $row['hazDesc'];
+        	echo $row['hazID'] . ' ' . $row['hazDesc'];
         }
       ?>
+      </h2>
   </td>
   <td style="width:350px">
   </td>
