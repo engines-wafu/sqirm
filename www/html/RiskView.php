@@ -18,8 +18,10 @@
 <table style="width:90% border: 1" align="center" >
   <tr style="border: 1px">
   <td style="width:450px">
+    Column 1
   </td>
   <td style="width:350px">
+    Column 2
 	<table style="width:80%", id="hazard", align="center">
       <h2>
       <?php
@@ -34,6 +36,7 @@
     </table>
   </td>
   <td style="width:350px">
+    Column 3
   </td>
   </tr>
 </table>
