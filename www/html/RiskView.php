@@ -47,7 +47,7 @@
     <table>
     <tr>
       <th>Threats</th>
-      <th>Controls</th>
+      <th id="control">Controls</th>
     </tr>
         <?php
           $qthr = "SELECT threat.thrDesc, threat.thrID FROM threat INNER JOIN threat_hazard ON threat_hazard.thrID = threat.thrID WHERE threat_hazard.hazID='" . $hazard . "'";
@@ -95,7 +95,7 @@
   <td>
     <table>
     <tr>
-      <th>Controls</th>
+      <th id="control">Controls</th>
       <th>Consequences</th>
     </tr>
     <?php
