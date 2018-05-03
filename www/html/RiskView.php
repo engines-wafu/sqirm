@@ -16,7 +16,7 @@
 
 <!-- Display table data. -->
 <table style="width:90% border: 1" align="center" >
-  <tr style="border: 0px">
+  <tr style="border: 1px">
   <td style="width:450px">
   </td>
   <td style="width:350px">
