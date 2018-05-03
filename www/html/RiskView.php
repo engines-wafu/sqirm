@@ -22,12 +22,11 @@
 <!-- Display table data. -->
 <table>
   <tr style="border:0px">
-  <td style="width:450px">
 <!-- Column 1 -->
+  <td style="width:450px">
   </td>
-  <td style="width:350px">
 <!-- Column 2 -->
-	<table style="width:80%", id="hazard", align="center">
+  <td style="width:350px", id="hazard", align="center">
       <?php
         $qhaz = "SELECT * FROM hazard WHERE hazID='" . $hazard . "'";
         $result = mysqli_query($connection, $qhaz); 
@@ -36,10 +35,9 @@
           echo $row['hazID'] . ' ' . $row['hazDesc'];
         }
       ?>
-    </table>
   </td>
-  <td style="width:350px">
 <!-- Column 3 -->
+  <td style="width:450px">
   </td>
   </tr>
 <!-- Row 2 -->
