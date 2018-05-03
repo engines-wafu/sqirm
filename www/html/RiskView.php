@@ -23,10 +23,10 @@
 <table>
   <tr style="border:0px">
 <!-- Column 1 -->
-  <td style="width:350px">
+  <td>
   </td>
 <!-- Column 2 -->
-  <td style="width:250px; border:0px", id="hazard", align="center">
+  <td style="border:0px", id="hazard", align="center">
       <?php
         $qhaz = "SELECT * FROM hazard WHERE hazID='" . $hazard . "'";
         $result = mysqli_query($connection, $qhaz); 
@@ -37,7 +37,7 @@
       ?>
   </td>
 <!-- Column 3 -->
-  <td style="width:350px">
+  <td>
   </td>
   </tr>
 <!-- Row 2 -->
