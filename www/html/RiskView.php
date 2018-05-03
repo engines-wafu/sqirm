@@ -20,8 +20,8 @@
 ?>
 
 <!-- Display table data. -->
-<table style="width:90% border: 0" align="center" >
-  <tr style="border: 0px">
+<table>
+  <tr style="border:0px">
   <td style="width:450px">
 <!-- Column 1 -->
   </td>
