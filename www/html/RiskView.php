@@ -21,8 +21,6 @@
   </td>
   <td style="width:350px">
 	<table style="width:80%", id="hazard", align="center">
-      <tr>
-      <td>
       <h2>
       <?php
         $qhaz = "SELECT * FROM hazard WHERE hazID='" . $hazard . "'";
@@ -32,12 +30,14 @@
         	echo $row['hazID'] . '</h2></td>' . '<td><h2>' . $row['hazDesc'];
         }
       ?>
-      </h2>
-      </td>
-      </tr>
+  </td>
+  <td style="width:350px">
+  </td>
+  </tr>
 </table>
 
 <!-- Clean up. -->
+
 <?php
 
   mysqli_free_result($result);
