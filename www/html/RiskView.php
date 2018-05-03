@@ -44,10 +44,12 @@
   <tr>
 <!-- Column 1 -->
   <td>
+    <table>
     <tr>
       <th>Threats</th>
       <th>Controls</th>
     </tr>
+    </table>
   </td>
 <!-- Column 2 -->
   <td>
@@ -55,10 +57,12 @@ Middle column
   </td>
 <!-- Column 3 -->
   <td>
+    <table>
     <tr>
       <th>Controls</th>
       <th>Consequences</th>
     </tr>
+    </table>
   </td>
   </tr>
 
