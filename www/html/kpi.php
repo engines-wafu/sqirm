@@ -47,7 +47,7 @@
       var chartOptions = {
         rotation: -Math.PI,
         cutoutPercentage: 80,
-      }
+      };
       </script>
     </div>
   </article>
