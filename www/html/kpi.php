@@ -17,7 +17,7 @@
       <script>
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
-          type: 'donut',
+          type: 'doughnut',
           data: {
               labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
               datasets: [{
