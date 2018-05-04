@@ -8,7 +8,6 @@
   </head>
   <body>
     <div class="content">
-      <h1>Welcome Page</h1>
       <!-- notification message -->
       <?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
@@ -21,7 +20,8 @@
         <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
-        <p><br>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
+        <h1>Welcome Page</h1>
+        <p>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
         <?php endif ?>
       </div>
     </div>
@@ -31,7 +31,8 @@
       <!-- Left division -->
       <article> 
         <div>
-          <p>Words in here</p>
+          <p>List of active hazards</p>
+          <p class="tile_hazard">some hazard</p>
         </div>
       </article>
 
