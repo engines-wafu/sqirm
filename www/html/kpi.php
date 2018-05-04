@@ -8,34 +8,12 @@
   </head>
 <body>
 <div class="content"><h1>KPI Test Page</h1></div>
-<?php
-
-  /* Connect to MySQL and select the database. */
-  $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
-  
-  if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  
-  $database = mysqli_select_db($connection, DB_DATABASE);
-  
-  $kpititle = "myChart";
-  
-  $query = "SELECT * FROM kpis";
-  $result = mysqli_query($connection, $query);
-
-?>
 <section>
   <article style="border: none;"> </article>
   <article>
     <div>
-      <p>
-        <?php
-          while ($row = mysqli_fetch_array($result)) {
-            echo $row['kpiDesc'];
-          }
-		?>
-      </p>
       <canvas id="myChart" width="150" height="150"></canvas>
-      <script src=../js/Chart.js></script>
+      <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
@@ -69,7 +47,6 @@
               display: true,
               fontFamily: 'Arial',
               fontColor: 'black',
-              position: 'bottom',
               lineHeight: 1,
               text: 'Self Audits'
             },
