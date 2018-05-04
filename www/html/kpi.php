@@ -44,10 +44,18 @@
           }
       });
 
-      var chartOptions = {
-        rotation: -Math.PI,
-        cutoutPercentage: 80,
-      };
+var chartOptions = {
+rotation: -Math.PI,
+cutoutPercentage: 30,
+circumference: Math.PI,
+legend: {
+position: 'left'
+},
+animation: {
+animateRotate: false,
+animateScale: true
+}
+};
       </script>
     </div>
   </article>
