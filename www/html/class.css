@@ -1,11 +1,11 @@
 section {
   width: 93%;
   margin: 20px auto;
-  background: black;
+  background: gray;
   display: flex;
 }
 div {
-  color: orange;
+  color: black;
   background: white;
   flex: 1;
   margin-right: 10px;
@@ -14,7 +14,7 @@ div:last-child {
   margin-right: 0;
 }
 section, div {
-  border: 3px solid red;
+  border: 3px solid black;
   padding: 10px;
 }
 .container {
