@@ -4,6 +4,9 @@
   border: 3px solid black;
   background: red;
 }
+a:hover, a:active {
+  border: 3px dashed black;
+}
 [class*="content"] {
   width: 93%;
   margin: 20px auto;
