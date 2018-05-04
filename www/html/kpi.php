@@ -29,15 +29,18 @@
                 'green',
               ],
               borderColor: [
-                'red',
-                'yellow',
-                'green',
+                'black',
+                'black',
+                'black',
               ],
-              borderWidth: 1
+              borderWidth: 3
             }]
           },
           options: {
-            scales: { },
+            title: {
+              display: true,
+              text: 'Status of Self Audits'
+            },
             legend: { 
                 display: false,
             }
