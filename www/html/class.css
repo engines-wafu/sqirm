@@ -3,7 +3,7 @@ body {
 	font-size: 8pt;
 }
 table, td, body {
-	border-collapse: separate;
+	border-collapse: collapse;
 	padding: 5px;
 }
 tr {
@@ -37,7 +37,6 @@ th {
 #topelement {
 	font-weight: bold;
 	align: center;
-	border-collapse: separate;
     border: 3px solid black;
 	border-radius: 80px;
 	width: 200px;
