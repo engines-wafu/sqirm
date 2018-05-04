@@ -18,7 +18,7 @@
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
           type: 'doughnut',
-          startAngle: 90,
+          startAngle: 180,
           data: {
             labels: ["Red", "Yellow", "Green"],
             datasets: [{
