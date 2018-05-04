@@ -56,7 +56,7 @@ if (isset($_POST['reg_user'])) {
   	mysqli_query($connection, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
+  	header('location: welcome.php');
   }
 }
 ?>
@@ -67,6 +67,7 @@ if (isset($_POST['reg_user'])) {
 			<div style = "margin:30px">
 
         <form method="post" action="register.php">
+      	<?php include('errors.php'); ?>
   	      <label>Username</label><input type="text" name="username" value="<?php echo $username; ?>" class = "box"/><br /><br />
   	      <label>Email</label><input type="email" name="email" value="<?php echo $email; ?>" class = "box"/><br /><br />
   	      <label>Password</label><input type="password" name="password_1" class = "box"/><br /><br />
