@@ -38,8 +38,6 @@
           },
           options: {
             scales: {
-              yAxes: [{
-              }]
             }
           }
       });
