@@ -10,9 +10,10 @@ table, td, body {
 	padding: 5px;
 }
 tr {
+	border: 3px solid black;
 }
 th {
-	border: 3px solid black;
+	border-bottom: 3px solid black;
 }
 [class*="white"] {
 	background: white;
