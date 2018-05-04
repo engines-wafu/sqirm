@@ -16,7 +16,6 @@
       <script src=Chart.js></script>
       <script>
       Chart.defaults.doughnut.cutoutPercentage = '80';
-      Chart.defaults.doughnut.rotation = '2.3562';
       Chart.defaults.doughnut.rotation = '4.7124';
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
