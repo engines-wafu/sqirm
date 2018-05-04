@@ -27,11 +27,13 @@
   <article style="border: none;"> </article>
   <article>
     <div>
-      <?php
-        while ($row = $mysqli_fetch_array($result)) {
-          echo $row['kpiDesc'];
-        }
-      ?>
+      <p>
+        <?php
+          while ($row = mysqli_fetch_array($result)) {
+            echo $row['kpiDesc'];
+          }
+        ?>
+      </p>
       <canvas id="myChart" width="150" height="150"></canvas>
       <script src=Chart.js></script>
       <script>
