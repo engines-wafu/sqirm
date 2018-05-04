@@ -36,9 +36,9 @@ th {
 }
 #topelement {
 	font-weight: bold;
-	align: center;
+	text-align: center;
 	background: orange;
-	border-radius: 80px;
+	border-radius: 100px;
     border-style: hidden; /* hide standard table (collapsed) border */
 	box-shadow: 0 0 0 3px black; /* this draws the table border  */
 	width: 200px;
