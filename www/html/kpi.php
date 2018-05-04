@@ -15,6 +15,7 @@
       <canvas id="myChart" width="150px" height="150px"></canvas>
       <script src=Chart.js></script>
       <script>
+      Chart.defaults.doughnut.cutoutPercentage = '80';
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
           type: 'doughnut',
@@ -38,7 +39,6 @@
           },
           options: {
             scales: { },
-            cutoutPercentage: {80},
             legend: { 
                 display: false,
             }
