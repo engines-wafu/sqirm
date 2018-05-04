@@ -1,3 +1,5 @@
+<?php include "session.php"; ?>
+<?php include "../inc/dbinfo.inc"; ?>
 <?php
 
 /* Connect to MySQL and select the database. */
@@ -9,8 +11,6 @@ $database = mysqli_select_db($connection, DB_DATABASE);
 $hazard = $_GET["hazID"]
 
 ?>
-<?php include "session.php"; ?>
-<?php include "../inc/dbinfo.inc"; ?>
 <html>
   <head>
     <style>
