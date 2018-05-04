@@ -1,3 +1,4 @@
+document.write("IMPORTANT")
 $(document).ready(function(){
   $.ajax({
     url: "../html/data.php",
