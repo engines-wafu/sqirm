@@ -1,10 +1,10 @@
+<?php include "../inc/dbinfo.inc"; ?>
+<?php include "session.php"; ?>
 <html>
   <head>
-	<style>
-   <?php include "../inc/dbinfo.inc"; ?>
-	  <?php include "class.css"; ?>
-	  <?php include "session.php"; ?>
-	</style>
+ 	<style>
+	   <?php include "class.css"; ?>
+	 </style>
   </head>
 <body>
 <h1>Bowtie Viewer</h1>

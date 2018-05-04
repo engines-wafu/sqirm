@@ -8,6 +8,15 @@
   </head>
 <body>
 <div class="content"><h1>KPI Test Page</h1></div>
+<?php
+
+/* Connect to MySQL and select the database. */
+$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+
+if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+
+$database = mysqli_select_db($connection, DB_DATABASE);
+?>
 <section>
   <article style="border: none;"> </article>
   <article>
@@ -47,6 +56,7 @@
               display: true,
               fontFamily: 'Arial',
               fontColor: 'black',
+              position: 'bottom',
               lineHeight: 1,
               text: 'Self Audits'
             },
