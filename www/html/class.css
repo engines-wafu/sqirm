@@ -11,17 +11,17 @@
 #topelement {
 	font-weight: bold;
 	align: center;
-	border-radius: 100px;
     border: 3px solid orange;
+	border-radius: 80px;
 	width: 200px;
 	height: 200px;
+}
+#control {
+    width: 250px;
 }
 body {
 	font-family: "Arial";
 	font-size: 8pt;
-}
-#control {
-    width: 300px;
 }
 table, td, body {
 	border-collapse: collapse;
