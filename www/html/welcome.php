@@ -7,8 +7,8 @@
     </style>
   </head>
   <body>
-    <h1>Welcome Page</h1>
     <div class="content">
+      <h1>Welcome Page</h1>
       <!-- notification message -->
       <?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
@@ -21,8 +21,7 @@
       <?php endif ?>
       <!-- logged in user information -->
       <?php  if (isset($_SESSION['username'])) : ?>
-      <p>Welcome <?php echo $_SESSION['username']; ?></p>
-      <p> <a href="welcome.php?logout='1'" style="color: red;">logout</a> </p>
+      <p>Welcome <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
       <?php endif ?>
       </div>
     </div>
