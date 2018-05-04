@@ -18,11 +18,10 @@
             unset($_SESSION['success']);
           ?>
         </h3>
-        <br>
         <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
-        <p>Welcome <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
+        <p><br>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
         <?php endif ?>
       </div>
     </div>
@@ -41,7 +40,12 @@
 
       <!-- Right division -->
       <div>
+        <!-- Right top division -->
         <p>Some text</p>
+        <!-- Right top division -->
+        <div>
+          <p>Words in here</p>
+        </div>
       </div>
     </section>
 
