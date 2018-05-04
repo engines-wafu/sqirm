@@ -13,7 +13,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT kpiDesc, kpiVal1 FROM kpis");
+$query = sprintf("SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis");
 
 //execute query
 $result = $mysqli->query($query);
