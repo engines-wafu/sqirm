@@ -9,7 +9,9 @@ table, td, body {
 	border-collapse: collapse;
 	padding: 5px;
 }
-th, tr {
+tr {
+}
+th {
 	border: 3px solid black;
 }
 [class*="white"] {
