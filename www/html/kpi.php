@@ -17,7 +17,7 @@
   
   $database = mysqli_select_db($connection, DB_DATABASE);
   
-  $kpititle = "myChart"
+  $kpititle = "myChart";
   
   $query = "SELECT * FROM kpis";
 
