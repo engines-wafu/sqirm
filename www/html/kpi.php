@@ -12,7 +12,7 @@
   <article style="border: none;"> </article>
   <article>
     <div>
-      <canvas id="myChart" width="350px" height="350px"></canvas>
+      <canvas id="myChart" width="350" height="350"></canvas>
       <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
