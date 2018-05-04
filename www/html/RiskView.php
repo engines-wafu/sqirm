@@ -81,7 +81,7 @@
     </table>
   </td>
 <!-- Column 2 -->
-  <td>
+  <td id="topelement">
     <?php
       $qtop = "SELECT top_element.topDesc FROM hazard INNER JOIN top_element ON top_element.topID = hazard.topID WHERE hazID='" . $hazard . "'";
       $result = mysqli_query($connection, $qtop); 
