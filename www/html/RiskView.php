@@ -110,7 +110,7 @@
       	$result2 = mysqli_query($connection, $qcon);
       	while ($row6 = mysqli_fetch_array($result2)) {
       		echo '<tr>';
-      		echo '<td class="' . $row6['conWRAG'] . '">';
+      		echo '<td id="control", class="' . $row6['conWRAG'] . '">';
       		echo $row6['conDesc'];
       		echo '</td>';
       		echo '</tr>';
