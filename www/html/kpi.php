@@ -20,12 +20,18 @@
   $kpititle = "myChart";
   
   $query = "SELECT * FROM kpis";
+  $result = mysqli_query($connection, $query);
 
 ?>
 <section>
   <article style="border: none;"> </article>
   <article>
     <div>
+      <?php
+        while ($row = $mysqli_fetch_array($result)) {
+          echo $row['kpiDesc'];
+        }
+      ?>
       <canvas id="myChart" width="150" height="150"></canvas>
       <script src=Chart.js></script>
       <script>
