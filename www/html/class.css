@@ -4,8 +4,8 @@
 }
 
 .container input {
-  width: 70%;
-  align: right;
+  width: 100%;
+  clear: both;
 }
 body {
 	font-family: "Arial";
