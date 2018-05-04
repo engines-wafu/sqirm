@@ -61,25 +61,27 @@ if (isset($_POST['reg_user'])) {
 }
 ?>
 
-  <form method="post" action="register.php">
-  	<div class="input-group">
-  	  <label>Username</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
-  	</div>
-  	<div class="input-group">
-  	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
-  	</div>
-  	<div class="input-group">
-  	  <label>Password</label>
-  	  <input type="password" name="password_1">
-  	</div>
-  	<div class="input-group">
-  	  <label>Confirm password</label>
-  	  <input type="password" name="password_2">
-  	</div>
-  	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Register</button>
+	<div align = "center">
+    <div style = "width:300px; border: solid 3px black; " align = "left">
+      <div style = "background-color:black; color:white; padding:10px;"><h2>Register</h2></div>
+			<div style = "margin:30px">
+
+        <form method="post" action="register.php">
+  	      <label>Username</label>
+  	      <input type="text" name="username" value="<?php echo $username; ?>">
+  	      <label>Email</label>
+  	      <input type="email" name="email" value="<?php echo $email; ?>">
+  	      <label>Password</label>
+  	      <input type="password" name="password_1">
+  	      <label>Confirm password</label>
+  	      <input type="password" name="password_2">
+  	      <button type="submit" class="btn" name="reg_user">Register</button>
+  			</form>
+
+			  <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+			</div>
+	  </div>
+	</div>
   	</div>
   	<p>
   		Already a member? <a href="login.php">Sign in</a>
