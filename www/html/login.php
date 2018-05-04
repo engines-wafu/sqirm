@@ -18,9 +18,11 @@
 			<div style = "margin:30px">
 
         <form method="post" action="login.php">
-         	<div class="container"> <label>Username</label> <input type="text" name="username"> </div>
-         	<div class="input-group"> <span> <label>Password</label> <input type="password" name="password"> </span></div>
-         	<div class="input-group"> <span> <button type="submit" class="btn" name="login_user">Login</button> </span> </div>
+					<div class="container">
+				    <label>Username</label> <input type="text" name="username"> <br />
+         	  <label>Password</label> <input type="password" name="password"> <br />
+         	  <button type="submit" class="btn" name="login_user">Login</button> <br />
+				  </div>
          	<p>
          		Not yet a member? <a href="register.php">Sign up</a>
          	</p>
