@@ -39,8 +39,6 @@
           options: {
             scales: {
               yAxes: [{
-                ticks: {
-                }
               }]
             }
           }
