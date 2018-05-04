@@ -32,7 +32,7 @@
           while ($row = mysqli_fetch_array($result)) {
             echo $row['kpiDesc'];
           }
-        ?
+		?>
       </p>
       <canvas id="myChart" width="150" height="150"></canvas>
       <script src=../js/Chart.js></script>
