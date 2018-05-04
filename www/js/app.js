@@ -11,7 +11,7 @@ $(document).ready(function(){
         kpiDesc.push(data[i].kpiDesc);
         kpiVal1.push(data[i].kpiVal1);
       }
-      <h1>IMPORTANT</h1>
+      document.write("IMPORTANT")
     })
 
     error: function(data) {
