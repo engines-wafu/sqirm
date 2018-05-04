@@ -11,6 +11,9 @@ section {
   display: flex;
 }
 article {
+  color: black;
+  flex: 1;
+  margin-right: 10px;
 }
 div {
   color: black;
