@@ -18,11 +18,11 @@
 			<div style = "margin:50px">
 
         <form method="post" action="login.php">
-					<div class="container">
+					<article class="container">
 				    <label>Username</label> <input type="text" name="username"> <br />
          	  <label>Password</label> <input type="password" name="password"> <br />
          	  <button type="submit" class="btn" name="login_user">Login</button> <br />
-				  </div>
+				  </article>
          	<p>
          		Not yet a member? <a href="register.php">Sign up</a>
          	</p>

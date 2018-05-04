@@ -1,7 +1,7 @@
-<?php include "../inc/dbinfo.inc"; ?>
 <html>
   <head>
 	<style>
+   <?php include "../inc/dbinfo.inc"; ?>
 	  <?php include "class.css"; ?>
 	  <?php include "session.php"; ?>
 	</style>
