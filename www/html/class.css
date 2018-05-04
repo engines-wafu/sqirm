@@ -1,3 +1,9 @@
+content {
+  width: 93%;
+  margin: 20px auto;
+  background: gray;
+  display: flex;
+}
 section {
   width: 93%;
   margin: 20px auto;
