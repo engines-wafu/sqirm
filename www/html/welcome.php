@@ -29,24 +29,24 @@
 
     <section>
       <!-- Left division -->
-      <div> 
+      <article> 
         <p>Some text</p>
-      </div>
+      </article>
 
-      <!-- Centre division -->
-      <div>
+      <!-- Centre articleision -->
+      <article>
         <p>Some text</p>
-      </div>
+      </article>
 
-      <!-- Right division -->
-      <div>
-        <!-- Right top division -->
+      <!-- Right articleision -->
+      <article>
+        <!-- Right top articleision -->
         <p>Some text</p>
-        <!-- Right top division -->
+        <!-- Right top articleision -->
         <div>
           <p>Words in here</p>
         </div>
-      </div>
+      </article>
     </section>
 
   </body>
