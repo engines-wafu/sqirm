@@ -19,7 +19,7 @@ div {
   color: black;
   background: white;
   flex: 1;
-  margin-right: 10px;
+  margin-top: 10px;
 }
 div:last-child {
   margin-right: 0;
