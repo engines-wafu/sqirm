@@ -4,6 +4,8 @@ body {
 #hazard {
 	background: repeating-linear-gradient(45deg, yellow, yellow 4px, #808080 4px, #808080 8px);
 	text-shadow: 1px 1px #808080;
+	text-color: white;
+	border: 3px solid black;
 }
 #control {
     width: 100px;
@@ -13,7 +15,7 @@ table, td, body {
 	padding: 5px;
 }
 th, tr {
-	border: 1px solid black;
+	border: 3px solid black;
 }
 [class*="white"] {
 	background: white;
