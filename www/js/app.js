@@ -13,15 +13,14 @@ $(document).ready(function(){
       }
 
       var chartdata = {
-        labels: kpiDesc,
+        labels: [a, b],
         datasets : [
           {
-            label: 'Player Score',
             backgroundColor: 'rgba(200, 200, 200, 0.75)',
             borderColor: 'rgba(200, 200, 200, 0.75)',
             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
             hoverBorderColor: 'rgba(200, 200, 200, 1)',
-            data: [1, 2]
+            data: [1, 2],
           }
         ]
       };
