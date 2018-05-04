@@ -17,12 +17,15 @@
       <div style = "background-color:black; color:white; padding:10px;"><h2>Login</h2></div>
 			<div style = "margin:30px">
 
-  			<form action = "" method = "post">
-        <?php include('errors.php'); ?>
-  			 	<label>User</label><input type = "text" name = "username" class = "box"/><br /><br />
-  			 	<label>Password</label><input type = "password" name = "password" class = "box" /><br/><br />
-  			 	<input type = "submit" value = " Submit "/><br />
-  			</form>
+        <form method="post" action="login.php">
+         	<?php include('errors.php'); ?>
+         	<div class="input-group"> <label>Username</label> <input type="text" name="username" > </div>
+         	<div class="input-group"> <label>Password</label> <input type="password" name="password"> </div>
+         	<div class="input-group"> <button type="submit" class="btn" name="login_user">Login</button> </div>
+         	<p>
+         		Not yet a member? <a href="register.php">Sign up</a>
+         	</p>
+       	</form>
 
 			  <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 			</div>
