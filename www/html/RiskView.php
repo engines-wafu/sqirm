@@ -3,6 +3,7 @@
   <head>
     <style>
       <?php include "class.css"; ?>
+      <?php include "session.php"; ?>
     </style>
   </head>
 <body>

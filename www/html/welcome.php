@@ -1,21 +1,8 @@
-<?php
-  session_start();
-
-  if (!isset($_SESSION['username'])) {
-  	$_SESSION['msg'] = "You must log in first";
-  	header('location: login.php');
-  }
-  if (isset($_GET['logout'])) {
-  	session_destroy();
-  	unset($_SESSION['username']);
-  	header("location: login.php");
-  }
-?>
-
 <html>
   <head>
     <style>
       <?php include "class.css"; ?>
+      <?php include "session.php"; ?>
     </style>
   </head>
   <body>
@@ -40,6 +27,5 @@
         <?php endif ?>
       </div>
 
-   	<h2><a href = "logout.php">Sign Out</a></h2>
   </body>
 </html>
