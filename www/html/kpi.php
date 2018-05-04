@@ -35,7 +35,7 @@
               borderWidth: 3
             }]
           },
-          options = {
+          options: {
             circumference: Math.PI,
             rotation: 1.0 * Math.PI,
             percentageInnerCutout: 10,
