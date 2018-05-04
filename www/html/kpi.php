@@ -37,10 +37,7 @@
             }]
           },
           options: {
-            title: {
-              display: true,
-              text: 'Custom Chart Title'
-            }
+            scales: { },
             legend: { 
                 display: false,
             }
