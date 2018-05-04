@@ -12,6 +12,10 @@
   <article style="border: none;"> </article>
   <article>
     <div>
+      <h2>Here is the data from JSON</h2>
+      <p>
+
+      </p>
       <canvas id="myChart" width="150" height="150"></canvas>
       <script src=Chart.js></script>
       <?php include "../js/doughnut.js"; ?>
