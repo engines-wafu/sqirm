@@ -12,20 +12,7 @@ $(document).ready(function(){
         kpiVal1.push(data[i].kpiVal1);
       }
 
-      var chartdata = {
-        labels: [a, b],
-        datasets : [
-          {
-            backgroundColor: 'rgba(200, 200, 200, 0.75)',
-            borderColor: 'rgba(200, 200, 200, 0.75)',
-            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-            hoverBorderColor: 'rgba(200, 200, 200, 1)',
-            data: [1, 2],
-          }
-        ]
-      };
-
-      var ctx = $("#mycanvas");
+      var ctx = document.getElementById("myChart");
 
       var myChart = new Chart(ctx, {
           type: 'doughnut',
