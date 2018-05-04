@@ -30,19 +30,25 @@
     <section>
       <!-- Left division -->
       <article> 
-        <p>Some text</p>
+        <div>
+          <p>Words in here</p>
+        </div>
       </article>
 
-      <!-- Centre articleision -->
+      <!-- Centre article -->
       <article>
-        <p>Some text</p>
+        <div>
+          <p>Words in here</p>
+        </div>
       </article>
 
-      <!-- Right articleision -->
+      <!-- Right article -->
       <article>
-        <!-- Right top articleision -->
-        <p>Some text</p>
-        <!-- Right top articleision -->
+        <!-- Right top article -->
+        <div>
+          <p>Words in here</p>
+        </div>
+        <!-- Right top article -->
         <div>
           <p>Words in here</p>
         </div>
