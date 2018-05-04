@@ -15,15 +15,17 @@
   <article style="border: none;">
   </article>
   <article>
+    <div>
+      <form method="post" action="login.php">
+        <label>Username</label> <input type="text" name="username"> <br />
+        <label>Password</label> <input type="password" name="password"> <br />
+        <button type="submit" class="btn" name="login_user">Login</button> <br />
+        <p> <a href="register.php">Sign up</a> </p>
+      </form>
+    </div>
   </article>
   <article style="border: none;">
   </article>
-  <form method="post" action="login.php">
-  <label>Username</label> <input type="text" name="username"> <br />
-  <label>Password</label> <input type="password" name="password"> <br />
-  <button type="submit" class="btn" name="login_user">Login</button> <br />
-  <p> <a href="register.php">Sign up</a> </p>
-  </form>
 </section>
 </body>
 </html>
