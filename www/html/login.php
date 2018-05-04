@@ -15,7 +15,7 @@
 	<div align = "center">
     <div style = "width:300px; border: solid 3px black; " align = "left">
       <div style = "background-color:black; color:white; padding:10px;"><h2>Login</h2></div>
-			<div style = "margin:30px">
+			<div style = "margin:50px">
 
         <form method="post" action="login.php">
 					<div class="container">

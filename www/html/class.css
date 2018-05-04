@@ -1,3 +1,22 @@
+section {
+  width: 93%;
+  margin: 20px auto;
+  background: black;
+  display: flex;
+}
+div {
+  color: orange;
+  background: white;
+  flex: 1;
+  margin-right: 10px;
+}
+div:last-child {
+  margin-right: 0;
+}
+section, div {
+  border: 3px solid red;
+  padding: 10px;
+}
 .container {
   width: 200px;
   clear: both;
@@ -8,52 +27,52 @@
   clear: both;
 }
 body {
-	font-family: "Arial";
-	font-size: 8pt;
+  font-family: "Arial";
+  font-size: 8pt;
 }
 table, td, body {
-	margin: auto;
-	border-collapse: collapse;
-	padding: 5px;
+  margin: auto;
+  border-collapse: collapse;
+  padding: 5px;
 }
 tr {
-	border: 3px solid black;
+  border: 3px solid black;
 }
 th {
-	border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
 }
 [class*="white"] {
-	background: white;
+  background: white;
 }
 [class*="green"] {
-	background: green;
+  background: green;
 }
 [class*="yellow"] {
-	background: yellow;
+  background: yellow;
 }
 [class*="red"] {
-	background: red;
+  background: red;
 }
 #hazard {
-	background: repeating-linear-gradient(45deg, yellow, yellow 4px, #808080 4px, #808080 8px);
-	text-shadow: 0px 0px 8px black;
-	color: red;
-	font-weight: bold;
-	border-style: solid;
-	border-width: 3px;
-	border-color: black;
-	width: 250;
+  background: repeating-linear-gradient(45deg, yellow, yellow 4px, #808080 4px, #808080 8px);
+  text-shadow: 0px 0px 8px black;
+  color: red;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  width: 250;
 }
 #topelement {
-	font-weight: bold;
-	text-align: center;
-	background: orange;
-	border-radius: 100px;
-    border-style: hidden; /* hide standard table (collapsed) border */
-	box-shadow: 0 0 0 3px black; /* this draws the table border  */
-	width: 200px;
-	height: 200px;
+  font-weight: bold;
+  text-align: center;
+  background: orange;
+  border-radius: 100px;
+  border-style: hidden; /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 3px black; /* this draws the table border  */
+  width: 200px;
+  height: 200px;
 }
 #control {
-    width: 250px;
+  width: 250px;
 }
