@@ -26,7 +26,7 @@
   <td>
   </td>
 <!-- Column 2 -->
-  <td style="border:0px", id="hazard", align="center">
+  <td id="hazard", align="center">
       <?php
         $qhaz = "SELECT * FROM hazard WHERE hazID='" . $hazard . "'";
         $result = mysqli_query($connection, $qhaz); 
