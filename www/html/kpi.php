@@ -19,6 +19,8 @@
   
   $kpititle = "myChart"
   
+  $query = "SELECT * FROM kpis";
+
 ?>
 <section>
   <article style="border: none;"> </article>
