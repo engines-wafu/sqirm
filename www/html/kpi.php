@@ -23,7 +23,7 @@ $kpititle = "myChart"
   <article style="border: none;"> </article>
   <article>
     <div>
-      <canvas id=$kpititle width="150" height="150"></canvas>
+      <canvas id="myChart" width="150" height="150"></canvas>
       <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
