@@ -38,6 +38,7 @@
           },
           options: {
             scales: { },
+            cutoutPercentage: {80},
             legend: { 
                 display: false,
             }
