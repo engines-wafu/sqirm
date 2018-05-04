@@ -17,7 +17,6 @@
       <script>
       Chart.defaults.doughnut.cutoutPercentage = '80';
       Chart.defaults.doughnut.circumference = '1.5 * Math.PI';
-      Chart.defaults.doughnut.rotation = '0 * Math.PI';
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
           type: 'doughnut',
