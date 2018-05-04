@@ -16,13 +16,22 @@
       <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
+      let options = {
+        circumference: Math.PI,
+        rotation: 1.0 * Math.PI,
+        percentageInnerCutout: 10,
+        legend: {
+          display: false
+        },
+        layout:{
+          padding:40
+        },
+      }
       var myChart = new Chart(ctx, {
           type: 'doughnut',
-          startAngle: 180,
           data: {
             labels: ["Red", "Yellow", "Green"],
             datasets: [{
-              label: '# of Votes',
               data: [12, 19, 3],
               backgroundColor: [
                 'red',
