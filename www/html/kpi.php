@@ -16,17 +16,6 @@
       <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
-      let options = {
-        circumference: Math.PI,
-        rotation: 1.0 * Math.PI,
-        percentageInnerCutout: 10,
-        legend: {
-          display: false
-        },
-        layout:{
-          padding:40
-        },
-      }
       var myChart = new Chart(ctx, {
           type: 'doughnut',
           data: {
@@ -46,18 +35,16 @@
               borderWidth: 3
             }]
           },
-          options: {
-            title: {
-              display: true,
-              text: 'Status of Self Audits'
+          options = {
+            circumference: Math.PI,
+            rotation: 1.0 * Math.PI,
+            percentageInnerCutout: 10,
+            legend: {
+              display: false
             },
-            title: {
-              display: true,
-              text: 'Status of Self Audits'
+            layout:{
+              padding:40
             },
-            legend: { 
-                display: false,
-            }
           }
       });
       </script>
