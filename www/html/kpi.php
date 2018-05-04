@@ -12,7 +12,7 @@
   <article style="border: none;"> </article>
   <article>
     <div>
-      <canvas id="myChart" width="150" height="150"></canvas>
+      <canvas id="myChart" width="150px" height="150px"></canvas>
       <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
@@ -43,7 +43,13 @@
               }]
           },
           options: {
-              cutoutPercentage: {80}
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
           }
       });
       </script>
