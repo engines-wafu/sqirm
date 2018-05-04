@@ -14,13 +14,15 @@
       <div style = "background-color:black; color:white; padding:10px;"><h2>Register</h2></div>
 			<div style = "margin:30px">
 
-        <form method="post" action="register.php">
-  	      <label>Username</label><input type="text" name="username" value="<?php echo $username; ?>" class = "box"/><br /><br />
-  	      <label>Email</label><input type="email" name="email" value="<?php echo $email; ?>" class = "box"/><br /><br />
-  	      <label>Password</label><input type="password" name="password_1" class = "box"/><br /><br />
-  	      <label>Confirm password</label><input type="password" name="password_2" class = "box"/><br /><br />
-  	      <button type="submit" class="btn" name="reg_user">Register</button>
-  			</form>
+				<form method="post" action="register.php">
+					<div class="container">
+						<label>Username</label><input type="text" name="username" value="<?php echo $username; ?>"><br />
+						<label>Email</label><input type="email" name="email" value="<?php echo $email; ?>"><br />
+						<label>Password</label><input type="password" name="password_1"><br />
+						<label>Confirm password</label><input type="password" name="password_2"><br />
+						<button type="submit" class="btn" name="reg_user">Register</button>
+					</div>
+				</form>
 
 			  <div style = "font-size:11px; color:#cc0000; margin-top:10px">
 				  <?php include('errors.php'); ?>
