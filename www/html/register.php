@@ -48,13 +48,15 @@ if (isset($_POST['reg_user'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
+					echo "THIS SHOULD WORK";
   	$password = md5($password_1);//encrypt the password before saving in the database
 
   	$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
   	mysqli_query($connection, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: welcome.php');
+  	// header('location: welcome.php');
+
   }
 }
 ?>
