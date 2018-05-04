@@ -19,13 +19,13 @@
       var myChart = new Chart(ctx, {
           type: 'doughnut',
           data: {
-            labels: ["Red", "Yellow", "Green"],
+            labels: ["Green", "Yellow", "Red"],
             datasets: [{
               data: [12, 19, 3],
               backgroundColor: [
-                'red',
-                'yellow',
                 'green',
+                'yellow',
+                'red',
               ],
               borderColor: [
                 'black',
@@ -39,6 +39,7 @@
             circumference: Math.PI,
             rotation: 1.0 * Math.PI,
             percentageInnerCutout: 10,
+            responsive: false,
             legend: {
               display: false
             },
