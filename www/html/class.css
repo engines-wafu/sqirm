@@ -11,15 +11,17 @@ section {
   display: flex;
 }
 article {
+}
+div {
   color: black;
   background: white;
   flex: 1;
   margin-right: 10px;
 }
-article:last-child {
+div:last-child {
   margin-right: 0;
 }
-section, article {
+section, div {
   border: 3px solid black;
   padding: 10px;
 }
