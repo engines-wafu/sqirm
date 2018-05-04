@@ -43,13 +43,7 @@
               }]
           },
           options: {
-              scales: {
-                  yAxes: [{
-                      ticks: {
-                          beginAtZero:true
-                      }
-                  }]
-              }
+              cutoutPercentage: {80}
           }
       });
       </script>
