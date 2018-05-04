@@ -19,9 +19,6 @@
   
   $kpititle = "myChart"
   
-  $query = "SELECT * FROM kpis";
-  $result = mysqli_query($connection, $query);
-
 ?>
 <section>
   <article style="border: none;"> </article>
