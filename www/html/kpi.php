@@ -12,7 +12,8 @@
   <article style="border: none;"> </article>
   <article>
     <canvas id="myChart" width="400" height="400"></canvas>
-    <script src=Chart.js>
+    <script src=Chart.js></script>
+    <script>
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
         type: 'bar',
