@@ -29,9 +29,9 @@
                 'green',
               ],
               borderColor: [
-                'black',
-                'black',
-                'black',
+                'red',
+                'yellow',
+                'green',
               ],
               borderWidth: 1
             }]
@@ -39,7 +39,7 @@
           options: {
             title: {
               display: true,
-              text: 'Status of Self Audits'
+              text: 'Custom Chart Title'
             }
             legend: { 
                 display: false,
