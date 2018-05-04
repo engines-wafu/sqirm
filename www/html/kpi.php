@@ -15,7 +15,6 @@
       <canvas id="myChart" width="150px" height="150px"></canvas>
       <script src=Chart.js></script>
       <script>
-      var cutout = Chart.defaults.doughnut.cutoutPercentage(80);
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
           type: 'doughnut',
@@ -44,6 +43,11 @@
             }
           }
       });
+
+      var chartOptions = {
+        rotation: -Math.PI,
+        cutoutPercentage: 80,
+      }
       </script>
     </div>
   </article>
