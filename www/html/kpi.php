@@ -16,10 +16,6 @@
       <script src=Chart.js></script>
       <?php include "../js/doughnut.js"; ?>
     </div>
-    <div>
-      <canvas id="myChart" width="150" height="150"></canvas>
-      <?php include "../js/doughnut.js"; ?>
-    </div>
   </article>
   <article style="border: none;"> </article>
 </section>
