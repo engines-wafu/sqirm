@@ -45,6 +45,9 @@
             },
             title: {
               display: true,
+              fontFamily: Arial,
+              fontColor: black,
+              lineHeight: 1,
               text: 'Custom Chart Title'
             },
             layout:{
