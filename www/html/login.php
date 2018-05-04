@@ -15,7 +15,7 @@
   <article style="border: none;">
   </article>
   <article>
-    <div>
+    <div class="container">
       <form method="post" action="login.php">
         <label>Username</label> <input type="text" name="username"> <br />
         <label>Password</label> <input type="password" name="password"> <br />
