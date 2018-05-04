@@ -12,8 +12,7 @@
 <body>
 <div class="content"><h1>Login Page</h1></div>
 <section>
-  <article style="border: none;">
-  </article>
+  <article style="border: none;"> </article>
   <article>
     <div class="container">
       <form method="post" action="login.php">
@@ -22,10 +21,10 @@
         <button type="submit" class="btn" name="login_user">Login</button> <br />
         <p> <a href="register.php">Sign up</a> </p>
       </form>
+				  <?php include('errors.php'); ?>
     </div>
   </article>
-  <article style="border: none;">
-  </article>
+  <article style="border: none;"> </article>
 </section>
 </body>
 </html>

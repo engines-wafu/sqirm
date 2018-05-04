@@ -12,12 +12,12 @@
   <article style="border: none;"> </article>
   <article>
     <div>
-      <canvas id="myChart" width="400" height="400"></canvas>
+      <canvas id="myChart" width="150" height="150"></canvas>
       <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
-          type: 'bar',
+          type: 'pie',
           data: {
               labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
               datasets: [{
