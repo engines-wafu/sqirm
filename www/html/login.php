@@ -7,8 +7,8 @@
    $myusername = mysqli_real_escape_string($db,$_POST['username']);
    $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-   $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
-   $result = mysqli_query($db,$sql);
+   $sql = "SELECT * FROM users WHERE username = '$myusername' and passcode = '$mypassword'";
+   $result = mysqli_query($connection, $sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $active = $row['active'];
 
@@ -42,8 +42,8 @@
 
   			<form action = "" method = "post">
         <?php include('errors.php'); ?>
-  			 	<label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-  			 	<label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
+  			 	<label>User</label><input type = "text" name = "username" class = "box"/><br /><br />
+  			 	<label>Password</label><input type = "password" name = "password" class = "box" /><br/><br />
   			 	<input type = "submit" value = " Submit "/><br />
   			</form>
 
