@@ -42,7 +42,7 @@ $hazard = $_GET["hazID"]
       <!-- Left division -->
       <article> 
         <div>
-          <h2>List of active hazards</h2>
+          <h2>List of Active Hazards</h2>
           <!-- Get hazards from database -->
           <?php
           		$query = "SELECT * FROM hazard";
@@ -58,7 +58,7 @@ $hazard = $_GET["hazID"]
       <!-- Centre article -->
       <article>
         <div>
-          <p>Words in here</p>
+          <h2>List of Active Controls</h2>
         </div>
       </article>
 
@@ -66,11 +66,11 @@ $hazard = $_GET["hazID"]
       <article>
         <!-- Right top article -->
         <div>
-          <p>Words in here</p>
+          <h2>Key Performance Indicators</h2>
         </div>
         <!-- Right top article -->
         <div>
-          <p>Words in here</p>
+          <h2>Active Actions and Issues Assigned to Me</h2>
         </div>
       </article>
     </section>
