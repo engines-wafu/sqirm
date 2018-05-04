@@ -12,12 +12,13 @@
   <article style="border: none;"> </article>
   <article>
     <div>
-      <canvas id="myChart" width="150px" height="150px"></canvas>
+      <canvas id="myChart" width="350px" height="350px"></canvas>
       <script src=Chart.js></script>
       <script>
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
           type: 'doughnut',
+          startAngle: 90,
           data: {
             labels: ["Red", "Yellow", "Green"],
             datasets: [{
@@ -37,6 +38,10 @@
             }]
           },
           options: {
+            title: {
+              display: true,
+              text: 'Status of Self Audits'
+            },
             title: {
               display: true,
               text: 'Status of Self Audits'
