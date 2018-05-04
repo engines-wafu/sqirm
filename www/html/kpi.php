@@ -16,15 +16,17 @@ $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
 $database = mysqli_select_db($connection, DB_DATABASE);
+
+$kpititle = "myChart"
 ?>
 <section>
   <article style="border: none;"> </article>
   <article>
     <div>
-      <canvas id="myChart" width="150" height="150"></canvas>
+      <canvas id=$kpititle width="150" height="150"></canvas>
       <script src=Chart.js></script>
       <script>
-      var ctx = document.getElementById("myChart");
+      var ctx = document.getElementById($kpititle);
       var myChart = new Chart(ctx, {
           type: 'doughnut',
           data: {
