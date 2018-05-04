@@ -10,19 +10,28 @@
 <div class="content"><h1>KPI Test Page</h1></div>
 <?php
 
-/* Connect to MySQL and select the database. */
-$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+  /* Connect to MySQL and select the database. */
+  $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+  
+  if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  
+  $database = mysqli_select_db($connection, DB_DATABASE);
+  
+  $kpititle = "myChart"
+  
+  $query = "SELECT * FROM kpis";
+  $result = mysqli_query($connection, $query);
 
-if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
-
-$database = mysqli_select_db($connection, DB_DATABASE);
-
-$kpititle = "myChart"
 ?>
 <section>
   <article style="border: none;"> </article>
   <article>
     <div>
+      <?php
+        while ($row = $mysqli_fetch_array($result)) {
+          echo $row['kpiDesc'];
+        }
+      ?>
       <canvas id="myChart" width="150" height="150"></canvas>
       <script src=Chart.js></script>
       <script>
