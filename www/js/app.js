@@ -27,9 +27,45 @@ $(document).ready(function(){
 
       var ctx = $("#mycanvas");
 
-      var barGraph = new Chart(ctx, {
-        type: 'bar',
-        data: chartdata
+      var myChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ["Green", "Yellow", "Red"],
+            datasets: [{
+              data: [12, 19, 3],
+              backgroundColor: [
+                'green',
+                'yellow',
+                'red',
+              ],
+              borderColor: [
+                'black',
+                'black',
+                'black',
+              ],
+              borderWidth: 3
+            }]
+          },
+          options: {
+            circumference: Math.PI,
+            rotation: 1.0 * Math.PI,
+            percentageInnerCutout: 10,
+            responsive: false,
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              fontFamily: 'Arial',
+              fontColor: 'black',
+              position: 'bottom',
+              lineHeight: 1,
+              text: 'Self Audits'
+            },
+            layout:{
+              padding:40
+            },
+          }
       });
     },
     error: function(data) {
