@@ -1,4 +1,4 @@
-content {
+[class*="content"] {
   width: 93%;
   margin: 20px auto;
   background: gray;
