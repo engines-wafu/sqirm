@@ -33,7 +33,7 @@
                 'black',
                 'black',
               ],
-              borderWidth: 3
+              borderWidth: 1
             }]
           },
           options: {
