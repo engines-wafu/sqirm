@@ -37,9 +37,9 @@
             }]
           },
           options: {
-            scales: { }
-              legend: { 
-                display: false
+            scales: { },
+            legend: { 
+                display: false,
             }
           }
       });
