@@ -43,6 +43,10 @@
             legend: {
               display: false
             },
+            title: {
+              display: true,
+              text: 'Custom Chart Title'
+            },
             layout:{
               padding:40
             },
