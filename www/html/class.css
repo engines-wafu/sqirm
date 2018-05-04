@@ -3,7 +3,7 @@ body {
 	font-size: 8pt;
 }
 table, td, body {
-    align: center;
+	margin: auto;
 	border-collapse: collapse;
 	padding: 5px;
 }
