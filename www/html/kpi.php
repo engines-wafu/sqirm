@@ -17,20 +17,20 @@
       <script>
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
-          type: 'pie',
+          type: 'doughnut',
           data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["Red", "Yellow", "Green"],
             datasets: [{
               label: '# of Votes',
               data: [12, 19, 3],
               backgroundColor: [
                 'red',
-                'amber',
+                'yellow',
                 'green',
               ],
               borderColor: [
                 'red',
-                'amber',
+                'yellow',
                 'green',
               ],
               borderWidth: 1
