@@ -14,7 +14,7 @@
     <div>
       <canvas id="myChart" width="150" height="150"></canvas>
       <script src=Chart.js></script>
-      <script src=doughnut.js></script>
+      <script src=../js/doughnut.js></script>
 	  <script>
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
