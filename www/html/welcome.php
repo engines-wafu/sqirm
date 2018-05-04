@@ -18,11 +18,12 @@
             unset($_SESSION['success']);
           ?>
         </h3>
-      <?php endif ?>
-      <!-- logged in user information -->
-      <?php  if (isset($_SESSION['username'])) : ?>
-      <p>Welcome <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
-      <?php endif ?>
+        <br>
+        <?php endif ?>
+        <!-- logged in user information -->
+        <?php  if (isset($_SESSION['username'])) : ?>
+        <p>Welcome <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
+        <?php endif ?>
       </div>
     </div>
     <!-- Main Splash Page Sections -->
