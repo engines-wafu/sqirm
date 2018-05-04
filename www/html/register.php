@@ -29,9 +29,7 @@ if (isset($_POST['reg_user'])) {
   if (empty($username)) { array_push($errors, "Username is required"); }
   if (empty($email)) { array_push($errors, "Email is required"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
-  if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
-  }
+  if ($password_1 != $password_2) { array_push($errors, "The two passwords do not match"); }
 
   // first check the database to make sure a user does not already exist with the same username and/or email
   $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
@@ -67,7 +65,6 @@ if (isset($_POST['reg_user'])) {
 			<div style = "margin:30px">
 
         <form method="post" action="register.php">
-      	<?php include('errors.php'); ?>
   	      <label>Username</label><input type="text" name="username" value="<?php echo $username; ?>" class = "box"/><br /><br />
   	      <label>Email</label><input type="email" name="email" value="<?php echo $email; ?>" class = "box"/><br /><br />
   	      <label>Password</label><input type="password" name="password_1" class = "box"/><br /><br />
@@ -75,7 +72,9 @@ if (isset($_POST['reg_user'])) {
   	      <button type="submit" class="btn" name="reg_user">Register</button>
   			</form>
 
-			  <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+			  <div style = "font-size:11px; color:#cc0000; margin-top:10px">
+				  <?php include('errors.php'); ?>
+        </div>
 			</div>
 	  </div>
 	</div>
