@@ -1,3 +1,29 @@
+body {
+	font-family: "Arial";
+	font-size: 8pt;
+}
+table, td, body {
+	border-collapse: collapse;
+	padding: 5px;
+}
+tr {
+	border: 3px solid black;
+}
+th {
+	border-bottom: 3px solid black;
+}
+[class*="white"] {
+	background: white;
+}
+[class*="green"] {
+	background: green;
+}
+[class*="yellow"] {
+	background: yellow;
+}
+[class*="red"] {
+	background: red;
+}
 #hazard {
 	background: repeating-linear-gradient(45deg, yellow, yellow 4px, #808080 4px, #808080 8px);
 	text-shadow: 1px 1px white;
@@ -19,29 +45,4 @@
 }
 #control {
     width: 250px;
-}
-body {
-	font-family: "Arial";
-	font-size: 8pt;
-}
-table, td, body {
-	padding: 5px;
-}
-tr {
-	border: 3px solid black;
-}
-th {
-	border-bottom: 3px solid black;
-}
-[class*="white"] {
-	background: white;
-}
-[class*="green"] {
-	background: green;
-}
-[class*="yellow"] {
-	background: yellow;
-}
-[class*="red"] {
-	background: red;
 }
