@@ -42,14 +42,14 @@ $hazard = $_GET["hazID"]
       <!-- Left division -->
       <article> 
         <div>
-          <p>List of active hazards</p>
+          <h2>List of active hazards</h2>
           <!-- Get hazards from database -->
           <?php
           		$query = "SELECT * FROM hazard";
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-            		echo '<p class="tile_hazard">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</p>' ;
+            		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
             }
           ?>
         </div>
