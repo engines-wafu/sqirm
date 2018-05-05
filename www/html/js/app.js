@@ -46,6 +46,10 @@ $(document).ready(function(){
 
       console.log(kpidatasetarray);
 
+      for(var i in kpidatasetarray){
+        var kpidatasetarray[i] = [];
+      }
+
     },
     error: function(data) {
     }
