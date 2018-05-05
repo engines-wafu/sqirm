@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.ajax({
-    url: "http://ec2-13-56-14-28.us-west-1.compute.amazonaws.com/api/data.php",
+    url: "http://ec2-13-56-14-28.us-west-1.compute.amazonaws.com/api/data.php?kpiID=1",
     method: "GET",
     success: function(data) {
       console.log(data);
@@ -21,7 +21,7 @@ $(document).ready(function(){
       console.log(kpiArr);
 
       var chartdata = {
-        labels: ["Red", "Amber", "Green"],
+        labels: ["In Limits", "Near Limits", "Out of Limits"],
         datasets : [
           {
             label: 'KPI Score',
@@ -30,9 +30,8 @@ $(document).ready(function(){
               'yellow',
               'red'
             ],
-            borderColor: 'rgba(200, 200, 200, 0.75)',
-            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            borderColor: 'black',
+            borderWidth: 3,
             data: kpiArr
           }
         ]
@@ -42,7 +41,26 @@ $(document).ready(function(){
 
       var Graph = new Chart(ctx, {
         type: 'doughnut',
-        data: chartdata
+        data: chartdata,
+	         options: {
+            circumference: Math.PI,
+            rotation: 1.0 * Math.PI,
+            percentageInnerCutout: 10,
+            responsive: false,
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              fontFamily: 'Arial',
+              fontColor: 'black',
+              lineHeight: 1,
+              text: kpiDesc
+            },
+            layout:{
+              padding:40
+            },
+          }
       });
     },
     error: function(data) {

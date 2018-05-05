@@ -1,4 +1,8 @@
 <?php
+//get kpiID from URL
+
+$kpiNo = $_GET["kpiID"];
+
 //setting header to json
 header('Content-Type: application/json');
 
@@ -13,7 +17,9 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis ORDER BY kpiDesc");
+$sql_line = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis WHERE kpiID = " . $kpiNo;
+
+$query = sprintf($sql_line);
 
 //execute query
 $result = $mysqli->query($query);
@@ -21,7 +27,7 @@ $result = $mysqli->query($query);
 //loop through the returned data
 $data = array();
 foreach ($result as $row) {
-	$data[] = $row;
+ 	$data[] = $row;
 }
 
 //free memory associated with result
@@ -32,3 +38,4 @@ $mysqli->close();
 
 //now print the data
 print json_encode($data);
+?>

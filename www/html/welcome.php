@@ -67,6 +67,23 @@ $hazard = $_GET["hazID"]
         <!-- Right top article -->
         <div>
           <h2>Key Performance Indicators</h2>
+          <canvas id="mycanvas"></canvas>
+  
+          <!-- javascript -->
+          <script type="text/javascript" src="js/jquery.js"></script>
+          <script type="text/javascript" src="js/Chart.js"></script>
+          <!-- Get kpis from database -->
+          <?php
+          		$query = "SELECT kpiID, kpiDesc FROM kpis";
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+              echo $row['kpiDesc'] ;
+              echo '<canvas id="mycanvas"' . $row['kpiID'] . '></canvas>' ;
+              // echo '<script type="text/javascript" src="js/app.js"></script>' ;
+            }
+          ?>
+  
         </div>
         <!-- Right top article -->
         <div>
