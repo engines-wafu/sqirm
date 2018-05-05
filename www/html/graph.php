@@ -15,8 +15,8 @@ $database = mysqli_select_db($connection, DB_DATABASE);
     <title>ChartJS - BarGraph</title>
     <style type="text/css">
       canvas{
-        width:150px !important;
-        height:150px !important;
+        width:300px !important;
+        height:300px !important;
       }
       #chart-container {
         width: 150px;
