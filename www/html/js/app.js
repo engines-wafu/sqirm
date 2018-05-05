@@ -31,6 +31,7 @@ $(document).ready(function(){
         kpiCanvas.push(kpiIDs[i].ctx);
       }
       
+      console.log(ctx);
       console.log(ctemp);
       console.log(kpiCanvas);
 
