@@ -26,7 +26,7 @@ $result = mysqli_query($connection, $query);
 while ($row = mysqli_fetch_array($result)) {
   echo '<div width=150 height=150>';
   echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" width="75" height="150"></canvas>';
-  echo '<?div>';
+  echo '</div>';
 }
 ?>
 
