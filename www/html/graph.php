@@ -17,7 +17,6 @@ $database = mysqli_select_db($connection, DB_DATABASE);
       canvas {
         display:inline !important;
         width:150px !important;
-        height:150px !important;
       }
       #chart-container {
         width: 150px;
