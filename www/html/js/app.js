@@ -4,7 +4,7 @@ console.log(kpiID);
 
 $(document).ready(function(){
   $.ajax({
-    url: "http://ec2-13-56-14-28.us-west-1.compute.amazonaws.com/api/data.php?kpiID=" + kpiID[1] ,
+    url: "http://ec2-13-56-14-28.us-west-1.compute.amazonaws.com/api/data.php?kpiID=" + kpiID[0] ,
     method: "GET",
     success: function(data) {
       console.log(data);
