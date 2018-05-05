@@ -25,7 +25,11 @@ $(document).ready(function(){
         datasets : [
           {
             label: 'KPI Score',
-            backgroundColor: 'rgba(200, 200, 200, 0.75)',
+            backgroundColor: [
+              'green',
+              'yellow',
+              'red'
+            ],
             borderColor: 'rgba(200, 200, 200, 0.75)',
             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
             hoverBorderColor: 'rgba(200, 200, 200, 1)',
