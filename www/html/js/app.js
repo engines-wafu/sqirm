@@ -4,16 +4,16 @@ $(document).ready(function(){
     method: "GET",
     success: function(data) {
       console.log(data);
-      var player = [];
+      var kpiDesc = [];
       var score = [];
 
       for(var i in data) {
-        player.push("Player " + data[i].playerid);
+        kpiDesc.push(data[i].kpiDesc);
         score.push(data[i].score);
       }
 
       var chartdata = {
-        labels: player,
+        labels: kpiDesc,
         datasets : [
           {
             label: 'Player Score',
