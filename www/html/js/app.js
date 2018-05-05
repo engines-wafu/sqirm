@@ -31,6 +31,7 @@ $(document).ready(function(){
         kpiCanvas.push(kpiCharts[i].ctx);
       }
       
+      console.log(ctemp);
       console.log(kpiCanvas);
 
     },
