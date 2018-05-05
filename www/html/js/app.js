@@ -37,7 +37,7 @@ $(document).ready(function(){
         ]
       };
 
-      var ctx = $("#mycanvas");
+      var ctx = $("#kpicanvas");
 
       var Graph = new Chart(ctx, {
         type: 'doughnut',
