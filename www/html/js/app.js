@@ -40,7 +40,7 @@ $(document).ready(function(){
       var kpidatasetarray= [];
 
       for(var i in data){
-        dtx = dtemp + kpiID[i];
+        dtx = dtemp + kpiIDs[i];
         kpidatasetarray.push(dtx);
       }
 
