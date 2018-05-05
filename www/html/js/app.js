@@ -70,7 +70,7 @@ $(document).ready(function(){
             ],
             borderColor: 'black',
             borderWidth: 3,
-            data: kpidatasetarray[0]
+            data: kpidatasetarray[1]
           }
         ]
       };
