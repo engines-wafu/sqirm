@@ -8,6 +8,7 @@ $(document).ready(function(){
       var kpiVal1 = [];
       var kpiVal2 = [];
       var kpiVal3 = [];
+      var kpiName = [Good, Near, Bad];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
@@ -16,8 +17,10 @@ $(document).ready(function(){
         kpiVal3.push(data[i].kpiVal3);
       }
 
+      var kpiArr = [kpiVal1, kpiVal2, kpiVal3];
+
       var chartdata = {
-        labels: kpiDesc,
+        labels: kpiName,
         datasets : [
           {
             label: 'KPI Score',
