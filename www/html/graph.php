@@ -28,7 +28,6 @@ $database = mysqli_select_db($connection, DB_DATABASE);
         echo '<div id="chart-container">';
         echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '"></canvas>';
         echo '</div>';
-        echo $row['kpiID'] ;
       }
     ?>
 
