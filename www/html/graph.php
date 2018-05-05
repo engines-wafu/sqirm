@@ -25,7 +25,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
       $query = "SELECT kpiID FROM kpis";
       $result = mysqli_query($connection, $query); 
       while ($row = mysqli_fetch_array($result)) {
-        echo '<div id="chart-container">';
+        echo '<div id="chart-container" style="position: relative; height:150px; width:150px">';
         echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '"></canvas>';
         echo '</div>';
       }
