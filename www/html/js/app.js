@@ -16,7 +16,7 @@ $(document).ready(function(){
       console.log(kpiDesc);
 
       var chartdata = {
-        labels: "Red" "Amber" "Green",
+        labels: ["Red", "Amber", "Green"],
         datasets : [
           {
             label: 'KPI Score',
