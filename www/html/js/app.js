@@ -17,6 +17,10 @@ $(document).ready(function(){
       
       var ctx = [];
       
+      for(var i in kpiCharts){
+        kpiCharts.push(data[i].ctx);
+      }
+      
       console.log(ctx);
 
     },
