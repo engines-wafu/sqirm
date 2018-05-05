@@ -80,6 +80,10 @@ $hazard = $_GET["hazID"]
               echo $row['kpiDesc'] ;
 			  
               echo '<canvas id="kpicanvas"' . $row['kpiID'] . ' width="150" height="150"></canvas>' ;
+
+              echo '<script type="text/javascript" src="js/app.js?kpiNo"></script>' ;
+
+
               // echo '<script type="text/javascript" src="js/app.js?kpiNo" + $kpiNo></script>' ;
             }
           ?>
