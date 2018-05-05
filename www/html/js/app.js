@@ -31,9 +31,21 @@ $(document).ready(function(){
         kpiCanvas.push(ctx);
       }
       
-      console.log(ctx);
-      console.log(ctemp);
       console.log(kpiCanvas);
+
+      //create datasets for each chart
+
+      var kpidata = [];
+
+      for(var i in data){
+        do{
+          kpidata.push(data[i].kpiVal1);
+          kpidata.push(data[i].kpiVal2);
+          kpidata.push(data[i].kpiVal3);
+        }
+      }
+
+      console.log(kpidata);
 
     },
     error: function(data) {
