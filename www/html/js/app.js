@@ -49,7 +49,7 @@ $(document).ready(function(){
       for(var i in kpidatasetarray){
         for(var j in data){
           kpidatasetarray[i] = [];
-          kpidatasetarray[i].push(data.kpiVal1, data.kpiVal2, data.kpiVal3);
+          kpidatasetarray[i].push(kpiVal1, kpiVal2, kpiVal3);
         }
         console.log(kpidatasetarray[i]);
       }
