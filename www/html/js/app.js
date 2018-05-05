@@ -62,7 +62,7 @@ $(document).ready(function(){
         labels: ["In Limits", "Near Limits", "Out of Limits"],
         datasets : [
           {
-            label: 'KPI Score',
+            label: kpiCharts[0],
             backgroundColor: [
               'green',
               'yellow',
@@ -70,7 +70,7 @@ $(document).ready(function(){
             ],
             borderColor: 'black',
             borderWidth: 3,
-            data: kpidatasetarray[1]
+            data: kpidatasetarray[0]
           }
         ]
       };
