@@ -46,10 +46,11 @@ $(document).ready(function(){
 
       console.log(kpidatasetarray);
 
-      kpidatasetarray[0] = ["1", "2", "3", "4"];
+      for(var i in kpidatasetarray){
+        kpidatasetarray[i] = ["1", "2", "3", "4"]; 
+        console.log(kpidatasetarray[i]);
+      }
 
-      console.log(kpidatasetarray[0]);
-      
     },
     error: function(data) {
     }
