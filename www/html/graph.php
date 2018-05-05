@@ -14,15 +14,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
   <head>
     <title>ChartJS - BarGraph</title>
     <style type="text/css">
-      element.style {
-        width: 150px;
-        height: 150px;
-      }
       #chart-container {
-        width: 150px;
-        height: 150px;
-      }
-      canvas {
         width: 150px;
         height: 150px;
       }
@@ -34,7 +26,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
       $result = mysqli_query($connection, $query); 
       while ($row = mysqli_fetch_array($result)) {
         echo '<div id="chart-container" style="position: relative; height:150px; width:150px">';
-        echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '"></canvas>';
+        echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" style:"height:150px; width:150px;"></canvas>';
         echo '</div>';
       }
     ?>
