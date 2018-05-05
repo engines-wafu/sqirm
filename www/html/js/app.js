@@ -9,16 +9,23 @@ $(document).ready(function(){
       var kpiVal2 = [];
       var kpiVal3 = [];
       var kpiArr = [];
+      var kpiData = [];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
-        kpiData.push(data[i].kpiVal1);
-        kpiData.push(data[i].kpiVal2);
-        kpiData.push(data[i].kpiVal3);
+      }
+
+      for(var i in data) {
+        do {
+          kpiData.push(data[i].kpiVal1);
+          kpiData.push(data[i].kpiVal2);
+          kpiData.push(data[i].kpiVal3);
+        }
+        while (kpiDesc = i);
       }
 
       console.log(kpiDesc);
-      console.log(kpiArr);
+      console.log(kpiData);
 
       var chartdata = {
         labels: ["In Limits", "Near Limits", "Out of Limits"],
