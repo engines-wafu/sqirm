@@ -8,7 +8,7 @@ $(document).ready(function(){
       var kpiCharts = [];
       
       for(var i in data){
-        kpiCharts.push(data[i].kpiDesc);
+        kpiCharts.push(data[i].kpiID);
       }
       
       console.log(kpiCharts);
@@ -18,7 +18,8 @@ $(document).ready(function(){
       var ctx = [];
       
       for(var i in kpiCharts){
-        ctx.push(data[i].kpiDesc);
+        ctx.push(data[i].kpiID);
+        ctx.prepend(String.valueOf("#canvas"));
       }
       
       console.log(ctx);
