@@ -13,9 +13,15 @@ $(document).ready(function(){
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
-        kpiData.push(data[i].kpiVal1);
-        kpiData.push(data[i].kpiVal2);
-        kpiData.push(data[i].kpiVal3);
+      }
+
+      for(var i in data) {
+        do {
+          kpiData.push(data[i].kpiVal1);
+          kpiData.push(data[i].kpiVal2);
+          kpiData.push(data[i].kpiVal3);
+        }
+        while (kpiDesc = i);
       }
 
       console.log(kpiDesc);
