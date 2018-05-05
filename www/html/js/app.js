@@ -5,11 +5,15 @@ $(document).ready(function(){
     success: function(data) {
       console.log(data);
       var kpiDesc = [];
-      var score = [];
+      var kpiVal1 = [];
+      var kpiVal2 = [];
+      var kpiVal3 = [];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
-        score.push(data[i].score);
+        kpiVal1.push(data[i].kpiVal1);
+        kpiVal2.push(data[i].kpiVal2);
+        kpiVal3.push(data[i].kpiVal3);
       }
 
       var chartdata = {
