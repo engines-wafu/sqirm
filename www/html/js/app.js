@@ -8,18 +8,15 @@ $(document).ready(function(){
       var kpiVal1 = [];
       var kpiVal2 = [];
       var kpiVal3 = [];
-      var kpiName = [kpiVal1, kpiVal2, kpiVal3];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
       }
 
-      var kpiArr = [kpiVal1, kpiVal2, kpiVal3];
-
-      console.log(kpiArr);
+      console.log(kpiDesc);
 
       var chartdata = {
-        labels: kpiName,
+        labels: "Red" "Amber" "Green",
         datasets : [
           {
             label: 'KPI Score',
