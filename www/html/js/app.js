@@ -18,6 +18,7 @@ $(document).ready(function(){
       }
 
       console.log(kpiDesc);
+      console.log(kpiArr);
 
       var chartdata = {
         labels: ["Red", "Amber", "Green"],
