@@ -58,6 +58,7 @@ $(document).ready(function(){
         console.log(kpidatasetarray[i]);
       }
 
+      {
       var chartdata = {
         labels: ["In Limits", "Near Limits", "Out of Limits"],
         datasets : [
@@ -97,6 +98,7 @@ $(document).ready(function(){
           },
         }
       });
+      }
     },
     error: function(data) {
     }
