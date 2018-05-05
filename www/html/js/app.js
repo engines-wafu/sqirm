@@ -14,9 +14,6 @@ $(document).ready(function(){
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
-      }
-
-      for(var i in data) {
         do {
           kpiData.push(data[i].kpiVal1);
           kpiData.push(data[i].kpiVal2);
