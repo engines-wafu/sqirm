@@ -4,6 +4,7 @@ $(document).ready(function(){
     method: "GET",
     success: function(data) {
       console.log(data);
+
       var kpiDesc = [];
       var kpiVal1 = [];
       var kpiVal2 = [];
