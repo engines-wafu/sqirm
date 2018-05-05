@@ -27,6 +27,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
       while ($row = mysqli_fetch_array($result)) {
         echo '<div id="chart-container">';
         echo '   <canvas id="mycanvas"></canvas>';
+        echo '<script type="text/javascript" src="js/app.js"></script>';
         echo '</div>';
         echo $row['kpiID'] ;
       }
@@ -35,6 +36,5 @@ $database = mysqli_select_db($connection, DB_DATABASE);
     <!-- javascript -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/Chart.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
