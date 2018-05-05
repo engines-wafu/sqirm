@@ -8,7 +8,7 @@ $(document).ready(function(){
       var kpiVal1 = [];
       var kpiVal2 = [];
       var kpiVal3 = [];
-      var kpiName = [Good, Near, Bad];
+      var kpiName = ["Good", "Near", "Bad"];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
