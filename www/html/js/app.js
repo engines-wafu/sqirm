@@ -4,7 +4,12 @@ $(document).ready(function(){
     method: "GET",
     success: function(data) {
       console.log(data);
+    },
+    error: function(data) {
+      console.log(data);
     }
+  });
+});
 
       //var kpiDesc = [];
       //var kpiVal1 = [];
@@ -68,9 +73,3 @@ $(document).ready(function(){
       //    },
       //  }
       //});
-    },
-    error: function(data) {
-      console.log(data);
-    }
-  });
-});
