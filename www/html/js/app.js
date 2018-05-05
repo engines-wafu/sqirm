@@ -38,11 +38,9 @@ $(document).ready(function(){
       var kpidata = [];
 
       for(var i in data){
-        do{
           kpidata.push(data[i].kpiVal1);
           kpidata.push(data[i].kpiVal2);
           kpidata.push(data[i].kpiVal3);
-        }
       }
 
       console.log(kpidata);
