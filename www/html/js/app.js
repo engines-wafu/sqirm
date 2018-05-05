@@ -8,7 +8,7 @@ $(document).ready(function(){
       var kpiCharts = [];
       
       for(var i in data){
-        kpiCharts.push(data[i].kpiID);
+        kpiCharts.push(data[i].kpiDesc);
       }
       
       console.log(kpiCharts);
