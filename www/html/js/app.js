@@ -58,46 +58,46 @@ $(document).ready(function(){
         console.log(kpidatasetarray[i]);
       }
 
-      {
-      var chartdata = {
-        labels: ["In Limits", "Near Limits", "Out of Limits"],
-        datasets : [
-          {
-            label: kpiCharts[0],
-            backgroundColor: [
-              'green',
-              'yellow',
-              'red'
-            ],
-            borderColor: 'black',
-            borderWidth: 3,
-            data: kpidatasetarray[0]
+      for(var i in kpiCharts){
+        var chartdata = {
+          labels: ["In Limits", "Near Limits", "Out of Limits"],
+          datasets : [
+            {
+              label: kpiCharts[0],
+              backgroundColor: [
+                'green',
+                'yellow',
+                'red'
+              ],
+              borderColor: 'black',
+              borderWidth: 3,
+              data: kpidatasetarray[0]
+            }
+          ]
+        };
+        var Graph = new Chart(kpiCanvas[0], {
+          type: 'doughnut',
+          data: chartdata,
+          options: {
+            circumference: Math.PI,
+            rotation: 1.0 * Math.PI,
+            percentageInnerCutout: 10,
+            responsive: false,
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              fontFamily: 'Arial',
+              fontColor: 'black',
+              lineHeight: 1,
+              text: kpiCharts[0]
+            },
+            layout:{
+              padding:40
+            },
           }
-        ]
-      };
-      var Graph = new Chart(kpiCanvas[0], {
-        type: 'doughnut',
-        data: chartdata,
-        options: {
-          circumference: Math.PI,
-          rotation: 1.0 * Math.PI,
-          percentageInnerCutout: 10,
-          responsive: false,
-          legend: {
-            display: false
-          },
-          title: {
-            display: true,
-            fontFamily: 'Arial',
-            fontColor: 'black',
-            lineHeight: 1,
-            text: kpiCharts[0]
-          },
-          layout:{
-            padding:40
-          },
-        }
-      });
+        });
       }
     },
     error: function(data) {
