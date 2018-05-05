@@ -1,7 +1,7 @@
 <?php
 //get kpiID from URL
 
-$kpiNo = $_GET["kpiID"];
+//$kpiNo = $_GET["kpiID"];
 
 //setting header to json
 header('Content-Type: application/json');
@@ -17,7 +17,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$sql_line = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis WHERE kpiID = " . $kpiNo;
+$sql_line = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis";
 
 $query = sprintf($sql_line);
 
