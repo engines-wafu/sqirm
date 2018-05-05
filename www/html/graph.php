@@ -3,7 +3,7 @@
 <?php
 
 /* Connect to MySQL and select the database. */
-$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
@@ -14,17 +14,18 @@ $database = mysqli_select_db($connection, DB_DATABASE);
   <head>
     <title>ChartJS - BarGraph</title>
     <style type="text/css">
-#chart-container {
-  width: 150px;
-  height: 150px;
-}
+      #chart-container {
+        width: 150px;
+        height: 150px;
+      }
     </style>
   </head>
   <body>
     <?php
-      $query = "SELECT * FROM kpis";
+      $query = "SELECT kpiID FROM kpis";
       $result = mysqli_query($connection, $query); 
       
+        echo 'Stuff' ;
       while ($row = mysqli_fetch_array($result)) {
         echo '$row['kpiID']' ;
       }
@@ -39,4 +40,3 @@ $database = mysqli_select_db($connection, DB_DATABASE);
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
-
