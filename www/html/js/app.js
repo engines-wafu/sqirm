@@ -8,7 +8,7 @@ $(document).ready(function(){
       var kpiVal1 = [];
       var kpiVal2 = [];
       var kpiVal3 = [];
-      var kpiName = [kpiVar1, kpiVar2, kpiVar3];
+      var kpiName = [kpiVal1, kpiVal2, kpiVal3];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
