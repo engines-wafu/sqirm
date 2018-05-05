@@ -17,7 +17,7 @@ $(document).ready(function(){
       
       var ctx = $("#kpicanvas") + kpiCharts[i];
 
-      console.log(kpiCharts);
+      console.log(ctx);
 
     },
     error: function(data) {
