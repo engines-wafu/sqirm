@@ -73,7 +73,7 @@ $hazard = $_GET["hazID"]
           <script type="text/javascript" src="js/Chart.js"></script>
           <!-- Get kpis from database -->
           <?php
-        	$query = "SELECT kpiID, kpiDesc FROM kpis";
+            $query = "SELECT kpiID, kpiDesc FROM kpis";
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
