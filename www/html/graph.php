@@ -21,15 +21,15 @@ $database = mysqli_select_db($connection, DB_DATABASE);
     </style>
   </head>
   <body>
-    <?php
-      $query = "SELECT kpiID FROM kpis";
-      $result = mysqli_query($connection, $query); 
-      
-        echo 'Stuff' ;
-      while ($row = mysqli_fetch_array($result)) {
-        echo '$row['kpiID']' ;
-      }
-    ?>
+    //<?php
+    //  $query = "SELECT kpiID FROM kpis";
+    //  $result = mysqli_query($connection, $query); 
+    //  
+    //    echo 'Stuff' ;
+    //  while ($row = mysqli_fetch_array($result)) {
+    //    echo '$row['kpiID']' ;
+    //  }
+    //?>
     <div id="chart-container">
       <canvas id="mycanvas"></canvas>
     </div>
