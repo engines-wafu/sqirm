@@ -11,6 +11,9 @@ $(document).ready(function(){
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
+        kpiArr.push(data[i].kpiVal1);
+        kpiArr.push(data[i].kpiVal2);
+        kpiArr.push(data[i].kpiVal3);
       }
 
       console.log(kpiDesc);
