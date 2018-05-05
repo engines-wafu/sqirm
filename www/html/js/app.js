@@ -9,6 +9,7 @@ $(document).ready(function(){
       var kpiVal2 = [];
       var kpiVal3 = [];
       var kpiArr = [];
+      var kpiData = [];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
