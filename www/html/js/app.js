@@ -8,13 +8,13 @@ $(document).ready(function(){
       var kpiVal1 = [];
       var kpiVal2 = [];
       var kpiVal3 = [];
-      var kpiName = ["Good", "Near", "Bad"];
+      var kpiName = [kpiVar1, kpiVar2, kpiVar3];
 
       for(var i in data) {
         kpiDesc.push(data[i].kpiDesc);
-        kpiVal1.push(data[i].kpiVal1);
-        kpiVal2.push(data[i].kpiVal2);
-        kpiVal3.push(data[i].kpiVal3);
+        kpiArr.push(data[i].kpiVal1);
+        kpiArr.push(data[i].kpiVal2);
+        kpiArr.push(data[i].kpiVal3);
       }
 
       var kpiArr = [kpiVal1, kpiVal2, kpiVal3];
