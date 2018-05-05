@@ -1,7 +1,4 @@
 <?php
-//get kpiID from URL
-
-//$kpiNo = $_GET["kpiID"];
 
 //setting header to json
 header('Content-Type: application/json');
@@ -13,13 +10,12 @@ include "../../inc/dbinfo.inc";
 $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 if(!$mysqli){
-	die("Connection failed: " . $mysqli->error);
+  die("Connection failed: " . $mysqli->error);
 }
 
 //query to get data from the table
-$sql_line = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis";
 
-$query = sprintf($sql_line);
+$query = sprintf("SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis");
 
 //execute query
 $result = $mysqli->query($query);
@@ -27,7 +23,7 @@ $result = $mysqli->query($query);
 //loop through the returned data
 $data = array();
 foreach ($result as $row) {
- 	$data[] = $row;
+  $data[] = $row;
 }
 
 //free memory associated with result
