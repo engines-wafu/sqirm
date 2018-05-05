@@ -16,6 +16,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
     <style type="text/css">
       canvas {
         display:inline !important;
+        width:150px !important;
       }
       #chart-container {
         width: 150px;
@@ -37,4 +38,4 @@ while ($row = mysqli_fetch_array($result)) {
     <script type="text/javascript" src="js/Chart.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
-</html>
+<html/html>
