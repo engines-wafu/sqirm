@@ -16,10 +16,12 @@ $(document).ready(function(){
       //create canvases for each chart
       
       var ctx = [];
+      var ctemp = ["#kpicanvas"];
+      var kpiCanvas = [];
       
       for(var i in kpiCharts){
-        ctx.push(data[i].kpiID);
-        ctx.prepend(String.valueOf("#canvas"));
+        ctx = ctemp + kpiCharts[i] ;
+        kpiCanvas.push(kpiCharts[i].ctx);
       }
       
       console.log(ctx);
