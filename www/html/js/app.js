@@ -40,7 +40,7 @@ $(document).ready(function(){
       //      data: kpiArr
       //    }
       //  ]
-      //};
+      };
 
       //var ctx = $("#kpicanvas") + kpiID[i];
 
