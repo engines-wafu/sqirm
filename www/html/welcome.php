@@ -72,14 +72,14 @@ $hazard = $_GET["hazID"]
           <script type="text/javascript" src="js/jquery.js"></script>
           <script type="text/javascript" src="js/Chart.js"></script>
           <!-- Get kpis from database -->
+          <script type="text/javascript" src="js/app.js?kpiNo" . $kpiNo ></script> ;
           <?php
         	$query = "SELECT kpiID, kpiDesc FROM kpis";
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-              echo $row['kpiDesc'] ;
               echo '<canvas id="kpicanvas"' . $row['kpiID'] . ' width="150" height="150"></canvas>' ;
-              // echo '<script type="text/javascript" src="js/app.js"></script>' ;
+              echo '<script type="text/javascript" src="js/app.js?kpiNo" . $kpiNo></script>' ;
             }
           ?>
   
