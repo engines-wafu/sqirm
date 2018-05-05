@@ -35,15 +35,16 @@ $(document).ready(function(){
 
       //create datasets for each chart
 
-      var kpidata = [];
+      var dtx = [];
+      var dtemp = ["dataset"];
+      var kpidatasetarray= [];
 
       for(var i in data){
-          kpidata.push(data[i].kpiVal1);
-          kpidata.push(data[i].kpiVal2);
-          kpidata.push(data[i].kpiVal3);
+        dtx = dtemp + kpiID[i];
+        kpidatasetarray.push(dtx);
       }
 
-      console.log(kpidata);
+      console.log(kpidatasetarray);
 
     },
     error: function(data) {
