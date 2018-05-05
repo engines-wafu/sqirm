@@ -57,6 +57,7 @@ $(document).ready(function(){
         kpidatasetarray[i].push(kpiVal1[i], kpiVal2[i], kpiVal3[i]);
         console.log(kpidatasetarray[i]);
       }
+
       var chartdata = {
         labels: ["In Limits", "Near Limits", "Out of Limits"],
         datasets : [
@@ -69,11 +70,11 @@ $(document).ready(function(){
             ],
             borderColor: 'black',
             borderWidth: 3,
-            data: kpidatasetarray[0]
+            data: ["1","2","4"]
           }
         ]
       };
-      var Graph = new Chart(kpiCanvas[0], {
+      var Graph = new Chart("mycanvas", {
         type: 'doughnut',
         data: chartdata,
         options: {
