@@ -1,4 +1,4 @@
-var kpiID = <?php echo $row['kpiID'] ?> ;
+var kpiID = '1' ;
 
 $(document).ready(function(){
   $.ajax({
