@@ -7,9 +7,15 @@ $(document).ready(function(){
 
       var kpiCharts = [];
       var kpiIDs = [];
+      var kpiVal1 = [];
+      var kpiVal2 = [];
+      var kpiVal3 = [];
       
       for(var i in data){
         kpiCharts.push(data[i].kpiDesc);
+        kpiVal1.push(data[i].kpiVal1);
+        kpiVal2.push(data[i].kpiVal2);
+        kpiVal3.push(data[i].kpiVal3);
       }
       
       console.log(kpiCharts);
