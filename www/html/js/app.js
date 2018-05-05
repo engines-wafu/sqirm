@@ -4,6 +4,7 @@ $(document).ready(function(){
     method: "GET",
     success: function(data) {
       console.log(data);
+
       var kpiDesc = [];
       var kpiVal1 = [];
       var kpiVal2 = [];
@@ -15,14 +16,14 @@ $(document).ready(function(){
         kpiDesc.push(data[i].kpiDesc);
       }
 
-      for(var i in data) {
-        do {
-          kpiData.push(data[i].kpiVal1);
-          kpiData.push(data[i].kpiVal2);
-          kpiData.push(data[i].kpiVal3);
-        }
-        while (kpiDesc = i);
-      }
+      //for(var i in data) {
+      //  do {
+      //    kpiData.push(data[i].kpiVal1);
+      //    kpiData.push(data[i].kpiVal2);
+      //    kpiData.push(data[i].kpiVal3);
+      //  }
+      //  while (kpiDesc = i);
+      //}
 
       console.log(kpiDesc);
       console.log(kpiData);
