@@ -41,7 +41,7 @@ for(var i in kpiID) {
         ]
       };
 
-      var ctx = $("#kpicanvas");
+      var ctx = $("#kpicanvas" + kpiID[i]);
 
       var Graph = new Chart(ctx, {
         type: 'doughnut',
