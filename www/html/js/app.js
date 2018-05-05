@@ -89,7 +89,7 @@ $(document).ready(function(){
             fontFamily: 'Arial',
             fontColor: 'black',
             lineHeight: 1,
-            text: kpiDesc
+            text: kpiCharts[0]
           },
           layout:{
             padding:40
