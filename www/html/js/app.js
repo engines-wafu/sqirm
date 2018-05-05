@@ -34,7 +34,7 @@ $(document).ready(function(){
       console.log(kpiCanvas);
 
       //create datasets for each chart
-
+  
       var dtx = [];
       var dtemp = ["dataset"];
       var kpidatasetarray= [];
@@ -47,7 +47,10 @@ $(document).ready(function(){
       console.log(kpidatasetarray);
 
       for(var i in kpidatasetarray){
-        kpidatasetarray[i] = ["1", "2", "3", "4"]; 
+        for(var j in data){
+          kpidatasetarray[i] = [];
+          kpidatasetarray[i].push(data.kpiVal1, data.kpiVal2, data.kpiVal3);
+        }
         console.log(kpidatasetarray[i]);
       }
 
