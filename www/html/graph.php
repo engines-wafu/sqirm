@@ -13,15 +13,25 @@ $database = mysqli_select_db($connection, DB_DATABASE);
 <html>
   <head>
     <title>ChartJS - BarGraph</title>
+    <style type="text/css">
+      canvas{
+        width:1000px !important;
+        height:600px !important;
+      }
+      #chart-container {
+        width: 150px;
+        height: 150px;
+      }
+    </style>
   </head>
   <body>
-    <?php
-      $query = "SELECT kpiID FROM kpis";
-      $result = mysqli_query($connection, $query); 
-      while ($row = mysqli_fetch_array($result)) {
-        echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" style="width:"150" height:"150""></canvas>';
-      }
-    ?>
+<?php
+$query = "SELECT kpiID FROM kpis";
+$result = mysqli_query($connection, $query); 
+while ($row = mysqli_fetch_array($result)) {
+  echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" style="width:"150" height:"150""></canvas>';
+}
+?>
 
     <!-- javascript -->
     <script type="text/javascript" src="js/jquery.js"></script>
