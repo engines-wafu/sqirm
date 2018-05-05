@@ -80,7 +80,7 @@ $hazard = $_GET["hazID"]
 
               echo '<canvas id="kpicanvas"' . $row['kpiID'] . ' width="150" height="150"></canvas>' ;
 
-              echo '<script type="text/javascript"> var str = "<?php echo $row['kpiID'] ?>"; </script>' ;
+              //echo '<script type="text/javascript"> var str = "<?php echo $row['kpiID'] ?>"; </script>' ;
 
               echo '<script type="text/javascript" src="js/app.js"></script>' ;
             }
