@@ -1,5 +1,4 @@
 var kpiID = '1' ;
-document.writeln(kpiID);
 
 $(document).ready(function(){
   $.ajax({

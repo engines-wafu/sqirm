@@ -77,8 +77,6 @@ $hazard = $_GET["hazID"]
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-              
-              //$dataURL = 'http://ec2-13-56-14-28.us-west-1.compute.amazonaws.com/api/data.php?kpiID=' . $row['kpiID'] ;
 
               echo '<canvas id="kpicanvas"' . $row['kpiID'] . ' width="150" height="150"></canvas>' ;
 
