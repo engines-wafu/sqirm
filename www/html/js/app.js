@@ -24,7 +24,7 @@ $(document).ready(function(){
         labels: ["Red", "Amber", "Green"],
         datasets : [
           {
-            labels: ["Green", "Yellow", "Red"],
+            label: 'KPI Score',
             backgroundColor: [
               'green',
               'yellow',
@@ -35,6 +35,7 @@ $(document).ready(function(){
               'black',
               'black',
             ],
+            borderWidth: 3
             data: kpiArr
           }
         ]
@@ -45,25 +46,6 @@ $(document).ready(function(){
       var Graph = new Chart(ctx, {
         type: 'doughnut',
         data: chartdata
-        options: {
-          circumference: Math.PI,
-          rotation: 1.0 * Math.PI,
-          percentageInnerCutout: 10,
-          responsive: false,
-          legend: {
-            display: false
-          },
-          title: {
-            display: true,
-            fontFamily: 'Arial',
-            fontColor: 'black',
-            lineHeight: 1,
-            text: 'Self Audits'
-          },
-          layout:{
-            padding:40
-          },
-        }
       });
     },
     error: function(data) {
