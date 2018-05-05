@@ -22,8 +22,8 @@ $database = mysqli_select_db($connection, DB_DATABASE);
   </head>
   <body>
     <?php
-    //  $query = "SELECT kpiID FROM kpis";
-    //  $result = mysqli_query($connection, $query); 
+      $query = "SELECT kpiID FROM kpis";
+      $result = mysqli_query($connection, $query); 
     //  
     //    echo 'Stuff' ;
     //  while ($row = mysqli_fetch_array($result)) {
