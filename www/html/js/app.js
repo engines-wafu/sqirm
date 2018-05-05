@@ -20,7 +20,7 @@ $(document).ready(function(){
         labels: kpiDesc,
         datasets : [
           {
-            label: 'Player Score',
+            label: 'KPI Score',
             backgroundColor: 'rgba(200, 200, 200, 0.75)',
             borderColor: 'rgba(200, 200, 200, 0.75)',
             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
@@ -32,8 +32,8 @@ $(document).ready(function(){
 
       var ctx = $("#mycanvas");
 
-      var barGraph = new Chart(ctx, {
-        type: 'bar',
+      var Graph = new Chart(ctx, {
+        type: 'doughnut',
         data: chartdata
       });
     },
