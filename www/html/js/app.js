@@ -27,7 +27,7 @@ $(document).ready(function(){
       var kpiCanvas = [];
       
       for(var i in data){
-        ctx = ctemp + kpiID[i] ;
+        ctx = ctemp + kpiID[i];
         kpiCanvas.push(ctx);
       }
       
