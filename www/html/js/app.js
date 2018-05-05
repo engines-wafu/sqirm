@@ -53,10 +53,8 @@ $(document).ready(function(){
       console.log(kpidatasetarray);
 
       for(var i in kpidatasetarray){
-        for(var j in data){
-          kpidatasetarray[i] = [];
-          kpidatasetarray[i].push(kpiVal1, kpiVal2, kpiVal3);
-        }
+        kpidatasetarray[i] = [];
+        kpidatasetarray[i].push(kpiVal1[i], kpiVal2[i], kpiVal3[i]);
         console.log(kpidatasetarray[i]);
       }
 
