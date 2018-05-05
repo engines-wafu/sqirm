@@ -26,6 +26,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
       $query = "SELECT kpiID FROM kpis";
       $result = mysqli_query($connection, $query); 
       
+      echo 'Here it comes:' ;
       while ($row = mysqli_fetch_array($result)) {
         echo '$row['kpiID']' ;
       }
