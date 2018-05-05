@@ -6,12 +6,19 @@ $(document).ready(function(){
       console.log(data);
 
       var kpiCharts = [];
+      var kpiIDs = [];
       
       for(var i in data){
-        kpiCharts.push(data[i].kpiID);
+        kpiCharts.push(data[i].kpiDesc);
       }
       
       console.log(kpiCharts);
+
+      for(var i in data){
+        kpiIDs.push(data[i].kpiID);
+      }
+      
+      console.log(kpiIDs);
 
       //create canvases for each chart
       
@@ -19,12 +26,12 @@ $(document).ready(function(){
       var ctemp = ["#kpicanvas"];
       var kpiCanvas = [];
       
-      for(var i in kpiCharts){
-        ctx = ctemp + kpiCharts[i] ;
+      for(var i in kpiIDs){
+        ctx = ctemp + kpiIDs[i] ;
         kpiCanvas.push(kpiCharts[i].ctx);
       }
       
-      console.log(ctx);
+      console.log(kpiCanvas);
 
     },
     error: function(data) {
