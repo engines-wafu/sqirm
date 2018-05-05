@@ -9,7 +9,7 @@ $(document).ready(function() {
     success : function(data){
       console.log(data);
 
-      var kpivals = {
+      var kpiVal = {
         kpiVal1 : [],
         kpiVal2 : [],
         kpiVal3 : []
