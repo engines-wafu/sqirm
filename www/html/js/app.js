@@ -25,7 +25,7 @@ $(document).ready(function(){
             borderColor: 'rgba(200, 200, 200, 0.75)',
             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
             hoverBorderColor: 'rgba(200, 200, 200, 1)',
-            data: score
+            data: kpiVal1
           }
         ]
       };
