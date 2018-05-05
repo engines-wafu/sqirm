@@ -18,6 +18,10 @@ $database = mysqli_select_db($connection, DB_DATABASE);
         width: 150px;
         height: 150px;
       }
+      canvas {
+        width: 150px;
+        height: 150px;
+      }
     </style>
   </head>
   <body>
