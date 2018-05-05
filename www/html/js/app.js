@@ -17,10 +17,6 @@ $(document).ready(function(){
       
       var ctx = [];
       
-      for(var i in kpiCharts)
-        var ctx = $("#kpicanvas") + kpiCharts[i];
-      }
-
       console.log(ctx);
 
     },
