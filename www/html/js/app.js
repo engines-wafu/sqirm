@@ -80,7 +80,6 @@ $(document).ready(function(){
           data: chartdata,
           options: {
             responsive: false,
-            maintainAspectRatio: true,
             circumference: Math.PI,
             rotation: 1.0 * Math.PI,
             percentageInnerCutout: 10,
