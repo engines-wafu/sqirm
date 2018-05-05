@@ -25,7 +25,7 @@ $query = "SELECT kpiID FROM kpis";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
   echo '<div width=150 height=150>';
-  echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" width="75" !important height="150" !important></canvas>';
+  echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" width="150" !important height="150" !important></canvas>';
   echo '</div>';
 }
 ?>
