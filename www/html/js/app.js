@@ -18,7 +18,7 @@ $(document).ready(function(){
       var ctx = [];
       
       for(var i in kpiCharts){
-        kpiCharts.push(data[i].ctx);
+        ctx.push(data[i].kpiDesc);
       }
       
       console.log(ctx);
