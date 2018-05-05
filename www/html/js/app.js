@@ -1,8 +1,8 @@
 var kpiID = [1, 3];
 console.log(kpiID);
 
+$(document).ready(function(){
 for(var i in kpiID) {
-  $(document).ready(function(){
   $.ajax({
     url: "http://ec2-13-56-14-28.us-west-1.compute.amazonaws.com/api/data.php?kpiID=" + kpiID[i] ,
     method: "GET",
