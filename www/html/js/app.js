@@ -63,7 +63,7 @@ $(document).ready(function(){
           labels: ["In Limits", "Near Limits", "Out of Limits"],
           datasets : [
             {
-              label: kpiCharts[0],
+              label: kpiCharts[i],
               backgroundColor: [
                 'green',
                 'yellow',
@@ -71,11 +71,11 @@ $(document).ready(function(){
               ],
               borderColor: 'black',
               borderWidth: 3,
-              data: kpidatasetarray[0]
+              data: kpidatasetarray[i]
             }
           ]
         };
-        var Graph = new Chart(kpiCanvas[0], {
+        var Graph = new Chart(kpiCanvas[i], {
           type: 'doughnut',
           data: chartdata,
           options: {
@@ -91,7 +91,7 @@ $(document).ready(function(){
               fontFamily: 'Arial',
               fontColor: 'black',
               lineHeight: 1,
-              text: kpiCharts[0]
+              text: kpiCharts[i]
             },
             layout:{
               padding:40
