@@ -3,10 +3,8 @@ $(document).ready(function(){
     url: "http://ec2-13-56-14-28.us-west-1.compute.amazonaws.com/api/data.php",
     method: "GET",
     success: function(data) {
-      console.log(data);
     },
     error: function(data) {
-      console.log(data);
     }
   });
 });
