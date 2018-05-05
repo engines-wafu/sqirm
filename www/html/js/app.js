@@ -24,14 +24,39 @@ $(document).ready(function(){
         labels: ["Red", "Amber", "Green"],
         datasets : [
           {
-            label: 'KPI Score',
-            backgroundColor: 'rgba(200, 200, 200, 0.75)',
-            borderColor: 'rgba(200, 200, 200, 0.75)',
-            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            labels: ["Green", "Yellow", "Red"],
+            backgroundColor: [
+              'green',
+              'yellow',
+              'red',
+            ],
+            borderColor: [
+              'black',
+              'black',
+              'black',
+            ],
             data: kpiArr
           }
         ]
+        options: {
+          circumference: Math.PI,
+          rotation: 1.0 * Math.PI,
+          percentageInnerCutout: 10,
+          responsive: false,
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            fontFamily: 'Arial',
+            fontColor: 'black',
+            lineHeight: 1,
+            text: 'Self Audits'
+          },
+          layout:{
+            padding:40
+          },
+        }
       };
 
       var ctx = $("#mycanvas");
