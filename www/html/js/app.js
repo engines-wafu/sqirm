@@ -4,6 +4,13 @@ $(document).ready(function(){
     method: "GET",
     success: function(data) {
       console.log(data);
+
+      var kpiCharts = [];
+      
+      for(var i in data){
+        kpiCharts.push(data[i].kpiDesc
+      }
+
     },
     error: function(data) {
     }
