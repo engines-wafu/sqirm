@@ -1,4 +1,4 @@
-var kpiID = '1' ;
+var kpiID = <?php $kpiID; ?> ;
 
 $(document).ready(function(){
   $.ajax({
