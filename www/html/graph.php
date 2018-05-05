@@ -13,12 +13,6 @@ $database = mysqli_select_db($connection, DB_DATABASE);
 <html>
   <head>
     <title>ChartJS - BarGraph</title>
-    <style type="text/css">
-      #chart-container {
-        width: 150px;
-        height: 150px;
-      }
-    </style>
   </head>
   <body>
     <?php
