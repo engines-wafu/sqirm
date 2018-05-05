@@ -16,8 +16,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
     <style type="text/css">
       canvas {
         display:inline !important;
-        width:150 !important;
-        height:150 !important;
+        width:50% !important;
       }
     </style>
   </head>
