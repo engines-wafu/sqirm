@@ -19,6 +19,8 @@ $(document).ready(function(){
 
       var kpiArr = [kpiVal1, kpiVal2, kpiVal3];
 
+      console.log(kpiArr);
+
       var chartdata = {
         labels: kpiName,
         datasets : [
@@ -28,7 +30,7 @@ $(document).ready(function(){
             borderColor: 'rgba(200, 200, 200, 0.75)',
             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
             hoverBorderColor: 'rgba(200, 200, 200, 1)',
-            data: kpiVal1
+            data: kpiArr
           }
         ]
       };
