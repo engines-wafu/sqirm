@@ -15,7 +15,7 @@ $(document).ready(function(){
 
       //create canvases for each chart
       
-      var ctx = $("#kpicanvas") + kpiID[i];
+      var ctx = $("#kpicanvas") + kpiCharts[i];
 
       console.log(kpiCharts);
 
