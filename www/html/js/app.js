@@ -10,6 +10,14 @@ $(document).ready(function(){
       for(var i in data){
         kpiCharts.push(data[i].kpiDesc);
       }
+      
+      console.log(kpiCharts);
+
+      //create canvases for each chart
+      
+      var ctx = $("#kpicanvas") + kpiID[i];
+
+      console.log(kpiCharts);
 
     },
     error: function(data) {
