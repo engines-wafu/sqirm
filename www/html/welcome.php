@@ -67,7 +67,6 @@ $hazard = $_GET["hazID"]
         <!-- Right top article -->
         <div>
           <h2>Key Performance Indicators</h2>
-          <canvas id="mycanvas"></canvas>
   
           <!-- javascript -->
           <script type="text/javascript" src="js/jquery.js"></script>
