@@ -38,6 +38,13 @@ $(document).ready(function(){
             data: kpiArr
           }
         ]
+      };
+
+      var ctx = $("#mycanvas");
+
+      var Graph = new Chart(ctx, {
+        type: 'doughnut',
+        data: chartdata
         options: {
           circumference: Math.PI,
           rotation: 1.0 * Math.PI,
@@ -57,13 +64,6 @@ $(document).ready(function(){
             padding:40
           },
         }
-      };
-
-      var ctx = $("#mycanvas");
-
-      var Graph = new Chart(ctx, {
-        type: 'doughnut',
-        data: chartdata
       });
     },
     error: function(data) {
