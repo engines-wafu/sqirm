@@ -79,7 +79,7 @@ $hazard = $_GET["hazID"]
           
             while ($row = mysqli_fetch_array($result)) {
               echo $row['kpiDesc'] ;
-              echo '<canvas id="kpicanvas"' . $row['kpiID'] . '></canvas>' ;
+              echo '<canvas id="kpicanvas"' . $row['kpiID'] . ' width="150" height="150"></canvas>' ;
               // echo '<script type="text/javascript" src="js/app.js"></script>' ;
             }
           ?>
