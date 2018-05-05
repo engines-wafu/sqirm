@@ -15,9 +15,16 @@ $(document).ready(function(){
 
       //create canvases for each chart
       
-      var ctx = $("#kpicanvas") + kpiCharts[i];
+      var ctx = [];
+      var canvas = [];
+      
+      for(var i in kpiCharts)
+        var ctx = $("#kpicanvas") + kpiCharts[i];
+        canvas.push(ctx.canvas);
+      }
 
       console.log(ctx);
+      console.log(canvas);
 
     },
     error: function(data) {
