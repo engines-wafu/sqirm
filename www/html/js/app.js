@@ -4,6 +4,7 @@ $(document).ready(function(){
     method: "GET",
     success: function(data) {
       console.log(data);
+    }
 
       //var kpiDesc = [];
       //var kpiVal1 = [];
@@ -40,7 +41,7 @@ $(document).ready(function(){
       //      data: kpiArr
       //    }
       //  ]
-      };
+      //};
 
       //var ctx = $("#kpicanvas") + kpiID[i];
 
