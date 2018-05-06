@@ -87,10 +87,12 @@ $(document).ready(function(){
               display: false
             },
             title: {
-              display: false,
+              display: true,
               fontFamily: 'Arial',
               fontColor: 'black',
               lineHeight: 1,
+              position: 'bottom',
+              padding: 2,
               text: kpiCharts[i]
             },
             layout:{
