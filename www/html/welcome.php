@@ -42,12 +42,61 @@ $hazard = $_GET["hazID"]
 
     <section>
       <!-- Left division -->
-      <article id=> 
+      <article> 
         <div>
-          <h3>Controls</h3>
+          <h2>List of Active Hazards</h2>
+          <!-- Get hazards from database -->
+          <?php
+          		$query = "SELECT * FROM hazard";
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+            		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+            }
+          ?>
         </div>
       </article>
 
+      <!-- Centre article -->
+      <article>
+        <div>
+          <h2>List of Active Controls</h2>
+          <!-- Get controls from database -->
+          <?php
+            $query = "SELECT * FROM controls ORDER BY conWRAG";
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+            		echo '<p class="' . $row['conWRAG'] . ' tile_control"><b>' . $row['conID'] . ' - ' . $row['conDesc'] . '</b></p>' ;
+            }
+	         ?>	
+        </div>
+      </article>
+
+      <!-- Right article -->
+      <article>
+        <!-- Right top article -->
+        <div width="400" !important>
+          <h2>Key Performance Indicators</h2>
+          
+          <?php
+          $query = "SELECT kpiID, kpiDesc FROM kpis";
+          $result = mysqli_query($connection, $query); 
+          while ($row = mysqli_fetch_array($result)) {
+            echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
+          }
+          ?>
+
+          <!-- javascript -->
+          <script type="text/javascript" src="js/jquery.js"></script>
+          <script type="text/javascript" src="js/Chart.js"></script>
+          <script type="text/javascript" src="js/app.js"></script>
+        </div>
+        <!-- Right top article -->
+        <div>
+		  <h2>My Actions and Issues</h2>
+        </div>
+      </article>
     </section>
 
   </body>
