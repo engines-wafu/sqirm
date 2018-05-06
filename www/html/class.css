@@ -96,9 +96,6 @@ th {
   width: 250px;
 }
 [class*="kpi"] {
-  border-style: solid;
-  border-width: 3px;
-  border-color: black;
   width: 110 !important;
   height: 110 !important;
   border-collapse: collapse;
