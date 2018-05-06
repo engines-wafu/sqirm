@@ -76,7 +76,7 @@ $(document).ready(function(){
           ]
         };
         var Graph = new Chart(kpiCanvas[i], {
-          type: 'doughnut',
+          type: 'pie',
           data: chartdata,
           options: {
 	           maintainAspectRatio: true,	
