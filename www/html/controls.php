@@ -44,16 +44,17 @@ $hazard = $_GET["conID"]
       <!-- Left division -->
       <article> 
         <div>
-          <h2>List of Active Hazards</h2>
+          <h2>
           <!-- Get hazards from database -->
           <?php
-          		$query = "SELECT * FROM hazard";
+          		$query = "SELECT conDesc FROM controls WHERE conID='" . $hazard . "'";
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
             		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
             }
           ?>
+          </h2>
         </div>
       </article>
     </section>
