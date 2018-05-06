@@ -105,4 +105,5 @@ th {
   margin: auto;
   border-collapse: collapse;
   padding: 0px;
+  display: inline-block;
 }
