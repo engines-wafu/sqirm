@@ -75,7 +75,6 @@ $(document).ready(function(){
             }
           ]
         };
-        var kpiCanvas = $("#kpicanvas0").getContext("2d");
         var Graph = new Chart(kpiCanvas[i], {
           type: 'doughnut',
           data: chartdata,
