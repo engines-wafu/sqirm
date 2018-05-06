@@ -18,7 +18,8 @@ $hazard = $_GET["hazID"]
     </style>
   </head>
   <body>
-    <div class="content">
+    <article>
+      <div class="content">
       <!-- notification message -->
       <?php if (isset($_SESSION['success'])) : ?>
       <div>
@@ -36,6 +37,7 @@ $hazard = $_GET["hazID"]
         <?php endif ?>
       </div>
     </div>
+    </article>
     <!-- Main Splash Page Sections -->
 
     <section>

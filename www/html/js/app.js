@@ -76,7 +76,7 @@ $(document).ready(function(){
           ]
         };
         var Graph = new Chart(kpiCanvas[i], {
-          type: 'pie',
+          type: 'doughnut',
           data: chartdata,
           options: {
 	           maintainAspectRatio: true,	
@@ -86,7 +86,9 @@ $(document).ready(function(){
             cutoutPercentage: 10,
             legend: {
               display: false
-              padding:40
+            },
+            layout: {
+              padding: 5
             },
             title: {
               display: true,
