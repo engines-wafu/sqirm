@@ -81,9 +81,9 @@ $(document).ready(function(){
           options: {
 	           maintainAspectRatio: false,	
 	           Responsive: true,	
-            circumference: 1.5 * Math.PI,
-            rotation: 0.75 * Math.PI,
-            cutoutPercentage: 80,
+            circumference: Math.PI,
+            rotation: Math.PI,
+            cutoutPercentage: 60,
             legend: {
               display: false
             },
