@@ -70,7 +70,7 @@ $(document).ready(function(){
                 'red'
               ],
               borderColor: 'black',
-              borderWidth: 3,
+              borderWidth: 6,
               data: kpidatasetarray[i]
             }
           ]
@@ -91,7 +91,7 @@ $(document).ready(function(){
               display: true,
               fontFamily: 'Arial',
               fontColor: 'black',
-              fontSize: 20,
+              fontSize: 30,
               lineHeight: 1,
               position: 'bottom',
               padding: 2,
