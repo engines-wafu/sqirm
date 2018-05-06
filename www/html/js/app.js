@@ -87,7 +87,7 @@ $(document).ready(function(){
               display: false
             },
             title: {
-              display: true,
+              display: false,
               fontFamily: 'Arial',
               fontColor: 'black',
               lineHeight: 1,
