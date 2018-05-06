@@ -72,7 +72,7 @@ $hazard = $_GET["hazID"]
           $query = "SELECT kpiID FROM kpis";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
-            echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" width="160" !important height="160" !important></canvas>';
+            echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" width="160" !important height="160" !important block=inline></canvas>';
           }
           ?>
 
@@ -83,7 +83,7 @@ $hazard = $_GET["hazID"]
         </div>
         <!-- Right top article -->
         <div>
-		  <h2>My Actions and Issues1</h2>
+		  <h2>My Actions and Issues</h2>
         </div>
       </article>
     </section>
