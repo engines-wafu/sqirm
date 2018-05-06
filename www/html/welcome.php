@@ -83,7 +83,7 @@ $hazard = $_GET["hazID"]
         </div>
         <!-- Right top article -->
         <div>
-          <h2>Active Actions and Issues Assigned to Me</h2>
+		  <h2>My Actions and Issues1</h2>
         </div>
       </article>
     </section>
