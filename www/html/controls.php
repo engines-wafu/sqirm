@@ -8,7 +8,7 @@ $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
 $database = mysqli_select_db($connection, DB_DATABASE);
-$hazard = $_GET["hazID"]
+$hazard = $_GET["conID"]
 
 ?>
 <html>
@@ -31,10 +31,8 @@ $hazard = $_GET["hazID"]
         <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
-        <div flex=0>
-          <h1>Welcome Page</h1>
-        </div>
         <div>
+        <h1>Control Page for conID = <?php echo $_GET['conID'] ?></h1>
           <p>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
         </div>
         <?php endif ?>

@@ -31,8 +31,8 @@ $hazard = $_GET["hazID"]
         <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
-        <h1>Welcome Page</h1><br>
         <div>
+          <h1>Welcome Page</h1><br>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
         </div>
         <?php endif ?>
