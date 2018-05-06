@@ -4,6 +4,12 @@
   border: 3px solid black;
   background: red;
 }
+[class*="tile_control"] {
+  margin: 20px auto;
+  padding: 10px;
+  border: 3px solid black;
+  background: yellow;
+}
 [class*="tile_hazard"]:hover {
   border: 3px dashed black;
 }

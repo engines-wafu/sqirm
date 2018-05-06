@@ -59,6 +59,15 @@ $hazard = $_GET["hazID"]
       <article>
         <div>
           <h2>List of Active Controls</h2>
+          <!-- Get hazards from database -->
+          <?php
+            $query = "SELECT * FROM controls WHERE conActive = "Y" ORDER BY conWRAG";
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+            		echo '<p class="tile_control"><b>' . $row['conID'] . ' - ' . $row['conDesc'] . '</b></p>' ;
+            }
+	         ?>	
         </div>
       </article>
 
