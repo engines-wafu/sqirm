@@ -90,6 +90,7 @@ $(document).ready(function(){
               display: true,
               fontFamily: 'Arial',
               fontColor: 'black',
+              fontSize: 20,
               lineHeight: 1,
               position: 'bottom',
               padding: 2,
