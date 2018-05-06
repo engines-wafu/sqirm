@@ -96,14 +96,12 @@ th {
   width: 250px;
 }
 [class*="kpi"] {
-  background: repeating-linear-gradient(45deg, yellow, yellow 4px, #808080 4px, #808080 8px);
   border-style: solid;
   border-width: 3px;
   border-color: black;
-  width: 150 !important;
-  height: 150 !important;
-  margin: auto;
+  width: 110 !important;
+  height: 110 !important;
   border-collapse: collapse;
   padding: 0px;
-  display: inline-block;
+  display: inline-block !important;
 }
