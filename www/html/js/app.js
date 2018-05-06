@@ -82,7 +82,7 @@ $(document).ready(function(){
 	           maintainAspectRatio: false,	
 	           Responsive: true,	
             circumference: 1.5 * Math.PI,
-            rotation: 0.25 * Math.PI,
+            rotation: 0.75 * Math.PI,
             cutoutPercentage: 80,
             legend: {
               display: false
