@@ -69,7 +69,7 @@ $(document).ready(function(){
                 'yellow',
                 'red'
               ],
-              borderColor: 'black',
+              borderColor: 'white',
               borderWidth: 6,
               data: kpidatasetarray[i]
             }
@@ -80,12 +80,13 @@ $(document).ready(function(){
           data: chartdata,
           options: {
 	           maintainAspectRatio: false,	
-	           Responsive: false,	
+	           Responsive: true,	
             circumference: Math.PI,
             rotation: 1.5 * Math.PI,
             cutoutPercentage: 10,
             legend: {
               display: false
+              padding:40
             },
             title: {
               display: true,
@@ -96,9 +97,6 @@ $(document).ready(function(){
               position: 'bottom',
               padding: 2,
               text: kpiCharts[i]
-            },
-            layout:{
-              padding:40
             },
           }
         });
