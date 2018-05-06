@@ -65,7 +65,7 @@ $hazard = $_GET["hazID"]
       <!-- Right article -->
       <article>
         <!-- Right top article -->
-        <div width="400">
+        <div width="400" !important>
           <h2>Key Performance Indicators</h2>
           
           <?php
