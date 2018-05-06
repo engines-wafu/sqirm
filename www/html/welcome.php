@@ -21,7 +21,7 @@ $hazard = $_GET["hazID"]
     <div class="content">
       <!-- notification message -->
       <?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
+      <div>
         <h3>
           <?php 
             echo $_SESSION['success']; 
