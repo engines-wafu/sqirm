@@ -69,7 +69,7 @@ $(document).ready(function(){
                 'yellow',
                 'red'
               ],
-              borderColor: 'white',
+              borderColor: 'black',
               borderWidth: 6,
               data: kpidatasetarray[i]
             }
@@ -82,8 +82,8 @@ $(document).ready(function(){
 	           maintainAspectRatio: true,	
 	           Responsive: true,	
             circumference: 1.5 * Math.PI,
-            rotation: 1.0 * Math.PI,
-            cutoutPercentage: 10,
+            rotation: 0.5 * Math.PI,
+            cutoutPercentage: 80,
             legend: {
               display: false
             },
