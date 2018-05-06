@@ -79,7 +79,7 @@ $(document).ready(function(){
           type: 'doughnut',
           data: chartdata,
           options: {
-            responsive: true,
+            responsive: false,
 	           maintainAspectRatio: true,	
             circumference: Math.PI,
             rotation: 1.0 * Math.PI,
@@ -88,7 +88,7 @@ $(document).ready(function(){
               display: false
             },
             title: {
-              display: true,
+              display: false,
               fontFamily: 'Arial',
               fontColor: 'black',
               lineHeight: 1,
