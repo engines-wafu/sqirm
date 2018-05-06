@@ -65,7 +65,7 @@ $hazard = $_GET["hazID"]
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-            		echo '<p class="tile_control" class="' . $row['conWRAG'] . '"><b>' . $row['conID'] . ' - ' . $row['conDesc'] . '</b></p>' ;
+            		echo '<p class="' . $row['conWRAG'] . '"><b>' . $row['conID'] . ' - ' . $row['conDesc'] . '</b></p>' ;
             }
 	         ?>	
         </div>
