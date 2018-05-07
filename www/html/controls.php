@@ -33,7 +33,8 @@ $hazard = $_GET["conID"]
         <?php  if (isset($_SESSION['username'])) : ?>
         <div>
         <h1>Control Page</h1>
-          <p>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
+          <p>Logged in as <?php echo $_SESSION['username']; ?></p><br>
+          <p><a href="welcome.php?logout='1'">logout</a></p>
         </div>
         <?php endif ?>
       </div>
@@ -66,6 +67,31 @@ $hazard = $_GET["conID"]
               <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>> White<br>
             		<button type="submit" class="btn" name="reg_user">Update</button>
        	  		</form>
+        </div>
+      </article>
+      <!-- Center division -->
+      <article> 
+        <div>
+          <?php
+          		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+              $conDesc = $row['conDesc'];
+              $conActive = $row['conActive'];
+              $conWRAG = $row['conWRAG'];
+            }
+          ?>
+          <h2 id="h2control" class=<?php echo $conWRAG; ?>>Associated Hazards</h2>
+          <!-- Get hazards from database -->
+          <?php
+          		$query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc FROM hazard INNER JOIN threat_hazard ON hazard.hazID=threat_hazard.hazID INNER JOIN threat_control ON threat_hazard.thrID=threat_control.thrID INNER JOIN controls ON threat_control.conID=controls.conID WHERE controls.conID=" . $conID;
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+            		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+            }
+          ?>
         </div>
       </article>
     </section>
