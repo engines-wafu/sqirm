@@ -77,6 +77,7 @@ $hazard = $_GET["conID"]
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
+              $conID = $row['conID'];
               $conDesc = $row['conDesc'];
               $conActive = $row['conActive'];
               $conWRAG = $row['conWRAG'];
@@ -85,7 +86,7 @@ $hazard = $_GET["conID"]
           <h2>Associated Hazards</h2>
           <!-- Get hazards from database -->
           <?php
-          		$query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc FROM hazard INNER JOIN threat_hazard ON hazard.hazID=threat_hazard.hazID INNER JOIN threat_control ON threat_hazard.thrID=threat_control.thrID INNER JOIN controls ON threat_control.conID=controls.conID WHERE controls.conID=31";
+          		$query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc FROM hazard INNER JOIN threat_hazard ON hazard.hazID=threat_hazard.hazID INNER JOIN threat_control ON threat_hazard.thrID=threat_control.thrID INNER JOIN controls ON threat_control.conID=controls.conID WHERE controls.conID=" . $conID;
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
