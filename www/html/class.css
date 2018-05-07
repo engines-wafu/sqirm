@@ -101,7 +101,7 @@ th {
   border-style: hidden; /* hide standard table (collapsed) border */
   box-shadow: 0 0 0 3px black; /* this draws the table border  */
   width: 200px;
-  height: 200px;
+  height: 100px;
 }
 #control {
   width: 250px;

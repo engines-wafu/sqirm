@@ -80,7 +80,7 @@ $(document).ready(function(){
           data: chartdata,
           options: {
 	           maintainAspectRatio: true,	
-	           responsive: true,	
+	           responsive: false,	
             circumference: Math.PI,
             rotation: Math.PI,
             cutoutPercentage: 60,
@@ -91,7 +91,7 @@ $(document).ready(function(){
               padding: 10
             },
             title: {
-              display: true,
+              display: false,
               fontFamily: 'Arial',
               fontColor: 'black',
               fontSize: 30,
