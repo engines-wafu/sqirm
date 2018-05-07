@@ -62,6 +62,7 @@ $hazard = $_GET["conID"]
             		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?> checked<br />
             		<button type="submit" class="btn" name="reg_user">Update</button>
        	  		</form>
+            <?php echo $conActive?>
         </div>
       </article>
     </section>
