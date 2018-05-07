@@ -107,7 +107,7 @@ $hazard = $_GET["conID"]
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-            		echo '<p class="comments"><b>' . $row['comID'] . ' - '</b>' . $row['comment'] . '<br><b>By: </b>' . $row['username'] . '<b> on </b>' . '</p>' ;
+            		echo '<p class="comments"><b>' . $row['comID'] . ' - </b>' . $row['comment'] . '<br><b>By: </b>' . $row['username'] . '<b> on </b>' . '</p>' ;
             }
           ?>
         </div>
