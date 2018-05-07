@@ -44,7 +44,7 @@ $hazard = $_GET["conID"]
     <section>
       <!-- Left division -->
       <article> 
-        <div>
+        <div style="height: 300px">
           <h2>Control Details</h2>
           <?php
           		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
@@ -70,9 +70,9 @@ $hazard = $_GET["conID"]
        	  		</form>
         </div>
       </article>
-      <!-- Center division -->
+      <!-- Right division -->
       <article> 
-        <div style="height: 400px">
+        <div style="height: 300px">
           <?php
           		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
             $result = mysqli_query($connection, $query); 
@@ -97,6 +97,12 @@ $hazard = $_GET["conID"]
         </div>
       </article>
     </section>
-
+    <section>
+      <article>
+        <div>
+          <h2>Comments</h2>
+        </div>
+      </article>
+    </section>
   </body>
 </html>
