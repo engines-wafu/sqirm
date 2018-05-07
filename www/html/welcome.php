@@ -47,12 +47,12 @@ $hazard = $_GET["hazID"]
           <h2>List of Active Hazards</h2>
           <!-- get hazards from database -->
           <?php
-          		$query = "select * from hazard";
-            $result = mysqli_query($connection, $query); 
+          $query = "select * from hazard";
+          $result = mysqli_query($connection, $query); 
           
-            while ($row = mysqli_fetch_array($result)) {
-            		echo '<p class="tile_hazard"><b><a href="riskview.php?hazid=' . $row['hazard.hazid'] . '">' . $row['hazard.hazid'] . ' - ' . $row['hazard.hazdesc'] . '</a></b></p>' ;
-            }
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<p class="tile_hazard"><b><a href="riskview.php?hazid=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+          }
           ?>
         </div>
       </article>
@@ -62,14 +62,14 @@ $hazard = $_GET["hazID"]
         <div>
           <h2>List of Active Controls</h2>
           <!-- Get controls from database -->
-          <?php
-            $query = "SELECT * FROM controls ORDER BY conWRAG";
-            $result = mysqli_query($connection, $query); 
-          
-            while ($row = mysqli_fetch_array($result)) {
-            		echo '<p class="' . $row['conWRAG'] . ' tile_control"><b><a href="controls.php?conID=' . $row['conID'] . '">' . $row['conID'] . ' - ' . $row['conDesc'] . '</a></b></p>' ;
-            }
-	         ?>	
+<?php
+$query = "SELECT * FROM controls ORDER BY conWRAG";
+$result = mysqli_query($connection, $query); 
+
+while ($row = mysqli_fetch_array($result)) {
+  echo '<p class="' . $row['conWRAG'] . ' tile_control"><b><a href="controls.php?conID=' . $row['conID'] . '">' . $row['conID'] . ' - ' . $row['conDesc'] . '</a></b></p>' ;
+}
+?>	
         </div>
       </article>
 
@@ -78,14 +78,14 @@ $hazard = $_GET["hazID"]
         <!-- Right top article -->
         <div width="400" !important>
           <h2>Key Performance Indicators</h2>
-          
-          <?php
-          $query = "SELECT kpiID, kpiDesc FROM kpis";
-          $result = mysqli_query($connection, $query); 
-          while ($row = mysqli_fetch_array($result)) {
-            echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-          }
-          ?>
+
+<?php
+$query = "SELECT kpiID, kpiDesc FROM kpis";
+$result = mysqli_query($connection, $query); 
+while ($row = mysqli_fetch_array($result)) {
+  echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
+}
+?>
 
           <!-- javascript -->
           <script type="text/javascript" src="js/jquery.js"></script>
@@ -94,7 +94,7 @@ $hazard = $_GET["hazID"]
         </div>
         <!-- Right top article -->
         <div>
-		  <h2>My Actions and Issues</h2>
+    <h2>My Actions and Issues</h2>
         </div>
       </article>
     </section>
