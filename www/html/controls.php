@@ -70,7 +70,7 @@ $hazard = $_GET["conID"]
      	  		</form>
           <?php
             $newDescription = $_POST['description'];
-            echo $newDescription ;
+            echo $newDescription . 'Words go here' ;
           ?>
         </div>
       </article>
