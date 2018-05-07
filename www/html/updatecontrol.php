@@ -15,7 +15,7 @@ $desc = $_POST['description'];
 $sql = "UPDATE controls SET conDesc = " . "'moar stuff'," . "conActive = 'Y' WHERE conID = " . $control;
 
 if (mysqli_query($connection, $sql)) {
-  echo "New record created successfully";
+  echo "Control Updated";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 }
