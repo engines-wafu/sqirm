@@ -72,7 +72,7 @@ $hazard = $_GET["conID"]
       </article>
       <!-- Center division -->
       <article> 
-        <div height: 400px !important>
+        <div style="height: 400px">
           <?php
           		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
             $result = mysqli_query($connection, $query); 
