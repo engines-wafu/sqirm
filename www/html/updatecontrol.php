@@ -11,7 +11,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
 $control = $_GET["conID"];
 
 $desc = $_POST['description'];
-if($_POST['active'] == "checked") {
+if($_POST['active'] == "on") {
   $active = "Y";
 } else {
   $active = "N";
