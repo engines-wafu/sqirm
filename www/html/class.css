@@ -109,7 +109,7 @@ th {
 [class*="kpiblock"] {
   width: 100 !important;
   height: 100 !important;
-  border: none;
+  border: none !important;
   border-collapse: collapse;
   padding: 0px;
   display: inline-block !important;
@@ -119,11 +119,13 @@ th {
   height: 80 !important;
   border-collapse: collapse;
   padding: 0px;
+  margin: 0px;
   display: block !important;
 }
 [class*="kpititle"] {
   padding: 0px;
+  margin: 0px;
   text-align: center;
-  border: none;
+  border: none !important;
   display: block !important;
 }
