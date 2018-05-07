@@ -66,6 +66,7 @@ $hazard = $_GET["conID"]
               <input type="radio" name="WRAGradio" value="green" <?php if ($conWRAG = "green") echo 'checked';?>> Green<br>
               <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG = "white") echo 'checked';?>> White<br>
             		<button type="submit" class="btn" name="reg_user">Update</button>
+            <?php echo $conWRAG; ?>
        	  		</form>
         </div>
       </article>
