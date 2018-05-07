@@ -57,17 +57,21 @@ $hazard = $_GET["conID"]
             }
           ?>
           <p id="pcontrol" class=<?php echo $conWRAG; ?>>
-            <?php echo $conDesc; ?>
+            <b><?php echo $conDesc; ?></b>
           </p>
-       	  		<form method="post" action="controls.php">
-            		<label>Description</label><input type="text" name="descrpition" size="100" value="<?php echo $conDesc; ?>"><br />
-            		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
-              <input type="radio" name="WRAGradio" value="red" <?php if ($conWRAG == "red") echo 'checked';?>> Red<br>
-              <input type="radio" name="WRAGradio" value="amber" <?php if ($conWRAG == "yellow") echo 'checked';?>> Amber<br>
-              <input type="radio" name="WRAGradio" value="green" <?php if ($conWRAG == "green") echo 'checked';?>> Green<br>
-              <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>> White<br>
-            		<button type="submit" class="btn" name="reg_user">Update</button>
-       	  		</form>
+     	  		<form method="post" action="controls.php">
+          		<label>Description</label><input type="text" name="descrpition" size="100" value="<?php echo $conDesc; ?>"><br />
+          		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
+            <input type="radio" name="WRAGradio" value="red" <?php if ($conWRAG == "red") echo 'checked';?>> Red<br>
+            <input type="radio" name="WRAGradio" value="amber" <?php if ($conWRAG == "yellow") echo 'checked';?>> Amber<br>
+            <input type="radio" name="WRAGradio" value="green" <?php if ($conWRAG == "green") echo 'checked';?>> Green<br>
+            <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>> White<br>
+          		<button type="submit" class="btn" name="reg_user">Update</button>
+     	  		</form>
+          <?php
+            $newDescription = $_POST['description'];
+            echo $newDescription ;
+          ?>
         </div>
       </article>
       <!-- Right division -->
