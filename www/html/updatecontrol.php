@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
   echo 'This is the thing: ' . $desc;
 };
 
-echo var_dump($_POST);
+echo 'contents of $_POST' . var_dump($_POST);
 
 $sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = 'Y' WHERE conID = " . $control;
 
