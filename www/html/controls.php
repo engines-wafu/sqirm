@@ -44,7 +44,6 @@ $hazard = $_GET["conID"]
       <!-- Left division -->
       <article> 
         <div>
-          <h2>
           <!-- Get hazards from database -->
           <?php
           		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
@@ -53,9 +52,11 @@ $hazard = $_GET["conID"]
             while ($row = mysqli_fetch_array($result)) {
               $conDesc = $row['conDesc'];
               $conActive = $row['conActive'];
-            		echo $conDesc;
+              $conWRAG = $row['conWRAG'];
             }
           ?>
+          <h2 class=<?php echo $conWRAG; ?>>
+            <?php echo $conDesc; ?>
           </h2>
        	  		<form method="post" action="controls.php">
             		<label>Description</label><input type="text" name="descrpition" value="<?php echo $conDesc; ?>"><br />
