@@ -70,15 +70,10 @@ $hazard = $_GET["conID"]
           		<button type="submit" class="btn" name="reg_user">Update</button>
      	  		</form>
           <?php
-            if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
-              $description = $_POST['description'];
-              $active = $_POST['active'];
-//              $query = "INSERT INTO controls (conDesc, conActive) VALUES ('" . $description . "', '" . $active . "');";
+            $query = "INSERT INTO controls (conDesc, conActive) VALUES ("A description", "Y")";
+            if(mysqli_query($connection, $query)) {
+              echo 'STUFF';
             }
-              $query = "INSERT INTO controls (conDesc, conActive) VALUES ("A description", "Y")";
-              if(mysqli_query($connection, $query)) {
-                echo 'STUFF';
-              };
           ?>
         </div>
       </article>
