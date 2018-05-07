@@ -69,6 +69,17 @@ $hazard = $_GET["conID"]
           		<button type="submit" class="btn" name="reg_user">Update</button>
      	  		</form>
           <?php
+            if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
+              $description = $_POST['description'];
+              $active = $_POST['active'];
+              if($description !=''||$active !=''){
+                $query = mysql_query("INSERT INTO controls(conDesc, conActive) VALUES ('$description', '$active')");
+                echo "<br/><br/><span>Data Inserted successfully...!!</span>";
+              }
+              else{
+                echo "<p>Insertion Failed</p>";
+              }
+            }
             $newDescription = $_POST['description'];
             echo $newDescription . 'Words go here' ;
           ?>
