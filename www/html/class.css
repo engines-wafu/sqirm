@@ -107,6 +107,9 @@ th {
   width: 250px;
 }
 [class*="kpiblock"] {
+  width: 100 !important;
+  height: 100 !important;
+  border: none;
   border-collapse: collapse;
   padding: 0px;
   display: inline-block !important;
@@ -119,6 +122,8 @@ th {
   display: block !important;
 }
 [class*="kpititle"] {
-  padding: 10px;
+  padding: 0px;
+  text-align: center;
+  border: none;
   display: block !important;
 }
