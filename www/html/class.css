@@ -106,10 +106,19 @@ th {
 #control {
   width: 250px;
 }
-[class*="kpi"] {
+[class*="kpiblock"] {
+  border-collapse: collapse;
+  padding: 0px;
+  display: inline-block !important;
+}
+[class*="kpicanvas"] {
   width: 80 !important;
   height: 80 !important;
   border-collapse: collapse;
   padding: 0px;
-  display: inline-block !important;
+  display: block !important;
+}
+[class*="kpititle"] {
+  padding: 10px;
+  display: block !important;
 }
