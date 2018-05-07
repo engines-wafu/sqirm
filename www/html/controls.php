@@ -44,7 +44,6 @@ $hazard = $_GET["conID"]
       <!-- Left division -->
       <article> 
         <div>
-          <!-- Get hazards from database -->
           <?php
           		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
             $result = mysqli_query($connection, $query); 
@@ -55,18 +54,17 @@ $hazard = $_GET["conID"]
               $conWRAG = $row['conWRAG'];
             }
           ?>
-          <h2 class=<?php echo $conWRAG; ?>>
+          <h2 id="h2control" class=<?php echo $conWRAG; ?>>
             <?php echo $conDesc; ?>
           </h2>
        	  		<form method="post" action="controls.php">
             		<label>Description</label><input type="text" name="descrpition" value="<?php echo $conDesc; ?>"><br />
             		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
               <input type="radio" name="WRAGradio" value="red" <?php if ($conWRAG == "red") echo 'checked';?>> Red<br>
-              <input type="radio" name="WRAGradio" value="amber" <?php if ($conWRAG == "amber") echo 'checked';?>> Amber<br>
+              <input type="radio" name="WRAGradio" value="amber" <?php if ($conWRAG == "yellow") echo 'checked';?>> Amber<br>
               <input type="radio" name="WRAGradio" value="green" <?php if ($conWRAG == "green") echo 'checked';?>> Green<br>
               <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>> White<br>
             		<button type="submit" class="btn" name="reg_user">Update</button>
-            <?php echo $conWRAG; ?>
        	  		</form>
         </div>
       </article>
