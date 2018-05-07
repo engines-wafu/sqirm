@@ -74,10 +74,6 @@ $hazard = $_GET["conID"]
               $active = $_POST['active'];
               if($description !=''||$active !=''){
                 $query = mysql_query("INSERT INTO controls(conDesc, conActive) VALUES ('$description', '$active')");
-                echo "<br/><br/><span>Data Inserted successfully...!!</span>";
-              }
-              else{
-                echo "<p>Insertion Failed</p>";
               }
             }
             $newDescription = $_POST['description'];
