@@ -60,9 +60,8 @@ $hazard = $_GET["conID"]
        	  		<form method="post" action="controls.php">
             		<label>Description</label><input type="text" name="descrpition" value="<?php echo $conDesc; ?>"><br />
             		<label>Active</label><input type="checkbox" name="active" <?php
-                if ($conActive = "Y"): {
-                  echo 'checked'
-                };
+                if ($conActive = "Y")
+                  echo 'checked' ;
               ?><br />
             		<button type="submit" class="btn" name="reg_user">Update</button>
        	  		</form>
