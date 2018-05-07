@@ -10,10 +10,8 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 $database = mysqli_select_db($connection, DB_DATABASE);
 $control = $_GET["conID"];
 
-if(isset($_POST['submit'])){
-  $desc = $_POST['description'];
-  echo 'This is the thing: ' . $desc;
-};
+$desc = $_POST['description'];
+echo 'This is the thing: ' . $desc;
 
 echo 'contents of $_POST' . var_dump($_POST);
 
