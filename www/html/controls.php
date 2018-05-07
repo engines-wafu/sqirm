@@ -73,9 +73,10 @@ $hazard = $_GET["conID"]
             if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
               $description = $_POST['description'];
               $active = $_POST['active'];
-              $query = "INSERT INTO controls (conDesc, conActive) VALUES ('" . $description . "', '" . $active . "');";
-              echo $query;
+//              $query = "INSERT INTO controls (conDesc, conActive) VALUES ('" . $description . "', '" . $active . "');";
             }
+              $query = "INSERT INTO controls (conDesc, conActive) VALUES ("A description", "Y");";
+              mysqli_query($connection, $query);
           ?>
         </div>
       </article>
