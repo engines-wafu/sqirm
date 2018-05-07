@@ -56,9 +56,9 @@ $hazard = $_GET["conID"]
               $conWRAG = $row['conWRAG'];
             }
           ?>
-          <h2 id="h2control" class=<?php echo $conWRAG; ?>>
+          <p id="pcontrol" class=<?php echo $conWRAG; ?>>
             <?php echo $conDesc; ?>
-          </h2>
+          </p>
        	  		<form method="post" action="controls.php">
             		<label>Description</label><input type="text" name="descrpition" size="100" value="<?php echo $conDesc; ?>"><br />
             		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
@@ -71,8 +71,8 @@ $hazard = $_GET["conID"]
         </div>
       </article>
       <!-- Center division -->
-      <article height="400px"> 
-        <div>
+      <article> 
+        <div height="400px" !important>
           <?php
           		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
             $result = mysqli_query($connection, $query); 
