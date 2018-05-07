@@ -19,17 +19,11 @@ if($_POST['active'] == "on") {
 
 if ($_POST["WRAGradio"] == "red") {
   $wrag = "red";
-};
-
-if ($_POST["WRAGradio"] == "amber") {
+} else if ($_POST["WRAGradio"] == "amber") {
   $wrag = "yellow";
-};
-
-if ($_POST["WRAGradio"] == "green") {
+} else if ($_POST["WRAGradio"] == "green") {
   $wrag = "green";
-};
-
-if ($_POST["WRAGradio"] == "white") {
+} else if ($_POST["WRAGradio"] == "white") {
   $wrag = "white";
 };
 
