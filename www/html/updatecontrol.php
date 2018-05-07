@@ -13,7 +13,9 @@ $control = $_GET["conID"];
 if(isset($_POST['submit'])){
   $desc = $_POST['description'];
   echo 'This is the thing: ' . $desc;
-}
+};
+
+echo var_dump($_POST);
 
 $sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = 'Y' WHERE conID = " . $control;
 
