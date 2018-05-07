@@ -21,6 +21,18 @@ if ($_POST["WRAGradio"] == "red") {
   $wrag = "red";
 };
 
+if ($_POST["WRAGradio"] == "amber") {
+  $wrag = "yellow";
+};
+
+if ($_POST["WRAGradio"] == "green") {
+  $wrag = "green";
+};
+
+if ($_POST["WRAGradio"] == "white") {
+  $wrag = "white";
+};
+
 $sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = '" . $active . "' WHERE conID = " . $control;
 
 if (mysqli_query($connection, $sql)) {
