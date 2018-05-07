@@ -32,7 +32,7 @@ $sql = "UPDATE controls SET conWRAG = '" . $wrag .  "', conDesc = '" . $desc . "
 if (mysqli_query($connection, $sql)) {
   echo var_dump($_POST);
   echo "Control Updated";
-  header('Location: controls.html?conID=' . $control);
+  header('Location: controls.php?conID=' . $control);
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
