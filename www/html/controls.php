@@ -85,11 +85,11 @@ $hazard = $_GET["conID"]
           <h2 id="h2control" class=<?php echo $conWRAG; ?>>Associated Hazards</h2>
           <!-- Get hazards from database -->
           <?php
-          		$query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc FROM hazard INNER JOIN threat_hazard ON hazard.hazID=threat_hazard.hazID INNER JOIN threat_control ON threat_hazard.thrID=threat_control.thrID INNER JOIN controls ON threat_control.conID=controls.conID WHERE controls.conID=" . $conID;
+          		$query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc FROM hazard INNER JOIN threat_hazard ON hazard.hazID=threat_hazard.hazID INNER JOIN threat_control ON threat_hazard.thrID=threat_control.thrID INNER JOIN controls ON threat_control.conID=controls.conID";
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-            		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazard.hazID'] . '">' . $row['hazard.hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+            		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazard.hazID'] . '">' . $row['hazard.hazID'] . ' - ' . $row['hazard.hazDesc'] . '</a></b></p>' ;
             }
           ?>
         </div>
