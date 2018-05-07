@@ -13,7 +13,7 @@ $control = $_GET["conID"];
 if(isset($_POST['submit']){
   $desc = $_POST['description'];
   $active = $_POST['description'];
-}
+};
 
 $sql = "UPDATE controls SET conDesc = " . $desc . "conActive = 'Y' WHERE conID = " . $control;
 
