@@ -14,7 +14,7 @@ $desc = $_POST['description'];
 if($_POST['active'] = "checked") {
   $active = "Y";
 } else {
-  $active = "N"
+  $active = "N";
 };
 
 $sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = '" . $active . "' WHERE conID = " . $control;
