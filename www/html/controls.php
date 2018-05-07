@@ -69,12 +69,6 @@ $hazard = $_GET["conID"]
             <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>> White<br>
           		<button type="submit" class="btn" name="reg_user">Update</button>
      	  		</form>
-          <?php
-            $query = "INSERT INTO controls (conDesc, conActive) VALUES ("A description", "Y")";
-            if(mysqli_query($connection, $query)) {
-              echo 'STUFF';
-            }
-          ?>
         </div>
       </article>
       <!-- Right division -->
