@@ -13,7 +13,7 @@ $control = $_GET["conID"];
 $desc = "TEST";
 echo 'This is the thing: ' . $desc;
 
-$sql = "UPDATE controls SET conDesc = " . $desc . "conActive = 'Y' WHERE conID = " . $control;
+$sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = 'Y' WHERE conID = " . $control;
 
 if (mysqli_query($connection, $sql)) {
   echo "Control Updated";
