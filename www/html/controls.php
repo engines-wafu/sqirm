@@ -47,19 +47,24 @@ $hazard = $_GET["conID"]
           <h2>
           <!-- Get hazards from database -->
           <?php
-          		$query = "SELECT conDesc FROM controls WHERE conID='" . $hazard . "'";
+          		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
               $conDesc = $row['conDesc'];
+              $conActive = $row['conActive'];
             		echo $conDesc;
             }
           ?>
           </h2>
        	  		<form method="post" action="controls.php">
             		<label>Description</label><input type="text" name="descrpition" value="<?php echo $conDesc; ?>"><br />
-            		<label>Active</label><input type="checkbox" name="active" checked><br />
-            		<button type="submit" class="btn" name="reg_user">Register</button>
+            		<label>Active</label><input type="checkbox" name="active" <?php
+                if $conActive = "Y"{
+                  echo 'checked'
+                }
+              ?><br />
+            		<button type="submit" class="btn" name="reg_user">Update</button>
        	  		</form>
         </div>
       </article>
