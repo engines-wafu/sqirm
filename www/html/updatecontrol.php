@@ -27,7 +27,7 @@ if ($_POST["WRAGradio"] == "red") {
   $wrag = "white";
 };
 
-$sql = "UPDATE controls SET conWRAG = '" . $wrag .  "' conDesc = '" . $desc . "', conActive = '" . $active . "' WHERE conID = " . $control;
+$sql = "UPDATE controls SET conWRAG = '" . $wrag .  ",' conDesc = '" . $desc . "', conActive = '" . $active . "' WHERE conID = '" . $control . "'";
 
 if (mysqli_query($connection, $sql)) {
   echo var_dump($_POST);
