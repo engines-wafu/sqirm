@@ -20,7 +20,7 @@ if($_POST['active'] = "checked") {
 $sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = '" . $active . "' WHERE conID = " . $control;
 
 if (mysqli_query($connection, $sql)) {
-  echo $var_dump($_POST);
+  echo var_dump($_POST);
   echo "Control Updated";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
