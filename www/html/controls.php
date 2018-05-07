@@ -32,7 +32,7 @@ $hazard = $_GET["conID"]
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
         <div>
-        <h1>Control Page for conID = <?php echo $_GET['conID'] ?></h1>
+        <h1>Control Page</h1>
           <p>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </p>
         </div>
         <?php endif ?>
@@ -61,6 +61,7 @@ $hazard = $_GET["conID"]
        	  		<form method="post" action="controls.php">
             		<label>Description</label><input type="text" name="descrpition" value="<?php echo $conDesc; ?>"><br />
             		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
+            		<label>WRAG</label><input type="text" name="WRAG" value="<?php echo $conWRAG ;?>"> <br />
             		<button type="submit" class="btn" name="reg_user">Update</button>
        	  		</form>
         </div>
