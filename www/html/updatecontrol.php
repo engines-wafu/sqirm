@@ -10,7 +10,7 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 $database = mysqli_select_db($connection, DB_DATABASE);
 $control = $_GET["conID"];
 
-$desc = $_REQUEST['description'];
+$desc = $_POST['description'];
 echo 'This is the thing: ' . $desc;
 
 $sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = 'Y' WHERE conID = " . $control;
