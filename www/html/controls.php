@@ -102,6 +102,14 @@ $hazard = $_GET["conID"]
       <article>
         <div>
           <h2>Comments</h2>
+          <?php
+          		$query = "SELECT * FROM comments";
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+            		echo '<p class="comments"><b> $row['comID'] . ' - '</b>' . $row['comment'] . '<br><b>By: </b>' . $row['username'] . '<b> on </b>' . '</p>' ;
+            }
+          ?>
         </div>
       </article>
     </section>
