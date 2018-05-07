@@ -79,7 +79,7 @@ $(document).ready(function(){
           type: 'doughnut',
           data: chartdata,
           options: {
-	           maintainAspectRatio: false,	
+	           maintainAspectRatio: true,	
 	           responsive: true,	
             circumference: Math.PI,
             rotation: Math.PI,
