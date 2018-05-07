@@ -51,10 +51,16 @@ $hazard = $_GET["conID"]
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-            		echo $row['conDesc'];
+              $conDesc = $row['conDesc'];
+            		echo $conDesc;
             }
           ?>
           </h2>
+       	  		<form method="post" action="controls.php">
+            		<label>Description</label><input type="text" name="descrpition" value="<?php echo $conDesc; ?>"><br />
+            		<label>Active</label><input type="checkbox" name="active" checked><br />
+            		<button type="submit" class="btn" name="reg_user">Register</button>
+       	  		</form>
         </div>
       </article>
     </section>
