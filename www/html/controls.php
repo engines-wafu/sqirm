@@ -60,7 +60,7 @@ $hazard = $_GET["conID"]
           <p id="pcontrol" class=<?php echo $conWRAG; ?>>
             <b><?php echo $conDesc; ?></b>
           </p>
-     	  		<form method="post" <?php echo 'action="controls.php?conID=' . $conID . '"' ?>>
+     	  		<form method="post" action="updatecontrol.php">
           		<label>Description</label><input type="text" name="descrpition" size="100" value="<?php echo $conDesc; ?>"><br />
           		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
             <input type="radio" name="WRAGradio" value="red" <?php if ($conWRAG == "red") echo 'checked';?>> Red<br>
@@ -69,16 +69,6 @@ $hazard = $_GET["conID"]
             <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>> White<br>
           		<button type="submit" class="btn" name="reg_user">Update</button>
      	  		</form>
-          <?php
-            $sql = "INSERT INTO controls (conDesc, conActive)
-            VALUES ('Stuff in the thing', 'Y')";
-            
-            if (mysqli_query($connection, $sql)) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($connection);
-            }
-          ?>
         </div>
       </article>
       <!-- Right division -->
