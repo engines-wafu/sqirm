@@ -16,14 +16,9 @@ if($_POST['active'] == "checked") {
 } else {
   $active = "N";
 };
+
 if ($_POST["WRAGradio"] == "red") {
   $wrag = "red";
-} else ($_POST["WRAGradio"] == "amber") { 
-  $wrag = "yellow";
-} else ($_POST["WRAGradio"] == "green") {
-  $wrag = "green";
-} else ($_POST["WRAGradio"] == "white") {
-  $wrag = "white";
 };
 
 $sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = '" . $active . "' WHERE conID = " . $control;
