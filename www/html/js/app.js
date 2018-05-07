@@ -88,7 +88,7 @@ $(document).ready(function(){
               display: false
             },
             layout: {
-              padding: 5
+              padding: 10
             },
             title: {
               display: true,
