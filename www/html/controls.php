@@ -89,7 +89,7 @@ $hazard = $_GET["conID"]
             $result = mysqli_query($connection, $query); 
           
             while ($row = mysqli_fetch_array($result)) {
-            		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazard.hazID'] . '">' . $row['hazard.hazID'] . ' - ' . $row['hazard.hazDesc'] . '</a></b></p>' ;
+            		echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
             }
           ?>
         </div>
