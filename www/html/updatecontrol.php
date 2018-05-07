@@ -10,9 +10,12 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 $database = mysqli_select_db($connection, DB_DATABASE);
 $control = $_GET["conID"];
 
-$desc = $_POST['description'];
+if(isset($_POST['submit']){
+  $desc = $_POST['description'];
+  $active = $_POST['description'];
+}
 
-$sql = "UPDATE controls SET conDesc = " . "'moar stuff'," . "conActive = 'Y' WHERE conID = " . $control;
+$sql = "UPDATE controls SET conDesc = " . $desc . "conActive = 'Y' WHERE conID = " . $control;
 
 if (mysqli_query($connection, $sql)) {
   echo "Control Updated";
