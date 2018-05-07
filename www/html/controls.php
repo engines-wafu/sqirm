@@ -76,7 +76,9 @@ $hazard = $_GET["conID"]
 //              $query = "INSERT INTO controls (conDesc, conActive) VALUES ('" . $description . "', '" . $active . "');";
             }
               $query = "INSERT INTO controls (conDesc, conActive) VALUES ("A description", "Y");";
-              mysqli_query($connection, $query);
+              if(mysqli_query($connection, $query)) {
+                echo 'STUFF';
+              };
           ?>
         </div>
       </article>
