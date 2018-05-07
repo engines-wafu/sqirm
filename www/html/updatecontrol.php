@@ -13,9 +13,7 @@ $control = $_GET["conID"];
 $desc = $_POST['description'];
 echo 'This is the thing: ' . $desc;
 
-echo 'contents of $_POST' . var_dump($_POST);
-
-$sql = "UPDATE controls SET conDesc = '" . $desc . "', conActive = 'Y' WHERE conID = " . $control;
+$sql = "UPDATE controls SET conDesc = '" . "AHGHG" . "', conActive = 'Y' WHERE conID = " . $control;
 
 if (mysqli_query($connection, $sql)) {
   echo "Control Updated";
