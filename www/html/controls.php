@@ -60,7 +60,7 @@ $hazard = $_GET["conID"]
           <p id="pcontrol" class=<?php echo $conWRAG; ?>>
             <b><?php echo $conDesc; ?></b>
           </p>
-     	  		<form method="post" <?php echo 'action="updatecontrol.php?conID=' . $conID . '"' ?>>
+     	  		<form method="POST" <?php echo 'action="updatecontrol.php?conID=' . $conID . '"' ?>>
           		<label>Description</label><input type="text" name="descrpition" size="100" value="<?php echo $conDesc; ?>"><br />
           		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
             <input type="radio" name="WRAGradio" value="red" <?php if ($conWRAG == "red") echo 'checked';?>> Red<br>
