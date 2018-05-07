@@ -61,7 +61,13 @@ $hazard = $_GET["conID"]
        	  		<form method="post" action="controls.php">
             		<label>Description</label><input type="text" name="descrpition" value="<?php echo $conDesc; ?>"><br />
             		<label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>> <br />
-            		<label>WRAG</label><input type="text" name="WRAG" value="<?php echo $conWRAG ;?>"> <br />
+            		<label>WRAG</label><input list="WRAG" name="WRAG" value="<?php echo $conWRAG ;?>"> <br />
+                <datalist name="WRAG">
+                  <option value="red">Volvo</option>
+                  <option value="amber">Saab</option>
+                  <option value="green">Fiat</option>
+                  <option value="white">Audi</option>
+                </datalist>
             		<button type="submit" class="btn" name="reg_user">Update</button>
        	  		</form>
         </div>
