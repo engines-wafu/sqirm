@@ -108,11 +108,12 @@ th {
 }
 #kpiblock {
   width: 80 !important;
-  height: 100 !important;
+  height: 55 !important;
   border: none !important;
   border-collapse: collapse;
   align: center;
   padding: 0px;
+  margin: 5px;
   display: inline-block !important;
 }
 [class*="kpi"] {
