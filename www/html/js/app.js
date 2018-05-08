@@ -70,7 +70,7 @@ $(document).ready(function(){
                 'red'
               ],
               borderColor: 'black',
-              borderWidth: 1,
+              borderWidth: 6,
               data: kpidatasetarray[i]
             }
           ]
@@ -79,8 +79,8 @@ $(document).ready(function(){
           type: 'doughnut',
           data: chartdata,
           options: {
-	           maintainAspectRatio: false,	
-	           responsive: false,	
+	           maintainAspectRatio: true,	
+	           responsive: true,	
             circumference: Math.PI,
             rotation: Math.PI,
             cutoutPercentage: 60,
