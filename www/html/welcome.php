@@ -24,7 +24,6 @@ $hazard = $_GET["hazID"]
       <div>
         <h3>
           <?php 
-            echo $_SESSION['success']; 
             unset($_SESSION['success']);
           ?>
         </h3>
@@ -51,7 +50,7 @@ $hazard = $_GET["hazID"]
           $result = mysqli_query($connection, $query); 
           
           while ($row = mysqli_fetch_array($result)) {
-            echo '<p class="tile_hazard"><b><a href="riskview.php?hazid=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazid=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
           }
           ?>
         </div>
