@@ -83,7 +83,7 @@ $hazard = $_GET["hazID"]
           $query = "SELECT kpiID, kpiDesc FROM kpis";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
-            echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
+            echo '<canvas id="kpitop #kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
           }
           ?>
 
