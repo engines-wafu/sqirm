@@ -84,7 +84,7 @@ $hazard = $_GET["hazID"]
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             echo '<div id="kpicanvas">';
-            echo '   <canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
+            echo '   <canvas id="#kpicanvas #kpicanvas' . $row['kpiID'] . '"></canvas>';
             echo $row['kpiDesc'];
             echo '<div id="kpicanvas">';
           }
