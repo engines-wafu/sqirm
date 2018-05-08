@@ -110,12 +110,11 @@ while ($row4 = mysqli_fetch_array($result1)) {
 		echo '<td>';
 		echo '<table>';
 		echo '<tr>';
-		$qcon = "SELECT controls.conDesc, controls.conWRAG FROM controls INNER JOIN consequence_control ON consequence_control.conID = controls.conID WHERE consequence_control.csqID ='" . $row4['csqID'] . "' AND controls.conActive ='Y'";
+		$qcon = "SELECT controls.conID, controls.conDesc, controls.conWRAG FROM controls INNER JOIN consequence_control ON consequence_control.conID = controls.conID WHERE consequence_control.csqID ='" . $row4['csqID'] . "' AND controls.conActive ='Y'";
 		$result2 = mysqli_query($connection, $qcon);
 		while ($row6 = mysqli_fetch_array($result2)) {
 				echo '<tr>';
-				echo '<td id="control", class="' . $row6['conWRAG'] . '">';
-				echo $row6['conDesc'];
+				echo '<td id="control", class="' . $row6['conWRAG'] . '"><a href="controls.php?conID=' . $row6['conID'] . '">' . $row6['conDesc'] . '</a>';
 				echo '</td>';
 				echo '</tr>';
 		}
