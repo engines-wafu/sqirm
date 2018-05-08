@@ -83,9 +83,9 @@ $hazard = $_GET["hazID"]
           $query = "SELECT kpiID, kpiDesc FROM kpis";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
-            echo '<div id=#kpiblock>';
-              echo '<canvas id=#kpicanvas' . $row['kpiID'] . '></canvas>';
-              echo '<div id=#kpititle>' . $row['kpiDesc'] . '</div>';
+            echo '<div id="kpiblock">';
+              echo '<canvas id="kpicanvas"' . $row['kpiID'] . '></canvas>';
+              echo '<div id="kpititle">' . $row['kpiDesc'] . '</div>';
             echo '</div>';
           }
           ?>
