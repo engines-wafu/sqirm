@@ -68,8 +68,7 @@ while ($row3 = mysqli_fetch_array($result1)) {
 
 		while ($row5 = mysqli_fetch_array($result2)) {
 				echo '<tr>';
-				echo '<td id="control", class="' . $row5['conWRAG'] . '">';
-				echo $row5['conDesc'];
+				echo '<td id="control", class="' . $row5['conWRAG'] . '"><a href="controls.php?conID=' . $row5['conID'] . '">' . $row5['conDesc'] . '</a>';
 				echo '</td>';
 				echo '</tr>';
 		}
