@@ -116,7 +116,7 @@ th {
 }
 [class*="kpi"] {
   width: 80 !important;
-  height: 80 !important;
+  height: 40 !important;
   border-collapse: collapse;
   padding: 0px;
   margin: 0px;
