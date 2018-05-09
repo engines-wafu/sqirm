@@ -1,6 +1,6 @@
-# riskmanagement
+# sqirm
 
-## Simple risk management tool
+## Simple Quality Risk and Issue Management
 
 ### Aim
 
