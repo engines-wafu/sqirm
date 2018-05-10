@@ -18,10 +18,7 @@ $hazard = $_GET["hazID"]
   </head>
   <body>
     <div class="content">
-      <!-- notification message -->
-      <?php if (isset($_SESSION['success'])) : ?>
       <div>
-        <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
         <div>
