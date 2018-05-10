@@ -26,7 +26,7 @@ $hazard = $_GET["hazID"]
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
         </div>
         <div style="width: 20%; float:right" style="border:none padding:0">
-          <img src="img/logosm.pgn" width="150px"/>
+          <img src="img/logosm.png" width="80px"/>
         </div>
         <?php endif ?>
       </div>
