@@ -15,7 +15,7 @@
   <article style="border: none;"> </article>
   <article>
     <div class="container">
-      <div align=center>
+      <div align=center border=none>
         <img src="img/logosm.png" width="150px" align="center" />
       </div>
         <form method="post" action="login.php">

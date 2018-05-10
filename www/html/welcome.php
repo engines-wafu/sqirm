@@ -1,6 +1,7 @@
-<?php include "session.php"; ?>
-<?php include "../inc/dbinfo.inc"; ?>
-<?php
+<?php 
+
+include "session.php";
+include "../inc/dbinfo.inc"; 
 
 /* Connect to MySQL and select the database. */
 $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
@@ -20,18 +21,18 @@ $hazard = $_GET["hazID"]
   <body>
     <div class="content">
       <!-- notification message -->
-      <?php if (isset($_SESSION['success'])) : ?>
       <div>
-        <h3>
-          <?php 
-            unset($_SESSION['success']);
-          ?>
-        </h3>
         <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
-        <div>
-          <h1>Welcome Page</h1><br>
+        <div style="display:flex; justify-content:space-between">
+          <div>
+            <h1>Welcome Page</h1>
+          </div>
+          <div>
+            <img src="img/logosm.png" width="150px" />
+          </div>
+          <br>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
         </div>
         <?php endif ?>
