@@ -21,11 +21,6 @@ $hazard = $_GET["hazID"]
       <!-- notification message -->
       <?php if (isset($_SESSION['success'])) : ?>
       <div>
-        <h3>
-          <?php 
-            unset($_SESSION['success']);
-          ?>
-        </h3>
         <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
