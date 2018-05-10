@@ -1,6 +1,6 @@
 # sqirm
 
-## Simple Quality Risk and Issue Management
+## Simple Quality, Issue, and Risk Management
 
 ### Aim
 
