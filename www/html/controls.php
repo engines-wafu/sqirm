@@ -122,9 +122,15 @@ $hazard = $_GET["conID"]
     </section>
     <section>
       <article>
-        <h2>Comments</h2>
         <div class="ci">
-          <p>New comments go here</p>
+          <form>
+            <div class="ci2">
+              <input type="text" class="commentinput">
+            </div>
+            <div class="ci2">
+              <input type="button" value="Submit">
+            </div>
+          </form>
         </div>
         <?php
         $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'";

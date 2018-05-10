@@ -92,7 +92,7 @@ $hazard = $_GET["hazID"]
           <script type="text/javascript" src="js/app.js"></script>
         </div>
         <!-- Right top article -->
-        <div>
+        <div style="margin-top: 10px;">
           <h2>My Actions and Issues</h2>
         </div>
       </article>

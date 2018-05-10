@@ -106,15 +106,57 @@ section, div {
   font-weight: bold;
   font-size: 12pt;
 }
+.navlink {
+  margin-left: 0px;
+}
 .a, .b, .c { border: none;}
-.a { float: left; text-align: left; }
-.b { text-align: center; }
-.c { float: right; text-align: center; }
-.ll, .li { text-align: left; border: none; padding: 0pt; margin: 0px; }
-.cl { text-align: left; padding: 10pt; margin-right: 0px; margin-bottom: 10px; }
-.ci { text-align: left; padding: 10pt; margin-right: 0px; margin-bottom: 10px; }
+.a {
+  display: inline-block;
+  float: left; text-align: left;
+}
+.b {
+  display: inline-block;
+  text-align: center;
+}
+.c {
+  display: inline-block;
+  float: right; text-align: center;
+}
+.ll, .li {
+  text-align: left;
+  border: none;
+  padding: 0pt;
+  margin: 0px;
+}
+.cl, .ci { 
+  text-align: left;
+  padding: 10pt;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.ci {
+  padding: 0px;
+}
 .cl:last-child {
   margin-bottom: 0;
+}
+.ci2 {
+  display: inline-block;
+  padding: 5px 10px;
+  width: 800px;
+  border: none;
+}
+.ci2:last-child {
+  margin-bottom: 0;
+  width: 80px;
+}
+.cl2:last-child {
+  margin-bottom: 0;
+}
+.commentinput {
+  width: calc(100% - 10px);
 }
 .alert {
   background: repeating-linear-gradient(45deg, yellow, yellow 4px, black 4px, black 8px);

@@ -1,5 +1,3 @@
-!(www/html/img/logosm.png)
-
 # sqirm
 
 ## Simple Quality, Issue, and Risk Management
