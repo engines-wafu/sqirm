@@ -1,6 +1,5 @@
-<?php include "session.php"; ?>
-<?php include "../inc/dbinfo.inc"; ?>
-<?php
+<?php include "session.php";
+iinclude "../inc/dbinfo.inc";
 
 /* Connect to MySQL and select the database. */
 $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
@@ -19,22 +18,64 @@ $hazard = $_GET["conID"]
   </head>
   <body>
     <div class="content">
-      <!-- notification message -->
-      <?php if (isset($_SESSION['success'])) : ?>
       <div>
-        <h3>
-          <?php 
-            echo $_SESSION['success']; 
-            unset($_SESSION['success']);
-          ?>
-        </h3>
-        <?php endif ?>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
         <div>
         <h1>Control Page</h1>
           <p>Logged in as <?php echo $_SESSION['username']; ?></p><br>
           <p><a href="welcome.php?logout='1'">logout</a></p>
+        </div>
+        <?php endif ?>
+      </div>
+    </div>
+    <!-- Main Splash Page Sections -->
+
+    <section>
+      <!-- Left division -->
+      <article> 
+        <div style="height: 300px">
+          <h2>Control Details</h2>
+          <?php
+          		$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
+            $result = mysqli_query($connection, $query); 
+          
+            while ($row = mysqli_fetch_array($result)) {
+              $conID = $row['conID'];
+              $conDesc = $row['conDesc'];
+              $conActive = $row['conActive'];
+              $conWRAG = $row['conWRAG'];
+            }
+          ?>
+          <p id="pcontrol" class=<?php echo $conWRAG; ?>>
+            <b><?php echo $conDesc; ?></b>nclude "../inc/dbinfo.inc";
+
+/* Connect to MySQL and select the database. */
+$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+
+if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+
+$database = mysqli_select_db($connection, DB_DATABASE);
+$hazard = $_GET["conID"]
+
+?>
+<html>
+  <head>
+    <style>
+      <?php include "class.css"; ?>
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div>
+        <!-- logged in user information -->
+        <?php  if (isset($_SESSION['username'])) : ?>
+        <div style="width: 60%; float:left; border-style:none; padding:0">
+          <h1>Welcome Page</h1><br>
+          <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
+        </div>
+        <div style="float:right; align:right; border-style:none; padding-right:20">
+          <img src="img/logosm.png" width="100px"/>
         </div>
         <?php endif ?>
       </div>
