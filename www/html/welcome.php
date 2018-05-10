@@ -31,6 +31,9 @@ $hazard = $_GET["hazID"]
         <?php endif ?>
       </div>
     </div>
+
+    <?php include "navbar.php"; ?>
+
     <!-- Main Splash Page Sections -->
 
     <section>

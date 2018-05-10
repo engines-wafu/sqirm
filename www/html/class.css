@@ -1,22 +1,17 @@
-[class*="tile_hazard"] {
-  margin: 20px auto;
-  padding: 10px;
+body {
+  font-family: "Arial";
+  font-size: 8pt;
+}
+table, td, body {
+  margin: auto;
+  border-collapse: collapse;
+  padding: 5px;
+}
+tr {
   border: 3px solid black;
-  background: orange;
 }
-[class*="tile_control"] {
-  margin: 20px auto;
-  padding: 10px;
-  border: 3px solid black;
-}
-[class*="tile_hazard"]:hover {
-  border: 3px dashed black;
-}
-[class*="content"] {
-  width: 93%;
-  margin: 20px auto;
-  background: gray;
-  display: flex;
+th {
+  border-bottom: 3px solid black;
 }
 section {
   width: 93%;
@@ -33,7 +28,6 @@ div {
   color: black;
   background: white;
   flex: 1;
-  margin-top: 10px;
 }
 div:last-child {
   margin-right: 0;
@@ -41,6 +35,26 @@ div:last-child {
 section, div {
   border: 3px solid black;
   padding: 10px;
+}
+.tile_hazard {
+  margin: 20px auto;
+  padding: 10px;
+  border: 3px solid black;
+  background: orange;
+}
+.tile_control {
+  margin: 20px auto;
+  padding: 10px;
+  border: 3px solid black;
+}
+.tile_hazard:hover {
+  border: 3px dashed black;
+}
+.content {
+  width: 93%;
+  margin: 20px auto;
+  background: gray;
+  display: flex;
 }
 .container {
   width: 200px;
@@ -50,33 +64,46 @@ section, div {
   width: 100%;
   clear: both;
 }
-body {
-  font-family: "Arial";
-  font-size: 8pt;
-}
-table, td, body {
-  margin: auto;
-  border-collapse: collapse;
-  padding: 5px;
-}
-tr {
-  border: 3px solid black;
-}
-th {
-  border-bottom: 3px solid black;
-}
-[class*="white"] {
+.white {
   background: white;
 }
-[class*="green"] {
+.green {
   background: green;
 }
-[class*="yellow"] {
+.yellow {
   background: yellow;
 }
-[class*="red"] {
+.red {
   background: red;
 }
+.kpi {
+  width: 80 !important;
+  height: 40 !important;
+  border-collapse: collapse;
+  padding: 0px;
+  align: center;
+  margin: 0px;
+  display: block !important;
+}
+.navbar {
+  width: 93%;
+  margin: 20px auto;
+  background: gray;
+  display: flex;
+  justify-content: center;
+}
+.navlink {
+  width: 100px;
+  margin: 0px 10px;
+  padding: 5px 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.a, .b, .c { border: none;}
+.a { float: left; text-align: left; }
+.b { text-align: center; }
+.c { float: right; text-align: center; }
 #pcontrol {
   padding: 10px;
   border-style: solid;
@@ -115,15 +142,6 @@ th {
   padding: 0px;
   margin: 5px;
   display: inline-block !important;
-}
-[class*="kpi"] {
-  width: 80 !important;
-  height: 40 !important;
-  border-collapse: collapse;
-  padding: 0px;
-  align: center;
-  margin: 0px;
-  display: block !important;
 }
 #kpititle {
   padding: 3px;
