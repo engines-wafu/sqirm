@@ -125,7 +125,7 @@ $hazard = $_GET["conID"]
     <div>
     <h2>Comments</h2>
     <?php
-    $query = "SELECT * FROM comments";
+    $query = "SELECT * FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.actID=controls.conID WHERE controls.conID='" . $conId . "'";
     $result = mysqli_query($connection, $query); 
     
     while ($row = mysqli_fetch_array($result)) {

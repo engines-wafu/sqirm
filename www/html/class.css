@@ -24,6 +24,9 @@ article {
   flex: 1;
   margin-right: 10px;
 }
+article:last-child {
+  margin-right: 0;
+}
 div {
   color: black;
   background: white;
@@ -104,6 +107,7 @@ section, div {
 .a { float: left; text-align: left; }
 .b { text-align: center; }
 .c { float: right; text-align: center; }
+.ll, .li { text-align: left; border: none; padding: 0pt; margin: 0px; }
 #pcontrol {
   padding: 10px;
   border-style: solid;

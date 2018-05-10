@@ -22,9 +22,23 @@
       <div align=center style="border:none; padding-bottom:20px">
         <img src="img/logosm.png" width="150px" align="center" />
       </div>
-        <form method="post" action="login.php">
-        <label>Username</label> <input type="text" name="username"> <br />
-        <label>Password</label> <input type="password" name="password"> <br />
+      <form method="post" action="login.php">
+        <div class="ll">
+          <h4>
+            Name
+          </h4>
+        </div>
+        <div class="li">
+          <input type="text" name="username"> <br />
+        </div>
+        <div class="ll">
+          <h4>
+            Password
+          </h4>
+        </div>
+        <div class="li">
+          <input type="password" name="password"> <br />
+        </div>
         <button type="submit" class="btn" name="login_user">Login</button> <br />
         <p> <a href="register.php">Sign up</a> </p>
       </form>
