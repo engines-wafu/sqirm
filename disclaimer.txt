@@ -1,0 +1,5 @@
+Please note that this is a beta version of the sqirm website, which is still in the process of being tested before its official release. The website, its software, and the content found on it are provided on an “as is” and “as available” basis. We do not give any warranties, whether express or implied, as to the suitability or usability of the website, its software, or any of its content.
+
+We will not be liable for any loss, whether such loss is direct, indirect, special, or consequential, suffered by any party as a result of its use of the website, its software, or any of its content.
+
+Should you encounter any bugs, glitches, lack of functionality, or other problems on the website, please let us know immediately so we can rectify these accordingly. Your help in this regard is greatly appreciated.
