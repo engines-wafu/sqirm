@@ -10,6 +10,11 @@
     </style>
   </head>
 <body>
+  <div class="content">
+    <div>
+      <h1>sqirm</h1><br>
+    </div>
+  </div>
 <section>
   <article style="border:none;">
     <div class="content"><h1>Login Page</h1></div>
