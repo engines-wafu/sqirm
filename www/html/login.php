@@ -15,7 +15,7 @@
   <article style="border: none;"> </article>
   <article>
     <div class="container">
-      <img src="img/logosm.png" width="150px" />
+      <img src="img/logosm.png" width="150px" align="center" />
       <form method="post" action="login.php">
         <label>Username</label> <input type="text" name="username"> <br />
         <label>Password</label> <input type="password" name="password"> <br />
