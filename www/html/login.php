@@ -10,7 +10,9 @@
     </style>
   </head>
 <body>
-<div class="content"><h1>Login Page</h1></div>
+<section>
+  <div class="content"><h1>Login Page</h1></div>
+</section>
 <section>
   <article style="border:none;"> </article>
   <article>
@@ -27,7 +29,16 @@
     <?php include('errors.php'); ?>
     </div>
   </article>
-  <article style="border: none;"> </article>
+  <article style="border: none;"> 
+    <div>
+      <h3>
+      Disclaimer 
+      </h3>
+      <p>
+        <?php include('disclaimer.txt'); ?>
+      </p>
+    </div>
+  </article>
 </section>
 </body>
 </html>
