@@ -18,13 +18,18 @@ $hazard = $_GET["hazID"]
   </head>
   <body>
     <div class="content">
+      <div>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
-        <div>
+        <div style="width: 80%; float:left">
           <h1>Welcome Page</h1><br>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
         </div>
+        <div style="width: 20%; float:right">
+          <img src="img/logosm.pgn" width="150px"/>
+        </div>
         <?php endif ?>
+      </div>
     </div>
     <!-- Main Splash Page Sections -->
 
