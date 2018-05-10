@@ -108,6 +108,7 @@ section, div {
 .b { text-align: center; }
 .c { float: right; text-align: center; }
 .ll, .li { text-align: left; border: none; padding: 0pt; margin: 0px; }
+.cl { text-align: left; padding: 10pt; margin-right: 0px; }
 #pcontrol {
   padding: 10px;
   border-style: solid;
