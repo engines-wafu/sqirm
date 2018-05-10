@@ -12,10 +12,10 @@
 <body>
 <div class="content"><h1>Login Page</h1></div>
 <section>
-  <article style="border: none;"> </article>
+  <article style="border:none;"> </article>
   <article>
     <div class="container">
-      <div align=center border=none>
+      <div align=center style="border:none">
         <img src="img/logosm.png" width="150px" align="center" />
       </div>
         <form method="post" action="login.php">
