@@ -18,7 +18,6 @@ $hazard = $_GET["hazID"]
   </head>
   <body>
     <div class="content">
-      <div>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
         <div>
@@ -26,7 +25,6 @@ $hazard = $_GET["hazID"]
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
         </div>
         <?php endif ?>
-      </div>
     </div>
     <!-- Main Splash Page Sections -->
 
