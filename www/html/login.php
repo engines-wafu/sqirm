@@ -16,7 +16,9 @@
   <article>
     <div class="container">
       <img src="img/logosm.png" width="150px" align="center" />
-      <form method="post" action="login.php">
+      <div align=center>
+        <form method="post" action="login.php">
+      </div>
         <label>Username</label> <input type="text" name="username"> <br />
         <label>Password</label> <input type="password" name="password"> <br />
         <button type="submit" class="btn" name="login_user">Login</button> <br />
