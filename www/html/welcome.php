@@ -21,11 +21,11 @@ $hazard = $_GET["hazID"]
       <div>
         <!-- logged in user information -->
         <?php  if (isset($_SESSION['username'])) : ?>
-        <div style="width: 80%; float:left">
+        <div style="width: 60%; float:left" style="border:none padding:0">
           <h1>Welcome Page</h1><br>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
         </div>
-        <div style="width: 20%; float:right">
+        <div style="width: 20%; float:right" style="border:none padding:0">
           <img src="img/logosm.pgn" width="150px"/>
         </div>
         <?php endif ?>
