@@ -16,11 +16,6 @@
     </div>
   </div>
 <section>
-  <article style="border:none;">
-    <div class="content"><h1>Login Page</h1></div>
-  </article>
-</section>
-<section>
   <article style="border:none;"> </article>
   <article>
     <div class="container">
