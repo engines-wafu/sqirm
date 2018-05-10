@@ -123,6 +123,9 @@ $hazard = $_GET["conID"]
     <section>
       <article>
         <h2>Comments</h2>
+        <div class="ci">
+          <p>New comments go here</p>
+        </div>
         <?php
         $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'";
         $result = mysqli_query($connection, $query); 

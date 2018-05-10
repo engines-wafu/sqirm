@@ -10,6 +10,9 @@ table, td, body {
 tr {
   border: 3px solid black;
 }
+a {
+  color: black;
+}
 th {
   border-bottom: 3px solid black;
 }
@@ -108,7 +111,20 @@ section, div {
 .b { text-align: center; }
 .c { float: right; text-align: center; }
 .ll, .li { text-align: left; border: none; padding: 0pt; margin: 0px; }
-.cl { text-align: left; padding: 10pt; margin-right: 0px; }
+.cl { text-align: left; padding: 10pt; margin-right: 0px; margin-bottom: 10px; }
+.ci { text-align: left; padding: 10pt; margin-right: 0px; margin-bottom: 10px; }
+.cl:last-child {
+  margin-bottom: 0;
+}
+.alert {
+  background: repeating-linear-gradient(45deg, yellow, yellow 4px, black 4px, black 8px);
+  color: red;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  width: 250;
+}
 #pcontrol {
   padding: 10px;
   border-style: solid;

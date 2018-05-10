@@ -17,7 +17,7 @@
   </div>
 <section>
   <article style="border:none;"> </article>
-  <article>
+  <article style="width:400px;";>
     <div class="container">
       <div align=center style="border:none; padding-bottom:20px">
         <img src="img/logosm.png" width="150px" align="center" />
@@ -46,13 +46,15 @@
     </div>
   </article>
   <article style="border: none;"> 
-    <div>
-      <h3>
-      Disclaimer 
-      </h3>
-      <p>
-        <?php include('disclaimer.txt'); ?>
-      </p>
+    <div class="alert">
+      <div>
+        <h3>
+        Disclaimer 
+        </h3>
+        <p>
+          <?php include('disclaimer.txt'); ?>
+        </p>
+      </div>
     </div>
   </article>
 </section>
