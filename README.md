@@ -1,4 +1,4 @@
-![www/html/img/logosm.png]
+!(www/html/img/logosm.png)
 
 # sqirm
 
