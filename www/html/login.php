@@ -15,13 +15,14 @@
   <article style="border: none;"> </article>
   <article>
     <div class="container">
+      <img src="../img/logo.png" width="300px" />
       <form method="post" action="login.php">
         <label>Username</label> <input type="text" name="username"> <br />
         <label>Password</label> <input type="password" name="password"> <br />
         <button type="submit" class="btn" name="login_user">Login</button> <br />
         <p> <a href="register.php">Sign up</a> </p>
       </form>
-				  <?php include('errors.php'); ?>
+    <?php include('errors.php'); ?>
     </div>
   </article>
   <article style="border: none;"> </article>
