@@ -107,17 +107,17 @@ $hazard = $_GET["conID"]
 
           <!-- Get hazards from database -->
           <?php
-          $query = "SELECT DISTINCT threats.hazID, threats.hazDesc 
-          FROM threats 
+          $query = "SELECT DISTINCT threat.thrID, threat.thrDesc 
+          FROM threat
           INNER JOIN threat_control 
-          ON threats.thrID=threat_control.thrID 
+          ON threat.thrID=threat_control.thrID 
           INNER JOIN controls 
           ON threat_control.conID=controls.conID 
           WHERE controls.conID=" . $conID;
           $result = mysqli_query($connection, $query); 
           
           while ($row = mysqli_fetch_array($result)) {
-            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+            echo '<p class="tile_hazard"><b>' . $row['thrDesc'] . '</b></p>' ;
           }
           ?>
         </div>
