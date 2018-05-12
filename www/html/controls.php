@@ -152,7 +152,7 @@ $hazard = $_GET["conID"]
         </div>
         <div>
           <?php
-          $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'";
+          $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'ORDER BY comments.comID DESC";
           $result = mysqli_query($connection, $query); 
           
           while ($row = mysqli_fetch_array($result)) {
