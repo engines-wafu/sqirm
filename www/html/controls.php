@@ -150,17 +150,20 @@ $hazard = $_GET["conID"]
             </div>
           </form>
         </div>
-        <?php
-        $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'";
-        $result = mysqli_query($connection, $query); 
-        
-        while ($row = mysqli_fetch_array($result)) {
-          echo '<div class="cl">';
-          echo '<p><b>' . $row['comID'] . ' - </b>' . $row['comment'] .'</p>' ;
-          echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
-          echo '</div>';
-        }
-        ?>
+        <div>
+          <?php
+          $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'";
+          $result = mysqli_query($connection, $query); 
+          
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<div class="cl">';
+            echo '<p><b>' . $row['comID'] . ' - </b>' . $row['comment'] .'</p>' ;
+            echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
+            echo '</div>';
+          }
+          ?>
+        </div>
+        <div>
       </article>
     </section>
   </body>
