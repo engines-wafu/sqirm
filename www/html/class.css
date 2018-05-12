@@ -128,11 +128,19 @@ section, div {
   padding: 0pt;
   margin: 0px;
 }
-.cl, .ci { 
+.ci { 
   text-align: left;
   padding: 10pt;
   margin-right: 0px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.cl { 
+  text-align: left;
+  padding: 10pt;
+  margin-right: 0px;
+  margin-bottom: 0px;
   display: flex;
   justify-content: space-between;
 }
