@@ -8,7 +8,7 @@ table, td, body {
   padding: 5px;
 }
 tr {
-  border: 3px solid black;
+  border: 2px solid black;
 }
 a {
   color: black;
@@ -39,35 +39,35 @@ div:last-child {
   margin-right: 0;
 }
 section, div {
-  border: 3px solid black;
+  border: 2px solid black;
   padding: 10px;
 }
 .tile_threat {
   margin: 20px auto;
   padding: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
   background: white;
 }
 .tile_consequence {
   margin: 20px auto;
   padding: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
   background: black;
   color: white;
 }
 .tile_hazard {
   margin: 20px auto;
   padding: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
   background: orange;
 }
 .tile_control {
   margin: 20px auto;
   padding: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 .tile_hazard:hover {
-  border: 3px dashed black;
+  border: 2px dashed black;
 }
 .content {
   width: 93%;
