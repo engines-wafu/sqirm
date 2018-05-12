@@ -44,6 +44,7 @@
       </td>
     <!-- Column 2 -->
       <td id="hazard", align="center">
+		<div>
     <?php
     		$qhaz = "SELECT * FROM hazard WHERE hazID='" . $hazard . "'";
     $result = mysqli_query($connection, $qhaz); 
@@ -52,6 +53,7 @@
     		echo $row['hazID'] . ' ' . $row['hazDesc'];
     }
     ?>
+		</div>
       </td>
     <!-- Column 3 -->
       <td>
