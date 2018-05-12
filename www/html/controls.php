@@ -140,7 +140,7 @@ $hazard = $_GET["conID"]
       <article>
         <div class="ci">
           <form action="addcontrolcomment.php" name="commentControlAdd" method="post">
-            <textarea id="comment" class="text" cols="86" rows ="20" name="comment">Insert new comment here.</textarea>
+            <textarea id="comment" class="text" cols="56" rows ="10" name="comment">Insert new comment here.</textarea>
             <input type="button" value="Submit">
           </form>
         </div>
