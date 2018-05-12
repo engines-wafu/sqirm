@@ -19,6 +19,7 @@ $hazard = $_GET["conID"]
   </head>
   <body>
 
+    <section>
     <div class="content">
       <div>
         <div class="a">
@@ -35,6 +36,7 @@ $hazard = $_GET["conID"]
 
     <?php include "navbar.php"; ?>
 
+    </section>
     <!-- Main Splash Page Sections -->
     
     <section>
