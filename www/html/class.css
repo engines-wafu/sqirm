@@ -141,12 +141,12 @@ section, div {
   padding: 2px 10pt;
   margin: 0px;
   display: flex;
+  justify-content: space-between;
 }
 .ci {
   padding: 0px;
 }
 .cl:last-child {
-  margin-bottom: 0;
 }
 .ci2 {
   display: inline-block;
