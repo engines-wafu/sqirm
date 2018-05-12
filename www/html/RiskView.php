@@ -36,6 +36,7 @@
     
     ?>
     
+<section>
     <!-- Display table data. -->
     <table>
       <tr style="border:0px">
@@ -152,6 +153,7 @@
       </tr>
     
     </table>
+</section>
     
     <!-- Clean up. -->
     
