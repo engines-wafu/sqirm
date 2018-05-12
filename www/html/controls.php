@@ -143,7 +143,7 @@ $hazard = $_GET["conID"]
         <div class="ci">
           <form>
             <div class="ci2">
-              <input type="text" class="commentinput">
+              <textarea name="message" rows="10" cols="40"></textarea>
             </div>
             <div class="ci2">
               <input type="button" value="Submit">
