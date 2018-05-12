@@ -138,9 +138,8 @@ section, div {
 }
 .cl { 
   text-align: left;
-  padding: 10pt;
-  margin-right: 0px;
-  margin-bottom: 0px;
+  padding: 3px 10pt;
+  margin: 0px;
   display: flex;
   justify-content: space-between;
 }
