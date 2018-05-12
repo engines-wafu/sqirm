@@ -44,7 +44,7 @@
       </td>
     <!-- Column 2 -->
       <td >
-		<div id="hazard", align="center">
+		<div class="alert", align="center">
 		  <div>
     <?php
     		$qhaz = "SELECT * FROM hazard WHERE hazID='" . $hazard . "'";
