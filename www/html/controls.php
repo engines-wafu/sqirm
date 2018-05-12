@@ -103,7 +103,7 @@ $hazard = $_GET["conID"]
           }
           ?>
 
-          <h2>Associated Threats</h2>
+          <h2>Associated Threats and Consequences</h2>
 
           <!-- Get hazards from database -->
           <?php
@@ -117,7 +117,22 @@ $hazard = $_GET["conID"]
           $result = mysqli_query($connection, $query); 
           
           while ($row = mysqli_fetch_array($result)) {
-            echo '<p class="tile_hazard"><b>' . $row['thrDesc'] . '</b></p>' ;
+            echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
+          }
+          ?>
+
+          <?php
+          $query = "SELECT DISTINCT consequence.thrID, consequence.thrDesc 
+          FROM consequence
+          INNER JOIN consequence_control 
+          ON consequence.csqID=consequence_control.csqID 
+          INNER JOIN controls 
+          ON consequence_control.conID=controls.conID 
+          WHERE controls.conID=" . $conID;
+          $result = mysqli_query($connection, $query); 
+          
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<p class="tile_consequence"><b>' . $row['csqDesc'] . '</b></p>' ;
           }
           ?>
         </div>

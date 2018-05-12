@@ -42,6 +42,19 @@ section, div {
   border: 3px solid black;
   padding: 10px;
 }
+.tile_threat {
+  margin: 20px auto;
+  padding: 10px;
+  border: 3px solid black;
+  background: white;
+}
+.tile_consequence {
+  margin: 20px auto;
+  padding: 10px;
+  border: 3px solid black;
+  background: black;
+  color: white;
+}
 .tile_hazard {
   margin: 20px auto;
   padding: 10px;
