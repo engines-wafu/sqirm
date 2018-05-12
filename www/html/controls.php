@@ -138,13 +138,13 @@ $hazard = $_GET["conID"]
         </div>
       </article>
       <article>
-        <div class="cl">
-          <form action="addcontrolcomment.php" name="commentControlAdd" method="post">
-            <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
-            <input type="button" value="Submit">
-          </form>
-        </div>
         <div>
+          <div>
+            <form action="addcontrolcomment.php" name="commentControlAdd" method="post">
+              <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
+              <input type="button" value="Submit">
+            </form>
+          </div>
           <?php
           $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'ORDER BY comments.comID DESC";
           $result = mysqli_query($connection, $query); 
