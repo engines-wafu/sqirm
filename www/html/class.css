@@ -70,8 +70,8 @@ section, div {
   border: 2px dashed black;
 }
 .content {
-  width: 93%;
-  margin: 20px auto;
+  width: 95%;
+  margin: 10px auto;
   background: gray;
   display: flex;
 }
@@ -105,8 +105,8 @@ section, div {
   display: block !important;
 }
 .navbar {
-  width: 93%;
-  margin: 20px auto;
+  width: 95%;
+  margin: 10px auto;
   background: gray;
   display: flex;
   justify-content: center;
