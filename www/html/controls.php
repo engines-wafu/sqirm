@@ -163,7 +163,6 @@ $hazard = $_GET["conID"]
           }
           ?>
         </div>
-        <div>
       </article>
     </section>
   </body>
