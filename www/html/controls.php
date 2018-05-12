@@ -122,7 +122,7 @@ $hazard = $_GET["conID"]
           ?>
 
           <?php
-          $query = "SELECT DISTINCT consequence.thrID, consequence.thrDesc 
+          $query = "SELECT DISTINCT consequence.csqID, consequence.csqDesc 
           FROM consequence
           INNER JOIN consequence_control 
           ON consequence.csqID=consequence_control.csqID 
