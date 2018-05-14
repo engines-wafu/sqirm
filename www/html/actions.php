@@ -44,10 +44,6 @@ $hazard = $_GET["conID"]
         <th style="width:10%;">Owner</th>
         <th style="width:20%;">Last Comment</th>
       </tr>
-      <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Germany</td>
-      </tr>
       <? php
         $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
         $result = mysqli_query($connection, $query); 
