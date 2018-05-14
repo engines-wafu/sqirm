@@ -44,6 +44,16 @@ $hazard = $_GET["conID"]
         <th style="width:10%;">Owner</th>
         <th style="width:20%;">Last Comment</th>
       </tr>
+      <? php
+        $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
+        $result = mysqli_query($connection, $query); 
+        while ($row = mysqli_fetch_array($result)) {
+          $ID = $row['actID'];
+          $WRAG = $row['actWRAG'];
+          $description = $row['actIssue'];
+          $owner = $row['actOwner'];
+        }
+      ?>
     </table>
   </body>
 </html>
