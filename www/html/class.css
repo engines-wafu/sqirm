@@ -181,6 +181,16 @@ hr {
   border: none;
   justify-content: space-between;
 }
+.kl { 
+  text-align: left;
+  padding: 2px 10pt;
+  margin: 0px;
+  display: flex;
+  border: none;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-grow: 1;
+}
 .ci {
   padding: 0px;
 }
