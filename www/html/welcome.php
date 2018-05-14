@@ -7,8 +7,8 @@ $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
 $database = mysqli_select_db($connection, DB_DATABASE);
-$hazard = $_GET["hazID"]
-$user = $_SESSION['username']
+$hazard = $_GET["hazID"];
+$user = $_SESSION['username'];
 
 ?>
 <html>
@@ -95,6 +95,29 @@ $user = $_SESSION['username']
         <!-- Right top article -->
         <div style="margin-top: 10px;">
           <h2>My Actions and Issues</h2>
+          <table>
+          <?php
+            $query = "SELECT actWRAG, actIssue FROM actions WHERE actOwner = '" . $user . "'";
+            $result = mysqli_query($connection, $query); 
+            while ($row = mysqli_fetch_array($result)) {
+              $ID = $row['actID'];
+              $WRAG = $row['actWRAG'];
+              $description = $row['actIssue'];
+              $owner = $row['actOwner'];
+				  	       echo '<tr>';
+                echo '<td><a href="action.php?actID=' . $ID . '">';
+                  echo $ID;
+                echo '</a></td>';
+                echo '<td class="' . $WRAG . '">';
+                  echo $WRAG;
+                echo '</td>';
+                echo '<td>';
+                  echo $description;
+                echo '</td>';
+			           echo '</tr>';
+            }
+          ?>
+          </table>
         </div>
       </article>
     </section>
