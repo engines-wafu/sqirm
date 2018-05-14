@@ -34,6 +34,8 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
 
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
     <table id="myTable">
       <tr class="header">
         <th style="width:5%;">ID</th>
@@ -42,16 +44,27 @@ $hazard = $_GET["conID"]
         <th style="width:10%;">Owner</th>
         <th style="width:20%;">Last Comment</th>
       </tr>
-      <? php
+      <?php
         $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
         $result = mysqli_query($connection, $query); 
-          echo '<tr>';
-            echo '<td>Stuff</td>';
-            echo '<td>Stuff</td>';
-            echo '<td>Stuff</td>';
-            echo '<td>Stuff</td>';
-            echo '<td>Stuff</td>';
-          echo '</tr>';
+        while ($row = mysqli_fetch_array($result)) {
+          $ID = $row['actID'];
+          $WRAG = $row['actWRAG'];
+          $description = $row['actIssue'];
+          $owner = $row['actOwner'];
+					     echo '<tr>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+					     echo '</tr>';
+        }
       ?>
     </table>
   </body>
