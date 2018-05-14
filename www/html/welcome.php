@@ -40,7 +40,7 @@ $user = $_SESSION['username'];
     <section>
       <!-- Left division -->
       <article> 
-        <div>
+        <div style="overflow:scroll; height:500px">
           <h2>List of Active Hazards</h2>
           <!-- get hazards from database -->
           <?php
@@ -93,7 +93,7 @@ $user = $_SESSION['username'];
           <script type="text/javascript" src="js/app.js"></script>
         </div>
         <!-- Right top article -->
-        <div style="margin-top: 10px;">
+        <div style="overflow:scroll; height:300px; margin-top:10px">
           <h2>My Actions and Issues</h2>
           <table>
           <?php
