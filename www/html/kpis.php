@@ -28,15 +28,19 @@ $hazard = $_GET["conID"]
       </div>
     </div>
     <?php include "navbar.php"; ?>
-    <div class="content">
-      <?php
-      $query = "SELECT kpiID, kpiDesc FROM kpis";
-      $result = mysqli_query($connection, $query); 
-      while ($row = mysqli_fetch_array($result)) {
-        echo '<div>';
-        echo '</div>';
-      }
-      ?>
-    </div>
+    <section>
+      <article>
+        <div class="content">
+          <?php
+          $query = "SELECT kpiID, kpiDesc FROM kpis";
+          $result = mysqli_query($connection, $query); 
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<div>';
+            echo '</div>';
+          }
+          ?>
+        </div>
+      </article>
+    </section>
   </body>
 </html>
