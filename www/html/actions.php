@@ -61,7 +61,7 @@ $hazard = $_GET["conID"]
             echo '<td>';
               echo $ID;
             echo '</td>';
-            echo '<td>';
+            echo '<td class="' . $WRAG . '">';
               echo $WRAG;
             echo '</td>';
             echo '<td>';
