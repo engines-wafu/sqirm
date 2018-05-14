@@ -14,7 +14,7 @@ $name = $_SESSION['username'];
 $date = date();
 $comment = $_POST['comment'];
 
-$sql = 'INSERT INTO comments (comment, name) VALUES ("' . $comment . '", "' . $name . '")';
+$sql = 'INSERT INTO comments (comment, username) VALUES ("' . $comment . '", "' . $name . '")';
 
 if (mysqli_query($connection, $sql)) {
   echo var_dump($_POST);
