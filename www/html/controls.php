@@ -97,26 +97,7 @@ $hazard = $_GET["conID"]
           while ($row1 = mysqli_fetch_array($result1)) {
             echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row1['hazID'] . '">' . $row1['hazID'] . ' - ' . $row1['hazDesc'] . '</a></b></p>' ;
           };
-          ?>
 
-          <?php
-          $query = "SELECT DISTINCT threat.thrID, threat.thrDesc 
-          FROM threat
-          INNER JOIN threat_control 
-          ON threat.thrID=threat_control.thrID 
-          INNER JOIN controls 
-          ON threat_control.conID=controls.conID 
-          WHERE controls.conID=" . $conID;
-          $result = mysqli_query($connection, $query); 
-          
-          while ($row = mysqli_fetch_array($result)) {
-            echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
-          };
-          ?>
-
-          <h2>Associated Threats and Their Consequences</h2>
-
-          <?php
           $query2 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
           FROM hazard 
           INNER JOIN threat_hazard 
@@ -133,7 +114,22 @@ $hazard = $_GET["conID"]
           }
           ?>
 
+          <h2>Associated Threats and Consequences</h2>
+
+          <!-- Get hazards from database -->
           <?php
+          $query = "SELECT DISTINCT threat.thrID, threat.thrDesc 
+          FROM threat
+          INNER JOIN threat_control 
+          ON threat.thrID=threat_control.thrID 
+          INNER JOIN controls 
+          ON threat_control.conID=controls.conID 
+          WHERE controls.conID=" . $conID;
+          $result = mysqli_query($connection, $query); 
+          
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
+          };
 
           $query = "SELECT DISTINCT consequence.csqID, consequence.csqDesc 
           FROM consequence
@@ -148,8 +144,6 @@ $hazard = $_GET["conID"]
             echo '<p class="tile_consequence"><b>' . $row['csqDesc'] . '</b></p>' ;
           }
           ?>
-
-
         </div>
       </article>
       <article>
