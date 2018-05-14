@@ -104,20 +104,12 @@ $user = $_SESSION['username'];
               $WRAG = $row['actWRAG'];
               $description = $row['actIssue'];
               $owner = $row['actOwner'];
-				  	       echo '<tr>';
-                echo '<td class="' . $WRAG . '">';
-                  echo $WRAG;
-                echo '</td>';
-                echo '<td><a href="action.php?actID=' . $ID . '">';
-                  echo $description;
-                echo '</a></td>';
-			           echo '</tr>';
+              echo '<p class="tile_action"><b><a href="action.php?actID=' . $ID . '">' . $ID . ' - ' . $description . '</a></b></p>' ;
             }
           ?>
           </table>
         </div>
       </article>
     </section>
-
   </body>
 </html>
