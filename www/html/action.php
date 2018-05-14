@@ -75,7 +75,7 @@ $action = $_GET["actID"];
         </div>
       <article>
 
-      <article>
+      <article style="border-top=10px;">
         <div>
           <h3>Comments</h3>
 
@@ -89,7 +89,7 @@ $action = $_GET["actID"];
           }
           ?>
 
-          <div>
+          <div class="cl">
             <form action="addactioncomment.php?actID=<?php echo $action ?>" name="commentControlAdd" method="post">
               <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
               <input type="submit" value="Sumbit"/>
