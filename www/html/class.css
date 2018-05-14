@@ -183,6 +183,7 @@ hr {
 }
 .kl { 
   text-align: left;
+  width: 150px;
   margin: 0px;
   display: flex;
   border: none;
