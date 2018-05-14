@@ -34,8 +34,6 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-
     <table id="myTable">
       <tr class="header">
         <th style="width:5%;">ID</th>
@@ -45,11 +43,11 @@ $hazard = $_GET["conID"]
         <th style="width:20%;">Last Comment</th>
       </tr>
       <tr class="header" style="text-align:center">
-        <th><input type="text" id="myInputID" onkeyup="myFunction()" placeholder="Search for ID"></th>
+        <th><input type="text" id="myInputID" onkeyup="myFunctionID()" placeholder="Search for ID"></th>
         <th></th>
-        <th><input type="text" id="myInputDesc" onkeyup="myFunction()" placeholder="Search in description"></th>
-        <th><input type="text" id="myInputOwner" onkeyup="myFunction()" placeholder="Search for names"></th>
-        <th><input type="text" id="myInputComment" onkeyup="myFunction()" placeholder="Search in comment"></th>
+        <th><input type="text" id="myInputDesc" onkeyup="myFunctionDesc()" placeholder="Search in description"></th>
+        <th><input type="text" id="myInputOwner" onkeyup="myFunctionOwner()" placeholder="Search for names"></th>
+        <th><input type="text" id="myInputComment" onkeyup="myFunctionComment()" placeholder="Search in comment"></th>
       </tr>
       <?php
         $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
