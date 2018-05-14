@@ -161,8 +161,9 @@ while ($row = mysqli_fetch_array($result)) {
           while ($row = mysqli_fetch_array($result)) {
             echo '<div class="cl">';
             echo '<p>' . $row['comment'] .'</p>' ;
-            echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p><hr>' ;
+            echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
             echo '</div>';
+            echo '<hr>';
           }
           ?>
         </div>
