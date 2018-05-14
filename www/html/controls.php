@@ -131,12 +131,6 @@ $hazard = $_GET["conID"]
             echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
           };
 
-					if (empty mysqli_fetch_array($result)) {
-									echo '<p> Empty </p>';
-					} else
-									echo '<p> Not Empty </p>';
-					};
-
           $query = "SELECT DISTINCT consequence.csqID, consequence.csqDesc 
           FROM consequence
           INNER JOIN consequence_control 
