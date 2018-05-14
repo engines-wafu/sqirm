@@ -76,7 +76,7 @@ $action = $_GET["actID"];
       <article>
 
       <article>
-        <div style="border-top=10px;">
+        <div style="margin-top:10px;">
           <h3>Comments</h3>
 
           <?php
