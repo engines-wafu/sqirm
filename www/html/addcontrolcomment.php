@@ -18,7 +18,7 @@ $sql = 'INSERT INTO comments (comment, username, date, active) VALUES ("' . $com
 
 mysqli_query($connection, $sql);
 
-$comID = mysqli_insert_id($connection)
+$comID = mysqli_insert_id($connection);
 
 $sql = 'INSERT INTO comment_links (comID, conID) VALUES ("' . $comID . '", "' . $control . ')';
 
