@@ -73,7 +73,7 @@ $user = $_SESSION['username'];
       <!-- Right article -->
       <article>
         <!-- Right top article -->
-        <div style="overflow:scroll; height:90px !important">
+        <div style="overflow:scroll; height:140px !important">
           <h2>Key Performance Indicators</h2>
 
           <?php
@@ -93,7 +93,7 @@ $user = $_SESSION['username'];
           <script type="text/javascript" src="js/app.js"></script>
         </div>
         <!-- Right top article -->
-        <div style="overflow:scroll; height:300px; margin-top:10px">
+        <div style="overflow:scroll; height:350px; margin-top:10px">
           <h2>My Actions and Issues</h2>
           <table>
           <?php
