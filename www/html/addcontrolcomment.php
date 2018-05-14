@@ -17,6 +17,5 @@ $comment = $_POST['comment'];
 
 $sql = "INSERT INTO comments (comment, username, active, date) VALUES ('" . $comment . "', " . $name . "', 1, '" . $date "')";
 
-mysqli_query($connection, $sql);
 
 ?>
