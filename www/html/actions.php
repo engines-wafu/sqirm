@@ -45,11 +45,11 @@ $hazard = $_GET["conID"]
         <th style="width:20%;">Last Comment</th>
       </tr>
       <tr class="header" style="text-align:center">
-        <th><input type="text" id="myInputID" onkeyup="myFunction()" placeholder="Search for names.."></th>
-        <th><input type="text" id="myInputWRAG" onkeyup="myFunction()" placeholder="Search for names.."></th>
-        <th><input type="text" id="myInputDesc" onkeyup="myFunction()" placeholder="Search for names.."></th>
-        <th><input type="text" id="myInputOwner" onkeyup="myFunction()" placeholder="Search for names.."></th>
-        <th><input type="text" id="myInputComment" onkeyup="myFunction()" placeholder="Search for names.."></th>
+        <th><input type="text" id="myInputID" onkeyup="myFunction()" placeholder="Search for ID"></th>
+        <th></th>
+        <th><input type="text" id="myInputDesc" onkeyup="myFunction()" placeholder="Search in description"></th>
+        <th><input type="text" id="myInputOwner" onkeyup="myFunction()" placeholder="Search for names"></th>
+        <th><input type="text" id="myInputComment" onkeyup="myFunction()" placeholder="Search in comment"></th>
       </tr>
       <?php
         $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
@@ -78,6 +78,28 @@ $hazard = $_GET["conID"]
 					     echo '</tr>';
         }
       ?>
+      <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInputID");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
     </table>
   </body>
 </html>
