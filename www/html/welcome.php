@@ -93,7 +93,7 @@ $user = $_SESSION['username'];
           <script type="text/javascript" src="js/app.js"></script>
         </div>
         <!-- Right top article -->
-        <div style="overflow:scroll; height:335px; margin-top:10px">
+        <div style="overflow:scroll; height:333px; margin-top:10px">
           <h2>My Actions and Issues</h2>
           <table>
           <?php

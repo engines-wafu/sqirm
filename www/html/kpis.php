@@ -36,9 +36,19 @@ $hazard = $_GET["conID"]
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             echo '<div>';
+              echo '<div id="kpiblock">';
+                echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
+                echo '<div id="kpititle">' . $row['kpiDesc'] . '</div>';
+              echo '</div>';
+              echo '<div>';
+                echo 'sample text';
+              echo '</div>';
             echo '</div>';
           }
           ?>
+          <script type="text/javascript" src="js/jquery.js"></script>
+          <script type="text/javascript" src="js/Chart.js"></script>
+          <script type="text/javascript" src="js/app.js"></script>
         </div>
       </article>
     </section>
