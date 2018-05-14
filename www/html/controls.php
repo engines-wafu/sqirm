@@ -106,11 +106,11 @@ $hazard = $_GET["conID"]
           $result2 = mysqli_query($connection, $query2); 
           
           while ($row1 = mysqli_fetch_array($result1)) {
-            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row1['hazID'] . '">' . $row1['hazID'] . ' - ' . $row1['hazDesc'] . '</a></b></p>' ;
           };
 
           while ($row2 = mysqli_fetch_array($result2)) {
-            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row2['hazID'] . '">' . $row2['hazID'] . ' - ' . $row2['hazDesc'] . '</a></b></p>' ;
           }
           ?>
 
