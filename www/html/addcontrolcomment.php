@@ -11,10 +11,10 @@ $database = mysqli_select_db($connection, DB_DATABASE);
 
 $control = $_GET["conID"];
 $name = $_SESSION['username'];
-$date = date();
+$date = date(YY "-" M "-" DD);
 $comment = $_POST['comment'];
 
-$sql = 'INSERT INTO comments (comment, username) VALUES ("' . $comment . '", "' . $name . '")';
+$sql = 'INSERT INTO comments (comment, username, date, active) VALUES ("' . $comment . '", "' . $name . '", "' . $date . '", 1")';
 
 if (mysqli_query($connection, $sql)) {
   echo var_dump($_POST);
