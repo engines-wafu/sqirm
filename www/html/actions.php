@@ -29,7 +29,7 @@ $hazard = $_GET["conID"]
     </div>
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
-    </div>
+    <div class="content">
       <table id="myTable">
         <tr class="header">
           <th style="width:5%;">ID</th>
