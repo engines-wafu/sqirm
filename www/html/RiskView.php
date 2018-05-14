@@ -40,7 +40,7 @@
   <div>
     <!-- Display table data. -->
     <table>
-      <tr style="border:0px">
+      <tr style="background:white; border:0px">
     <!-- Column 1 -->
       <td>
       </td>
