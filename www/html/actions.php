@@ -52,8 +52,18 @@ $hazard = $_GET["conID"]
           $WRAG = $row['actWRAG'];
           $description = $row['actIssue'];
           $owner = $row['actOwner'];
-					echo '<tr>';
-					echo '</tr>';
+					     echo '<tr>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+            echo '<td>';
+            echo '</td>';
+					     echo '</tr>';
         }
       ?>
     </table>
