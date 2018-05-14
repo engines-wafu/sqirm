@@ -34,7 +34,7 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
 
-    <table id="myTable" style="margin: 10px 10px; width:100%">
+    <table id="myTable" style="margin-left:10px; width:95%">
       <tr class="header">
         <th style="width:5%;">ID</th>
         <th style="width:5%;">WRAG</th>
