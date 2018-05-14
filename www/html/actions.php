@@ -46,6 +46,7 @@ $hazard = $_GET["conID"]
         $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
+        }
           echo '<tr>';
             echo '<td>Stuff</td>';
             echo '<td>Stuff</td>';
@@ -53,7 +54,6 @@ $hazard = $_GET["conID"]
             echo '<td>Stuff</td>';
             echo '<td>Stuff</td>';
           echo '</tr>';
-        }
       ?>
     </table>
   </body>
