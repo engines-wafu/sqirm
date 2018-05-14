@@ -53,9 +53,9 @@ $hazard = $_GET["conID"]
           $description = $row['actIssue'];
           $owner = $row['actOwner'];
 					     echo '<tr>';
-            echo '<td>';
+            echo '<td><a href="action=' . $ID . '">';
               echo $ID;
-            echo '</td>';
+            echo '</a></td>';
             echo '<td class="' . $WRAG . '">';
               echo $WRAG;
             echo '</td>';
