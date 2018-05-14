@@ -11,7 +11,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
 
 $control = $_GET["conID"];
 $name = $_SESSION['username'];
-$date = date("Y-M-d");
+$date = date();
 $comment = $_POST['comment'];
 
 $sql = 'INSERT INTO comments (comment, username, date, active) VALUES ("' . $comment . '", "' . $name . '", "' . $date . '", 1)';
