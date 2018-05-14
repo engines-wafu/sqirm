@@ -20,7 +20,7 @@ mysqli_query($connection, $sql);
 
 $comID = mysqli_insert_id($connection);
 
-$sql = 'INSERT INTO comment_links (comID, conID) VALUES ("' . $comID . '", "' . $control . ')';
+$sql = 'INSERT INTO comment_links (comID, conID) VALUES ("' . $comID . '", "' . $control . '")';
 
 if (mysqli_query($connection, $sql)) {
   header('Location: controls.php?conID=' . $control);
