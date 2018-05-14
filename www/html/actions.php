@@ -34,8 +34,6 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-
     <table id="myTable">
       <tr class="header">
         <th style="width:5%;">ID</th>
