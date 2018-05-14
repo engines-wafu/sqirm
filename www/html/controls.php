@@ -94,24 +94,24 @@ $hazard = $_GET["conID"]
           WHERE controls.conID=" . $conID;
           $result = mysqli_query($connection, $query); 
           
-          if isset ($row = mysqli_fetch_array($result)) {
+          while ($row = mysqli_fetch_array($result)) {
             echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
-          } else {
-            $query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
-            FROM hazard 
-            INNER JOIN threat_hazard 
-            ON hazard.hazID=threat_hazard.hazID 
-            INNER JOIN threat_control 
-            ON threat_hazard.thrID=threat_control.thrID 
-            INNER JOIN controls 
-            ON threat_control.conID=controls.conID 
-            WHERE controls.conID=" . $conID;
-            $result = mysqli_query($connection, $query); 
-            
-            while ($row = mysqli_fetch_array($result)) {
-              echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
-            }
-					};
+          };
+
+          $query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
+          FROM hazard 
+          INNER JOIN threat_hazard 
+          ON hazard.hazID=threat_hazard.hazID 
+          INNER JOIN threat_control 
+          ON threat_hazard.thrID=threat_control.thrID 
+          INNER JOIN controls 
+          ON threat_control.conID=controls.conID 
+          WHERE controls.conID=" . $conID;
+          $result = mysqli_query($connection, $query); 
+          
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+          }
           ?>
 
           <h2>Associated Threats and Consequences</h2>
