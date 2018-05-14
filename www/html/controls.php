@@ -133,7 +133,7 @@ $hazard = $_GET["conID"]
 
 					if (empty($row)) {
 									echo '<p> Empty </p>';
-					} else;
+					} else
 									echo '<p> Not Empty </p>';
 					};
 
