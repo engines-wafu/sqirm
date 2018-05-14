@@ -34,7 +34,6 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
 
-    <section>
       <div class="navbar">
         <div class="navlink">
           <h3>ID</h3>
@@ -52,7 +51,6 @@ $hazard = $_GET["conID"]
           <h3>Owner</h3>
         </div>
       </div>
-    </section>
 
 
 
