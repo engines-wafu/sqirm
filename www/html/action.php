@@ -50,7 +50,7 @@ $action = $_GET["actID"];
             $owner = $row['actOwner'];
             $dl = $row['actDL'];
 
-            echo '<h2 class="' . $WRAG . '"> Action Serial Number ' . $action . '</h2>';
+            echo '<h2 class="action_tile ' . $WRAG . '"> Action Serial Number ' . $action . '</h2>';
           ?>
 
           <h3>Description of the Action or Issue</h3>
