@@ -95,27 +95,6 @@ $user = $_SESSION['username']
         <!-- Right top article -->
         <div style="margin-top: 10px;">
           <h2>My Actions and Issues</h2>
-          <?php
-            $query = "SELECT actWRAG, actIssue FROM actions WHERE actOwner = '" . $user . "'";
-            $result = mysqli_query($connection, $query); 
-            while ($row = mysqli_fetch_array($result)) {
-              $ID = $row['actID'];
-              $WRAG = $row['actWRAG'];
-              $description = $row['actIssue'];
-              $owner = $row['actOwner'];
-				  	       echo '<tr>';
-                echo '<td><a href="action.php?actID=' . $ID . '">';
-                  echo $ID;
-                echo '</a></td>';
-                echo '<td class="' . $WRAG . '">';
-                  echo $WRAG;
-                echo '</td>';
-                echo '<td>';
-                  echo $description;
-                echo '</td>';
-			           echo '</tr>';
-            }
-          ?>
         </div>
       </article>
     </section>
