@@ -2,4 +2,4 @@
 
 <p>We will not be liable for any loss, whether such loss is direct, indirect, special, or consequential, suffered by any party as a result of its use of the website, its software, or any of its content.</p>
 
-<p>Should you encounter any bugs, glitches, lack of functionality, or other problems on the website, please let us know immediately so we can rectify these accordingly. Your help in this regard is greatly appreciated.</p>
+<p>Should you encounter any bugs, glitches, lack of functionality, or other problems on the website, please let us know immediately by reporting them <a href="https://github.com/gavinedwards/sqirm/issues/new">here</a> so we can rectify these accordingly. Your help in this regard is greatly appreciated.</p>
