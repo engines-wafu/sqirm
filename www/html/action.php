@@ -8,7 +8,7 @@ $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
 $database = mysqli_select_db($connection, DB_DATABASE);
-$action = $_GET["actID"]
+$action = $_GET["actID"];
 
 ?>
 <html>
@@ -49,7 +49,7 @@ $action = $_GET["actID"]
           $owner = $row['actOwner'];
           $dl = $row['actDL'];
 
-          echo '<h2>' $description '</h2>';
+          echo '<h2>' . $description . '</h2>';
 
         ?>
       <div>
