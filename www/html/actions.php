@@ -38,7 +38,7 @@ $hazard = $_GET["conID"]
       <tr class="header">
         <th style="width:5%;">ID</th>
         <th style="width:5%;">WRAG</th>
-        <th style="width:45%;">Description</th>
+        <th>Description</th>
         <th style="width:10%;">Owner</th>
         <th style="width:20%;">Last Comment</th>
       </tr>
