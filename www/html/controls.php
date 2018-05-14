@@ -129,10 +129,8 @@ $hazard = $_GET["conID"]
           
           while ($row = mysqli_fetch_array($result)) {
             echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
-          }
-          ?>
+          };
 
-          <?php
           $query = "SELECT DISTINCT consequence.csqID, consequence.csqDesc 
           FROM consequence
           INNER JOIN consequence_control 
