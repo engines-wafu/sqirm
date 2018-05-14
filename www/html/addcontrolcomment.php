@@ -17,9 +17,16 @@ $comment = $_POST['comment'];
 $sql = 'INSERT INTO comments (comment, username, date, active) VALUES ("' . $comment . '", "' . $name . '", "' . $date . '", 1)';
 
 if (mysqli_query($connection, $sql)) {
-  echo var_dump($_POST);
-  echo "Comment added";
-  header('Location: controls.php?conID=' . $control);
+  exit;
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+}
+
+$comID = mysqli_insert_id($connection)
+
+$sql = 'INSERT INTO comment_links (comID, conID) VALUES ("' . $comID . '", "' . $conID . '")';
+
+if (mysqli_query($connection, $sql)) {
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
