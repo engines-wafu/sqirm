@@ -38,9 +38,9 @@ $hazard = $_GET["conID"]
             echo '<div class="cl">';
               echo '<div id="kpiblock">';
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-                echo '<div id="kpititle">' . $row['kpiDesc'] . '</div>';
               echo '</div>';
               echo '<div>';
+              echo '<h2>' . $row['kpiDesc'] . '</h2>';
                 echo 'sample text';
               echo '</div>';
             echo '</div>';
