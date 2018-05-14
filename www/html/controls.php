@@ -171,9 +171,3 @@ $hazard = $_GET["conID"]
     </section>
   </body>
 </html>
-					if (empty mysqli_fetch_array($result)) {
-									echo '<p> Empty </p>';
-					} else
-									echo '<p> Not Empty </p>';
-					};
-

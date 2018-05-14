@@ -34,169 +34,37 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
 
-      <div class="navbar">
-        <div class="navlink">
-          <h3>ID</h3>
-        </div>
-        <div class="navlink">
-          <h3>WRAG</h3>
-        </div>
-        <div class="navlink">
-          <h3>Description</h3>
-        </div>
-        <div class="navlink">
-          <h3>Last Comment</h3>
-        </div>
-        <div class="navlink">
-          <h3>Owner</h3>
-        </div>
-      </div>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
-
-
-
-
-    <section>
-      <!-- Left division -->
-      <article> 
-        <div style="height: 300px">
-          <h2>Control Details</h2>
-<?php
-  $query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
-$result = mysqli_query($connection, $query); 
-
-while ($row = mysqli_fetch_array($result)) {
-  $conID = $row['conID'];
-  $conDesc = $row['conDesc'];
-  $conActive = $row['conActive'];
-  $conWRAG = $row['conWRAG'];
-}
-?>
-          <p id="pcontrol" class=<?php echo $conWRAG; ?>>
-            <b><?php echo $conDesc; ?></b>
-          </p>
-
-          <form method="POST" <?php echo 'action="updatecontrol.php?conID=' . $conID . '"' ?>>
-            <label>Description</label><input type="text" name="description" size="40" value="<?php echo $conDesc; ?>"/><br>
-            <label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>/> <br>
-            <input type="radio" name="WRAGradio" value="red" <?php if ($conWRAG == "red") echo 'checked';?>/> Red<br>
-            <input type="radio" name="WRAGradio" value="amber" <?php if ($conWRAG == "yellow") echo 'checked';?>/> Amber<br>
-            <input type="radio" name="WRAGradio" value="green" <?php if ($conWRAG == "green") echo 'checked';?>/> Green<br>
-            <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>/> White<br>
-            <input type="submit" value="Sumbit"/>
-          </form>
-        </div>
-      </article>
-      <!-- Center division -->
-      <article> 
-        <div>
-<?php
-$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
-$result = mysqli_query($connection, $query); 
-
-while ($row = mysqli_fetch_array($result)) {
-  $conID = $row['conID'];
-  $conDesc = $row['conDesc'];
-  $conActive = $row['conActive'];
-  $conWRAG = $row['conWRAG'];
-}
-?>
-
-          <h2>Associated Hazards and Their Threats</h2>
-
-          <!-- Get hazards from database -->
-<?php
-$query1 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
-  FROM hazard 
-  INNER JOIN hazard_consequence
-  ON hazard.hazID=hazard_consequence.hazID 
-  INNER JOIN consequence_control 
-  ON hazard_consequence.csqID=consequence_control.csqID 
-  INNER JOIN controls 
-  ON consequence_control.conID=controls.conID 
-  WHERE controls.conID=" . $conID;
-$result1 = mysqli_query($connection, $query1); 
-
-while ($row1 = mysqli_fetch_array($result1)) {
-  echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row1['hazID'] . '">' . $row1['hazID'] . ' - ' . $row1['hazDesc'] . '</a></b></p>' ;
-};
-
-$query2 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
-  FROM hazard 
-  INNER JOIN threat_hazard 
-  ON hazard.hazID=threat_hazard.hazID 
-  INNER JOIN threat_control 
-  ON threat_hazard.thrID=threat_control.thrID 
-  INNER JOIN controls 
-  ON threat_control.conID=controls.conID 
-  WHERE controls.conID=" . $conID;
-$result2 = mysqli_query($connection, $query2); 
-
-while ($row2 = mysqli_fetch_array($result2)) {
-  echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row2['hazID'] . '">' . $row2['hazID'] . ' - ' . $row2['hazDesc'] . '</a></b></p>' ;
-}
-?>
-
-          <h2>Associated Threats and Consequences</h2>
-
-          <!-- Get hazards from database -->
-<?php
-$query = "SELECT DISTINCT threat.thrID, threat.thrDesc 
-  FROM threat
-  INNER JOIN threat_control 
-  ON threat.thrID=threat_control.thrID 
-  INNER JOIN controls 
-  ON threat_control.conID=controls.conID 
-  WHERE controls.conID=" . $conID;
-$result = mysqli_query($connection, $query); 
-
-while ($row = mysqli_fetch_array($result)) {
-  echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
-};
-
-$query = "SELECT DISTINCT consequence.csqID, consequence.csqDesc 
-  FROM consequence
-  INNER JOIN consequence_control 
-  ON consequence.csqID=consequence_control.csqID 
-  INNER JOIN controls 
-  ON consequence_control.conID=controls.conID 
-  WHERE controls.conID=" . $conID;
-$result = mysqli_query($connection, $query); 
-
-while ($row = mysqli_fetch_array($result)) {
-  echo '<p class="tile_consequence"><b>' . $row['csqDesc'] . '</b></p>' ;
-}
-?>
-        </div>
-      </article>
-      <article>
-        <div>
-          <div class="cl">
-     <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
-              <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
-          <input type="submit" value="Sumbit"/>
-            </form>
-          </div>
-<?php
-$query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'ORDER BY comments.comID DESC";
-$result = mysqli_query($connection, $query); 
-
-while ($row = mysqli_fetch_array($result)) {
-  echo '<div class="cl">';
-  echo '<p>' . $row['comment'] .'</p>' ;
-  echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
-  echo '</div>';
-}
-?>
-        </div>
-      <!-- Right division -->
-      </article> 
-    </section>
+    <table id="myTable">
+      <tr class="header">
+        <th style="width:5%;">ID</th>
+        <th style="width:5%;">WRAG</th>
+        <th style="width:50%;">Description</th>
+        <th style="width:10%;">Owner</th>
+        <th style="width:20%;">Last Comment</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Germany</td>
+      </tr>
+      <? php
+        $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
+        $result = mysqli_query($connection, $query); 
+        while ($row = mysqli_fetch_array($result)) {
+          $ID = $row['actID'];
+          $WRAG = $row['actWRAG'];
+          $description = $row['actIssue'];
+          $owner = $row['actOwner'];
+          echo '<tr>';
+            echo '<td>' . $ID .  '</td>';
+            echo '<td>' . $WRAG .  '</td>';
+            echo '<td>' . $description .  '</td>';
+            echo '<td>' . $owner .  '</td>';
+            echo '<td>' . '' .  '</td>';
+          echo '</tr>';
+        }
+      ?>
+    </table>
   </body>
 </html>
-     if (empty mysqli_fetch_array($result)) {
-         echo '<p> Empty </p>';
-     } else
-         echo '<p> Not Empty </p>';
-     };
-
