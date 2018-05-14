@@ -187,7 +187,6 @@ hr {
   margin: 0px;
   display: flex;
   border: none;
-  justify-content: space-between;
   align-items: stretch;
   flex-grow: 1;
 }
