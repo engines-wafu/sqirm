@@ -29,124 +29,126 @@ $hazard = $_GET["conID"]
     </div>
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
-    <table id="myTable">
-      <tr class="header">
-        <th style="width:5%;">ID</th>
-        <th style="width:5%;">WRAG</th>
-        <th style="width:50%;">Description</th>
-        <th style="width:10%;">Owner</th>
-        <th style="width:20%;">Last Comment</th>
-      </tr>
-      <tr class="header" style="text-align:center">
-        <th><input type="text" id="myInputID" onkeyup="myFunctionID()" placeholder="Search for ID"></th>
-        <th></th>
-        <th><input type="text" id="myInputDesc" onkeyup="myFunctionDesc()" placeholder="Search in description"></th>
-        <th><input type="text" id="myInputOwner" onkeyup="myFunctionOwner()" placeholder="Search for names"></th>
-        <th><input type="text" id="myInputComment" onkeyup="myFunctionComment()" placeholder="Search in comment"></th>
-      </tr>
-      <?php
-        $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
-        $result = mysqli_query($connection, $query); 
-        while ($row = mysqli_fetch_array($result)) {
-          $ID = $row['actID'];
-          $WRAG = $row['actWRAG'];
-          $description = $row['actIssue'];
-          $owner = $row['actOwner'];
-					     echo '<tr>';
-            echo '<td><a href="action=' . $ID . '">';
-              echo $ID;
-            echo '</a></td>';
-            echo '<td class="' . $WRAG . '">';
-              echo $WRAG;
-            echo '</td>';
-            echo '<td>';
-              echo $description;
-            echo '</td>';
-            echo '<td>';
-              echo $owner;
-            echo '</td>';
-            echo '<td>';
-              echo '';
-            echo '</td>';
-					     echo '</tr>';
-        }
-      ?>
-      <script>
-        function myFunctionID() {
-          var input, filter, table, tr, td, i;
-          input = document.getElementById("myInputID");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myTable");
-          tr = table.getElementsByTagName("tr");
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
+    </div>
+      <table id="myTable">
+        <tr class="header">
+          <th style="width:5%;">ID</th>
+          <th style="width:5%;">WRAG</th>
+          <th style="width:50%;">Description</th>
+          <th style="width:10%;">Owner</th>
+          <th style="width:20%;">Last Comment</th>
+        </tr>
+        <tr class="header" style="text-align:center">
+          <th><input type="text" id="myInputID" onkeyup="myFunctionID()" placeholder="Search for ID"></th>
+          <th></th>
+          <th><input type="text" id="myInputDesc" onkeyup="myFunctionDesc()" placeholder="Search in description"></th>
+          <th><input type="text" id="myInputOwner" onkeyup="myFunctionOwner()" placeholder="Search for names"></th>
+          <th><input type="text" id="myInputComment" onkeyup="myFunctionComment()" placeholder="Search in comment"></th>
+        </tr>
+        <?php
+          $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
+          $result = mysqli_query($connection, $query); 
+          while ($row = mysqli_fetch_array($result)) {
+            $ID = $row['actID'];
+            $WRAG = $row['actWRAG'];
+            $description = $row['actIssue'];
+            $owner = $row['actOwner'];
+				  	     echo '<tr>';
+              echo '<td><a href="action=' . $ID . '">';
+                echo $ID;
+              echo '</a></td>';
+              echo '<td class="' . $WRAG . '">';
+                echo $WRAG;
+              echo '</td>';
+              echo '<td>';
+                echo $description;
+              echo '</td>';
+              echo '<td>';
+                echo $owner;
+              echo '</td>';
+              echo '<td>';
+                echo '';
+              echo '</td>';
+				  	     echo '</tr>';
+          }
+        ?>
+        <script>
+          function myFunctionID() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInputID");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
               }
             }
           }
-        }
-      </script>
-      <script>
-        function myFunctionDesc() {
-          var input, filter, table, tr, td, i;
-          input = document.getElementById("myInputDesc");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myTable");
-          tr = table.getElementsByTagName("tr");
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[2];
-            if (td) {
-              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
-              }
-            }
-          }
-        }
-      </script>
-      <script>
-        function myFunctionOwner() {
-          var input, filter, table, tr, td, i;
-          input = document.getElementById("myInputOwner");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myTable");
-          tr = table.getElementsByTagName("tr");
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[3];
-            if (td) {
-              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
-              }
-            }
-          }
-        }
-      </script>
-      <script>
-        function myFunctionComment() {
-          var input, filter, table, tr, td, i;
-          input = document.getElementById("myInputComment");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myTable");
-          tr = table.getElementsByTagName("tr");
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[4];
-            if (td) {
-              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
-              }
-            }
-          }
-        }
         </script>
-    </table>
+        <script>
+          function myFunctionDesc() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInputDesc");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[2];
+              if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          }
+        </script>
+        <script>
+          function myFunctionOwner() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInputOwner");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[3];
+              if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          }
+        </script>
+        <script>
+          function myFunctionComment() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInputComment");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[4];
+              if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          }
+          </script>
+      </table>
+    </div>
   </body>
 </html>
