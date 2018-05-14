@@ -22,7 +22,7 @@ $comID = mysqli_insert_id($connection);
 
 $sql = 'INSERT INTO comment_links (comID, conID) VALUES ("' . $comID . '", "' . $conID . '")';
 
-mysqli_query($connection, $sql)
+mysqli_query($connection, $sql);
 exit;
 
 ?>
