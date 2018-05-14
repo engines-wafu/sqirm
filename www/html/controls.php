@@ -88,7 +88,7 @@ $hazard = $_GET["conID"]
           INNER JOIN hazard_consequence
           ON hazard.hazID=hazard_consequence.hazID 
           INNER JOIN consequence_control 
-          ON hazard_consequence.thrID=consequence_control.thrID 
+          ON hazard_consequence.csqID=consequence_control.csqID 
           INNER JOIN controls 
           ON consequence_control.conID=controls.conID 
           WHERE controls.conID=" . $conID;
