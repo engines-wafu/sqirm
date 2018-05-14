@@ -79,10 +79,8 @@ $action = $_GET["actID"];
         $result = mysqli_query($connection, $query); 
         
         while ($row = mysqli_fetch_array($result)) {
-          echo '<div class="cl">';
-          echo '<p>' . $row['comment'] .'</p>' ;
+          echo '<p>' . $row['comment'] .'</p><br>' ;
           echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
-          echo '</div>';
         }
         ?>
 
