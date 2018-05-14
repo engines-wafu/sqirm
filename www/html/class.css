@@ -17,6 +17,7 @@ tr:nth-child(even) {
 }
 a {
   color: black;
+  text-decoration: none;
 }
 th {
   border-bottom: 2px solid black;
