@@ -85,6 +85,23 @@ $hazard = $_GET["conID"]
           <?php
           $query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
           FROM hazard 
+          INNER JOIN hazard_consequence
+          ON hazard.hazID=hazard_consequence.hazID 
+          INNER JOIN consequence_control 
+          ON hazard_consequence.thrID=consequence_control.thrID 
+          INNER JOIN controls 
+          ON consequence_control.conID=controls.conID 
+          WHERE controls.conID=" . $conID;
+          $result = mysqli_query($connection, $query); 
+          
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
+          }
+          ?>
+
+          <?php
+          $query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
+          FROM hazard 
           INNER JOIN threat_hazard 
           ON hazard.hazID=threat_hazard.hazID 
           INNER JOIN threat_control 
