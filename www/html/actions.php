@@ -44,6 +44,13 @@ $hazard = $_GET["conID"]
         <th style="width:10%;">Owner</th>
         <th style="width:20%;">Last Comment</th>
       </tr>
+      <tr class="header" style="text-align:center">
+        <th><input type="text" id="myInputID" onkeyup="myFunction()" placeholder="Search for names.."></th>
+        <th><input type="text" id="myInputWRAG" onkeyup="myFunction()" placeholder="Search for names.."></th>
+        <th><input type="text" id="myInputDesc" onkeyup="myFunction()" placeholder="Search for names.."></th>
+        <th><input type="text" id="myInputOwner" onkeyup="myFunction()" placeholder="Search for names.."></th>
+        <th><input type="text" id="myInputComment" onkeyup="myFunction()" placeholder="Search for names.."></th>
+      </tr>
       <?php
         $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
         $result = mysqli_query($connection, $query); 
