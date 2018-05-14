@@ -92,7 +92,7 @@ $hazard = $_GET["conID"]
           INNER JOIN controls 
           ON consequence_control.conID=controls.conID 
           WHERE controls.conID=" . $conID;
-          $result = mysqli_query($connection, $query1); 
+          $result1 = mysqli_query($connection, $query1); 
           
           $query2 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
           FROM hazard 
@@ -103,13 +103,13 @@ $hazard = $_GET["conID"]
           INNER JOIN controls 
           ON threat_control.conID=controls.conID 
           WHERE controls.conID=" . $conID;
-          $result = mysqli_query($connection, $query2); 
+          $result2 = mysqli_query($connection, $query2); 
           
-          while ($row = mysqli_fetch_array($result)) {
+          while ($row1 = mysqli_fetch_array($result1)) {
             echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
           };
 
-          while ($row = mysqli_fetch_array($result)) {
+          while ($row2 = mysqli_fetch_array($result2)) {
             echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
           }
           ?>
