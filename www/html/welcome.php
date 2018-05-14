@@ -8,6 +8,7 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 
 $database = mysqli_select_db($connection, DB_DATABASE);
 $hazard = $_GET["hazID"]
+$user = $_SESSION['username']
 
 ?>
 <html>
@@ -94,6 +95,39 @@ $hazard = $_GET["hazID"]
         <!-- Right top article -->
         <div style="margin-top: 10px;">
           <h2>My Actions and Issues</h2>
+          <?php
+            $query = "SELECT actWRAG, actIssue FROM actions WHERE actOwner = '" . $user . "'";
+            $result = mysqli_query($connection, $query); 
+            while ($row = mysqli_fetch_array($result)) {
+              $ID = $row['actID'];
+              $WRAG = $row['actWRAG'];
+              $description = $row['actIssue'];
+              $owner = $row['actOwner'];
+				  	       echo '<tr>';
+                echo '<td><a href="action.php?actID=' . $ID . '">';
+                  echo $ID;
+                echo '</a></td>';
+                echo '<td class="' . $WRAG . '">';
+                  echo $WRAG;
+                echo '</td>';
+                echo '<td>';
+                  echo $description;
+                echo '</td>';
+                echo '<td>';
+                  echo $owner;
+                echo '</td>';
+                echo '<td>';
+                  $query2 = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $ID . "'ORDER BY comments.comID DESC";
+                $result2 = mysqli_query($connection, $query2); 
+                while ($row2 = mysqli_fetch_array($result2)) {
+                  echo '<p>' . $row2['comment'] .'</p>' ;
+                  echo '<p><b>By: </b>' . $row2['username'] . '<b> on </b>' . $row2['date'] .'</p>' ;
+                    echo '<hr>' ;
+                  }
+                echo '</td>';
+			           echo '</tr>';
+            }
+          ?>
         </div>
       </article>
     </section>
