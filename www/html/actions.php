@@ -60,9 +60,9 @@ $hazard = $_GET["conID"]
               echo '<td class="' . $WRAG . '">';
                 echo $WRAG;
               echo '</td>';
-              echo '<td>';
+              echo '<td><a href="action.php?actID=' . $ID . '">';
                 echo $description;
-              echo '</td>';
+              echo '</a></td>';
               echo '<td>';
                 echo $owner;
               echo '</td>';
