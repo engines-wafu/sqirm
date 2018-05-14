@@ -113,18 +113,6 @@ $user = $_SESSION['username']
                 echo '<td>';
                   echo $description;
                 echo '</td>';
-                echo '<td>';
-                  echo $owner;
-                echo '</td>';
-                echo '<td>';
-                  $query2 = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $ID . "'ORDER BY comments.comID DESC";
-                $result2 = mysqli_query($connection, $query2); 
-                while ($row2 = mysqli_fetch_array($result2)) {
-                  echo '<p>' . $row2['comment'] .'</p>' ;
-                  echo '<p><b>By: </b>' . $row2['username'] . '<b> on </b>' . $row2['date'] .'</p>' ;
-                    echo '<hr>' ;
-                  }
-                echo '</td>';
 			           echo '</tr>';
             }
           ?>
