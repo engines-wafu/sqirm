@@ -83,7 +83,7 @@ $hazard = $_GET["conID"]
 
           <!-- Get hazards from database -->
           <?php
-          $query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
+          $query1 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
           FROM hazard 
           INNER JOIN hazard_consequence
           ON hazard.hazID=hazard_consequence.hazID 
@@ -92,13 +92,13 @@ $hazard = $_GET["conID"]
           INNER JOIN controls 
           ON consequence_control.conID=controls.conID 
           WHERE controls.conID=" . $conID;
-          $result = mysqli_query($connection, $query); 
+          $result = mysqli_query($connection, $query1); 
           
           while ($row = mysqli_fetch_array($result)) {
             echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
           };
 
-          $query = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
+          $query2 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
           FROM hazard 
           INNER JOIN threat_hazard 
           ON hazard.hazID=threat_hazard.hazID 
@@ -107,7 +107,7 @@ $hazard = $_GET["conID"]
           INNER JOIN controls 
           ON threat_control.conID=controls.conID 
           WHERE controls.conID=" . $conID;
-          $result = mysqli_query($connection, $query); 
+          $result = mysqli_query($connection, $query2); 
           
           while ($row = mysqli_fetch_array($result)) {
             echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
@@ -171,3 +171,9 @@ $hazard = $_GET["conID"]
     </section>
   </body>
 </html>
+					if (empty mysqli_fetch_array($result)) {
+									echo '<p> Empty </p>';
+					} else
+									echo '<p> Not Empty </p>';
+					};
+
