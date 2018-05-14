@@ -73,7 +73,7 @@ $user = $_SESSION['username'];
       <!-- Right article -->
       <article>
         <!-- Right top article -->
-        <div style="overflow:scroll; height:140px !important">
+        <div style="overflow:scroll; height:136px !important">
           <h2>Key Performance Indicators</h2>
 
           <?php
