@@ -71,11 +71,12 @@ $action = $_GET["actID"];
         <h3>Deadline for rectification</h3>
 
         <p><?php echo $dl ?></p>
-
-        <h3>Comments</h3>
       </div>
 
-      <div>
+      <div style="display:block">
+
+        <h3>Comments</h3>
+
         <?php
         $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $action . "'ORDER BY comments.comID DESC";
         $result = mysqli_query($connection, $query); 
