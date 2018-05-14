@@ -74,6 +74,25 @@ $action = $_GET["actID"];
 
         <h3>Comments</h3>
 
+        <div class="cl">
+          <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
+            <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
+            <input type="submit" value="Sumbit"/>
+          </form>
+        </div>
+
+        <?php
+        $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'ORDER BY comments.comID DESC";
+        $result = mysqli_query($connection, $query); 
+        
+        while ($row = mysqli_fetch_array($result)) {
+          echo '<div class="cl">';
+          echo '<p>' . $row['comment'] .'</p>' ;
+          echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
+          echo '</div>';
+        }
+        ?>
+
       </div>
     </div>
   </body>

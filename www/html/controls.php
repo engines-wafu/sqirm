@@ -38,17 +38,17 @@ $hazard = $_GET["conID"]
       <article> 
         <div style="height: 300px">
           <h2>Control Details</h2>
-          <?php
-          $query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
-          $result = mysqli_query($connection, $query); 
-          
-          while ($row = mysqli_fetch_array($result)) {
-            $conID = $row['conID'];
-            $conDesc = $row['conDesc'];
-            $conActive = $row['conActive'];
-            $conWRAG = $row['conWRAG'];
-          }
-          ?>
+<?php
+  $query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
+$result = mysqli_query($connection, $query); 
+
+while ($row = mysqli_fetch_array($result)) {
+  $conID = $row['conID'];
+  $conDesc = $row['conDesc'];
+  $conActive = $row['conActive'];
+  $conWRAG = $row['conWRAG'];
+}
+?>
           <p id="pcontrol" class=<?php echo $conWRAG; ?>>
             <b><?php echo $conDesc; ?></b>
           </p>
@@ -67,91 +67,91 @@ $hazard = $_GET["conID"]
       <!-- Center division -->
       <article> 
         <div>
-          <?php
-          $query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
-          $result = mysqli_query($connection, $query); 
-          
-          while ($row = mysqli_fetch_array($result)) {
-            $conID = $row['conID'];
-            $conDesc = $row['conDesc'];
-            $conActive = $row['conActive'];
-            $conWRAG = $row['conWRAG'];
-          }
-          ?>
+<?php
+$query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
+$result = mysqli_query($connection, $query); 
+
+while ($row = mysqli_fetch_array($result)) {
+  $conID = $row['conID'];
+  $conDesc = $row['conDesc'];
+  $conActive = $row['conActive'];
+  $conWRAG = $row['conWRAG'];
+}
+?>
 
           <h2>Associated Hazards and Their Threats</h2>
 
           <!-- Get hazards from database -->
-          <?php
-          $query1 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
-          FROM hazard 
-          INNER JOIN hazard_consequence
-          ON hazard.hazID=hazard_consequence.hazID 
-          INNER JOIN consequence_control 
-          ON hazard_consequence.csqID=consequence_control.csqID 
-          INNER JOIN controls 
-          ON consequence_control.conID=controls.conID 
-          WHERE controls.conID=" . $conID;
-          $result1 = mysqli_query($connection, $query1); 
-          
-          while ($row1 = mysqli_fetch_array($result1)) {
-            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row1['hazID'] . '">' . $row1['hazID'] . ' - ' . $row1['hazDesc'] . '</a></b></p>' ;
-          };
+<?php
+$query1 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
+  FROM hazard 
+  INNER JOIN hazard_consequence
+  ON hazard.hazID=hazard_consequence.hazID 
+  INNER JOIN consequence_control 
+  ON hazard_consequence.csqID=consequence_control.csqID 
+  INNER JOIN controls 
+  ON consequence_control.conID=controls.conID 
+  WHERE controls.conID=" . $conID;
+$result1 = mysqli_query($connection, $query1); 
 
-          $query2 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
-          FROM hazard 
-          INNER JOIN threat_hazard 
-          ON hazard.hazID=threat_hazard.hazID 
-          INNER JOIN threat_control 
-          ON threat_hazard.thrID=threat_control.thrID 
-          INNER JOIN controls 
-          ON threat_control.conID=controls.conID 
-          WHERE controls.conID=" . $conID;
-          $result2 = mysqli_query($connection, $query2); 
-          
-          while ($row2 = mysqli_fetch_array($result2)) {
-            echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row2['hazID'] . '">' . $row2['hazID'] . ' - ' . $row2['hazDesc'] . '</a></b></p>' ;
-          }
-          ?>
+while ($row1 = mysqli_fetch_array($result1)) {
+  echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row1['hazID'] . '">' . $row1['hazID'] . ' - ' . $row1['hazDesc'] . '</a></b></p>' ;
+};
+
+$query2 = "SELECT DISTINCT hazard.hazID, hazard.hazDesc 
+  FROM hazard 
+  INNER JOIN threat_hazard 
+  ON hazard.hazID=threat_hazard.hazID 
+  INNER JOIN threat_control 
+  ON threat_hazard.thrID=threat_control.thrID 
+  INNER JOIN controls 
+  ON threat_control.conID=controls.conID 
+  WHERE controls.conID=" . $conID;
+$result2 = mysqli_query($connection, $query2); 
+
+while ($row2 = mysqli_fetch_array($result2)) {
+  echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row2['hazID'] . '">' . $row2['hazID'] . ' - ' . $row2['hazDesc'] . '</a></b></p>' ;
+}
+?>
 
           <h2>Associated Threats and Consequences</h2>
 
           <!-- Get hazards from database -->
-          <?php
-          $query = "SELECT DISTINCT threat.thrID, threat.thrDesc 
-          FROM threat
-          INNER JOIN threat_control 
-          ON threat.thrID=threat_control.thrID 
-          INNER JOIN controls 
-          ON threat_control.conID=controls.conID 
-          WHERE controls.conID=" . $conID;
-          $result = mysqli_query($connection, $query); 
-          
-          while ($row = mysqli_fetch_array($result)) {
-            echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
-          };
+<?php
+$query = "SELECT DISTINCT threat.thrID, threat.thrDesc 
+  FROM threat
+  INNER JOIN threat_control 
+  ON threat.thrID=threat_control.thrID 
+  INNER JOIN controls 
+  ON threat_control.conID=controls.conID 
+  WHERE controls.conID=" . $conID;
+$result = mysqli_query($connection, $query); 
 
-          $query = "SELECT DISTINCT consequence.csqID, consequence.csqDesc 
-          FROM consequence
-          INNER JOIN consequence_control 
-          ON consequence.csqID=consequence_control.csqID 
-          INNER JOIN controls 
-          ON consequence_control.conID=controls.conID 
-          WHERE controls.conID=" . $conID;
-          $result = mysqli_query($connection, $query); 
-          
-          while ($row = mysqli_fetch_array($result)) {
-            echo '<p class="tile_consequence"><b>' . $row['csqDesc'] . '</b></p>' ;
-          }
-          ?>
+while ($row = mysqli_fetch_array($result)) {
+  echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
+};
+
+$query = "SELECT DISTINCT consequence.csqID, consequence.csqDesc 
+  FROM consequence
+  INNER JOIN consequence_control 
+  ON consequence.csqID=consequence_control.csqID 
+  INNER JOIN controls 
+  ON consequence_control.conID=controls.conID 
+  WHERE controls.conID=" . $conID;
+$result = mysqli_query($connection, $query); 
+
+while ($row = mysqli_fetch_array($result)) {
+  echo '<p class="tile_consequence"><b>' . $row['csqDesc'] . '</b></p>' ;
+}
+?>
         </div>
       </article>
       <article>
         <div>
           <div class="cl">
-					<form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
+            <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
               <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
-				      <input type="submit" value="Sumbit"/>
+              <input type="submit" value="Sumbit"/>
             </form>
           </div>
           <?php
