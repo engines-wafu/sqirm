@@ -21,7 +21,7 @@ $action = $_GET["actID"];
     <div class="content">
       <div>
         <div class="a">
-          <h1>Open Actions Page</h1>
+          <h1>Action Detail Page</h1>
           <?php  if (isset($_SESSION['username'])) : ?>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
           <?php endif ?>
@@ -49,10 +49,32 @@ $action = $_GET["actID"];
           $owner = $row['actOwner'];
           $dl = $row['actDL'];
 
-          echo '<h2>' . $description . '</h2>';
-
+          echo '<h2> Action Serial Number' . $action . '</h2>';
         ?>
-      <div>
+
+        <h3>Description of the Action or Issue</h3>
+
+        <p><?php echo $description ?></p>
+
+        <h3>Owner</h3>
+
+        <p><?php echo $owner ?></p>
+
+        <h3>Topic</h3>
+
+        <p><?php echo $topic ?></p>
+
+        <h3>Origin</h3>
+
+        <p><?php echo $origin ?></p>
+
+        <h3>Deadline for rectification</h3>
+
+        <p><?php echo $dl ?></p>
+
+        <h3>Comments</h3>
+
+      </div>
     </div>
   </body>
 </html>
