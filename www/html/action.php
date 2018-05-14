@@ -77,7 +77,7 @@ $action = $_GET["actID"];
 
       <article>
         <div style="margin-top:10px;">
-          <h3>Comments</h3>
+          <h3>Comments</h3><hr>
 
           <?php
           $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $action . "'ORDER BY comments.comID DESC";
