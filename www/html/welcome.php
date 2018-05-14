@@ -97,7 +97,7 @@ $user = $_SESSION['username'];
           <h2>My Actions and Issues</h2>
           <table>
           <?php
-            $query = "SELECT actWRAG, actIssue FROM actions WHERE actOwner = '" . $user . "'";
+            $query = "SELECT actWRAG, actID, actIssue FROM actions WHERE actOwner = '" . $user . "'";
             $result = mysqli_query($connection, $query); 
             while ($row = mysqli_fetch_array($result)) {
               $ID = $row['actID'];
@@ -111,9 +111,9 @@ $user = $_SESSION['username'];
                 echo '<td class="' . $WRAG . '">';
                   echo $WRAG;
                 echo '</td>';
-                echo '<td>';
+                echo '<td><a href="action.php?actID=' . $ID . '">';
                   echo $description;
-                echo '</td>';
+                echo '</a></td>';
 			           echo '</tr>';
             }
           ?>
