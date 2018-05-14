@@ -131,7 +131,7 @@ $hazard = $_GET["conID"]
             echo '<p class="tile_threat"><b>' . $row['thrDesc'] . '</b></p>' ;
           };
 
-					if (empty($row)) {
+					if (empty mysqli_fetch_array($result)) {
 									echo '<p> Empty </p>';
 					} else
 									echo '<p> Not Empty </p>';
