@@ -188,7 +188,7 @@ hr {
   display: flex;
   border: none;
   align-items: stretch;
-  flex-grow: 1;
+  flex-grow: 6;
 }
 .ki1 { 
   text-align: left;
