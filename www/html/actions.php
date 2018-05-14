@@ -54,10 +54,6 @@ $hazard = $_GET["conID"]
             echo '<td>Stuff</td>';
             echo '<td>Stuff</td>';
             echo '<td>Stuff</td>';
-          $row['actID'];
-          $row['actWRAG'];
-          $row['actIssue'];
-          $row['actOwner'];
           echo '</tr>';
         }
       ?>
