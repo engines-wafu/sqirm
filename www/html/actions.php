@@ -54,14 +54,19 @@ $hazard = $_GET["conID"]
           $owner = $row['actOwner'];
 					     echo '<tr>';
             echo '<td>';
+              echo $ID;
             echo '</td>';
             echo '<td>';
+              echo $WRAG;
             echo '</td>';
             echo '<td>';
+              echo $description;
             echo '</td>';
             echo '<td>';
+              echo $owner;
             echo '</td>';
             echo '<td>';
+              echo '';
             echo '</td>';
 					     echo '</tr>';
         }
