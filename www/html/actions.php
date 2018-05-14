@@ -48,13 +48,17 @@ $hazard = $_GET["conID"]
         $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
-          $ID = $row['actID'];
-          $WRAG = $row['actWRAG'];
-          $description = $row['actIssue'];
-          $owner = $row['actOwner'];
-					     echo '<tr>';
-            echo 'test';
-					     echo '</tr>';
+          echo '<tr>';
+            echo '<td>Stuff</td>';
+            echo '<td>Stuff</td>';
+            echo '<td>Stuff</td>';
+            echo '<td>Stuff</td>';
+            echo '<td>Stuff</td>';
+          $row['actID'];
+          $row['actWRAG'];
+          $row['actIssue'];
+          $row['actOwner'];
+          echo '</tr>';
         }
       ?>
     </table>
