@@ -191,12 +191,18 @@ hr {
   align-items: stretch;
   flex-grow: 1;
 }
-.ki { 
+.ki1 { 
+  text-align: left;
+  height: 90px;
+  width: 1500px;
+  margin: 0px;
+  border: none;
+}
+.ki2 { 
   text-align: left;
   height: 90px;
   margin: 0px;
   border: none;
-  display: flex;
   flex-grow: 1;
 }
 .ci {

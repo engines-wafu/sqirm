@@ -36,10 +36,10 @@ $hazard = $_GET["conID"]
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             echo '<div class="kl">';
-              echo '<div id="kpiblock" class="width:170px;">';
+              echo '<div class="ki1">';
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
               echo '</div>';
-              echo '<div class="ki">';
+              echo '<div class="ki2">';
               echo '<h2>' . $row['kpiDesc'] . '</h2>';
                 echo '<p>sample text</p>';
               echo '</div>';
