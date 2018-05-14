@@ -56,7 +56,7 @@ $user = $_SESSION['username'];
 
       <!-- Centre article -->
       <article>
-        <div style="overflow:scroll; height;500px">
+        <div style="overflow:scroll; height:500px">
           <h2>List of Active Controls</h2>
           <!-- Get controls from database -->
           <?php
