@@ -111,7 +111,7 @@ $hazard = $_GET["conID"]
             while ($row = mysqli_fetch_array($result)) {
               echo '<p class="tile_hazard"><b><a href="RiskView.php?hazID=' . $row['hazID'] . '">' . $row['hazID'] . ' - ' . $row['hazDesc'] . '</a></b></p>' ;
             }
-					}
+					};
           ?>
 
           <h2>Associated Threats and Consequences</h2>
