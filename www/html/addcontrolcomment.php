@@ -22,7 +22,7 @@ if (mysqli_query($connection, $sql)) {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 }
 
-$comID = mysqli_insert_id($connection)
+$comID = mysqli_insert_id($connection);
 
 $sql = 'INSERT INTO comment_links (comID, conID) VALUES ("' . $comID . '", "' . $conID . '")';
 
