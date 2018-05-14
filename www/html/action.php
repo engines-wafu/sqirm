@@ -86,6 +86,7 @@ $action = $_GET["actID"];
           while ($row = mysqli_fetch_array($result)) {
             echo '<p>' . $row['comment'] .'</p>' ;
             echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
+            echo '<hr>' ;
           }
           ?>
 
