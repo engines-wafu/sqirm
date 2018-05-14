@@ -9,29 +9,29 @@ table, td, body {
   font-size: 8pt;
 }
 tr {
-  border: 2px solid black;
+  border: 2px solid #012161;
   background-color: white;
 }
 tr:nth-child(even) {
   background-color: #f2f2f2 !important
 }
 a {
-  color: black;
+  color: #012161;
   text-decoration: none;
 }
 th {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #012161;
   background-color: white;
   font-size: 8pt;
 }
 section {
   width: 95%;
   margin: 10px;
-  background: gray;
+  background: #222c3f;
   display: flex;
 }
 article {
-  color: black;
+  color: #012161;
   flex: 1;
   margin-right: 10px;
 }
@@ -39,7 +39,7 @@ article:last-child {
   margin-right: 0;
 }
 div {
-  color: black;
+  color: #012161;
   background: white;
   flex: 1;
 }
@@ -47,14 +47,14 @@ div:last-child {
   margin-right: 0;
 }
 section, div {
-  border: 2px solid black;
+  border: 2px solid #012161;
   padding: 10px;
 }
 hr {
   display: block;
   border: 0px;
-  color: gray;
-  background-color: gray;
+  color: #222c3f;
+  background-color: #222c3f;
   height: 2px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -64,39 +64,39 @@ hr {
 .tile_action {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #012161;
 }
 .tile_threat {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #012161;
   background: white;
 }
 .tile_consequence {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid black;
-  background: black;
+  border: 2px solid #012161;
+  background: #012161;
   color: white;
 }
 .tile_hazard {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #012161;
   background: orange;
 }
 .tile_control {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #012161;
 }
 .tile_hazard:hover {
-  border: 2px dashed black;
+  border: 2px dashed #012161;
 }
 .content {
   width: 95%;
   margin: 10px;
-  background: gray;
+  background: #222c3f;
   display: flex;
 }
 .container {
@@ -131,7 +131,7 @@ hr {
 .navbar {
   width: 95%;
   margin: 10px;
-  background: gray;
+  background: #222c3f;
   display: flex;
   justify-content: center;
 }
@@ -223,19 +223,19 @@ hr {
   width: calc(100% - 10px);
 }
 .alert {
-  background: repeating-linear-gradient(45deg, yellow, yellow 4px, black 4px, black 8px);
+  background: repeating-linear-gradient(45deg, yellow, yellow 4px, #012161 4px, #012161 8px);
   color: red;
   font-weight: bold;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #012161;
   width: 250;
 }
 #pcontrol {
   padding: 10px;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #012161;
 }
 #topelement {
   font-weight: bold;
@@ -243,7 +243,7 @@ hr {
   background: orange;
   border-radius: 100px;
   border-style: hidden; /* hide standard table (collapsed) border */
-  box-shadow: 0 0 0 3px black; /* this draws the table border  */
+  box-shadow: 0 0 0 3px #012161; /* this draws the table border  */
   width: 200px;
   height: 100px;
 }
