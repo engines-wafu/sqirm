@@ -67,11 +67,11 @@ $hazard = $_GET["conID"]
                 echo $owner;
               echo '</td>';
               echo '<td>';
-                $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $ID . "'ORDER BY comments.comID DESC";
-                $result = mysqli_query($connection, $query); 
-                while ($row = mysqli_fetch_array($result)) {
-                  echo '<p>' . $row['comment'] .'</p>' ;
-                  echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
+                $query2 = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $ID . "'ORDER BY comments.comID DESC";
+              $result2 = mysqli_query($connection, $query2); 
+              while ($row2 = mysqli_fetch_array($result2)) {
+                echo '<p>' . $row2['comment'] .'</p>' ;
+                echo '<p><b>By: </b>' . $row2['username'] . '<b> on </b>' . $row2['date'] .'</p>' ;
                   echo '<hr>' ;
                 }
               echo '</td>';
