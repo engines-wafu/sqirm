@@ -188,7 +188,6 @@ hr {
   display: flex;
   border: none;
   align-items: stretch;
-  flex-grow: 6;
 }
 .ki1 { 
   text-align: left;
@@ -202,7 +201,7 @@ hr {
   height: 90px;
   margin: 0px;
   border: none;
-  flex-grow: 1;
+  flex-grow: 6;
 }
 .ci {
   padding: 0px;
