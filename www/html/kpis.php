@@ -30,7 +30,7 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <section>
       <article>
-        <div class="content">
+        <div>
           <?php
           $query = "SELECT kpiID, kpiDesc FROM kpis";
           $result = mysqli_query($connection, $query); 
