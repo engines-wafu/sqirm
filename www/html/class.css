@@ -27,7 +27,7 @@ th {
 section {
   width: 95%;
   margin: 10px;
-  background: #222c3f;
+  background: #e6eeff;
   display: flex;
 }
 article {
@@ -53,8 +53,8 @@ section, div {
 hr {
   display: block;
   border: 0px;
-  color: #222c3f;
-  background-color: #222c3f;
+  color: #e6eeff;
+  background-color: #e6eeff;
   height: 2px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -96,7 +96,7 @@ hr {
 .content {
   width: 95%;
   margin: 10px;
-  background: #222c3f;
+  background: #e6eeff;
   display: flex;
 }
 .container {
@@ -131,7 +131,7 @@ hr {
 .navbar {
   width: 95%;
   margin: 10px;
-  background: #222c3f;
+  background: #e6eeff;
   display: flex;
   justify-content: center;
 }
