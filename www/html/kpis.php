@@ -60,7 +60,7 @@ $hazard = $_GET["conID"]
                 echo '<input type="text" id="' . $row['kpiVal3'] . '" placeholder="' . $row['kpiVal3']. '">';
               echo '</td>';
               echo '<td>';
-                echo '<input type="submit" value="Sumbit"/'>
+                echo '<input type="submit" value="Sumbit"/>';
               echo '</td>';
             echo '</tr>';
           }
