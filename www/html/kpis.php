@@ -39,30 +39,6 @@ $hazard = $_GET["conID"]
             <div style="flex-grow: 1">Sumbit</div>
           </div>
           <div class="kpi_line">
-          <?php
-          $query = "SELECT * FROM kpis";
-          $result = mysqli_query($connection, $query); 
-          while ($row = mysqli_fetch_array($result)) {
-            $name = $_SESSION['username'];
-            $date = date('Y-m-d');
-            $description = $_POST['kpiDesc'];
-            $kpiID = $_POST['kpiID'];
-            $val1 = $_POST['kpiVal1'];
-            $desc1 = $_POST['kpiDesc1'];
-            $val2 = $_POST['kpiVal2'];
-            $desc2 = $_POST['kpiDesc2'];
-            $val3 = $_POST['kpiVal3'];
-            $desc3 = $_POST['kpiDesc3'];
-                echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-                echo '<input type="text" id="' . $row['kpiDesc'] . '" value="' . $row['kpiDesc']. '">';
-                echo '<input type="text" id="' . $row['kpiDesc1'] . '" value="' . $row['kpiDesc1']. '">';
-                echo '<input type="text" id="' . $row['kpiVal1'] . '" value="' . $row['kpiVal1']. '">';
-                echo '<input type="text" id="' . $row['kpiDesc2'] . '" value="' . $row['kpiDesc2']. '">';
-                echo '<input type="text" id="' . $row['kpiVal2'] . '" value="' . $row['kpiVal2']. '">';
-                echo '<input type="text" id="' . $row['kpiDesc3'] . '" value="' . $row['kpiDesc3']. '">';
-                echo '<input type="text" id="' . $row['kpiVal3'] . '" value="' . $row['kpiVal3']. '">';
-          }
-          ?>
           </div>
         </div>
       </div>
