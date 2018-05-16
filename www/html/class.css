@@ -105,6 +105,7 @@ hr {
   display: flex;
 }
 .kpi_container{
+  flex-grow: 1;
   margin: 10px;
   padding: 0px;
   display: flex;
