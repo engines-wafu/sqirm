@@ -65,11 +65,11 @@ $(document).ready(function(){
             {
               label: kpiCharts[i],
               backgroundColor: [
-                'green',
-                'yellow',
-                'red'
+                '#034732',
+                '#FFBA08',
+                '#B80C09'
               ],
-              borderColor: 'black',
+              borderColor: '#012161',
               borderWidth: 2,
               data: kpidatasetarray[i]
             }
