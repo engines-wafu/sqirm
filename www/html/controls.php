@@ -20,7 +20,7 @@ $hazard = $_GET["conID"]
   <body>
     <div class="content">
       <div>
-        <div class="a" style="height:500px">
+        <div class="a">
           <h1>Controls Page</h1>
           <?php  if (isset($_SESSION['username'])) : ?>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
@@ -36,7 +36,7 @@ $hazard = $_GET["conID"]
     <section>
       <!-- Left division -->
       <article> 
-        <div style="height: 300px">
+        <div style="height: 500px">
           <h2>Control Details</h2>
 <?php
   $query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
@@ -66,7 +66,7 @@ while ($row = mysqli_fetch_array($result)) {
       </article>
       <!-- Center division -->
       <article> 
-        <div>
+        <div style="height:500px">
 <?php
 $query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
 $result = mysqli_query($connection, $query); 
@@ -147,7 +147,7 @@ while ($row = mysqli_fetch_array($result)) {
         </div>
       </article>
       <article>
-        <div>
+        <div style="height:500px">
           <div class="cl">
             <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
               <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
