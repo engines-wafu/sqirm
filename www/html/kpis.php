@@ -35,55 +35,6 @@ $hazard = $_GET["conID"]
           </div>
         </div>
         <div class="kpi_container">
-        <table style="width: 100%;">
-          <th style="width:15%;">Gas Gauge</th>
-          <th style="width:20%;">Title</th>
-          <th style="width:20%;">Green Threshold</th>
-          <th style="width:20%;">Amber Threshold</th>
-          <th style="width:20%;">Red Threshold</th>
-          <th style="width:5%;">Submit</th>
-          <?php
-          $query = "SELECT * FROM kpis";
-          $result = mysqli_query($connection, $query); 
-          while ($row = mysqli_fetch_array($result)) {
-            $name = $_SESSION['username'];
-            $date = date('Y-m-d');
-            $description = $_POST['kpiDesc'];
-            $kpiID = $_POST['kpiID'];
-            $val1 = $_POST['kpiVal1'];
-            $desc1 = $_POST['kpiDesc1'];
-            $val2 = $_POST['kpiVal2'];
-            $desc2 = $_POST['kpiDesc2'];
-            $val3 = $_POST['kpiVal3'];
-            $desc3 = $_POST['kpiDesc3'];
-            echo '<form action="submitkpis.php" name="kpiAdd' . $kpiID . '" method="post">';
-              echo '<tr>';
-                echo '<td>';
-                  echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-                echo '</td>';
-                echo '<td>';
-                  echo '<input type="text" id="' . $row['kpiDesc'] . '" value="' . $row['kpiDesc']. '">';
-                echo '</td>';
-                echo '<td>';
-                  echo '<input type="text" id="' . $row['kpiDesc1'] . '" value="' . $row['kpiDesc1']. '">';
-                  echo '<input type="text" id="' . $row['kpiVal1'] . '" value="' . $row['kpiVal1']. '">';
-                echo '</td>';
-                echo '<td>';
-                  echo '<input type="text" id="' . $row['kpiDesc2'] . '" value="' . $row['kpiDesc2']. '">';
-                  echo '<input type="text" id="' . $row['kpiVal2'] . '" value="' . $row['kpiVal2']. '">';
-                echo '</td>';
-                echo '<td>';
-                  echo '<input type="text" id="' . $row['kpiDesc3'] . '" value="' . $row['kpiDesc3']. '">';
-                  echo '<input type="text" id="' . $row['kpiVal3'] . '" value="' . $row['kpiVal3']. '">';
-                echo '</td>';
-                echo '<td>';
-                  echo '<input type="submit" value="Sumbit"/>';
-                echo '</td>';
-              echo '</tr>';
-            echo '</form>';
-          }
-          ?>
-        <table>
         </div>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/Chart.js"></script>
