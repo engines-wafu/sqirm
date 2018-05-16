@@ -110,13 +110,13 @@ hr {
   justify-content: center;
   align-content: center;
 }
-.kpi_container > div {
+.kpi_line {
   margin: 0px;
   padding: 0px;
   border: 0px;
   flex-direction: row;
 }
-.kpi_line {
+.kpi_block {
   margin: 0px;
   padding: 0px;
   border: 0px;

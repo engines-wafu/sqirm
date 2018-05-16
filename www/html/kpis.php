@@ -30,13 +30,13 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
       <div class="content">
         <div class="kpi_container">
-          <div>
-            <div style="flex-grow: 3" class="kpi_line">Gas Gauge</div>
-            <div style="flex-grow: 4" class="kpi_line">Title</div>
-            <div style="flex-grow: 4" class="kpi_line">Green Threshold</div>
-            <div style="flex-grow: 4" class="kpi_line">Amber Threshold</div>
-            <div style="flex-grow: 4" class="kpi_line">Red Threshold</div>
-            <div style="flex-grow: 1" class="kpi_line">Sumbit</div>
+          <div class="kpi_line">
+            <div style="flex-grow: 3" class="kpi_block">Gas Gauge</div>
+            <div style="flex-grow: 4" class="kpi_block">Title</div>
+            <div style="flex-grow: 4" class="kpi_block">Green Threshold</div>
+            <div style="flex-grow: 4" class="kpi_block">Amber Threshold</div>
+            <div style="flex-grow: 4" class="kpi_block">Red Threshold</div>
+            <div style="flex-grow: 1" class="kpi_block">Sumbit</div>
           </div>
           <div>
             <table style="width: 100%;">
