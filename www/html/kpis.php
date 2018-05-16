@@ -34,6 +34,7 @@ $hazard = $_GET["conID"]
             <p> all the text</p>
           </div>
         </div>
+        <div class="kpi_container">
         <table style="width: 100%;">
           <th style="width:15%;">Gas Gauge</th>
           <th style="width:20%;">Title</th>
@@ -83,6 +84,7 @@ $hazard = $_GET["conID"]
           }
           ?>
         <table>
+        </div>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/Chart.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
