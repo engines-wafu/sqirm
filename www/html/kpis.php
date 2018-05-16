@@ -31,16 +31,15 @@ $hazard = $_GET["conID"]
       <div class="content">
         <div class="kpi_container">
           <div>
-            <p>Titles go here</p>
+            <div style="flex-grow: 3">Gas Gauge</div>
+            <div style="flex-grow: 4">Title</div>
+            <div style="flex-grow: 4">Green Threshold</div>
+            <div style="flex-grow: 4">Amber Threshold</div>
+            <div style="flex-grow: 4">Red Threshold</div>
+            <div style="flex-grow: 1">Sumbit</div>
           </div>
           <div>
             <table style="width: 100%;">
-              <th style="width:15%;">Gas Gauge</th>
-              <th style="width:20%;">Title</th>
-              <th style="width:20%;">Green Threshold</th>
-              <th style="width:20%;">Amber Threshold</th>
-              <th style="width:20%;">Red Threshold</th>
-              <th style="width:5%;">Submit</th>
               <?php
               $query = "SELECT * FROM kpis";
               $result = mysqli_query($connection, $query); 
