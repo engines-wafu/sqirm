@@ -48,7 +48,7 @@ div:last-child {
 }
 section, div {
   border: 2px solid #012161;
-  padding: 10px;
+  padding: 4px;
 }
 hr {
   display: block;
