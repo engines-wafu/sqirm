@@ -29,11 +29,11 @@ $hazard = $_GET["conID"]
     </div>
     <?php include "navbar.php"; ?>
       <div class="content">
-        <?php
-        $query = "SELECT kpiID, kpiDesc FROM kpis";
-        $result = mysqli_query($connection, $query); 
-        while ($row = mysqli_fetch_array($result)) {
-          echo '<table>';
+        <table>
+          <?php
+          $query = "SELECT kpiID, kpiDesc FROM kpis";
+          $result = mysqli_query($connection, $query); 
+          while ($row = mysqli_fetch_array($result)) {
             echo '<tr>';
               echo '<td>';
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
@@ -45,9 +45,9 @@ $hazard = $_GET["conID"]
                 echo '<p>sample text</p>';
               echo '</td>';
             echo '</tr>';
-          echo '</table>';
-        }
-        ?>
+          }
+          ?>
+        <table>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/Chart.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
