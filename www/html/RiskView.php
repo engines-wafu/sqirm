@@ -39,7 +39,7 @@
 <section>
   <div>
     <!-- Display table data. -->
-    <table>
+    <table class="hazard_table">
       <tr style="background:white; border:0px">
     <!-- Column 1 -->
       <td>

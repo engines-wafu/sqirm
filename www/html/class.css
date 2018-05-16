@@ -246,7 +246,7 @@ hr {
 #topelement {
   font-weight: bold;
   text-align: center;
-  background: orange;
+  background: #FFBA08;
   border-radius: 100px;
   border-style: hidden; /* hide standard table (collapsed) border */
   box-shadow: 0 0 0 3px #012161; /* this draws the table border  */
@@ -273,4 +273,7 @@ hr {
   text-align: center;
   border: none !important;
   display: block !important;
+}
+#hazard_table {
+  background: white;
 }
