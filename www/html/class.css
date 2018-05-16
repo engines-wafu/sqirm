@@ -47,8 +47,12 @@ section, div {
   border: 2px solid #012161;
   padding: 4px;
 }
-a {
+p {
   color: #0C120C;
+  text-decoration: none;
+}
+a {
+  color: inherit;
   text-decoration: none;
 }
 hr {
