@@ -47,6 +47,10 @@ section, div {
   border: 2px solid #012161;
   padding: 4px;
 }
+a {
+  color: #0C120C;
+  text-decoration: none;
+}
 hr {
   display: block;
   border: 0px;
@@ -265,8 +269,4 @@ hr {
   text-align: center;
   border: none !important;
   display: block !important;
-}
-a {
-  color: #0C120C;
-  text-decoration: none;
 }
