@@ -44,19 +44,19 @@ $hazard = $_GET["conID"]
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
               echo '</td>';
               echo '<td>';
-                echo '<h2><input type="text" id="' . $row['kpiDesc'] . '" placeholder="' . $row['kpiDesc']. '"></h2>';
+                echo '<input type="text" id="' . $row['kpiDesc'] . '" placeholder="' . $row['kpiDesc']. '">';
               echo '</td>';
               echo '<td>';
-                echo '<p>' . $row['kpiDesc1'] . '</p>';
-                echo '<p>' . $row['kpiVal1'] . '</p>';
+                echo '<input type="text" id="' . $row['kpiDesc1'] . '" placeholder="' . $row['kpiDesc1']. '">';
+                echo '<input type="text" id="' . $row['kpiVal1'] . '" placeholder="' . $row['kpiVal1']. '">';
               echo '</td>';
               echo '<td>';
-                echo '<p>' . $row['kpiDesc2'] . '</p>';
-                echo '<p>' . $row['kpiVal2'] . '</p>';
+                echo '<input type="text" id="' . $row['kpiDesc2'] . '" placeholder="' . $row['kpiDesc2']. '">';
+                echo '<input type="text" id="' . $row['kpiVal2'] . '" placeholder="' . $row['kpiVal2']. '">';
               echo '</td>';
               echo '<td>';
-                echo '<p>' . $row['kpiDesc3'] . '</p>';
-                echo '<p>' . $row['kpiVal2'] . '</p>';
+                echo '<input type="text" id="' . $row['kpiDesc3'] . '" placeholder="' . $row['kpiDesc3']. '">';
+                echo '<input type="text" id="' . $row['kpiVal3'] . '" placeholder="' . $row['kpiVal3']. '">';
               echo '</td>';
             echo '</tr>';
           }
