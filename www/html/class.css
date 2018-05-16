@@ -16,7 +16,7 @@ tr:nth-child(even) {
   background-color: #f2f2f2 !important
 }
 a {
-  color: #012161;
+  color: #0C120C;
   text-decoration: none;
 }
 th {
@@ -39,7 +39,7 @@ article:last-child {
   margin-right: 0;
 }
 div {
-  color: #012161;
+  color: #0C120C;
   background: white;
   flex: 1;
 }
@@ -54,7 +54,7 @@ section, div {
 hr {
   display: block;
   border: 0px;
-  color: #222c3f;
+  color: #0C120C;
   background-color: #222c3f;
   height: 2px;
   margin-top: 5px;
@@ -113,6 +113,7 @@ hr {
 }
 .green {
   background: #034732;
+  color: white;
 }
 .yellow {
   background: #FFBA08;
