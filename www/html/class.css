@@ -88,7 +88,7 @@ hr {
   margin: 4px auto;
   padding: 10px;
   border: 2px solid #012161;
-  background: orange;
+  background: #FFBA08;
 }
 .tile_control {
   margin: 4px auto;
@@ -101,7 +101,7 @@ hr {
 .content {
   width: 95%;
   margin: 10px;
-  background: #222c3f;
+  background: #012161;
   display: flex;
 }
 .container {
