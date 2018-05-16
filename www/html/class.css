@@ -63,31 +63,31 @@ hr {
   margin-right: 10px;
 }
 .tile_action {
-  margin: 20px auto;
+  margin: 4px auto;
   padding: 10px;
   border: 2px solid #012161;
 }
 .tile_threat {
-  margin: 20px auto;
+  margin: 4px auto;
   padding: 10px;
   border: 2px solid #012161;
   background: white;
 }
 .tile_consequence {
-  margin: 20px auto;
+  margin: 4px auto;
   padding: 10px;
   border: 2px solid #012161;
   background: #012161;
   color: white;
 }
 .tile_hazard {
-  margin: 20px auto;
+  margin: 4px auto;
   padding: 10px;
   border: 2px solid #012161;
   background: orange;
 }
 .tile_control {
-  margin: 20px auto;
+  margin: 4px auto;
   padding: 10px;
   border: 2px solid #012161;
 }
@@ -112,13 +112,13 @@ hr {
   background: white;
 }
 .green {
-  background: green;
+  background: #034732;
 }
 .yellow {
-  background: yellow;
+  background: #FFBA08;
 }
 .red {
-  background: red;
+  background: #B80C09;
 }
 .kpi {
   width: 80 !important;
@@ -224,8 +224,8 @@ hr {
   width: calc(100% - 10px);
 }
 .alert {
-  background: repeating-linear-gradient(45deg, yellow, yellow 4px, #012161 4px, #012161 8px);
-  color: red;
+  background: repeating-linear-gradient(45deg, #FFBA08, #FFBA08 4px, #0C120C 4px, #0C120C 8px);
+  color: #B80C09;
   font-weight: bold;
   border-style: solid;
   border-width: 2px;
