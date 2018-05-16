@@ -113,7 +113,7 @@ hr {
 }
 .green {
   background: #034732;
-  color: white;
+  color: white !important;
 }
 .yellow {
   background: #FFBA08;
