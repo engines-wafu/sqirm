@@ -44,7 +44,7 @@ $hazard = $_GET["conID"]
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
               echo '</td>';
               echo '<td>';
-                echo '<h2>' . $row['kpiDesc'] . '</h2>';
+                echo '<h2><input type="text" id="' . $row['kpiDesc'] . '" placeholder="' . $row['kpiDesc']. '"></h2>';
               echo '</td>';
               echo '<td>';
                 echo '<p>' . $row['kpiDesc1'] . '</p>';
