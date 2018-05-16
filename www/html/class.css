@@ -26,14 +26,14 @@ th {
 }
 section {
   width: 95%;
-  margin: 10px;
+  margin: 4px;
   background: #012161;
   display: flex;
 }
 article {
   color: #0c120c;
   flex: 1;
-  margin-right: 10px;
+  margin-right: 4px;
 }
 article:last-child {
   margin-right: 0;
@@ -48,7 +48,7 @@ div:last-child {
 }
 section, div {
   border: 2px solid #0c120c;
-  padding: 10px;
+  padding: 4px;
 }
 hr {
   display: block;
@@ -56,38 +56,38 @@ hr {
   color: #012161;
   background-color: #012161;
   height: 2px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 .tile_action {
-  margin: 20px auto;
-  padding: 10px;
+  margin: 8px auto;
+  padding: 4px;
   border: 2px solid #0c120c;
 }
 .tile_threat {
   margin: 20px auto;
-  padding: 10px;
+  padding: 4px;
   border: 2px solid #0c120c;
   background: white;
 }
 .tile_consequence {
   margin: 20px auto;
-  padding: 10px;
+  padding: 4px;
   border: 2px solid #0c120c;
   background: #0c120c;
   color: white;
 }
 .tile_hazard {
   margin: 20px auto;
-  padding: 10px;
+  padding: 4px;
   border: 2px solid #0c120c;
   background: orange;
 }
 .tile_control {
   margin: 20px auto;
-  padding: 10px;
+  padding: 4px;
   border: 2px solid #0c120c;
 }
 .tile_hazard:hover {
@@ -138,7 +138,7 @@ hr {
 .navlink {
   width: 100px;
   margin: 0px 10px;
-  padding: 5px 0px;
+  padding: 2px 0px;
   text-align: center;
   font-weight: bold;
   font-size: 12pt;
