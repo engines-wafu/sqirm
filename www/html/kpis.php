@@ -48,6 +48,7 @@ $hazard = $_GET["conID"]
           </div>
         </div>
       </div>
+    </div>
   </body>
 </html>
           <?php
