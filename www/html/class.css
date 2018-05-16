@@ -9,29 +9,29 @@ table, td, body {
   font-size: 8pt;
 }
 tr {
-  border: 2px solid #012161;
+  border: 2px solid #0c120c;
   background-color: white;
 }
 tr:nth-child(even) {
-  background-color: #f2f2f2 !important
+  background-color: #8b98b7 !important
 }
 a {
-  color: #012161;
+  color: #0c120c;
   text-decoration: none;
 }
 th {
-  border-bottom: 2px solid #012161;
+  border-bottom: 2px solid #0c120c;
   background-color: white;
   font-size: 8pt;
 }
 section {
   width: 95%;
   margin: 10px;
-  background: #e6eeff;
+  background: #012161;
   display: flex;
 }
 article {
-  color: #012161;
+  color: #0c120c;
   flex: 1;
   margin-right: 10px;
 }
@@ -39,7 +39,7 @@ article:last-child {
   margin-right: 0;
 }
 div {
-  color: #012161;
+  color: #0c120c;
   background: white;
   flex: 1;
 }
@@ -47,14 +47,14 @@ div:last-child {
   margin-right: 0;
 }
 section, div {
-  border: 2px solid #012161;
+  border: 2px solid #0c120c;
   padding: 10px;
 }
 hr {
   display: block;
   border: 0px;
-  color: #e6eeff;
-  background-color: #e6eeff;
+  color: #012161;
+  background-color: #012161;
   height: 2px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -64,39 +64,39 @@ hr {
 .tile_action {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid #012161;
+  border: 2px solid #0c120c;
 }
 .tile_threat {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid #012161;
+  border: 2px solid #0c120c;
   background: white;
 }
 .tile_consequence {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid #012161;
-  background: #012161;
+  border: 2px solid #0c120c;
+  background: #0c120c;
   color: white;
 }
 .tile_hazard {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid #012161;
+  border: 2px solid #0c120c;
   background: orange;
 }
 .tile_control {
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid #012161;
+  border: 2px solid #0c120c;
 }
 .tile_hazard:hover {
-  border: 2px dashed #012161;
+  border: 2px dashed #0c120c;
 }
 .content {
   width: 95%;
   margin: 10px;
-  background: #e6eeff;
+  background: #012161;
   display: flex;
 }
 .container {
@@ -131,7 +131,7 @@ hr {
 .navbar {
   width: 95%;
   margin: 10px;
-  background: #e6eeff;
+  background: #012161;
   display: flex;
   justify-content: center;
 }
@@ -223,19 +223,19 @@ hr {
   width: calc(100% - 10px);
 }
 .alert {
-  background: repeating-linear-gradient(45deg, yellow, yellow 4px, #012161 4px, #012161 8px);
+  background: repeating-linear-gradient(45deg, yellow, yellow 4px, #0c120c 4px, #0c120c 8px);
   color: red;
   font-weight: bold;
   border-style: solid;
   border-width: 2px;
-  border-color: #012161;
+  border-color: #0c120c;
   width: 250;
 }
 #pcontrol {
   padding: 10px;
   border-style: solid;
   border-width: 2px;
-  border-color: #012161;
+  border-color: #0c120c;
 }
 #topelement {
   font-weight: bold;
@@ -243,7 +243,7 @@ hr {
   background: orange;
   border-radius: 100px;
   border-style: hidden; /* hide standard table (collapsed) border */
-  box-shadow: 0 0 0 3px #012161; /* this draws the table border  */
+  box-shadow: 0 0 0 3px #0c120c; /* this draws the table border  */
   width: 200px;
   height: 100px;
 }
