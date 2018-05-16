@@ -61,7 +61,6 @@ $hazard = $_GET["conID"]
             $desc2 = $_POST['kpiDesc2'];
             $val3 = $_POST['kpiVal3'];
             $desc3 = $_POST['kpiDesc3'];
-            echo '<form action="submitkpis.php" name="kpiAdd' . $kpiID . '" method="post">';
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
                 echo '<input type="text" id="' . $row['kpiDesc'] . '" value="' . $row['kpiDesc']. '">';
                 echo '<input type="text" id="' . $row['kpiDesc1'] . '" value="' . $row['kpiDesc1']. '">';
@@ -70,7 +69,6 @@ $hazard = $_GET["conID"]
                 echo '<input type="text" id="' . $row['kpiVal2'] . '" value="' . $row['kpiVal2']. '">';
                 echo '<input type="text" id="' . $row['kpiDesc3'] . '" value="' . $row['kpiDesc3']. '">';
                 echo '<input type="text" id="' . $row['kpiVal3'] . '" value="' . $row['kpiVal3']. '">';
-                echo '<input type="submit" value="Sumbit"/>';
           echo '</div>';
           }
           ?>
