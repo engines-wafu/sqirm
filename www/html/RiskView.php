@@ -39,7 +39,7 @@
 <section>
   <div>
     <!-- Display table data. -->
-    <table style="background: white !important">
+    <table>
       <tr style="background:white; border:0px">
     <!-- Column 1 -->
       <td>
@@ -64,7 +64,7 @@
       </td>
       </tr>
     <!-- Row 2 -->
-      <tr style="border:0px">
+      <tr style="background:white !important; border:0px">
     <!-- Column 1 -->
       <td>
     	<table>
