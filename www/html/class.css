@@ -109,6 +109,7 @@ hr {
   padding: 0px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .kpi_container > div {
   margin: 0px;
