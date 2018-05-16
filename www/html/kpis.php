@@ -36,7 +36,7 @@ $hazard = $_GET["conID"]
           <th style="width:20%;">Amber Threshold</th>
           <th style="width:20%;">Red Threshold</th>
           <?php
-          $query = "SELECT kpiID, kpiDesc FROM kpis";
+          $query = "SELECT * FROM kpis";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             echo '<tr>';
@@ -47,7 +47,16 @@ $hazard = $_GET["conID"]
                 echo '<h2>' . $row['kpiDesc'] . '</h2>';
               echo '</td>';
               echo '<td>';
-                echo '<p>sample text</p>';
+                echo '<p>' . $row['kpiDesc1'] . '</p>';
+                echo '<p>' . $row['kpiVal1'] . '</p>';
+              echo '</td>';
+              echo '<td>';
+                echo '<p>' . $row['kpiDesc2'] . '</p>';
+                echo '<p>' . $row['kpiVal2'] . '</p>';
+              echo '</td>';
+              echo '<td>';
+                echo '<p>' . $row['kpiDesc3'] . '</p>';
+                echo '<p>' . $row['kpiVal2'] . '</p>';
               echo '</td>';
             echo '</tr>';
           }
