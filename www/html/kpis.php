@@ -40,6 +40,17 @@ $hazard = $_GET["conID"]
           $query = "SELECT * FROM kpis";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
+            $name = $_SESSION['username'];
+            $date = date('Y-m-d');
+            $description = $_POST['kpiDesc'];
+            $kpiID = $_POST['kpiID'];
+            $val1 = $_POST['kpiVal1'];
+            $desc1 = $_POST['kpiDesc1'];
+            $val2 = $_POST['kpiVal2'];
+            $desc2 = $_POST['kpiDesc2'];
+            $val3 = $_POST['kpiVal3'];
+            $desc3 = $_POST['kpiDesc3'];
+
             echo '<form action="submitkpis.php" name="kpiAdd' . $kpiID . '" method="post">';
               echo '<tr>';
                 echo '<td>';
