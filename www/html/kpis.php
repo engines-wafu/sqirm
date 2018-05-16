@@ -17,7 +17,7 @@ $hazard = $_GET["conID"]
     <div class="content">
       <div>
         <div class="a">
-          <h1>Open Actions Page</h1>
+          <h1>Key Performance Inditcators Page</h1>
           <?php  if (isset($_SESSION['username'])) : ?>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
           <?php endif ?>
@@ -36,10 +36,10 @@ $hazard = $_GET["conID"]
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             echo '<div class="kl">';
-              echo '<div class="ki1">';
+              echo '<div class="a">';
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
               echo '</div>';
-              echo '<div class="ki2">';
+              echo '<div class="c">';
               echo '<h2>' . $row['kpiDesc'] . '</h2>';
                 echo '<p>sample text</p>';
               echo '</div>';
