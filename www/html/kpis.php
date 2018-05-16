@@ -52,39 +52,21 @@ $hazard = $_GET["conID"]
             $desc2 = $_POST['kpiDesc2'];
             $val3 = $_POST['kpiVal3'];
             $desc3 = $_POST['kpiDesc3'];
-          echo '<div class="kpi_line">';
             echo '<form action="submitkpis.php" name="kpiAdd' . $kpiID . '" method="post">';
-              echo '<div style="flex-grow: 3">';
                 echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-              echo '</div>';
-              echo '<div style="flex-grow: 4">';
                 echo '<input type="text" id="' . $row['kpiDesc'] . '" value="' . $row['kpiDesc']. '">';
-              echo '</div>';
-              echo '<div style="flex-grow: 4">';
                 echo '<input type="text" id="' . $row['kpiDesc1'] . '" value="' . $row['kpiDesc1']. '">';
                 echo '<input type="text" id="' . $row['kpiVal1'] . '" value="' . $row['kpiVal1']. '">';
-              echo '</div>';
-              echo '<div style="flex-grow: 4">';
                 echo '<input type="text" id="' . $row['kpiDesc2'] . '" value="' . $row['kpiDesc2']. '">';
                 echo '<input type="text" id="' . $row['kpiVal2'] . '" value="' . $row['kpiVal2']. '">';
-              echo '</div>';
-              echo '<div style="flex-grow: 4">';
                 echo '<input type="text" id="' . $row['kpiDesc3'] . '" value="' . $row['kpiDesc3']. '">';
                 echo '<input type="text" id="' . $row['kpiVal3'] . '" value="' . $row['kpiVal3']. '">';
-              echo '</div>';
-              echo '<div style="flex-grow: 1">';
                 echo '<input type="submit" value="Sumbit"/>';
-              echo '</div>';
-            echo '</form>';
-          echo '</div>';
           }
           ?>
         </div>
-        <div class="kpi_container">
-        </div>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/Chart.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-      </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
