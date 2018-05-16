@@ -31,7 +31,7 @@ $hazard = $_GET["conID"]
       <div class="content">
         <div class="kpi_container">
           <div>
-            <p> all the text</p>
+            <p>Titles go here</p>
           </div>
           <div>
             <table style="width: 100%;">
