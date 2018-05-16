@@ -40,8 +40,8 @@ $hazard = $_GET["conID"]
           $query = "SELECT * FROM kpis";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
-            echo '<tr>';
-              echo '<form action="submitkpis.php" name="kpiAdd" method="post">';
+            echo '<form action="submitkpis.php" name="kpiAdd" method="post">';
+              echo '<tr>';
                 echo '<td>';
                   echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
                 echo '</td>';
@@ -63,8 +63,8 @@ $hazard = $_GET["conID"]
                 echo '<td>';
                   echo '<input type="submit" value="Sumbit"/>';
                 echo '</td>';
-              echo '</form>';
-            echo '</tr>';
+              echo '</tr>';
+            echo '</form>';
           }
           ?>
         <table>
