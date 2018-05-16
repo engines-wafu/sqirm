@@ -28,20 +28,24 @@ $hazard = $_GET["conID"]
       </div>
     </div>
     <?php include "navbar.php"; ?>
-      <div class="content" style="flex: 1;">
+      <div class="content">
         <?php
         $query = "SELECT kpiID, kpiDesc FROM kpis";
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
-          echo '<div>';
-            echo '<div class="a">';
-              echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-            echo '</div>';
-            echo '<div>';
-            echo '<h2>' . $row['kpiDesc'] . '</h2>';
-              echo '<p>sample text</p>';
-            echo '</div>';
-          echo '</div>';
+          echo '<table>';
+            echo '<tr>';
+              echo '<td>';
+                echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
+              echo '</td>';
+              echo '<td>';
+                echo '<h2>' . $row['kpiDesc'] . '</h2>';
+              echo '</td>';
+              echo '<td>';
+                echo '<p>sample text</p>';
+              echo '</td>';
+            echo '</tr>';
+          echo '</table>';
         }
         ?>
         <script type="text/javascript" src="js/jquery.js"></script>
