@@ -31,10 +31,11 @@ $hazard = $_GET["conID"]
       <div class="content">
         <table style="width: 100%;">
           <th style="width:15%;">Gas Gauge</th>
-          <th style="width:25%;">Title</th>
+          <th style="width:20%;">Title</th>
           <th style="width:20%;">Green Threshold</th>
           <th style="width:20%;">Amber Threshold</th>
           <th style="width:20%;">Red Threshold</th>
+          <th style="width:5%;">Submit</th>
           <?php
           $query = "SELECT * FROM kpis";
           $result = mysqli_query($connection, $query); 
@@ -57,6 +58,9 @@ $hazard = $_GET["conID"]
               echo '<td>';
                 echo '<input type="text" id="' . $row['kpiDesc3'] . '" placeholder="' . $row['kpiDesc3']. '">';
                 echo '<input type="text" id="' . $row['kpiVal3'] . '" placeholder="' . $row['kpiVal3']. '">';
+              echo '</td>';
+              echo '<td>';
+                echo '<input type="submit" value="Sumbit"/'>
               echo '</td>';
             echo '</tr>';
           }
