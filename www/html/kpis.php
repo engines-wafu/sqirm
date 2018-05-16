@@ -76,9 +76,9 @@ $hazard = $_GET["conID"]
                 echo '<input type="submit" value="Sumbit"/>';
               echo '</div>';
             echo '</form>';
+          echo '</div>';
           }
           ?>
-          </div>
         </div>
         <div class="kpi_container">
         </div>
