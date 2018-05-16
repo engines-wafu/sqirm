@@ -114,6 +114,13 @@ hr {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  flex-direction: row;
+}
+.kpi_container > div > div {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  flex-direction: row;
 }
 .container {
   width: 200px;
