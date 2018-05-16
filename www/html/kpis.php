@@ -28,29 +28,25 @@ $hazard = $_GET["conID"]
       </div>
     </div>
     <?php include "navbar.php"; ?>
-    <section>
-      <article>
-        <div>
-          <?php
-          $query = "SELECT kpiID, kpiDesc FROM kpis";
-          $result = mysqli_query($connection, $query); 
-          while ($row = mysqli_fetch_array($result)) {
-            echo '<div>';
-              echo '<div class="a">';
-                echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-              echo '</div>';
-              echo '<div class="c">';
-              echo '<h2>' . $row['kpiDesc'] . '</h2>';
-                echo '<p>sample text</p>';
-              echo '</div>';
-            echo '</div>';
-          }
-          ?>
-          <script type="text/javascript" src="js/jquery.js"></script>
-          <script type="text/javascript" src="js/Chart.js"></script>
-          <script type="text/javascript" src="js/app.js"></script>
-        </div>
-      </article>
-    </section>
+    <div class="content">
+      <?php
+      $query = "SELECT kpiID, kpiDesc FROM kpis";
+      $result = mysqli_query($connection, $query); 
+      while ($row = mysqli_fetch_array($result)) {
+        echo '<div>';
+          echo '<div class="a">';
+            echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
+          echo '</div>';
+          echo '<div class="c">';
+          echo '<h2>' . $row['kpiDesc'] . '</h2>';
+            echo '<p>sample text</p>';
+          echo '</div>';
+        echo '</div>';
+      }
+      ?>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/Chart.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+    </div>
   </body>
 </html>
