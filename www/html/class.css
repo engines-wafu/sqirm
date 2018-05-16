@@ -249,9 +249,9 @@ hr {
   background: #FFBA08;
   border-radius: 100px;
   border-style: hidden; /* hide standard table (collapsed) border */
-  box-shadow: 0 0 0 3px #012161; /* this draws the table border  */
+  box-shadow: 0 0 0 2px #012161; /* this draws the table border  */
   width: 200px;
-  height: 100px;
+  height: 200px;
 }
 #control {
   width: 250px;
