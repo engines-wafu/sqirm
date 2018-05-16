@@ -28,25 +28,32 @@ $hazard = $_GET["conID"]
       </div>
     </div>
     <?php include "navbar.php"; ?>
-      <div class="content">
-        <div class="kpi_container">
-          <div class="kpi_line">
-            <div style="flex-grow: 3">Gas Gauge</div>
-            <div style="flex-grow: 4">Title</div>
-            <div style="flex-grow: 4">Green Threshold</div>
-            <div style="flex-grow: 4">Amber Threshold</div>
-            <div style="flex-grow: 4">Red Threshold</div>
-            <div style="flex-grow: 1">Sumbit</div>
-          </div>
-          <div class="kpi_line">
-            <div style="flex-grow: 3">Gas Gauge</div>
-            <div style="flex-grow: 4">Title</div>
-            <div style="flex-grow: 4">Green Threshold</div>
-            <div style="flex-grow: 4">Amber Threshold</div>
-            <div style="flex-grow: 4">Red Threshold</div>
-            <div style="flex-grow: 1">Sumbit</div>
-          </div>
+    <div class="content">
+      <div class="kpi_container">
+        <div class="kpi_line">
+          <div style="flex-grow: 3">Gas Gauge</div>
+          <div style="flex-grow: 4">Title</div>
+          <div style="flex-grow: 4">Green Threshold</div>
+          <div style="flex-grow: 4">Amber Threshold</div>
+          <div style="flex-grow: 4">Red Threshold</div>
+          <div style="flex-grow: 1">Sumbit</div>
         </div>
+        <?php
+        $query = "SELECT * FROM kpis";
+        $result = mysqli_query($connection, $query); 
+        while ($row = mysqli_fetch_array($result)) {
+       echo '
+       <div class="kpi_line">
+          <div style="flex-grow: 3">Gas Gauge</div>
+          <div style="flex-grow: 4">Title</div>
+          <div style="flex-grow: 4">Green Threshold</div>
+          <div style="flex-grow: 4">Amber Threshold</div>
+          <div style="flex-grow: 4">Red Threshold</div>
+          <div style="flex-grow: 1">Sumbit</div>
+        </div>
+        '
+        }
+        ?>
       </div>
     </div>
   </body>
