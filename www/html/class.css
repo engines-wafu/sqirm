@@ -106,7 +106,7 @@ hr {
 }
 .kpi_container{
   flex-grow: 1;
-  margin: 4px !important;
+  margin: 0px !important;
   padding: 0px;
   display: flex;
   flex-direction: column;
