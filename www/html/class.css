@@ -110,6 +110,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
 }
 .kpi_container > div {
   margin: 0px;
