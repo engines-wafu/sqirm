@@ -106,9 +106,10 @@ hr {
 }
 .kpi_container{
   display: flex;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
 }
 .kpi_line {
   margin: 0px;
