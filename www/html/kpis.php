@@ -38,8 +38,15 @@ $hazard = $_GET["conID"]
             <div style="flex-grow: 4">Red Threshold</div>
             <div style="flex-grow: 1">Sumbit</div>
           </div>
+          <div class="kpi_line">
+          </div>
+          <div class="kpi_line">
+          </div>
+          <div class="kpi_line">
+          </div>
+          <div class="kpi_line">
+          </div>
           <?php
-          echo '<div class="kpi_line">';
           $query = "SELECT * FROM kpis";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
@@ -63,7 +70,6 @@ $hazard = $_GET["conID"]
                 echo '<input type="text" id="' . $row['kpiDesc3'] . '" value="' . $row['kpiDesc3']. '">';
                 echo '<input type="text" id="' . $row['kpiVal3'] . '" value="' . $row['kpiVal3']. '">';
                 echo '<input type="submit" value="Sumbit"/>';
-          echo '</div>';
           }
           ?>
         </div>
