@@ -20,7 +20,7 @@ $hazard = $_GET["conID"]
   <body>
     <div class="content">
       <div>
-        <div class="a">
+        <div class="a" style="height:500px">
           <h1>Controls Page</h1>
           <?php  if (isset($_SESSION['username'])) : ?>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
