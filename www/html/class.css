@@ -117,7 +117,7 @@ hr {
   display: flex;
   flex-direction: row;
 }
-.kpi_block {
+.kpi_line > div {
   margin: 0px;
   padding: 0px;
   border: 0px;
