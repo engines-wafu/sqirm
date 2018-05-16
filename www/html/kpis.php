@@ -31,12 +31,12 @@ $hazard = $_GET["conID"]
       <div class="content">
         <div class="kpi_container">
           <div>
-            <div style="flex-grow: 3">Gas Gauge</div>
-            <div style="flex-grow: 4">Title</div>
-            <div style="flex-grow: 4">Green Threshold</div>
-            <div style="flex-grow: 4">Amber Threshold</div>
-            <div style="flex-grow: 4">Red Threshold</div>
-            <div style="flex-grow: 1">Sumbit</div>
+            <div style="flex-grow: 3" class="kpi_line">Gas Gauge</div>
+            <div style="flex-grow: 4" class="kpi_line">Title</div>
+            <div style="flex-grow: 4" class="kpi_line">Green Threshold</div>
+            <div style="flex-grow: 4" class="kpi_line">Amber Threshold</div>
+            <div style="flex-grow: 4" class="kpi_line">Red Threshold</div>
+            <div style="flex-grow: 1" class="kpi_line">Sumbit</div>
           </div>
           <div>
             <table style="width: 100%;">
