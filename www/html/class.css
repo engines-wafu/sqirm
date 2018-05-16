@@ -116,11 +116,7 @@ hr {
   border: 0px;
   display: flex;
   flex-direction: row;
-}
-.kpi_line > div {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
+  align-content: center;
 }
 .container {
   width: 200px;
