@@ -33,7 +33,7 @@ section {
 article {
   color: #012161;
   flex: 1;
-  margin-right: 10px;
+  margin-right: 4px;
 }
 article:last-child {
   margin-right: 0;
