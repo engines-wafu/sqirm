@@ -51,7 +51,7 @@ $hazard = $_GET["conID"]
           <div style="flex-grow: 4">Red Threshold</div>
           <div style="flex-grow: 1">Sumbit</div>
         </div>
-        '
+        ';
         }
         ?>
       </div>
