@@ -27,7 +27,7 @@ $hazard = $_GET["conID"]
         </div>
       </div>
     </div>
-    <article>
+    <div>
       <?php include "navbar.php"; ?>
       <div class="content">
         <?php
@@ -49,6 +49,6 @@ $hazard = $_GET["conID"]
         <script type="text/javascript" src="js/Chart.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
       </div>
-    <article>
+    <div>
   </body>
 </html>
