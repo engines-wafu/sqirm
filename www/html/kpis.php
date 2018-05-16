@@ -63,7 +63,7 @@ $hazard = $_GET["conID"]
                 echo '<input type="text" id="' . $row['kpiDesc3'] . '" value="' . $row['kpiDesc3']. '">';
                 echo '<input type="text" id="' . $row['kpiVal3'] . '" value="' . $row['kpiVal3']. '">';
                 echo '<input type="submit" value="Sumbit"/>';
-          echo '</div'>;
+          echo '</div>';
           }
           ?>
         </div>
