@@ -29,6 +29,9 @@ $hazard = $_GET["conID"]
     </div>
     <?php include "navbar.php"; ?>
       <div class="content">
+        <div>
+
+        </div>
         <table style="width: 100%;">
           <th style="width:15%;">Gas Gauge</th>
           <th style="width:20%;">Title</th>
@@ -50,7 +53,6 @@ $hazard = $_GET["conID"]
             $desc2 = $_POST['kpiDesc2'];
             $val3 = $_POST['kpiVal3'];
             $desc3 = $_POST['kpiDesc3'];
-
             echo '<form action="submitkpis.php" name="kpiAdd' . $kpiID . '" method="post">';
               echo '<tr>';
                 echo '<td>';
