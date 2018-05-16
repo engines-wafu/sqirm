@@ -29,8 +29,10 @@ $hazard = $_GET["conID"]
     </div>
     <?php include "navbar.php"; ?>
       <div class="content">
-        <div>
-
+        <div class="kpi_container">
+          <div>
+            <p> all the text</p>
+          </div>
         </div>
         <table style="width: 100%;">
           <th style="width:15%;">Gas Gauge</th>
