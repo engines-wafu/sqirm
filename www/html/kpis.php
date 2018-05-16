@@ -33,11 +33,11 @@ $hazard = $_GET["conID"]
         $query = "SELECT kpiID, kpiDesc FROM kpis";
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
-          echo '<div>';
+          echo '<div style="flex: 1; display: block">';
             echo '<div class="a">';
               echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
             echo '</div>';
-            echo '<div class="c">';
+            echo '<div>';
             echo '<h2>' . $row['kpiDesc'] . '</h2>';
               echo '<p>sample text</p>';
             echo '</div>';
