@@ -67,7 +67,6 @@ $hazard = $_GET["conID"]
           </div>
         </form>
         ';
-        exit;
         };
 				    echo '
 				    <form method="POST" action="createnewkpi.php>
