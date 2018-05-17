@@ -61,7 +61,7 @@ $hazard = $_GET["conID"]
               <input type="text" name="description" value="' . $row['kpiDesc3'] . '">
               <input type="text" name="description" value="' . $row['kpiVal3'] . '">
             </div>
-            <div style="flex-grow: 1"><input type="sumbit" name="Sumbit"/></div>
+            <div style="flex-grow: 1"></div>
           </div>
         </form>
         ';
