@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 
 $database = mysqli_select_db($connection, DB_DATABASE);
 $kpiID = $_GET["kpiID"];
-$description = $_POST["kpiDesc"];
+$description = $_POST["description"];
 $kpiDesc1 = $_POST["kpiDesc1"];
 $kpiVal1 = $_POST["kpiVal1"];
 $kpiDesc2 = $_POST["kpiDesc2"];
