@@ -72,6 +72,7 @@ $hazard = $_GET["conID"]
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/Chart.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <form method="POST" action="createnewkpi.php">
         <div class="kpi_line">
           <div style="flex-grow: 2"></div>
           <div style="flex-grow: 3">
@@ -93,6 +94,7 @@ $hazard = $_GET["conID"]
             <input type="submit" name="Sumbit"/>
           </div>
         </div>
+        </form>
       </div>
     </div>
   </body>
