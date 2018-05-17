@@ -5,6 +5,7 @@ include "../inc/dbinfo.inc";
 $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 $database = mysqli_select_db($connection, DB_DATABASE);
+$hazard = $_GET["conID"]
 ?>
 <html>
   <head>
@@ -42,7 +43,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
         echo '
-        <form method="POST" action="submitkpis.php>
+        <form method="POST" action="submitkpis.php">
           <div class="kpi_line">
             <div style="flex-grow: 2"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
             <div style="flex-grow: 3">
@@ -61,7 +62,7 @@ $database = mysqli_select_db($connection, DB_DATABASE);
               <input type="text" name="vpiVal3" value="' . $row['kpiVal3'] . '"/>
             </div>
             <div style="flex-grow: 1">
-              <input type="submit" name="Sumbit" value=' . $row['kpiID'] . '/>
+              <input type="submit" name="Sumbit"/>
             </div>
           </div>
         </form>
