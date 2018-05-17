@@ -56,7 +56,6 @@ if (isset($_POST['login_user'])) {
 						$_SESSION['username'] = $username;
 						$_SESSION['success'] = "You are now logged in";
 						header('Location: welcome.php');
-						exit;
 				}else {
 						array_push($errors, "Wrong username/password combination");
 				}
