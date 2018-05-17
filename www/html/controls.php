@@ -79,7 +79,7 @@ while ($row = mysqli_fetch_array($result)) {
 }
 ?>
 
-          <h2>Associated Hazards and Their Threats</h2>
+          <h2>Associated Hazards</h2>
 
           <!-- Get hazards from database -->
 <?php
