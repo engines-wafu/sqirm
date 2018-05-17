@@ -17,7 +17,7 @@ $kpiVal2 = $_POST["kpiVal2"];
 $kpiDesc3 = $_POST["kpiDesc3"];
 $kpiVal3 = $_POST["kpiVal3"];
 
-$sql = 'UPDATE kpis SET kpiDesc = "' . $description . '", kpiDesc1 = "' . $kpiDesc1 . '", kpiVal1 = "' . $kpiVal1 . '", kpiDesc2 = "' . $kpiDesc2 . '", kpiVal2 = "' . $kpiVal2 . '", kpiDesc3 = "' . $kpiDesc3 . '", kpiVal3 = "' . $kpiVal3 . '" WHERE kpiID = "' . $kpiID . '"';
+$sql = 'INSERT INTO TABLE kpis (kpiDesc, kpiDesc1, kpiDesc2, kpiDesc3, kpiVal1, kpiVal2, kpiVal3) VALUES (' . $description . ', ' . $kpiDesc1 . ', ' . $kpiDesc2 . ', ' . $kpiDesc3 . ', ' . $kpiVal1 . ', ' . $kpiVal2 . ', ' . $kpiVal3 . ')';
 
 mysqli_query($connection, $sql);
 
