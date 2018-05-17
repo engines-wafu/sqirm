@@ -46,11 +46,22 @@ $hazard = $_GET["conID"]
         <form method="POST" action="submitkpis.php">
           <div class="kpi_line">
             <div style="flex-grow: 3"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
-            <div style="flex-grow: 4"><input type="text" name="description" value="' . $row['kpiDesc'] . '"></div>
-            <div style="flex-grow: 4"></div>
-            <div style="flex-grow: 4"></div>
-            <div style="flex-grow: 4"></div>
-            <div style="flex-grow: 1"></div>
+            <div style="flex-grow: 4">
+              <input type="text" name="description" value="' . $row['kpiDesc'] . '">
+            </div>
+            <div style="flex-grow: 4">
+              <input type="text" name="description" value="' . $row['kpiDesc1'] . '">
+              <input type="text" name="description" value="' . $row['kpiVal1'] . '">
+            </div>
+            <div style="flex-grow: 4">
+              <input type="text" name="description" value="' . $row['kpiDesc2'] . '">
+              <input type="text" name="description" value="' . $row['kpiVal2'] . '">
+            </div>
+            <div style="flex-grow: 4">
+              <input type="text" name="description" value="' . $row['kpiDesc3'] . '">
+              <input type="text" name="description" value="' . $row['kpiVal3'] . '">
+            </div>
+            <div style="flex-grow: 1"><input type="sumbit" name="Sumbit"></div>
           </div>
         </form>
         ';
