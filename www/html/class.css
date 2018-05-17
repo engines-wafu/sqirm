@@ -26,6 +26,9 @@ section {
   background: #012161;
   display: flex;
 }
+form {
+  margin-bottom: 0;
+}
 article {
   color: #012161;
   flex: 1;
