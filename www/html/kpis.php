@@ -63,9 +63,11 @@ $hazard = $_GET["conID"]
             </div>
             <div style="flex-grow: 1">
               <input type="submit" name="Sumbit"/>
+            </form>
+            <form method="POST" action="deletekpi.php">
+            </form>
             </div>
           </div>
-        </form>
         ';
         }
         ?>
