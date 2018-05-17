@@ -43,7 +43,7 @@ $hazard = $_GET["conID"]
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
         echo '
-        <form method="POST" action="submitkpis.php">
+        <form method="POST" action="submitkpis.php?kpiID=' . $row['kpiID'] . '">
           <div class="kpi_line">
             <div style="flex-grow: 2"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
             <div style="flex-grow: 3">
