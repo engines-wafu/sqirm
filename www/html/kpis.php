@@ -31,11 +31,11 @@ $hazard = $_GET["conID"]
     <div class="kpi_content">
       <div class="kpi_container">
         <div class="kpi_line">
-          <div style="flex-grow: 3">Gas Gauge</div>
-          <div style="flex-grow: 4">Title</div>
-          <div style="flex-grow: 4">Green Threshold</div>
-          <div style="flex-grow: 4">Amber Threshold</div>
-          <div style="flex-grow: 4">Red Threshold</div>
+          <div style="flex-grow: 2">Gas Gauge</div>
+          <div style="flex-grow: 3">Title</div>
+          <div style="flex-grow: 3">Green Threshold</div>
+          <div style="flex-grow: 3">Amber Threshold</div>
+          <div style="flex-grow: 3">Red Threshold</div>
           <div style="flex-grow: 1">Sumbit</div>
         </div>
         <?php
@@ -45,21 +45,21 @@ $hazard = $_GET["conID"]
         echo '
         <form method="POST" action="submitkpis.php">
           <div class="kpi_line">
-            <div style="flex-grow: 3"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
-            <div style="flex-grow: 4">
+            <div style="flex-grow: 2"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
+            <div style="flex-grow: 3">
               <input type="text" name="description" value="' . $row['kpiDesc'] . '">
             </div>
-            <div style="flex-grow: 4">
+            <div style="flex-grow: 3">
               <input type="text" name="description" value="' . $row['kpiDesc1'] . '">
               <input type="text" name="description" value="' . $row['kpiVal1'] . '">
             </div>
-            <div style="flex-grow: 4">
+            <div style="flex-grow: 3">
               <input type="text" name="description" value="' . $row['kpiDesc2'] . '">
               <input type="text" name="description" value="' . $row['kpiVal2'] . '">
             </div>
-            <div style="flex-grow: 4">
-              <input type="text" name="description" value="' . $row['kpiDesc3'] . '">
-              <input type="text" name="description" value="' . $row['kpiVal3'] . '">
+            <div style="flex-grow: 3">
+              <INPUT TYPE="TEXT" NAME="DESCRIPTION" VALUE="' . $ROW['KPIDESC2'] . '">
+              <input type="text" name="description" value="' . $row['kpiVal2'] . '">
             </div>
             <div style="flex-grow: 1"></div>
           </div>
