@@ -49,6 +49,9 @@ $hazard = $_GET["conID"]
         ';
         }
         ?>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/Chart.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
       </div>
     </div>
   </body>
