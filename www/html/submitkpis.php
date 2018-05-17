@@ -22,7 +22,14 @@ $sql = 'UPDATE kpis SET kpiDesc = "' . $description . '", kpiDesc1 = "' . $kpiDe
 mysqli_query($connection, $sql);
 
 if (mysqli_query($connection, $sql)) {
-  header('Location: kpis.php');
+echo $kpiID ;
+echo $description ;
+echo $kpiDesc1 ;
+echo $kpiVal1 ;
+echo $kpiDesc2 ;
+echo $kpiVal2 ;
+echo $kpiDesc3 ;
+echo $kpiVal3 ;
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
