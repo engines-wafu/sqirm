@@ -43,7 +43,7 @@ $hazard = $_GET["conID"]
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
         echo '
-        <form method="POST" action="submitkpis.php">
+        <form method="POST" action="submitkpis.php?kpiID=' . $kpiID . '">
           <div class="kpi_line">
             <div style="flex-grow: 2"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
             <div style="flex-grow: 3">
@@ -51,7 +51,7 @@ $hazard = $_GET["conID"]
             </div>
             <div style="flex-grow: 3">
               <input type="text" name="kpiDesc1" value="' . $row['kpiDesc1'] . '"/>
-              <input type="text" name="vpiVal1" value="' . $row['kpiVal1'] . '"/>
+              <input type="text" name="kpiVal1" value="' . $row['kpiVal1'] . '"/>
             </div>
             <div style="flex-grow: 3">
               <input type="text" name="kpiDesc2" value="' . $row['kpiDesc2'] . '"/>
