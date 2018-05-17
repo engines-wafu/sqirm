@@ -28,7 +28,7 @@ $hazard = $_GET["conID"]
       </div>
     </div>
     <?php include "navbar.php"; ?>
-    <div class="content">
+    <section>
       <div class="kpi_container">
         <div class="kpi_line">
           <div style="flex-grow: 3">Gas Gauge</div>
@@ -55,6 +55,6 @@ $hazard = $_GET["conID"]
         }
         ?>
       </div>
-    </div>
+    </section>
   </body>
 </html>
