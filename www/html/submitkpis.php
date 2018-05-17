@@ -14,8 +14,6 @@ $sql = 'UPDATE kpis SET kpiDesc = "' . $description . '", kpiDesc1 = "' . $kpiDe
 mysqli_query($connection, $sql);
 
 if (mysqli_query($connection, $sql)) {
-  echo 'content';
-  echo var_dump($_REQUEST);
   echo $kpiID . '<br>';
   echo $description . '<br>';
   echo $kpiDesc1 . '<br>';
