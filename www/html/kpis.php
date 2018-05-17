@@ -66,10 +66,8 @@ $hazard = $_GET["conID"]
             </div>
           </div>
         </form>
-        ';
-        };
-        ?>
-				    <?php echo '
+        '};
+        echo '
 				    <form method="POST" action="createnewkpi.php>
           <div class="kpi_line">
             <div style="flex-grow: 2"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
