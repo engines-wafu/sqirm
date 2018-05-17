@@ -55,11 +55,11 @@ $hazard = $_GET["conID"]
             </div>
             <div style="flex-grow: 3">
               <input type="text" name="kpiDesc2" value="' . $row['kpiDesc2'] . '"/>
-              <input type="text" name="vpiVal2" value="' . $row['kpiVal2'] . '"/>
+              <input type="text" name="kpiVal2" value="' . $row['kpiVal2'] . '"/>
             </div>
             <div style="flex-grow: 3">
               <input type="text" name="kpiDesc3" value="' . $row['kpiDesc3'] . '"/>
-              <input type="text" name="vpiVal3" value="' . $row['kpiVal3'] . '"/>
+              <input type="text" name="kpiVal3" value="' . $row['kpiVal3'] . '"/>
             </div>
             <div style="flex-grow: 1">
               <input type="submit" name="Sumbit"/>
