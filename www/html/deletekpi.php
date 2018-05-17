@@ -10,7 +10,7 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 $database = mysqli_select_db($connection, DB_DATABASE);
 $kpiID = $_GET["kpiID"];
 
-$sql = '';
+$sql = 'DELETE FROM kpis WHERE kpiID="' . $kpiID . '"';
 
 mysqli_query($connection, $sql);
 
