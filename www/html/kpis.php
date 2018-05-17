@@ -93,7 +93,8 @@ $hazard = $_GET["conID"]
             <div style="flex-grow: 1">
               <input type="submit" name="Sumbit"/>
             </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
