@@ -120,7 +120,6 @@ hr {
   overflow: scroll;
 }
 .kpi_line {
-  height: 40px;
   margin: 0px;
   padding: 0px;
   border: 0px;
@@ -129,6 +128,7 @@ hr {
   align-content: center;
 }
 .kpi_line > div {
+  height: 40px;
 }
 .container {
   width: 200px;
