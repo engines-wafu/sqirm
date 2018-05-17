@@ -103,6 +103,7 @@ hr {
   margin: 10px;
   background: #012161;
   display: flex;
+  overflow:hidden;
 }
 .kpi_container{
   display: flex;
