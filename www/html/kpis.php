@@ -47,21 +47,23 @@ $hazard = $_GET["conID"]
           <div class="kpi_line">
             <div style="flex-grow: 2"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
             <div style="flex-grow: 3">
-              <input type="text" name="description" value="' . $row['kpiDesc'] . '">
+              <input type="text" name="description" value="' . $row['kpiDesc'] . '"/>
             </div>
             <div style="flex-grow: 3">
-              <input type="text" name="description" value="' . $row['kpiDesc1'] . '">
-              <input type="text" name="description" value="' . $row['kpiVal1'] . '">
+              <input type="text" name="kpiDesc1" value="' . $row['kpiDesc1'] . '"/>
+              <input type="text" name="vpiVal1" value="' . $row['kpiVal1'] . '"/>
             </div>
             <div style="flex-grow: 3">
-              <input type="text" name="description" value="' . $row['kpiDesc2'] . '">
-              <input type="text" name="description" value="' . $row['kpiVal2'] . '">
+              <input type="text" name="kpiDesc2" value="' . $row['kpiDesc2'] . '"/>
+              <input type="text" name="vpiVal2" value="' . $row['kpiVal2'] . '"/>
             </div>
             <div style="flex-grow: 3">
-              <INPUT TYPE="TEXT" NAME="DESCRIPTION" VALUE="' . $ROW['KPIDESC2'] . '">
-              <input type="text" name="description" value="' . $row['kpiVal2'] . '">
+              <input type="text" name="kpiDesc3" value="' . $row['kpiDesc3'] . '"/>
+              <input type="text" name="vpiVal3" value="' . $row['kpiVal3'] . '"/>
             </div>
-            <div style="flex-grow: 1"></div>
+            <div style="flex-grow: 1">
+              <input type="submit" name="Sumbit"/>
+            </div>
           </div>
         </form>
         ';
