@@ -32,6 +32,7 @@ echo $kpiDesc3 ;
 echo $kpiVal3 ;
   exit;
 } else {
+  header ['location = kpis.php'];
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 }
 
