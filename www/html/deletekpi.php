@@ -15,7 +15,7 @@ $sql = 'DELETE FROM kpis WHERE kpiID="' . $kpiID . '"';
 mysqli_query($connection, $sql);
 
 if (mysqli_query($connection, $sql)) {
-  header ('Location kpis.php');
+  header ('Location: kpis.php');
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);

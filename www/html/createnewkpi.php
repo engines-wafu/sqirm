@@ -22,7 +22,7 @@ $sql = 'INSERT INTO kpis (kpiDesc, kpiDesc1, kpiDesc2, kpiDesc3, kpiVal1, kpiVal
 mysqli_query($connection, $sql);
 
 if (mysqli_query($connection, $sql)) {
-  header ('Location kpis.php');
+  header ('Location: kpis.php');
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
