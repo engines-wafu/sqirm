@@ -1,4 +1,3 @@
-
 <?php 
 include "session.php"; 
 include "../inc/dbinfo.inc";
@@ -23,7 +22,7 @@ $sql = 'UPDATE kpis SET kpiDesc = "' . $description . '", kpiDesc1 = "' . $kpiDe
 mysqli_query($connection, $sql);
 
 if (mysqli_query($connection, $sql)) {
-  header('Location: kpis.php');
+  echo var_dump($_POST);
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);

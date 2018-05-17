@@ -74,19 +74,27 @@ $hazard = $_GET["conID"]
         <script type="text/javascript" src="js/app.js"></script>
         <div class="kpi_line">
           <div style="flex-grow: 2"></div>
-        <?php
-        $query = "SELECT * FROM kpis";
-        $result = mysqli_query($connection, $query); 
-        while ($row = mysqli_fetch_array($result)) {
-        echo '
-          <div style="flex-grow: 3">Title</div>
-          <div style="flex-grow: 3">Green Threshold</div>
-          <div style="flex-grow: 3">Amber Threshold</div>
-          <div style="flex-grow: 3">Red Threshold</div>
-          <div style="flex-grow: 1">Sumbit</div>
+          <form method="POST" action="createnewkpi.php">
+            <div style="flex-grow: 3">
+              <input type="text" name="description"/>
+            </div>
+            <div style="flex-grow: 3">
+              <input type="text" name="kpiDesc1"/>
+              <input type="text" name="kpiVal1"/>
+            </div>
+            <div style="flex-grow: 3">
+              <input type="text" name="kpiDesc2"/>
+              <input type="text" name="kpiVal2"/>
+            </div>
+            <div style="flex-grow: 3">
+              <input type="text" name="kpiDesc3"/>
+              <input type="text" name="kpiVal3"/>
+            </div>
+            <div style="flex-grow: 1">
+              <input type="submit" name="Sumbit"/>
+            </div>
+          </form>
         </div>
-        ';
-        ?>
       </div>
     </div>
   </body>
