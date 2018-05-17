@@ -112,7 +112,7 @@ hr {
   height: 500px;
 }
 .kpi_container{
-  display: flex;
+  display: flex-start;
   margin: 0px;
   padding: 0px;
   border: 0px;
