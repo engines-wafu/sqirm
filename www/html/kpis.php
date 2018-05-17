@@ -73,7 +73,7 @@ $hazard = $_GET["conID"]
         <script type="text/javascript" src="js/Chart.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <div class="kpi_line">
-          <div style="flex-grow: 2">Gas Gauge</div>
+          <div style="flex-grow: 2"></div>
           <div style="flex-grow: 3">Title</div>
           <div style="flex-grow: 3">Green Threshold</div>
           <div style="flex-grow: 3">Amber Threshold</div>
