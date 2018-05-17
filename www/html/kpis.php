@@ -66,12 +66,21 @@ $hazard = $_GET["conID"]
             </div>
           </div>
         </form>
-        '};
+        ';
+        }
         ?>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/Chart.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <div class="kpi_line">
+          <div style="flex-grow: 2">Gas Gauge</div>
+          <div style="flex-grow: 3">Title</div>
+          <div style="flex-grow: 3">Green Threshold</div>
+          <div style="flex-grow: 3">Amber Threshold</div>
+          <div style="flex-grow: 3">Red Threshold</div>
+          <div style="flex-grow: 1">Sumbit</div>
+        </div>
       </div>
-      <script type="text/javascript" src="js/jquery.js"></script>
-      <script type="text/javascript" src="js/Chart.js"></script>
-      <script type="text/javascript" src="js/app.js"></script>
     </div>
   </body>
 </html>
