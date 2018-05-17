@@ -31,12 +31,14 @@ $hazard = $_GET["conID"]
     <div class="kpi_content">
       <div class="kpi_container">
         <div class="kpi_line">
-          <div style="flex-grow: 2">Gas Gauge</div>
-          <div style="flex-grow: 3">Title</div>
-          <div style="flex-grow: 3">Green Threshold</div>
-          <div style="flex-grow: 3">Amber Threshold</div>
-          <div style="flex-grow: 3">Red Threshold</div>
-          <div style="flex-grow: 1">Sumbit</div>
+          <h4>
+            <div style="flex-grow: 2">Gas Gauge</div>
+            <div style="flex-grow: 3">Title</div>
+            <div style="flex-grow: 3">Green Threshold</div>
+            <div style="flex-grow: 3">Amber Threshold</div>
+            <div style="flex-grow: 3">Red Threshold</div>
+            <div style="flex-grow: 1">Sumbit</div>
+          </h4>
         </div>
         <?php
         $query = "SELECT * FROM kpis";
@@ -77,7 +79,7 @@ $hazard = $_GET["conID"]
         <script type="text/javascript" src="js/app.js"></script>
         <form method="POST" action="createnewkpi.php">
         <div class="kpi_line">
-          <div style="flex-grow: 2"></div>
+          <div style="flex-grow: 2"><h4>Create New KPI</h4></div>
           <div style="flex-grow: 3">
             <input type="text" name="description"/>
           </div>
