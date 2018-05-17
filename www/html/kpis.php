@@ -45,11 +45,6 @@ $hazard = $_GET["conID"]
         echo '
         <div class="kpi_line">
           <div style="flex-grow: 3"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
-          <div style="flex-grow: 4">Title</div>
-          <div style="flex-grow: 4">Green Threshold</div>
-          <div style="flex-grow: 4">Amber Threshold</div>
-          <div style="flex-grow: 4">Red Threshold</div>
-          <div style="flex-grow: 1">Sumbit</div>
         </div>
         ';
         }
