@@ -93,7 +93,6 @@ $hazard = $_GET["conID"]
           </div>
         </form>
         ';
-        }
         ?>
       </div>
       <script type="text/javascript" src="js/jquery.js"></script>
