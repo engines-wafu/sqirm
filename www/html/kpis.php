@@ -68,31 +68,6 @@ $hazard = $_GET["conID"]
         </form>
         ';
         };
-				    echo '
-				    <form method="POST" action="createnewkpi.php>
-          <div class="kpi_line">
-            <div style="flex-grow: 2"><canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas></div>
-            <div style="flex-grow: 3">
-              <input type="text" name="description" />
-            </div>
-            <div style="flex-grow: 3">
-              <input type="text" name="kpiDesc1" />
-              <input type="text" name="kpiVal1" />
-            </div>
-            <div style="flex-grow: 3">
-              <input type="text" name="kpiDesc2" />
-              <input type="text" name="kpiVal2" />
-            </div>
-            <div style="flex-grow: 3">
-              <input type="text" name="kpiDesc3" />
-              <input type="text" name="kpiVal3" />
-            </div>
-            <div style="flex-grow: 1">
-              <input type="submit" name="Sumbit"/>
-            </div>
-          </div>
-        </form>
-        ';
         ?>
       </div>
       <script type="text/javascript" src="js/jquery.js"></script>
