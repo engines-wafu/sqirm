@@ -19,8 +19,6 @@ $kpiVal3 = $_POST["kpiVal3"];
 
 $sql = 'INSERT INTO kpis (kpiDesc, kpiDesc1, kpiDesc2, kpiDesc3, kpiVal1, kpiVal2, kpiVal3) VALUES ("' . $description . '", "' . $kpiDesc1 . '", "' . $kpiDesc2 . '", "' . $kpiDesc3 . '", "' . $kpiVal1 . '", "' . $kpiVal2 . '", "' . $kpiVal3 . '")';
 
-mysqli_query($connection, $sql);
-
 if (mysqli_query($connection, $sql)) {
   header ('Location: kpis.php');
   exit;
