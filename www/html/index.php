@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 	if(!$user->isValidUsername($username)){
 		$error[] = 'Usernames must be at least 3 Alphanumeric characters';
 	} else {
-		$stmt = $db->prepare('SELECT username FROM members WHERE username = :username');
+		$stmt = $db->prepare('SELECT username FROM users WHERE username = :username');
 		$stmt->execute(array(':username' => $username));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -43,7 +43,7 @@ if(isset($_POST['submit'])){
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 	    $error[] = 'Please enter a valid email address';
 	} else {
-		$stmt = $db->prepare('SELECT email FROM members WHERE email = :email');
+		$stmt = $db->prepare('SELECT email FROM users WHERE email = :email');
 		$stmt->execute(array(':email' => $email));
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -66,14 +66,14 @@ if(isset($_POST['submit'])){
 		try {
 
 			//insert into database with a prepared statement
-			$stmt = $db->prepare('INSERT INTO members (username,password,email,active) VALUES (:username, :password, :email, :active)');
+			$stmt = $db->prepare('INSERT INTO users (username,password,email,active) VALUES (:username, :password, :email, :active)');
 			$stmt->execute(array(
 				':username' => $username,
 				':password' => $hashedpassword,
 				':email' => $email,
 				':active' => $activasion
 			));
-			$id = $db->lastInsertId('memberID');
+			$id = $db->lastInsertId('userID');
 
 			//send email
 			$to = $_POST['email'];
