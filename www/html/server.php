@@ -1,6 +1,6 @@
 <?php
-// initializing variables
 ob_start()
+// initializing variables
 $username = "";
 $email    = "";
 $errors = array(); 
@@ -56,7 +56,8 @@ if (isset($_POST['login_user'])) {
 				if (mysqli_num_rows($results) == 1) {
 						$_SESSION['username'] = $username;
 						$_SESSION['success'] = "You are now logged in";
-						echo "<script type='text/javascript'>window.top.location='https://www.blackcataerospace.com/';</script>"; exit;
+						header("Location:https://www.blackcataerospace.com/welcome.php");
+						exit;
 				}else {
 						array_push($errors, "Wrong username/password combination");
 				}
