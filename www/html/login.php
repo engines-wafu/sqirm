@@ -46,7 +46,6 @@ require('layout/header.php');
         <img src="img/logosm.png" width="150px" align="center" />
    		  	<form role="form" method="post" action="" autocomplete="off">
     	  			<h2>Please Login</h2>
-    	  			<p><a href='./'>Back to home page</a></p>
     	  			<?php
     	  			//check for any errors
     	  			if(isset($error)){
@@ -69,10 +68,11 @@ require('layout/header.php');
     	  				}
     	  			}
     	  			?>
-    	  				<input type="text" name="username" id="username" input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
+    	  				<input type="text" name="username" id="username" placeholder="User Name" value=<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
     	  				<input type="password" name="password" id="password" input-lg" placeholder="Password" tabindex="3">
 				       	<input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5">
     	  					<a href='reset.php'>Forgot your Password?</a>
+    	  			  <p><a href='./'>Register a new account</a></p>
    		  	</form>
       </div>
     </div>
