@@ -20,16 +20,6 @@ $control = $_GET["conID"]
 
 <?php
 
-$query = "SELECT kpiVal1, kpiVal2, kpiVal3, kpiVal3/(kpiVal1+kpiVal2+kpiVal3) AS kpiWeight FROM kpis";
-$result = mysqli_query($connection, $query); 
-while ($row = mysqli_fetch_array($result)) {
-  echo '<p> This is the weighted kpi value: ' .  $row['kpiWeight'] . '</p>';
-}
-
-?>
-
-<?php
-
 $query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, kpiVal3/(kpiVal1+kpiVal2+kpiVal3) AS kpiWeight FROM kpis";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
