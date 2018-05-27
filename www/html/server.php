@@ -1,4 +1,5 @@
 <?php
+ob_start();
 // initializing variables
 $username = "";
 $email    = "";
@@ -61,4 +62,5 @@ if (isset($_POST['login_user'])) {
 				}
 		}
 }
+ob_end_flush();
 ?>
