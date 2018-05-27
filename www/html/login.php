@@ -1,4 +1,6 @@
 <?php
+  error_reporting(E_ALL); ini_set('display_errors', 'On');
+
   include "../inc/dbinfo.inc"; 
   session_start();
 ?>
@@ -52,6 +54,7 @@
         Disclaimer 
         </h3>
         <p>
+          <?php include('disclaimer.txt'); ?>
         </p>
       </div>
     </div>
