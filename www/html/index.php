@@ -78,14 +78,14 @@ if(isset($_POST['submit'])){
 			//send email
 			$to = $_POST['email'];
 			$subject = "Registration Confirmation";
-			$body = "<p>Thank you for registering at the sqirm site.</p>
-			<p>To activate your account, please click on this link: <a href='".DIR."activate.php?x=$id&y=$activasion'>".DIR."activate.php?x=$id&y=$activasion</a></p>
+			$body = "<p>A new user has registered on the sqirm site.</p>
+			<p>To activate this account, please click on this link: <a href='".DIR."activate.php?x=$id&y=$activasion'>".DIR."activate.php?x=$id&y=$activasion</a></p>
 			<p>Regards</p>
 			<p>Gavin</p>";
 
 			$mail = new Mail();
 			$mail->setFrom(SITEEMAIL);
-			$mail->addAddress($to);
+			$mail->addAddress("edwards.gavin@gmail.com");
 			$mail->subject($subject);
 			$mail->body($body);
 			$mail->send();
@@ -128,14 +128,14 @@ require('layout/header.php');
 		     	 	}
 		     	 	//if action is joined show sucess
 		     	 	if(isset($_GET['action']) && $_GET['action'] == 'joined'){
-		     	 		echo "<h2 class='bg-success'>Registration successful, please check your email to activate your account.</h2>";
+		     	 		echo "<h2 class='bg-success'>Registration successful, you're request is now being reviewed by an administrator.</h2>";
 		     	 	}
 		     	 	?>
 		     	 	<input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
 		     	 	<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['email'], ENT_QUOTES); } ?>" tabindex="2">
      	 			<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="3">
      	 			<input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control input-lg" placeholder="Confirm Password" tabindex="4">
-				      <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5">
+				      <input type="submit" name="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="5">
 		     	</form>
       </div>
     </div>
