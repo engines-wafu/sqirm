@@ -52,7 +52,6 @@
         Disclaimer 
         </h3>
         <p>
-          <?php include('disclaimer.txt'); ?>
         </p>
       </div>
     </div>
