@@ -68,11 +68,11 @@ require('layout/header.php');
     	  				}
     	  			}
     	  			?>
-    	  				<input type="text" name="username" id="username" placeholder="User Name" tabindex="1" size="10">
-    	  				<input type="password" name="password" id="password" placeholder="Password" tabindex="3" size="10">
-				       <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5">
-    	  				<a href='reset.php'>Forgot your Password?</a>
-    	  			 <p><a href='./'>Register a new account</a></p>
+    	  			<input type="text" name="username" id="username" placeholder="User Name" tabindex="1" size="10">
+    	  			<input type="password" name="password" id="password" placeholder="Password" tabindex="3" size="10">
+				      <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5">
+    	  			<a href='reset.php'>Forgot your Password?</a>
+    	  			<p><a href='./'>Register a new account</a></p>
    		  	</form>
       </div>
     </div>
