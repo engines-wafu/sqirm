@@ -53,8 +53,9 @@ if (isset($_POST['login_user'])) {
 				$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 				$results = mysqli_query($connection, $query);
 				if (mysqli_num_rows($results) == 1) {
-						header("Location:https://www.blackcataerospace.com/welcome.php");
-						exit;
+						$_SESSION['username'] = $username;
+						$_SESSION['success'] = "You are now logged in";
+						echo "<script type='text/javascript'>window.top.location='https://www.blackcataerospace.com/';</script>"; exit;
 				}else {
 						array_push($errors, "Wrong username/password combination");
 				}
