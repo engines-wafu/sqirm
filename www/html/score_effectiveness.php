@@ -23,10 +23,8 @@ $control = $_GET["conID"]
 $query = "SELECT kpiVal1, kpiVal2, kpiVal3, kpiVal3/(kpiVal1+kpiVal2+kpiVal3) AS eff1 FROM kpis WHERE kpiID=1";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
-  echo '<h1> This is the calculated value: ' .  $row['kpiID'] . '</h1>';
-}
-
   echo '<h1> This is the calculated value: ' .  $row['eff1'] . '</h1>';
+}
 
 ?>
 <?php
