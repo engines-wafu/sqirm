@@ -1,14 +1,15 @@
 <?php
   error_reporting(E_ALL); ini_set('display_errors', 'On');
-
   include "../inc/dbinfo.inc"; 
   session_start();
 ?>
 <html>
   <head>
     <style>
-      <?php include "class.css"; ?>
-      <?php include "server.php"; ?>
+      <?php
+      include "class.css";
+      include "server.php"
+      ?>
     </style>
   </head>
 <body>
