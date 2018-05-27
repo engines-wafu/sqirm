@@ -77,9 +77,20 @@ require('layout/header.php');
       </div>
     </div>
   </article>
-  <article style="border:none;"> </article>
+  <article style="border: none;">
+    <div class="alert">
+      <div>
+        <h3>
+        Disclaimer
+        </h3>
+        <p>
+          <link href="disclaimer.txt">
+        </p>
+      </div>
+    </div>
+  </article>
 </section>
 <?php 
-//include header template
-require('layout/footer.php'); 
+          //include header template
+          require('layout/footer.php'); 
 ?>
