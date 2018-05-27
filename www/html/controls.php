@@ -68,16 +68,16 @@ while ($row = mysqli_fetch_array($result)) {
           <form method="post" action="">
             <select name="kpis[]" multiple="multiple">
             <?php
-            $query = "SELECT kpiDesc FROM kpis";
+            $query = "SELECT kpiID, kpiDesc FROM kpis";
             $result = mysqli_query($connection, $query); 
             
             while ($row = mysqli_fetch_array($result)) {
               $kpiDesc = $row['kpiDesc'];
-              echo '<option value="' . $kpiDesc . '">' . $kpiDesc . '</option>';
+              echo '<option value="' . $kpiID . ' - ' . $kpiDesc . '">' . $kpiDesc . '</option>';
             }
             ?>
             </select>
-            <input type="submit" name="Submit"/>
+            <input type="submit" name="Attach"/>
           </form>
 
         </div>
