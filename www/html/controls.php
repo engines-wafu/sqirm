@@ -69,7 +69,7 @@ while ($row = mysqli_fetch_array($result)) {
 
           <form method="POST" <?php echo 'action="updatecontrol.php?conID=' . $conID . '"' ?>>
 <?php
-$query = "SELECT kpiID, kpiDesc FROM kpis WHERE";
+$query = "SELECT kpiID, kpiDesc FROM kpis";
 $result = mysqli_query($connection, $query); 
 
 while ($row = mysqli_fetch_array($result)) {
