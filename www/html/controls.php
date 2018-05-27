@@ -62,6 +62,21 @@ while ($row = mysqli_fetch_array($result)) {
             <input type="radio" name="WRAGradio" value="white" <?php if ($conWRAG == "white") echo 'checked';?>/> White<br>
             <input type="submit" value="Sumbit"/>
           </form>
+
+          <h3>Select associated kpis</h3>
+
+          <form method="post" action="">
+            Shop ID: <input type="text" name="shopID"/> -
+            <select name="cars[]" multiple="multiple">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="honda">Honda</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+            </select>
+            <input type="submit" name="Submit"/>
+          </form>
+
         </div>
       </article>
       <!-- Center division -->
