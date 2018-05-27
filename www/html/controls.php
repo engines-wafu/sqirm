@@ -18,7 +18,7 @@ $hazard = $_GET["conID"]
     </style>
   </head>
   <body>
-    <div class="content">
+    <div style="overflow:scroll" class="content">
       <div>
         <div class="a">
           <h1>Controls Page</h1>
