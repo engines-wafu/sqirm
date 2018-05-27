@@ -1,4 +1,3 @@
-<?php
 // initializing variables
 $username = "";
 $email    = "";
@@ -61,4 +60,3 @@ if (isset($_POST['login_user'])) {
 				}
 		}
 }
-?>
