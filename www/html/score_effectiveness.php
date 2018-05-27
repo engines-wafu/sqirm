@@ -20,10 +20,10 @@ $control = $_GET["conID"]
 
 <?php
 
-$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, kpiVal3/(kpiVal1+kpiVal2+kpiVal3) AS kpiWeight FROM kpis";
+$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, kpiVal3/(kpiVal1+kpiVal2+kpiVal3) AS kpiWeight FROM kpis INNER JOIN controls ON kpis.kpiID = controls.kpiPriID";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
-  echo '<p> This is the weighted kpi value of ' . $row['kpiDesc'] . ': ' .  $row['kpiWeight'] . '</p>';
+  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $row['kpiWeight'] . '</p>';
 }
 
 ?>
