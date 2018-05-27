@@ -44,7 +44,7 @@ require('layout/header.php');
     <div class="container">
       <div align=center style="border:none; padding-bottom:20px">
         <img src="img/logosm.png" width="150px" align="center" />
-   		  	<form role="form" method="post" action="" autocomplete="off">
+   		  	<form method="post" action="" autocomplete="off">
     	  			<h2>Please Login</h2>
     	  			<?php
     	  			//check for any errors
