@@ -42,7 +42,7 @@ require('layout/header.php');
   <article style="border:none;"> </article>
   <article style="border:none;">
     <div class="container">
-      <div align=center style="border:none; padding-bottom:20px">
+      <div align=center style="border:none; padding:20px">
         <img src="img/logosm.png" width="150px" align="center" />
    		  	<form method="post" action="" autocomplete="off">
     	  			<h2>Please Login</h2>
