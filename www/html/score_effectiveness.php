@@ -26,6 +26,8 @@ while ($row = mysqli_fetch_array($result)) {
   echo '<h1> This is the calculated value: ' .  $row['kpiID'] . '</h1>';
 }
 
+  echo '<h1> This is the calculated value: ' .  $row['kpiID'] . '</h1>';
+
 ?>
 <?php
 
