@@ -78,9 +78,10 @@ if(isset($_POST['submit'])){
 			//send email
 			$to = $_POST['email'];
 			$subject = "Registration Confirmation";
-			$body = "<p>Thank you for registering at demo site.</p>
+			$body = "<p>Thank you for registering at the sqirm site.</p>
 			<p>To activate your account, please click on this link: <a href='".DIR."activate.php?x=$id&y=$activasion'>".DIR."activate.php?x=$id&y=$activasion</a></p>
-			<p>Regards Site Admin</p>";
+			<p>Regards</p>
+			<p>Gavin</p>";
 
 			$mail = new Mail();
 			$mail->setFrom(SITEEMAIL);
@@ -103,18 +104,19 @@ if(isset($_POST['submit'])){
 }
 
 //define page title
-$title = 'Demo';
+$title = 'sqirm';
 
 //include header template
+require('class.css');
 require('layout/header.php');
 ?>
 
 
-<div class="container">
+<div>
 
-	<div class="row">
+	<div>
 
-	    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+	    <div>
 			<form role="form" method="post" action="" autocomplete="off">
 				<h2>Please Sign Up</h2>
 				<p>Already a member? <a href='login.php'>Login</a></p>
