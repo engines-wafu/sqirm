@@ -159,7 +159,13 @@ hr {
   height: 40 !important;
   border-collapse: collapse;
   padding: 0px;
+  align-self: flex-start;
   align: center;
+  padding: 0px;
+  margin: 5px;
+  display: inline-block !important;
+}
+#align: center;
   margin: 0px;
   display: block !important;
 }
@@ -295,15 +301,6 @@ hr {
   padding: 0px;
   margin: 5px;
   display: inline-block !important;
-}
-#kpicanvas {
-  padding: 3px;
-  margin: 0px;
-  align: center;
-  align-self: flex-start;
-  text-align: center;
-  border: none !important;
-  display: block !important;
 }
 #kpititle {
   padding: 3px;
