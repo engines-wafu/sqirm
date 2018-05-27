@@ -7,10 +7,8 @@ session_start();
 	<head>
 		<style>
 <?php
-ob_start();
 include "class.css";
 include "server.php"
-ob_end_flush();
 ?>
 		</style>
 	</head>
