@@ -78,8 +78,8 @@ if(isset($_POST['submit'])){
 			//send email
 			$to = $_POST['email'];
 			$subject = "Registration Confirmation";
-			$body = "<p>A new user has registered on the sqirm site.</p>
-			<p>To activate this account, please click on this link: <a href='".DIR."activate.php?x=$id&y=$activasion'>".DIR."activate.php?x=$id&y=$activasion</a></p>
+			$body = "<p>A new user (" . $email . ") has registered on the sqirm site.</p>
+			<p>To activate this user's account, please click on this link: <a href='".DIR."activate.php?x=$id&y=$activasion'>".DIR."activate.php?x=$id&y=$activasion</a></p>
 			<p>Regards</p>
 			<p>Gavin</p>";
 
