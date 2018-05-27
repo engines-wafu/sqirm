@@ -160,6 +160,7 @@ hr {
   border-collapse: collapse;
   padding: 0px;
 	align-self: flex-start;
+	vertical-align: top;
   align: center;
   margin: 0px;
   display: block !important;
