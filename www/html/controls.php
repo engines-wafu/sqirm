@@ -65,7 +65,7 @@ while ($row = mysqli_fetch_array($result)) {
             <input type="submit" value="Sumbit"/>
           </form>
 
-          <h3>Select associated kpis</h3>
+          <h3>Select associated primary KPI</h3>
 
           <form method="POST" <?php echo 'action="updatecontrol.php?conID=' . $conID . '"' ?>>
 <?php
@@ -75,7 +75,9 @@ $result = mysqli_query($connection, $query);
 while ($row = mysqli_fetch_array($result)) {
   $kpiID = $row['kpiID'];
   $kpiDesc = $row['kpiDesc'];
-  echo '<input type="radio" name="kpiIDRadio" value="' . $kpiID .' - ' . $kpiDesc . '"/>' . $kpiDesc . '<br>';
+  echo '<input type="radio" name="kpiIDRadio" value="' . $kpiID . ' - ' . $kpiDesc;
+  if ($kpiID == $kpiPriID) echo 'checked';
+  echo '/>' . $kpiDesc . '<br>';
 }
 ?>
             <input type="submit" value="Sumbit"/>
