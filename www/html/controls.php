@@ -20,7 +20,7 @@ $hazard = $_GET["conID"]
   <body>
     <div class="content">
       <div>
-        <div style="overflow:scroll" class="a">
+        <div class="a">
           <h1>Controls Page</h1>
           <?php  if (isset($_SESSION['username'])) : ?>
           <h3>Logged in as <?php echo $_SESSION['username']; ?> <a href="welcome.php?logout='1'">logout</a> </h3>
@@ -36,7 +36,7 @@ $hazard = $_GET["conID"]
     <section>
       <!-- Left division -->
       <article> 
-        <div style="height: 500px">
+        <div style="overflow:scroll; height: 500px">
           <h2>Control Details</h2>
 <?php
   $query = "SELECT * FROM controls WHERE conID='" . $hazard . "'";
