@@ -53,7 +53,7 @@ if (isset($_POST['login_user'])) {
 				$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 				$results = mysqli_query($connection, $query);
 				if (mysqli_num_rows($results) == 1) {
-						header("Location:https://www.blackcataerospace.com/welcome.php");
+						header("Location:https://www.blackcataerospace.com/welcome.php", true, 301); exit;
 						$_SESSION['username'] = $username;
 						$_SESSION['success'] = "You are now logged in";
 				}else {
