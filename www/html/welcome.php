@@ -81,9 +81,9 @@ $user = $_SESSION['username'];
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             echo '<div id="kpiblock">';
-			           echo '<table width="80px" style="border: none; table-layout:fixed" align=center><tr width="80px"><td>';	
+			           echo '<table width="85px" style="border: none; table-layout:fixed" align=center><tr width="85px"><td>';	
                 echo '<canvas vertical-align=top id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-			           echo '</td></tr><tr><td>';	
+			           echo '</td></tr><tr height="40px"><td>';	
                 echo '<h3 align=center>' . $row['kpiDesc'] . '</h3>';
 			           echo '</td></tr></table>';	
             echo '</div>';
