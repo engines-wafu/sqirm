@@ -47,8 +47,6 @@ require('layout/header.php');
    		  	<form role="form" method="post" action="" autocomplete="off">
     	  			<h2>Please Login</h2>
     	  			<p><a href='./'>Back to home page</a></p>
-    	  			<hr>
-    
     	  			<?php
     	  			//check for any errors
     	  			if(isset($error)){
@@ -56,9 +54,7 @@ require('layout/header.php');
     	  					echo '<p class="bg-danger">'.$error.'</p>';
     	  				}
     	  			}
-    
     	  			if(isset($_GET['action'])){
-    
     	  				//check the action
     	  				switch ($_GET['action']) {
     	  					case 'active':
@@ -71,16 +67,12 @@ require('layout/header.php');
     	  						echo "<h2 class='bg-success'>Password changed, you may now login.</h2>";
     	  						break;
     	  				}
-    
     	  			}
-    	  			
     	  			?>
-    
     	  				<input type="text" name="username" id="username" input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
     	  				<input type="password" name="password" id="password" input-lg" placeholder="Password" tabindex="3">
-    	  					 <a href='reset.php'>Forgot your Password?</a>
-    	  			<hr>
 				       	<input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5">
+    	  					<a href='reset.php'>Forgot your Password?</a>
    		  	</form>
       </div>
     </div>
