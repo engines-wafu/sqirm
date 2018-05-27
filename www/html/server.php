@@ -53,7 +53,7 @@ if (isset($_POST['login_user'])) {
 				$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 				$results = mysqli_query($connection, $query);
 				if(!isset($_SESSION['login_user'])){
-								header("location:login.php");
+								header("location:welcome.php");
 				}else {
 						array_push($errors, "Wrong username/password combination");
 				}
