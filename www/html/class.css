@@ -287,8 +287,6 @@ hr {
   width: 250px;
 }
 #kpiblock {
-  width: 80 !important;
-  height: 55 !important;
   border: none !important;
   border-collapse: collapse;
   align: center;
@@ -297,6 +295,7 @@ hr {
   display: inline-block !important;
 }
 #kpititle {
+  width: 80 !important;
   padding: 3px;
   margin: 0px;
   align: center;
