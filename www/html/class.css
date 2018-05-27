@@ -161,7 +161,7 @@ hr {
   padding: 0px;
 	vertical-align: top;
   align: center;
-  border: none !important;
+  border: 1px;
   margin: 0px;
   display: block !important;
 }
