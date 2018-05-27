@@ -296,6 +296,15 @@ hr {
   margin: 5px;
   display: inline-block !important;
 }
+#kpicanvas {
+  padding: 3px;
+  margin: 0px;
+  align: center;
+  align-self: flex-start;
+  text-align: center;
+  border: none !important;
+  display: block !important;
+}
 #kpititle {
   padding: 3px;
   margin: 0px;
