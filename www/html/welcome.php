@@ -83,7 +83,7 @@ $user = $_SESSION['username'];
             echo '<div id="kpiblock">';
 			           echo '<table width="95" style="border: none; table-layout:fixed" align=center><tr width="95"><td>';	
                 echo '<canvas vertical-align=top id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-			           echo '</td></tr><tr><td height="50">';	
+			           echo '</td></tr><tr><td height="70">';	
                 echo '<h3 align=center>' . $row['kpiDesc'] . '</h3>';
 			           echo '</td></tr></table>';	
             echo '</div>';
