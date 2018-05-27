@@ -110,12 +110,6 @@ $title = 'sqirm';
 require('layout/header.php');
 ?>
 
-
-<div>
-
-	<div>
-
-	    <div>
 			<form role="form" method="post" action="" autocomplete="off">
 				<h2>Please Sign Up</h2>
 				<p>Already a member? <a href='login.php'>Login</a></p>
@@ -158,10 +152,6 @@ require('layout/header.php');
 					<div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="5"></div>
 				</div>
 			</form>
-		</div>
-	</div>
-
-</div>
 
 <?php
 //include header template
