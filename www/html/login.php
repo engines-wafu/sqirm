@@ -68,7 +68,7 @@ require('layout/header.php');
     	  				}
     	  			}
     	  			?>
-    	  				<input type="text" name="username" width=16 id="username" input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
+    	  				<input type="text" name="username" width=16 id="username" input-sm" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
     	  				<input type="password" name="password" width=16 id="password" input-lg" placeholder="Password" tabindex="3">
 				       	<input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5">
     	  					<a href='reset.php'>Forgot your Password?</a>
