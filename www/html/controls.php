@@ -75,7 +75,7 @@ $result = mysqli_query($connection, $query);
 while ($row = mysqli_fetch_array($result)) {
   $kpiID = $row['kpiID'];
   $kpiDesc = $row['kpiDesc'];
-  echo '<input type="radio" name="' . $kpiID . '"' . 'checked' . '> ' . $kpiID . ' - ' . $kpiDesc ;
+  echo '<input type="radio" name="' . $kpiID . '"' . {'checked'} . '> ' . $kpiID . ' - ' . $kpiDesc ;
   echo '</input>';
   echo '<br>';
 }
