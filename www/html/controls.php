@@ -66,13 +66,16 @@ while ($row = mysqli_fetch_array($result)) {
           <h3>Select associated kpis</h3>
 
           <form method="post" action="">
-            Shop ID: <input type="text" name="shopID"/> -
-            <select name="cars[]" multiple="multiple">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="honda">Honda</option>
-                <option value="audi">Audi</option>
-                <option value="bmw">BMW</option>
+            <select name="kpis[]" multiple="multiple">
+            <?php
+            $query = "SELECT kpiDesc FROM kpis";
+            $result = mysqli_query($connection, $query); 
+            
+            while ($row = mysqli_fetch_array($result)) {
+              $kpiDesc = $row['kpiDesc'];
+              echo '<option value="' . $kpiDesc . '">' . $kpiDesc . '</option>';
+            }
+            ?>
             </select>
             <input type="submit" name="Submit"/>
           </form>
