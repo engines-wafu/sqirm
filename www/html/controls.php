@@ -68,8 +68,6 @@ while ($row = mysqli_fetch_array($result)) {
           <h3>Select associated kpis</h3>
 
           <form method="POST" <?php echo 'action="updatecontrol.php?conID=' . $conID . '"' ?>>
-            <label>Description</label><input type="text" name="description" size="40" value="<?php echo $conDesc; ?>"/><br>
-            <label>Active</label><input type="checkbox" name="active" <?php if ($conActive = "Y") echo 'checked';?>/> <br>
 <?php
 $query = "SELECT kpiID, kpiDesc FROM kpis WHERE";
 $result = mysqli_query($connection, $query); 
@@ -77,6 +75,7 @@ $result = mysqli_query($connection, $query);
 while ($row = mysqli_fetch_array($result)) {
   $kpiID = $row['kpiID'];
   $kpiDesc = $row['kpiDesc'];
+  echo '<input type="radio" name="kpiIDRadio" value="' . $kpiID .' - ' . $kpiDesc . '"/>' . $kpiDesc . '<br>';
 }
 ?>
             <input type="submit" value="Sumbit"/>
