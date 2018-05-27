@@ -159,13 +159,7 @@ hr {
   height: 40 !important;
   border-collapse: collapse;
   padding: 0px;
-  align-self: flex-start;
   align: center;
-  padding: 0px;
-  margin: 5px;
-  display: inline-block !important;
-}
-#align: center;
   margin: 0px;
   display: block !important;
 }
@@ -296,7 +290,6 @@ hr {
   height: 55 !important;
   border: none !important;
   border-collapse: collapse;
-  align-self: flex-start;
   align: center;
   padding: 0px;
   margin: 5px;
