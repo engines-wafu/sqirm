@@ -159,7 +159,6 @@ hr {
   height: 40 !important;
   border-collapse: collapse;
   padding: 0px;
-	vertical-align: top;
   align: center;
   margin: 0px;
   display: block !important;
@@ -288,8 +287,8 @@ hr {
 }
 #kpiblock {
   width: 80 !important;
-  height: 83 !important;
-  border: 1px !important;
+  height: 55 !important;
+  border: none !important;
   border-collapse: collapse;
   align: center;
   padding: 0px;
@@ -297,11 +296,10 @@ hr {
   display: inline-block !important;
 }
 #kpititle {
-  height: 40 !important;
   padding: 3px;
   margin: 0px;
   align: center;
   text-align: center;
-  border: 1px !important;
+  border: none !important;
   display: block !important;
 }
