@@ -75,9 +75,9 @@ $result = mysqli_query($connection, $query);
 while ($row = mysqli_fetch_array($result)) {
   $kpiID = $row['kpiID'];
   $kpiDesc = $row['kpiDesc'];
-  echo '<input type="radio" name="kpiIDRadio" value="' . $kpiID . ' - ' . $kpiDesc;
-  if ($kpiID == $kpiPriID) echo 'checked';
-  echo '/>' . $kpiDesc . '<br>';
+  echo '<input type="radio" name="kpiIDRadio" value="' . $kpiID . ' - ';
+  echo '/>' . $kpiDesc;
+  echo '</br>';
 }
 ?>
             <input type="submit" value="Sumbit"/>
