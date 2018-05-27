@@ -84,7 +84,7 @@ require('layout/header.php');
         Disclaimer
         </h3>
         <p>
-          <link href="disclaimer.txt">
+          <link href="disclaimer.txt" rel="import">
         </p>
       </div>
     </div>
