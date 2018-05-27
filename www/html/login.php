@@ -1,6 +1,6 @@
 <?php
-include "../inc/dbinfo.inc"; 
-session_start();
+  include "../inc/dbinfo.inc"; 
+  session_start();
 ?>
 <html>
   <head>
@@ -22,7 +22,7 @@ session_start();
       <div align=center style="border:none; padding-bottom:20px">
         <img src="img/logosm.png" width="150px" align="center" />
       </div>
-      <form method="post" action="login.php">
+      <form method="post" action="">
         <div class="ll">
           <h4>
             Name
@@ -42,10 +42,7 @@ session_start();
         <button type="submit" class="btn" name="login_user">Login</button> <br />
         <p> <a href="register.php">Sign up</a> </p>
       </form>
-      <?php 
-      include('errors.php');
-      header('Location: welcome.php');
-      ?>
+    <?php include('errors.php'); ?>
     </div>
   </article>
   <article style="border: none;"> 
