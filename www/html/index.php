@@ -85,7 +85,7 @@ if(isset($_POST['submit'])){
 
 			$mail = new Mail();
 			$mail->setFrom(SITEEMAIL);
-			$mail->addAddress("edwards.gavin@gmail.com");
+			$mail->addAddress("NOREPLY@blackcataerospace.com");
 			$mail->subject($subject);
 			$mail->body($body);
 			$mail->send();
