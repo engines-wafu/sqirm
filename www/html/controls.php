@@ -72,8 +72,9 @@ while ($row = mysqli_fetch_array($result)) {
             $result = mysqli_query($connection, $query); 
             
             while ($row = mysqli_fetch_array($result)) {
+              $kpiID = $row['kpiID'];
               $kpiDesc = $row['kpiDesc'];
-              echo '<option value="' . $kpiID . ' - ' . $kpiDesc . '">' . $kpiDesc . '</option>';
+              echo '<option value="' . $kpiID . '">' . $kpiID . ' - ' . $kpiDesc . '</option>';
             }
             ?>
             </select>
