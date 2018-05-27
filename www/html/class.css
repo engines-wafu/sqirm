@@ -159,6 +159,7 @@ hr {
   height: 40 !important;
   border-collapse: collapse;
   padding: 0px;
+	align-self: flex-start;
   align: center;
   margin: 0px;
   display: block !important;
