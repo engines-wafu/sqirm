@@ -1,5 +1,4 @@
 <?php
-ob_start()
 // initializing variables
 $username = "";
 $email    = "";
@@ -57,11 +56,9 @@ if (isset($_POST['login_user'])) {
 						$_SESSION['username'] = $username;
 						$_SESSION['success'] = "You are now logged in";
 						header("Location:https://www.blackcataerospace.com/welcome.php");
-						exit;
 				}else {
 						array_push($errors, "Wrong username/password combination");
 				}
 		}
 }
-ob_end_flush()
 ?>
