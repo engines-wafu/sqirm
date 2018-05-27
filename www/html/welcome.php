@@ -82,7 +82,7 @@ $user = $_SESSION['username'];
           while ($row = mysqli_fetch_array($result)) {
             echo '<div id="kpiblock">';
               echo '<canvas id="#kpicanvas' . $row['kpiID'] . '" class="kpi"></canvas>';
-              echo '<div id="kpititle">' . $row['kpiDesc'] . '</div>';
+              echo '<h3>' . $row['kpiDesc'] . '</h3>';
             echo '</div>';
           }
           ?>
