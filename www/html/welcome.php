@@ -77,7 +77,7 @@ $user = $_SESSION['username'];
           <h2>Key Performance Indicators</h2>
 
           <?php
-          $query = "SELECT kpiID, kpiDesc FROM kpis";
+          $query = "SELECT kpiID, kpiDesc, kpiVal1, kpiVal2, kpiVal3 FROM kpis ORDER BY kpiVal3/(kpiVal1+kpiVal2+kpiVal3) DESC";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             echo '<div id="kpiblock">';
