@@ -13,7 +13,7 @@
     </style>
   </head>
 <body>
-<section style="background:white">
+<section style="border:none; background:white">
   <article style="border:none;"> </article>
   <article style="width:400px;";>
     <div class="container">
