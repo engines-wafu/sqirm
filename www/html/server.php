@@ -52,7 +52,7 @@ if (isset($_POST['login_user'])) {
 				$password = md5($password);
 				$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 				$results = mysqli_query($connection, $query);
-				if(isset($_SESSION['login_user'])){
+				if(!isset($_SESSION['login_user'])){
 								header("location:welcome.php");
 				}else {
 						array_push($errors, "Wrong username/password combination");
