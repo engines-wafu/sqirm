@@ -22,7 +22,7 @@
       <div align=center style="border:none; padding-bottom:20px">
         <img src="img/logosm.png" width="150px" align="center" />
       </div>
-      <form method="post" action="login.php">
+      <form method="post" action="session.php">
         <div class="ll">
           <h4>
             Name
