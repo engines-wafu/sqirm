@@ -39,7 +39,7 @@ $hazard = $_GET["conID"]
           <div style="flex-grow: 1"><h4>Sumbit</h2></div>
         </div>
         <?php
-        $query = "SELECT * FROM kpis";
+        $query = "SELECT * FROM kpis SORT BY kpiVal3/(kpiVal1+kpiVal2+kpiVal3)";
         $result = mysqli_query($connection, $query); 
         while ($row = mysqli_fetch_array($result)) {
         echo '
