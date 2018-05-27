@@ -1,7 +1,9 @@
-<?php
-   session_start();
-   
-   if(session_destroy()) {
-      header("Location: login.php");
-   }
+<?php require('includes/config.php');
+
+//logout
+$user->logout(); 
+
+//logged in return to index page
+header('Location: index.php');
+exit;
 ?>

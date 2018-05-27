@@ -7,7 +7,7 @@ header('Content-Type: application/json');
 include "../../inc/dbinfo.inc";
 
 //get connection
-$mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+$mysqli = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 
 if(!$mysqli){
   die("Connection failed: " . $mysqli->error);

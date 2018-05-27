@@ -45,11 +45,11 @@
 <?php
 
   /* Connect to MySQL and select the database. */
-  $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+  $connection = mysqli_connect(DBHOST, DBUSER, DBPASS);
 
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
-  $database = mysqli_select_db($connection, DB_DATABASE);
+  $database = mysqli_select_db($connection, DBNAME);
 
   // select hazard
   $hazard = "HF001";
@@ -71,7 +71,7 @@
 	<table style="width:80%", id="hazard", align="center">
       <?php
         $qhaz = "SELECT * FROM hazard WHERE hazID='" . $hazard . "'";
-        mysqli_query(DB_DATABASE, $qhaz) or die('Error querying database.');
+        mysqli_query(DBNAME, $qhaz) or die('Error querying database.');
         
         $rhaz = mysqli_query($db, $qhaz);
         while ($row = mysqli_fetch_array($rhaz)) {

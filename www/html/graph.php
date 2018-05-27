@@ -3,11 +3,11 @@
 <?php
 
 /* Connect to MySQL and select the database. */
-$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+$connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
 if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
-$database = mysqli_select_db($connection, DB_DATABASE);
+$database = mysqli_select_db($connection, DBNAME);
 
 ?>
 <html>
