@@ -158,6 +158,7 @@ hr {
   width: 80 !important;
   height: 40 !important;
   border-collapse: collapse;
+  align-self: flex-start;
   padding: 0px;
   align: center;
   margin: 0px;
