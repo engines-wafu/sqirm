@@ -159,7 +159,6 @@ hr {
   height: 40 !important;
   border-collapse: collapse;
   padding: 0px;
-	align-self: flex-start;
 	vertical-align: top;
   align: center;
   margin: 0px;
@@ -298,6 +297,7 @@ hr {
   display: inline-block !important;
 }
 #kpititle {
+  height: 40 !important;
   padding: 3px;
   margin: 0px;
   align: center;
