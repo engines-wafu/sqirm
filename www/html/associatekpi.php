@@ -10,11 +10,12 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 $database = mysqli_select_db($connection, DBNAME);
 $control = $_GET["conID"];
 
-$kpiPriID = $_POST["$kpiPriRad"];
+$kpiPriID = $_POST["kpiPriID"];
 
 $query = 'UPDATE controls SET kpiPriID = "' . $kpiPriID . '" WHERE conID = "' . $control . '"';
 
 if (mysqli_query($connection, $query)) {
+  echo $kpiPriID;
   header('Location: controls.php?conID=' . $control);
   exit;
 } else {
