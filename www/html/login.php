@@ -86,6 +86,7 @@ require('layout/header.php');
         <p>
           <link href="disclaimer.txt" rel="import">
         </p>
+        <p>Some words </p>
       </div>
     </div>
   </article>
