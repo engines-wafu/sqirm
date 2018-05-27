@@ -107,6 +107,7 @@ if(isset($_POST['submit'])){
 $title = 'sqirm';
 
 //include header template
+require('class.css');
 require('layout/header.php');
 ?>
 
