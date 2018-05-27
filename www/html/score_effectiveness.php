@@ -44,7 +44,7 @@ while ($row = mysqli_fetch_array($result)) {
   echo '<p>Subjective score is: ' . $s . '</p>';
 }
 
-$e = $s * $k 
+$e = $s * $k ;
 
 echo '<p>Total effectiveness score is: ' . $e . '</p>';
 
