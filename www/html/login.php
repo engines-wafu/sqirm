@@ -45,7 +45,9 @@
         <button type="submit" class="btn" name="login_user">Login</button> <br />
         <p> <a href="register.php">Sign up</a> </p>
       </form>
-    <?php include('errors.php'); ?>
+    <?php
+    include('errors.php');
+    ?>
     </div>
   </article>
   <article style="border: none;"> 
@@ -55,7 +57,9 @@
         Disclaimer 
         </h3>
         <p>
-          <?php include('disclaimer.txt'); ?>
+          <?php
+          include('disclaimer.txt');
+          ?>
         </p>
       </div>
     </div>
