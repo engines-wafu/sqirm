@@ -128,7 +128,7 @@ require('layout/header.php');
 		     	 	}
 		     	 	//if action is joined show sucess
 		     	 	if(isset($_GET['action']) && $_GET['action'] == 'joined'){
-		     	 		echo "<h2 class='bg-success'>Registration successful, you're request is now being reviewed by an administrator.</h2>";
+		     	 		echo "<h5 class='bg-success'>Registration successful, your request is now being reviewed by an administrator.</h5>";
 		     	 	}
 		     	 	?>
 		     	 	<input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
