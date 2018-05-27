@@ -161,6 +161,7 @@ hr {
   padding: 0px;
 	vertical-align: top;
   align: center;
+  border: none !important;
   margin: 0px;
   display: block !important;
 }
@@ -294,6 +295,7 @@ hr {
   align: center;
   padding: 0px;
   margin: 5px;
+  border: 1px;
   display: inline-block !important;
 }
 #kpititle {
@@ -302,6 +304,6 @@ hr {
   margin: 0px;
   align: center;
   text-align: center;
-  border: none !important;
+  border: 1px;
   display: block !important;
 }
