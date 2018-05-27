@@ -42,7 +42,17 @@
         <button type="submit" class="btn" name="login_user">Login</button> <br />
         <p> <a href="register.php">Sign up</a> </p>
       </form>
-    <?php include('errors.php'); ?>
+      <?php
+      if (mysqli_num_rows($results) == 1) {
+  				$_SESSION['username'] = $username;
+  				$_SESSION['success'] = "You are now logged in";
+  				header("Location: https://www.blackcataerospace.com/welcome.php");
+  				exit;
+  	  	}else {
+  	  			array_push($errors, "Wrong username/password combination");
+  	  	}
+  
+      include('errors.php'); ?>
     </div>
   </article>
   <article style="border: none;"> 
