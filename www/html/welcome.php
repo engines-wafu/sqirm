@@ -80,12 +80,6 @@ while ($control = mysqli_fetch_array($result)) {
   $query = 'UPDATE controls SET conScore = "' . $t . '" WHERE conID = "' . $control . '"';
   if ($result = mysqli_query($connection, $query)) {; 
   }
-  
-  ?>
-  <?php
-  
-    header('Location: controls.php?conID=' . $control);
-  ?>
 }
 
 ?>
