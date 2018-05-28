@@ -31,9 +31,9 @@ if ($row = mysqli_fetch_array($result)) {
 
 $query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, (kpiVal1 + kpiVal2)/(kpiVal1 + kpiVal2 + kpiVal3) AS kpiWeight FROM kpis WHERE kpi = " . $kpiPriID;
 $result = mysqli_query($connection, $query); 
-while ($row = mysqli_fetch_array($result)) {
+if ($row = mysqli_fetch_array($result)) {
+  $k = $row['kpiWeight'];
   echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
-  $k = '1';
 } else {
   $k = '1';
 }
