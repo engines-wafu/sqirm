@@ -97,6 +97,10 @@ $c = ($n_cc + $n_tc) / $n_ta;
 
 echo '<p>Total criticality score is: ' . $c . '</p>';
 
+$t = hypot( $c, (1 - $e) );
+
+echo '<p>Total control score is: ' . $t . '</p>';
+
 ?>
 
   </body>
