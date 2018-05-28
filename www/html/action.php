@@ -70,12 +70,12 @@ $action = $_GET["actID"];
 
           <form method="POST" <?php echo 'action="associatecontrol.php?actID=' . $conID . '"' ?>>
             <?php
-            $query = "SELECT conID, conDesc FROM kpis";
+            $query = "SELECT conID, conDesc FROM controls";
             $result = mysqli_query($connection, $query); 
             
             while ($row = mysqli_fetch_array($result)) {
-              $kpiID = $row['conID'];
-              $kpiDesc = $row['conDesc'];
+              $conID = $row['conID'];
+              $conDesc = $row['conDesc'];
               echo '<input type="radio" name="conID" value="' .$conID . '"' . (($conID == $conPriID)?'checked':'') . '> ' . $conID . ' - ' . $conDesc ;
               echo '</input>';
               echo '<br>';
