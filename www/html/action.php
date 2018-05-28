@@ -34,72 +34,56 @@ $action = $_GET["actID"];
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
   
-      <section>
+    <section>
       <article>
-        <div>
-          <?php
-            $query = "SELECT * FROM actions WHERE actID = '" . $action . "'";
-            $result = mysqli_query($connection, $query); 
-            $row = mysqli_fetch_array($result);
-            $ID = $row['actID'];
-            $sqaairID = $row['sqaairID'];
-            $WRAG = $row['actWRAG'];
-            $description = $row['actIssue'];
-            $topic = $row['actTopic'];
-            $origin = $row['actOrigin'];
-            $owner = $row['actOwner'];
-            $dl = $row['actDL'];
-
-            echo '<h2 class="tile_action ' . $WRAG . '"> Action Serial Number ' . $action . '</h2>';
-          ?>
-
-          <h3>Description of the Action or Issue</h3>
-
-          <p><?php echo $description ?></p>
-
-          <h3>Owner</h3>
-
-          <p><?php echo $owner ?></p>
-
-          <h3>Topic</h3>
-
-          <p><?php echo $topic ?></p>
-
-          <h3>Origin</h3>
-
-          <p><?php echo $origin ?></p>
-
-          <h3>Deadline for rectification</h3>
-
-          <p><?php echo $dl ?></p>
-        </div>
-        <div>
-        </div>
-      </article>
-      </section>
-
-      <article>
-        <div style="margin-top:10px;">
-          <h3>Comments</h3><hr>
-
-          <?php
-          $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $action . "'ORDER BY comments.comID DESC";
+        <?php
+          $query = "SELECT * FROM actions WHERE actID = '" . $action . "'";
           $result = mysqli_query($connection, $query); 
-          
-          while ($row = mysqli_fetch_array($result)) {
-            echo '<p>' . $row['comment'] .'</p>' ;
-            echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
-            echo '<hr>' ;
-          }
-          ?>
+          $row = mysqli_fetch_array($result);
+          $ID = $row['actID'];
+          $sqaairID = $row['sqaairID'];
+          $WRAG = $row['actWRAG'];
+          $description = $row['actIssue'];
+          $topic = $row['actTopic'];
+          $origin = $row['actOrigin'];
+          $owner = $row['actOwner'];
+          $dl = $row['actDL'];
 
+          echo '<h2 class="tile_action ' . $WRAG . '"> Action Serial Number ' . $action . '</h2>';
+        ?>
+        <h3>Description of the Action or Issue</h3>
+        <p><?php echo $description ?></p>
+        <h3>Owner</h3>
+        <p><?php echo $owner ?></p>
+        <h3>Topic</h3>
+        <p><?php echo $topic ?></p>
+        <h3>Origin</h3>
+        <p><?php echo $origin ?></p>
+        <h3>Deadline for rectification</h3>
+        <p><?php echo $dl ?></p>
+      </article>
+      <article>
+        <h3>Associated Controls</h3>;
+      </article>
+      <article>
+        <h3>Comments</h3><hr>
+        <?php
+        $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $action . "'ORDER BY comments.comID DESC";
+        $result = mysqli_query($connection, $query); 
+        
+        while ($row = mysqli_fetch_array($result)) {
+          echo '<p>' . $row['comment'] .'</p>' ;
+          echo '<p><b>By: </b>' . $row['username'] . '<b> on </b>' . $row['date'] .'</p>' ;
+          echo '<hr>' ;
+        }
+        ?>
           <div class="cl">
             <form action="addactioncomment.php?actID=<?php echo $action ?>" name="commentActionAdd" method="post">
               <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
               <input type="submit" value="Sumbit"/>
             </form>
           </div>
-        </div>
       </article>
+    </section>
   </body>
 </html>
