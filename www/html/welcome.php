@@ -10,8 +10,8 @@ $database = mysqli_select_db($connection, DBNAME);
 $hazard = $_GET["hazID"];
 $user = $_SESSION['username'];
 
-$query = "SELECT conID FROM controls;";
-$result = mysqli_query($connection, $query); 
+$outer_query = "SELECT conID FROM controls;";
+$result = mysqli_query($connection, $outer_query); 
 while ($row = mysqli_fetch_array($result)) {
   $control = $row['conID'];
 
