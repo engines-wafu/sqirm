@@ -75,6 +75,7 @@ $action = $_GET["actID"];
             
             if ($row = mysqli_fetch_array($result)) {
               $conPriID = $rowp['conPriID'];
+              echo $conPriID;
             }
 
             $query = "SELECT conID, conDesc FROM controls";
