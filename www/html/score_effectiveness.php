@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_array($result)) {
   echo '<p>Subjective score is: ' . $s . '</p>';
 }
 
-$query = "SELECT COUNT(DISTINCT actID) FROM actions";
+$query = "SELECT actID FROM actions";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
   $n_t = mysqli_num_rows($result);
