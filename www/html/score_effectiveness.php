@@ -20,13 +20,22 @@ $control = $_GET["conID"]
 
 <?php
 
-$query = "SELECT kpiPriID FROM controls WHERE conID = " . $control ;
+$query = "SELECT kpiPriID FROM controls WHERE conID = " . $control;
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
   $kpiPriID = $row['kpiPriID'];
   echo '<p> The associated primary kpi is: ' . $kpiPriID;
 } else {
   echo 'No associated kpi';
+}
+
+$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, (kpiVal1 + kpiVal2)/(kpiVal1 + kpiVal2 + kpiVal3) AS kpiWeight FROM kpis WHERE kpi = " . $kpiPriID;
+$result = mysqli_query($connection, $query); 
+while ($row = mysqli_fetch_array($result)) {
+  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
+  $k = '1';
+} else {
+  $k = '1';
 }
 
 $query = "SELECT conwrag, conid FROM controls WHERE conid = " . $control;
