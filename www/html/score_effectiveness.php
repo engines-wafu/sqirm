@@ -29,7 +29,7 @@ if ($row = mysqli_fetch_array($result)) {
   echo 'No associated kpi';
 }
 
-$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, (kpiVal1 + kpiVal2)/(kpiVal1 + kpiVal2 + kpiVal3) AS kpiWeight FROM kpis WHERE kpi = " . $kpiPriID;
+$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, (kpiVal1 + kpiVal2)/(kpiVal1 + kpiVal2 + kpiVal3) AS kpiWeight FROM kpis WHERE kpiID = " . $kpiPriID;
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
   $k = $row['kpiWeight'];
