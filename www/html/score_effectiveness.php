@@ -35,8 +35,8 @@ if ($row = mysqli_fetch_array($result)) {
   $k = $row['kpiWeight'];
   echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
 } else {
-  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
   $k = '1';
+  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
 }
 
 $query = "SELECT conwrag, conid FROM controls WHERE conid = " . $control;
