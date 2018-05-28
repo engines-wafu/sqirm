@@ -102,8 +102,7 @@ $t = hypot( $c, (1 - $e) );
 echo '<p>Total control score is: ' . $t . '</p>';
 
 $query = 'UPDATE controls SET conScore = "' . $t . '" WHERE conID = "' . $control . '"';
-$result = mysqli_query($connection, $query); 
-if ($row = mysqli_fetch_array($result)) {
+if ($result = mysqli_query($connection, $query)) {; 
   echo 'Score updated';
 } else {
   echo 'Update failed';
