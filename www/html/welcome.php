@@ -82,8 +82,6 @@ while ($outer_row = mysqli_fetch_array($outer_result)) {
   $query = 'UPDATE controls SET conScore = "' . $t . '" WHERE conID = "' . $control . '"';
   if ($result = mysqli_query($connection, $query)) {; 
   }
-
-  echo $t;
 }
 
 ?>
@@ -136,7 +134,7 @@ while ($outer_row = mysqli_fetch_array($outer_result)) {
           <h2>List of Active Controls</h2>
           <!-- Get controls from database -->
           <?php
-          $query = "SELECT * FROM controls ORDER BY conWRAG";
+          $query = "SELECT * FROM controls ORDER BY conScore";
           $result = mysqli_query($connection, $query); 
           
           while ($row = mysqli_fetch_array($result)) {
