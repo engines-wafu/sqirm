@@ -35,7 +35,7 @@ $action = $_GET["actID"];
     <!-- Main Splash Page Sections -->
   
     <div class="content">
-      <article>
+      <section>
         <div>
           <?php
             $query = "SELECT * FROM actions WHERE actID = '" . $action . "'";
@@ -75,7 +75,7 @@ $action = $_GET["actID"];
         </div>
         <div>
         </div>
-      <article>
+      </section>
 
       <article>
         <div style="margin-top:10px;">
