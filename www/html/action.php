@@ -80,7 +80,7 @@ $action = $_GET["actID"];
               echo '<br>';
             }
             ?>
-            <input type="submit" value="Sumbit"/>
+            <input type="submit" value="Associate"/>
           </form>
         </div>
       </article>

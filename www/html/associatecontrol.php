@@ -10,9 +10,9 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 $database = mysqli_select_db($connection, DBNAME);
 $action = $_GET["actID"];
 
-$conID = $_POST["control"];
+$conID = $_POST["conID"];
 
-$query = 'UPDATE actions SET conPriID = "' . $conPriID . '" WHERE actID = "' . $action . '"';
+$query = 'UPDATE actions SET conPriID = "' . $conID . '" WHERE actID = "' . $action . '"';
 
 if (mysqli_query($connection, $query)) {
   echo $conID;
