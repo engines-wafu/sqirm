@@ -13,7 +13,7 @@ $user = $_SESSION['username'];
 $query = "SELECT conID FROM controls;";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
-  header('Location: control_score="' . $row['conID'] . '"');
+  header('Location: control_score=' . $row['conID']);
 }
 
 ?>
