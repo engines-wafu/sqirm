@@ -36,6 +36,7 @@ $action = $_GET["actID"];
   
     <section>
       <article>
+        <div style="overflow:scroll; height:500px">
         <?php
           $query = "SELECT * FROM actions WHERE actID = '" . $action . "'";
           $result = mysqli_query($connection, $query); 
@@ -61,11 +62,15 @@ $action = $_GET["actID"];
         <p><?php echo $origin ?></p>
         <h3>Deadline for rectification</h3>
         <p><?php echo $dl ?></p>
+        </div>
       </article>
       <article>
+        <div style="overflow:scroll; height:500px">
         <h3>Associated Controls</h3>;
+        </div>
       </article>
       <article>
+        <div style="overflow:scroll; height:500px">
         <h3>Comments</h3><hr>
         <?php
         $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN actions ON comment_links.actID=actions.actID WHERE actions.actID='" . $action . "'ORDER BY comments.comID DESC";
@@ -83,6 +88,7 @@ $action = $_GET["actID"];
               <input type="submit" value="Sumbit"/>
             </form>
           </div>
+        </div>
       </article>
     </section>
   </body>
