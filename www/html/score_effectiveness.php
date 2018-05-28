@@ -46,7 +46,6 @@ $query = "SELECT actID FROM actions";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
   $n_t = mysqli_num_rows($result);
-  }
   echo '<p>Total number of actions is: ' . $n_t . '</p>';
 }
 
