@@ -134,7 +134,7 @@ while ($outer_row = mysqli_fetch_array($outer_result)) {
           <h2>List of Active Controls</h2>
           <!-- Get controls from database -->
           <?php
-          $query = "SELECT * FROM controls ORDER BY conScore";
+          $query = "SELECT * FROM controls ORDER BY conScore DESC";
           $result = mysqli_query($connection, $query); 
           
           while ($row = mysqli_fetch_array($result)) {
