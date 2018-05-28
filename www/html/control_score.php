@@ -72,14 +72,14 @@ $e = $s * $k * (($n_t - $n_i) / $n_t) ;
 
 echo '<p>Total effectiveness score is: ' . $e . '</p>';
 
-$query = "SELECT conID FROM consequence_control";
+$query = "SELECT conID FROM consequence_control WHERE conID = " . $control;
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
   $n_cc = mysqli_num_rows($result);
   echo '<p>Total number of associated consequences is: ' . $n_cc . '</p>';
 }
 
-$query = "SELECT conID FROM threat_control";
+$query = "SELECT conID FROM threat_control WHERE conID = " . $control;
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
   $n_tc = mysqli_num_rows($result);
