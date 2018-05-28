@@ -12,8 +12,8 @@ $user = $_SESSION['username'];
 
 $outer_query = "SELECT conID FROM controls;";
 $result = mysqli_query($connection, $outer_query); 
-while ($row = mysqli_fetch_array($result)) {
-  $control = $row['conID'];
+while ($outer_row = mysqli_fetch_array($result)) {
+  $control = $outer_row['conID'];
 
   $query = "SELECT kpiPriID FROM controls WHERE conID = " . $control;
   $result = mysqli_query($connection, $query); 
