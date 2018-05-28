@@ -34,6 +34,10 @@ while ($row = mysqli_fetch_array($result)) {
     $s = '0';
   } elseif ($row['conWRAG'] == 'green') {
     $s = '1';
+  } elseif ($row['conWRAG'] == 'yellow') {
+    $s = '0.5';
+  } elseif ($row['conWRAG'] == 'red') {
+    $s = '0.1';
   }
   echo '<p>Subjective score is: ' . $s . '</p>';
 }
