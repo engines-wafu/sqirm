@@ -66,7 +66,7 @@ $action = $_GET["actID"];
       </article>
       <article>
         <div style="overflow:scroll; height:500px">
-          <h3>Select Associated Controls</h3>
+          <h3>Select Associated Primary Control</h3>
 
           <form method="POST" <?php echo 'action="associatecontrol.php?actID=' . $action . '"' ?>>
             <?php
@@ -75,7 +75,6 @@ $action = $_GET["actID"];
             
             if ($row = mysqli_fetch_array($result)) {
               $conPriID = $row['conPriID'];
-              echo 'This is the associated ID: ' . $conPriID . '<br>';
             }
 
             $query = "SELECT conID, conDesc FROM controls";
