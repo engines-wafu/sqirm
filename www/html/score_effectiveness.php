@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_array($result)) {
   echo '<p>Subjective score is: ' . $s . '</p>';
 }
 
-$query = "SELECT conPriID FROM actions";
+$query = "SELECT conPriID FROM actions WHERE conPriID =" . $control;
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
   $n_i = mysqli_num_rows($result);
