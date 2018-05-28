@@ -70,6 +70,13 @@ $action = $_GET["actID"];
 
           <form method="POST" <?php echo 'action="associatecontrol.php?actID=' . $action . '"' ?>>
             <?php
+            $query = "SELECT conPriID FROM actions WHERE actID = " . $action;
+            $result = mysqli_query($connection, $query); 
+            
+            if ($row = mysqli_fetch_array($result)) {
+              $conPriID = $rowp['conPriID'];
+            }
+
             $query = "SELECT conID, conDesc FROM controls";
             $result = mysqli_query($connection, $query); 
             
