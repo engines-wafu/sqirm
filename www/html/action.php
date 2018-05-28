@@ -73,6 +73,8 @@ $action = $_GET["actID"];
 
           <p><?php echo $dl ?></p>
         </div>
+        <div>
+        </div>
       <article>
 
       <article>
