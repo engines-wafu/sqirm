@@ -76,7 +76,7 @@ $action = $_GET["actID"];
             while ($row = mysqli_fetch_array($result)) {
               $conID = $row['conID'];
               $conDesc = $row['conDesc'];
-              echo '<input type="radio" name="conID" value=Pri"' .$conID . '"' . (($conID == $conPriID)?'checked':'') . '/> <input type="radio" name="conID" value=Sec"' .$conID . '"' . (($conID == $conSecID)?'checked':'') . '/> ' . $conID . ' - ' . $conDesc ;
+              echo '<input type="radio" name="conID" value="' .$conID . '"' . (($conID == $conPriID)?'checked':'') . '/> ' . $conID . ' - ' . $conDesc ;
               echo '<br>';
             }
             ?>
