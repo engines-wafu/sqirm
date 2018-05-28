@@ -74,7 +74,7 @@ $action = $_GET["actID"];
             $result = mysqli_query($connection, $query); 
             
             if ($row = mysqli_fetch_array($result)) {
-              $conPriID = $rowp['conPriID'];
+              $conPriID = $row['conPriID'];
               echo 'This is the associated ID: ' . $conPriID . '<br>';
             }
 
