@@ -27,19 +27,27 @@ while ($row = mysqli_fetch_array($result)) {
   echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
 }
 
-$query = "SELECT conWRAG, conID FROM controls WHERE conID = " . $control;
+$query = "SELECT conwrag, conid FROM controls WHERE conid = " . $control;
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
-  if ($row['conWRAG'] == 'white') {
+  if ($row['conwrag'] == 'white') {
     $s = '0';
-  } elseif ($row['conWRAG'] == 'green') {
+  } elseif ($row['conwrag'] == 'green') {
     $s = '1';
-  } elseif ($row['conWRAG'] == 'yellow') {
+  } elseif ($row['conwrag'] == 'yellow') {
     $s = '0.5';
-  } elseif ($row['conWRAG'] == 'red') {
+  } elseif ($row['conwrag'] == 'red') {
     $s = '0.1';
   }
   echo '<p>Subjective score is: ' . $s . '</p>';
+}
+
+$query = "SELECT COUNT(DISTINCT actID) FROM actions";
+$result = mysqli_query($connection, $query); 
+while ($row = mysqli_fetch_array($result)) {
+  $n_t = mysqli_num_rows($result);
+  }
+  echo '<p>Total number of actions is: ' . $n_t . '</p>';
 }
 
 $e = $s * $k ;
