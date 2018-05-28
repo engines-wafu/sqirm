@@ -20,7 +20,7 @@ $control = $_GET["conID"]
 
 <?php
 
-$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, kpiVal3/(kpiVal1+kpiVal2+kpiVal3) AS kpiWeight FROM kpis INNER JOIN controls ON kpis.kpiID = controls.kpiPriID";
+$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, (kpiVal1 + kpiVal2)/(kpiVal1 + kpiVal2 + kpiVal3) AS kpiWeight FROM kpis INNER JOIN controls ON kpis.kpiID = controls.kpiPriID";
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
   $k = $row['kpiWeight'];
@@ -56,7 +56,7 @@ if ($row = mysqli_fetch_array($result)) {
   echo '<p>Total number of actions is: ' . $n_t . '</p>';
 }
 
-$e = $s * $k * ($n_i / $n_t) ;
+$e = $s * $k * (($n_t - $n_i) / $n_t) ;
 
 echo '<p>Total effectiveness score is: ' . $e . '</p>';
 
