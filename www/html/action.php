@@ -34,7 +34,6 @@ $action = $_GET["actID"];
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
   
-    <div class="content">
       <section>
       <article>
         <div>
@@ -102,6 +101,5 @@ $action = $_GET["actID"];
           </div>
         </div>
       </article>
-    </div>
   </body>
 </html>
