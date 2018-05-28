@@ -89,7 +89,7 @@ if ($row = mysqli_fetch_array($result)) {
 $query = "SELECT conID FROM threat_control";
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
-  $n_tc = mysqli_num_rows($result);
+  $n_ta = mysqli_num_rows($result);
   echo '<p>Total number of associations is: ' . $n_ta . '</p>';
 }
 
