@@ -42,6 +42,13 @@ while ($row = mysqli_fetch_array($result)) {
   echo '<p>Subjective score is: ' . $s . '</p>';
 }
 
+$query = "SELECT conPriID FROM actions";
+$result = mysqli_query($connection, $query); 
+if ($row = mysqli_fetch_array($result)) {
+  $n_i = mysqli_num_rows($result);
+  echo '<p>Number of associated actions is: ' . $n_i . '</p>';
+}
+
 $query = "SELECT actID FROM actions";
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
