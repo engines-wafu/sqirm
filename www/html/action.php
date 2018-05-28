@@ -68,7 +68,7 @@ $action = $_GET["actID"];
         <div style="overflow:scroll; height:500px">
           <h3>Select Associated Controls</h3>
 
-          <form method="POST" <?php echo 'action="associatecontrol.php?actID=' . $conID . '"' ?>>
+          <form method="POST" <?php echo 'action="associatecontrol.php?actID=' . $action . '"' ?>>
             <?php
             $query = "SELECT conID, conDesc FROM controls";
             $result = mysqli_query($connection, $query); 
