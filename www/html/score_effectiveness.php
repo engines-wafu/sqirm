@@ -33,10 +33,10 @@ $query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, (kpiVal1 + kpiVal2)/(kpiVal
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
   $k = $row['kpiWeight'];
-  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
+  echo '<p> The weighted kpi value ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
 } else {
   $k = '1';
-  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
+  echo '<p> The weighted kpi value ' . $row['kpiDesc'] . ' is: ' .  $k . ' because there are no kpis associated</p>';
 }
 
 $query = "SELECT conwrag, conid FROM controls WHERE conid = " . $control;
