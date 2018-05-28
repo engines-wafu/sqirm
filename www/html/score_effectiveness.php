@@ -56,7 +56,7 @@ if ($row = mysqli_fetch_array($result)) {
   echo '<p>Total number of actions is: ' . $n_t . '</p>';
 }
 
-$e = $s * $k ;
+$e = $s * $k * ($n_i / $n_t) ;
 
 echo '<p>Total effectiveness score is: ' . $e . '</p>';
 
