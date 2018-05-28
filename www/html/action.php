@@ -36,6 +36,7 @@ $action = $_GET["actID"];
   
     <div class="content">
       <section>
+      <article>
         <div>
           <?php
             $query = "SELECT * FROM actions WHERE actID = '" . $action . "'";
@@ -75,6 +76,7 @@ $action = $_GET["actID"];
         </div>
         <div>
         </div>
+      </article>
       </section>
 
       <article>
