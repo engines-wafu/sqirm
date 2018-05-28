@@ -10,6 +10,12 @@ $database = mysqli_select_db($connection, DBNAME);
 $hazard = $_GET["hazID"];
 $user = $_SESSION['username'];
 
+$query = "SELECT conID FROM controls;";
+$result = mysqli_query($connection, $query); 
+while ($row = mysqli_fetch_array($result)) {
+  header('Location: control_score="' . $row['conID'] . '"');
+}
+
 ?>
 <html>
   <head>

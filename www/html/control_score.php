@@ -112,4 +112,3 @@ if ($result = mysqli_query($connection, $query)) {;
 
   </body>
 </html>
-
