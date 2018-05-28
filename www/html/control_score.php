@@ -105,8 +105,9 @@ $query = 'UPDATE controls SET conScore = "' . $t . '" WHERE conID = "' . $contro
 $result = mysqli_query($connection, $query); 
 if ($row = mysqli_fetch_array($result)) {
   echo 'Score updated';
+} else {
+  echo 'Update failed';
 }
-
 
 ?>
 
