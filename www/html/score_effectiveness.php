@@ -35,6 +35,7 @@ if ($row = mysqli_fetch_array($result)) {
   $k = $row['kpiWeight'];
   echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
 } else {
+  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
   $k = '1';
 }
 
