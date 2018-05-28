@@ -12,7 +12,8 @@ $user = $_SESSION['username'];
 
 $query = "SELECT conID FROM controls;";
 $result = mysqli_query($connection, $query); 
-while ($row = mysqli_fetch_array($result)) {
+while ($control = mysqli_fetch_array($result)) {
+  include 'control_score.php';
 }
 
 ?>
