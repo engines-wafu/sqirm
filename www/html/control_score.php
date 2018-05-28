@@ -93,6 +93,10 @@ if ($row = mysqli_fetch_array($result)) {
   echo '<p>Total number of associations is: ' . $n_ta . '</p>';
 }
 
+$c = ($n_cc + $n_tc) / $n_ta;
+
+echo '<p>Total criticality score is: ' . $c . '</p>';
+
 ?>
 
   </body>
