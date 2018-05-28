@@ -29,15 +29,6 @@ if ($row = mysqli_fetch_array($result)) {
   echo 'No associated kpi';
 }
 
-$query = "SELECT kpiDesc, kpiVal1, kpiVal2, kpiVal3, (kpiVal1 + kpiVal2)/(kpiVal1 + kpiVal2 + kpiVal3) AS kpiWeight FROM kpis WHERE kpi = " . $kpiPriID;
-$result = mysqli_query($connection, $query); 
-while ($row = mysqli_fetch_array($result)) {
-  $k = $row['kpiWeight'];
-  echo '<p> The weighted kpi value of ' . $row['kpiDesc'] . ' is: ' .  $k . '</p>';
-} else {
-  $k = "1";
-}
-
 $query = "SELECT conwrag, conid FROM controls WHERE conid = " . $control;
 $result = mysqli_query($connection, $query); 
 while ($row = mysqli_fetch_array($result)) {
