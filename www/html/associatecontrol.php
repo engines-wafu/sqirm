@@ -16,7 +16,7 @@ $query = 'UPDATE actions SET conPriID = "' . $conPriID . '" WHERE actID = "' . $
 
 if (mysqli_query($connection, $query)) {
   echo $conID;
-  header('Location: actions.php?actID=' . $action);
+  header('Location: action.php?actID=' . $action);
   exit;
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($connection);
