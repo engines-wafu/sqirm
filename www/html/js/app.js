@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.ajax({
-    url: "https://www.blackcataerospace.com/api/data.php",
+    url: "../api/data.php",
     method: "GET",
     success: function(data) {
       console.log(data);
