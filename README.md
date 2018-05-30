@@ -28,7 +28,7 @@ The tool pulls together the following elements to form a simple picture of organ
 
 ### Hosting
 
-The pre-beta website is hosted at www.blackcataerospace.com.  Any data contained therein is for test purposes only.
+The pre-beta website is hosted at https://www.blackcataerospace.com.  Any data contained therein is for test purposes only.
 
 ### Contributions
 
