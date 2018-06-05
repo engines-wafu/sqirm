@@ -55,7 +55,7 @@ $hazard = $_GET["conID"]
           </form> 
         </tr>
         <?php
-          $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
+          $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions ORDER BY actID DESC";
           $result = mysqli_query($connection, $query); 
           while ($row = mysqli_fetch_array($result)) {
             $ID = $row['actID'];
