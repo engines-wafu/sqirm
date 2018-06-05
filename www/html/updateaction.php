@@ -13,7 +13,7 @@ $description = $_POST["description"];
 $owner = $_POST["owner"];
 $topic = $_POST["topic"];
 $origin = $_POST["origin"];
-$dl = $_POST["dl"];
+$dl = $_POST["deadline"];
 if ($_POST["WRAGradio"] == "red"){
   $wrag = "red";
 } elseif ($_POST["WRAGradio"] == "amber") {
