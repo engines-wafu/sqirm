@@ -15,6 +15,7 @@ $owner = $_POST["owner"];
 $sql = 'UPDATE actions SET actIssue = "' . $description . '", actOwner = "' . $owner . '" WHERE actID = "' . $action . '"';
 
 if (mysqli_query($connection, $sql)) {
+  header('Location: action.php?actID=' . $action );
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
