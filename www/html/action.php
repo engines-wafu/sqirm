@@ -57,6 +57,11 @@ $action = $_GET["actID"];
             <input type="text" name="description" size="40" value="<?php echo $description; ?>"/><br>
           <h3>Owner</h3>
             <input type="text" name="owner" size="40" value="<?php echo $owner; ?>"/><br>
+          <h3>WRAG Assessment</h3>
+            <input type="radio" name="WRAGradio" value="red" <?php if ($actWRAG == "red") echo 'checked';?>/> Red<br>
+            <input type="radio" name="WRAGradio" value="amber" <?php if ($actWRAG == "yellow") echo 'checked';?>/> Amber<br>
+            <input type="radio" name="WRAGradio" value="green" <?php if ($actWRAG == "green") echo 'checked';?>/> Green<br>
+            <input type="radio" name="WRAGradio" value="white" <?php if ($actWRAG == "white") echo 'checked';?>/> White<br>
           <h3>Topic</h3>
             <input type="text" name="topic" size="40" value="<?php echo $topic; ?>"/><br>
           <h3>Origin</h3>
