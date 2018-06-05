@@ -11,22 +11,16 @@ $database = mysqli_select_db($connection, DBNAME);
 $action = $_GET["actID"];
 $description = $_POST["description"];
 $owner = $_POST["owner"];
-$red = $_POST["owner"];
-$owner = $_POST["owner"];
-if ($_POST["red"] == "checked") {
-  $wrag = "red";
-} else if ($_POST["yellow"] == "checked") {
-  $wrag = "yellow";
-} else if ($_POST["green"] == "checked") {
-  $wrag = "green";
-} else if ($_POST["white"] == "checked") {
-  $wrag = "white";
-};
+$red = $_POST["red"];
+$yellow = $_POST["red"];
+$green = $_POST["red"];
 
 $sql = 'UPDATE actions SET actIssue = "' . $description . '", actOwner = "' . $owner . '", actWRAG = "' . $wrag . '" WHERE actID = "' . $action . '"';
 
 if (mysqli_query($connection, $sql)) {
-  echo $wrag;
+  echo $red;
+  echo $yellow;
+  echo $green;
   echo $description;
   echo $owner;
   #header('Location: action.php?actID=' . $action );
