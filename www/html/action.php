@@ -52,16 +52,19 @@ $action = $_GET["actID"];
 
             echo '<h2 class="tile_action ' . $WRAG . '"> Action Serial Number ' . $action . '</h2>';
           ?>
+          <form method="POST" <?php echo 'action="updateaction.php?actID=' . $action . '"' ?>>
           <h3>Description of the Action or Issue</h3>
-          <p><?php echo $description ?></p>
+            <input type="text" name="description" size="40" value="<?php echo $description; ?>"/><br>
           <h3>Owner</h3>
-          <p><?php echo $owner ?></p>
+            <input type="text" name="owner" size="40" value="<?php echo $owner; ?>"/><br>
           <h3>Topic</h3>
-          <p><?php echo $topic ?></p>
+            <input type="text" name="topic" size="40" value="<?php echo $topic; ?>"/><br>
           <h3>Origin</h3>
-          <p><?php echo $origin ?></p>
+            <input type="text" name="origin" size="40" value="<?php echo $origin; ?>"/><br>
           <h3>Deadline for rectification</h3>
-          <p><?php echo $dl ?></p>
+            <input type="text" name="deadline" size="40" value="<?php echo $dl; ?>"/><br>
+            <input type="submit" value="Sumbit"/>
+          </form>
         </div>
       </article>
       <article>
