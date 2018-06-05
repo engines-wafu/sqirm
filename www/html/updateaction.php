@@ -24,7 +24,7 @@ if ($_POST["WRAGradio"] == "red"){
   $wrag = "white";
 }
 
-$sql = 'UPDATE actions SET actIssue = "' . $description . '", actOwner = "' . $owner . '", actWRAG = "' . $wrag . '", actDue "' . $dl. '", actTopic = "' . $topic . '", actOrigin = "' . $origin . '" WHERE actID = "' . $action . '"';
+$sql = 'UPDATE actions SET actIssue = "' . $description . '", actOwner = "' . $owner . '", actWRAG = "' . $wrag . '", actDue ' . $dl. ', actTopic = "' . $topic . '", actOrigin = "' . $origin . '" WHERE actID = "' . $action . '"';
 
 if (mysqli_query($connection, $sql)) {
   header('Location: action.php?actID=' . $action );
