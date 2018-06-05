@@ -14,11 +14,11 @@ $owner = $_POST["owner"];
 if ($_POST["WRAGradio"] == "red"){
   $wrag = "red";
 } elseif ($_POST["WRAGradio"] == "amber") {
-  $wrag = "yellow":
+  $wrag = "yellow";
 } elseif ($_POST["WRAGradio"] == "green") {
-  $wrag = "green":
+  $wrag = "green";
 } elseif ($_POST["WRAGradio"] == "white") {
-  $wrag = "white":
+  $wrag = "white";
 }
 
 $sql = 'UPDATE actions SET actIssue = "' . $description . '", actOwner = "' . $owner . '", actWRAG = "' . $wrag . '" WHERE actID = "' . $action . '"';
