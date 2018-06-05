@@ -26,8 +26,9 @@ if ($_POST["red"] == "checked") {
 $sql = 'UPDATE actions SET actIssue = "' . $description . '", actOwner = "' . $owner . '", actWRAG = "' . $wrag . '" WHERE actID = "' . $action . '"';
 
 if (mysqli_query($connection, $sql)) {
-  $arr = get_defined_vars();
-  echo $arr;
+  echo $wrag;
+  echo $description;
+  echo $owner;
   #header('Location: action.php?actID=' . $action );
   exit;
 } else {
