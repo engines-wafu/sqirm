@@ -11,17 +11,19 @@ $database = mysqli_select_db($connection, DBNAME);
 $action = $_GET["actID"];
 $description = $_POST["description"];
 $owner = $_POST["owner"];
-$red = $_POST["red"];
-$yellow = $_POST["yellow"];
-$green = $_POST["green"];
-$wrag = $_POST["WRAGradio"];
+if ($_POST["WRAGradio"] == "red"){
+  $wrag = "red";
+} elseif ($_POST["WRAGradio"] == "amber") {
+  $wrag = "yellow":
+} elseif ($_POST["WRAGradio"] == "green") {
+  $wrag = "green":
+} elseif ($_POST["WRAGradio"] == "white") {
+  $wrag = "white":
+}
 
 $sql = 'UPDATE actions SET actIssue = "' . $description . '", actOwner = "' . $owner . '", actWRAG = "' . $wrag . '" WHERE actID = "' . $action . '"';
 
 if (mysqli_query($connection, $sql)) {
-  echo $red;
-  echo $yellow;
-  echo $green;
   echo $description;
   echo $owner;
   echo $wrag;
