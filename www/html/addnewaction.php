@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 
 $database = mysqli_select_db($connection, DBNAME);
 
-$action = $_POST["Description"];
+$action = $_POST["description"];
 
 $sql = 'INSERT INTO actions (actIssue) VALUES ("' . $description . '")';
 

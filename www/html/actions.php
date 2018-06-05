@@ -49,7 +49,7 @@ $hazard = $_GET["conID"]
           <form method="POST" action="addnewaction.php"> 
           <td style="widtd:5%;"></td>
           <td style="widtd:5%;"></td>
-          <td style="widtd:50%;"><input type="text" label="Description"></td>
+          <td style="widtd:50%;"><input type="text" label="description"></td>
           <td style="widtd:10%;"></td>
           <td style="widtd:20%;"><input type="submit" label="sumbit" value="Add"></td>
           </form> 
