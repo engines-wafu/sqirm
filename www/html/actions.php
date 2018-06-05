@@ -46,11 +46,13 @@ $hazard = $_GET["conID"]
           <th><input type="text" id="myInputComment" onkeyup="myFunctionComment()" placeholder="Search in comment"></th>
         </tr>
         <tr class="header">
+          <form method="POST" action="addnewaction.php"> 
           <td style="widtd:5%;"></td>
           <td style="widtd:5%;"></td>
           <td style="widtd:50%;"></td>
           <td style="widtd:10%;"></td>
           <td style="widtd:20%;"></td>
+          </form> 
         </tr>
         <?php
           $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions";
