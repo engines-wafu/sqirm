@@ -70,6 +70,15 @@ hr {
   margin-left: 10px;
   margin-right: 10px;
 }
+textarea
+{
+  width:100%;
+}
+.textwrapper
+{
+  margin:5px 0;
+  padding:0px;
+}
 .tile_action {
   margin: 4px auto;
   padding: 10px;
