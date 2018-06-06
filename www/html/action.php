@@ -48,7 +48,7 @@ $action = $_GET["actID"];
             $topic = $row['actTopic'];
             $origin = $row['actOrigin'];
             $owner = $row['actOwner'];
-            $dl = $row['actDue'];
+            $dl = $row['DATE_FORMAT(actDue, "%W %M %e %Y")'];
 
             echo '<h2 class="tile_action ' . $WRAG . '"> Action Serial Number ' . $action . '</h2>';
           ?>
