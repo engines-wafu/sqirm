@@ -38,7 +38,7 @@ $action = $_GET["actID"];
       <article>
         <div style="overflow:scroll; height:500px">
           <?php
-            $query = "SELECT * FROM actions WHERE actID = '" . $action . "'";
+            $query = "SELECT *, DATE_FORMAT(actDue, '%Y%m%d') FROM actions WHERE actID = '" . $action . "'";
             $result = mysqli_query($connection, $query); 
             $row = mysqli_fetch_array($result);
             $ID = $row['actID'];
