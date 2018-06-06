@@ -29,7 +29,7 @@ $hazard = $_GET["conID"]
     </div>
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
-    <div class="content">
+    <div class="content" style="display: block">
       <div>
       <h2>Create new action</h2>
         <form method="POST" action="addnewaction.php"> 
