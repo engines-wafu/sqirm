@@ -171,7 +171,7 @@ while ($row = mysqli_fetch_array($result)) {
         <div style="height:500px">
           <div class="cl">
             <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
-              <textarea id="comment" class="text" cols="70" rows ="10" name="comment">Insert new comment here.</textarea>
+              <textarea id="comment" class="text" rows ="10" name="comment">Insert new comment here.</textarea>
               <input type="submit" value="Sumbit"/>
             </form>
           </div>
