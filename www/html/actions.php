@@ -30,11 +30,13 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
     <div class="content">
+      <div>
       <h2>Create new action</h2>
-      <form method="POST" action="addnewaction.php"> 
-        <input type="text" name="description">
-        <input type="submit" label="sumbit" value="Add">
-      </form> 
+        <form method="POST" action="addnewaction.php"> 
+          <input type="text" name="description">
+          <input type="submit" label="sumbit" value="Add">
+        </form> 
+      </div>
       <table id="myTable">
         <tr class="header">
           <th style="width:5%;">ID</th>
