@@ -174,7 +174,7 @@ while ($outer_row = mysqli_fetch_array($outer_result)) {
           <h2>My Actions and Issues</h2>
           <table>
           <?php
-            $query = "SELECT actWRAG, actID, actIssue FROM actions WHERE actOwner = '" . $user . "'";
+            $query = "SELECT actWRAG, actID, actIssue FROM actions WHERE actOwner = '" . $user . "' ORDER BY actID DESC";
             $result = mysqli_query($connection, $query); 
             while ($row = mysqli_fetch_array($result)) {
               $ID = $row['actID'];
