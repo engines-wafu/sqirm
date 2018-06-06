@@ -33,7 +33,7 @@ $hazard = $_GET["conID"]
       <div>
       <h2>Create new action</h2>
         <form method="POST" action="addnewaction.php"> 
-          <input type="text" name="description">
+          <input[type="text" name="description"]{width:95%}>
           <input type="submit" label="sumbit" value="Add">
         </form> 
       </div>
