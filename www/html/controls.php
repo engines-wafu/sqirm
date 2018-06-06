@@ -169,14 +169,8 @@ while ($row = mysqli_fetch_array($result)) {
       </article>
       <article>
         <div style="height:500px; overflow:scroll">
-          <div class="textwrapper">
-            <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
-              <textarea id="comment" class="text" rows ="10" name="comment">Insert new comment here.</textarea>
-              <input type="submit" value="Sumbit"/>
-            </form>
-          </div>
           <?php
-          $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'ORDER BY comments.comID DESC";
+          $query = "SELECT DISTINCT comments.* FROM comments INNER JOIN comment_links ON comments.comID=comment_links.comID INNER JOIN controls ON comment_links.conID=controls.conID WHERE controls.conID='" . $conID . "'ORDER BY comments.comID ASC";
           $result = mysqli_query($connection, $query); 
           
           while ($row = mysqli_fetch_array($result)) {
@@ -187,6 +181,12 @@ while ($row = mysqli_fetch_array($result)) {
             echo '<hr>';
           }
           ?>
+          <div class="textwrapper">
+            <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
+              <textarea id="comment" class="text" rows ="10" name="comment">Insert new comment here.</textarea>
+              <input type="submit" value="Sumbit"/>
+            </form>
+          </div>
         </div>
       <!-- Right division -->
       </article> 
