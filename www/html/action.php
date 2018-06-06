@@ -38,7 +38,7 @@ $action = $_GET["actID"];
       <article>
         <div style="overflow:scroll; height:500px">
           <?php
-            $query = "SELECT *, DATE_FORMAT(actDue, '%Y%m%d') FROM actions WHERE actID = '" . $action . "'";
+            $query = "SELECT *, DATE_FORMAT(actDue, '%Y%m%d') AS dl FROM actions WHERE actID = '" . $action . "'";
             $result = mysqli_query($connection, $query); 
             $row = mysqli_fetch_array($result);
             $ID = $row['actID'];
@@ -48,7 +48,7 @@ $action = $_GET["actID"];
             $topic = $row['actTopic'];
             $origin = $row['actOrigin'];
             $owner = $row['actOwner'];
-            $dl = $row['DATE_FORMAT(actDue, "%Y%m%d")'];
+            $dl = $row['dl'];
 
             echo '<h2 class="tile_action ' . $WRAG . '"> Action Serial Number ' . $action . '</h2>';
           ?>
