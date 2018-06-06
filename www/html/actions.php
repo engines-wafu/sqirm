@@ -30,6 +30,11 @@ $hazard = $_GET["conID"]
     <?php include "navbar.php"; ?>
     <!-- Main Splash Page Sections -->
     <div class="content">
+      <h2>Create new action</h2>
+      <form method="POST" action="addnewaction.php"> 
+        <input type="text" name="description">
+        <input type="submit" label="sumbit" value="Add">
+      </form> 
       <table id="myTable">
         <tr class="header">
           <th style="width:5%;">ID</th>
@@ -44,15 +49,6 @@ $hazard = $_GET["conID"]
           <th><input type="text" id="myInputDesc" onkeyup="myFunctionDesc()" placeholder="Search in description"></th>
           <th><input type="text" id="myInputOwner" onkeyup="myFunctionOwner()" placeholder="Search for names"></th>
           <th><input type="text" id="myInputComment" onkeyup="myFunctionComment()" placeholder="Search in comment"></th>
-        </tr>
-        <tr class="header">
-          <form method="POST" action="addnewaction.php"> 
-          <td style="widtd:5%;"></td>
-          <td style="widtd:5%;"></td>
-          <td style="widtd:50%;"><input type="text" name="description"></td>
-          <td style="widtd:10%;"></td>
-          <td style="widtd:20%;"><input type="submit" label="sumbit" value="Add"></td>
-          </form> 
         </tr>
         <?php
           $query = "SELECT actID, actWRAG, actIssue, actOwner FROM actions ORDER BY actID DESC";

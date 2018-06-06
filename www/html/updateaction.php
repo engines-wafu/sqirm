@@ -26,6 +26,8 @@ if ($_POST["WRAGradio"] == "red"){
 
 $sql = "UPDATE actions SET actIssue = '" . $description . "', actOwner = '" . $owner . "', actWRAG = '" . $wrag . "', actDue = '" . $dl. "', actTopic = '" . $topic . "', actOrigin = '" . $origin . "' WHERE actID = '" . $action . "'";
 
+mysqli_query($connection, $sql);
+
 if (mysqli_query($connection, $sql)) {
   header('Location: action.php?actID=' . $action );
   exit;
