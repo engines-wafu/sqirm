@@ -168,7 +168,7 @@ while ($row = mysqli_fetch_array($result)) {
         </div>
       </article>
       <article>
-        <div style="height:500px">
+        <div style="height:500px overflow:scroll">
           <div class="textwrapper">
             <form action="addcontrolcomment.php?conID=<?php echo $conID ?>" name="commentControlAdd" method="post">
               <textarea id="comment" class="text" rows ="10" name="comment">Insert new comment here.</textarea>
