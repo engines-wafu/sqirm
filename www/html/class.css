@@ -75,9 +75,8 @@ textarea
   width:100%;
 }
 .textwrapper {
-  border: 0px;
-  margin: 4px;
-  padding:5px;
+  padding: 3px;
+  margin: 0px;
 }
 .tile_action {
   margin: 4px auto;
