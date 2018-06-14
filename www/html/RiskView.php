@@ -102,10 +102,13 @@ while ($row3 = mysqli_fetch_array($result1)) {
 ?>
      <tr>
      <td>
-       Stuff 
+        <form method="POST" action="addnewaction.php"> 
+          <textarea name="description" rows="5" cols="60">Enter the description of your issue here.  Once you hit "Add", it will be registered below and you may add further details by clicking on the description.</textarea>
+          <br>
      </td>
      <td>
-       Stuff 
+          <input type="submit" label="sumbit" value="Add">
+        </form> 
      </td>
      </tr>
      </table>
