@@ -102,8 +102,8 @@ while ($row3 = mysqli_fetch_array($result1)) {
 ?>
      <tr>
      <td>
-        <form method="POST" action="addnewaction.php"> 
-          <textarea name="description" rows="5" cols="60">Enter the description of your issue here.  Once you hit "Add", it will be registered below and you may add further details by clicking on the description.</textarea>
+        <form method="POST" action="addnewthreat.php"> 
+          <textarea name="description" rows="5" cols="60">Enter new threat here.</textarea>
           <br>
      </td>
      <td>
