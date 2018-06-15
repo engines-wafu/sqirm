@@ -16,7 +16,7 @@ $sql = 'INSERT INTO threat (thrDesc) VALUES ("' . $description . '")';
 mysqli_query($connection, $sql);
 
 $thrID = mysqli_insert_id($connection);
-$hazID = $_GET['hazard'];
+$hazID = $_GET['hazID'];
 
 $sql = 'INSERT INTO comment_links (thrID, hazID) VALUES ("' . $thrID . '", "' . $hazID . '")';
 
