@@ -103,7 +103,7 @@ while ($row3 = mysqli_fetch_array($result1)) {
      <tr>
      <td>
 <?php 
-echo '<form method="POST" action="addnewthreat.php?hazard="' . $hazard . '>'; 
+echo '<form method="POST" action="addnewthreat.php?hazard=' . $hazard . '">'; 
 ?>
           <textarea name="description" rows="5" cols="60">Enter new threat here.</textarea>
           <br>
