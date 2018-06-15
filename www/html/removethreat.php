@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect
 
 $database = mysqli_select_db($connection, DBNAME);
 
-$thrID = $_POST["thrID"];
+$thrID = $_GET["thrID"];
 
 $sql = 'DELETE FROM threat WHERE thrID=' . $thrID ;
 
