@@ -11,14 +11,14 @@ $database = mysqli_select_db($connection, DBNAME);
 
 $description = $_POST["description"];
 
-$sql = 'INSERT INTO threat (thrDesc) VALUES ("' . $description . '")';
+$sql = 'INSERT INTO consequence (csqDesc) VALUES ("' . $description . '")';
 
 mysqli_query($connection, $sql);
 
-$thrID = mysqli_insert_id($connection);
+$csqID = mysqli_insert_id($connection);
 $hazID = $_GET['hazard'];
 
-$sql = 'INSERT INTO threat_hazard (thrID, hazID) VALUES ("' . $thrID . '", "' . $hazID . '")';
+$sql = 'INSERT INTO hazard_consequence (hazID, csqID) VALUES ("' . $hazID . '", "' . $csqID . '")';
 
 if (mysqli_query($connection, $sql)) {
   header('Location: RiskView.php?hazID=' . $hazID );
