@@ -162,9 +162,6 @@ while ($row4 = mysqli_fetch_array($result1)) {
   echo '</tr>';
 }
 ?>
-     </table>
-     </td>
-     </tr>
      <tr>
      <td>
 <?php 
@@ -178,7 +175,9 @@ echo '<form method="POST" action="addnewconsequence.php?hazard=' . $hazard . '">
         </form> 
      </td>
      </tr>
-
+     </table>
+     </td>
+     </tr>
     </table>
   </div>
 </section>
