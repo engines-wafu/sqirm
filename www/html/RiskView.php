@@ -80,14 +80,11 @@ while ($row3 = mysqli_fetch_array($result1)) {
   echo '<td>';
   echo '<a href=removethreat.php?thrID="' . $row3['thrID'] . '"> delete </a>' . $row3['thrDesc'];
   echo '</td>';
-
   echo '<td>';
   echo '<table>';
   echo '<tr>';
-
   $qcon = "SELECT controls.conID, controls.conDesc, controls.conWRAG FROM controls INNER JOIN threat_control ON threat_control.conID = controls.conID WHERE threat_control.thrID ='" . $row3['thrID'] . "' AND controls.conActive ='Y'";
   $result2 = mysqli_query($connection, $qcon);
-
   while ($row5 = mysqli_fetch_array($result2)) {
     echo '<tr>';
     echo '<td id="control", class="' . $row5['conWRAG'] . '"><a href="controls.php?conID=' . $row5['conID'] . '">' . $row5['conDesc'] . '</a>';
