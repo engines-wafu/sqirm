@@ -73,7 +73,7 @@ while ($row = mysqli_fetch_array($result)) {
        <th>Controls</th>
      </tr>
 <?php
-$qthr = "SELECT threat.thrDesc, threat.thrID FROM threat INNER JOIN threat_hazard ON threat_hazard.thrID = threat.thrID WHERE threat_hazard.hazID='" . $hazard . "'";
+$qthr = "SELECT threat.thrDesc, threat.thrID FROM threat INNER JOIN threat_hazard ON threat_hazard.thrID = threat.thrID WHERE threat_hazard.hazID='" . $hazard . "' AND NOT threat.active=0";
 $result1 = mysqli_query($connection, $qthr);
 while ($row3 = mysqli_fetch_array($result1)) {
   echo '<tr>';
@@ -117,7 +117,7 @@ echo '<form method="POST" action="addnewthreat.php?hazard=' . $hazard . '">';
      <table>
       <td id="topelement">
 <?php
-$qtop = "SELECT top_element.topDesc FROM hazard INNER JOIN top_element ON top_element.topID = hazard.topID WHERE hazID='" . $hazard . "' AND NOT active=0";
+$qtop = "SELECT top_element.topDesc FROM hazard INNER JOIN top_element ON top_element.topID = hazard.topID WHERE hazID='" . $hazard . "'";
 $result = mysqli_query($connection, $qtop); 
 
 while ($row = mysqli_fetch_array($result)) {
