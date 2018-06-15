@@ -164,15 +164,15 @@ while ($row4 = mysqli_fetch_array($result1)) {
 ?>
      <tr>
      <td>
+          <input type="submit" label="sumbit" value="Add">
+        </form> 
+     </td>
+     <td>
 <?php 
 echo '<form method="POST" action="addnewconsequence.php?hazard=' . $hazard . '">'; 
 ?>
           <textarea name="description" rows="5" cols="60">Enter new consequence here.</textarea>
           <br>
-     </td>
-     <td>
-          <input type="submit" label="sumbit" value="Add">
-        </form> 
      </td>
      </tr>
      </table>
