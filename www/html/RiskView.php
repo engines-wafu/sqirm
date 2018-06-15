@@ -117,7 +117,7 @@ echo '<form method="POST" action="addnewthreat.php?hazard=' . $hazard . '">';
      <table>
       <td id="topelement">
 <?php
-$qtop = "SELECT top_element.topDesc FROM hazard INNER JOIN top_element ON top_element.topID = hazard.topID WHERE hazID='" . $hazard . "'";
+$qtop = "SELECT top_element.topDesc FROM hazard INNER JOIN top_element ON top_element.topID = hazard.topID WHERE hazID='" . $hazard . "' AND NOT active=0";
 $result = mysqli_query($connection, $qtop); 
 
 while ($row = mysqli_fetch_array($result)) {
