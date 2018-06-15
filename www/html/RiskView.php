@@ -78,7 +78,7 @@ $result1 = mysqli_query($connection, $qthr);
 while ($row3 = mysqli_fetch_array($result1)) {
   echo '<tr>';
   echo '<td>';
-  echo '<a href=removethreat.php?thrID="' . $row3['thrID'] . '">' . $row3['thrDesc'] . '</a>';
+  echo '<a href=removethreat.php?thrID="' . $row3['thrID'] . '"> delete </a>' . $row3['thrDesc'];
   echo '</td>';
 
   echo '<td>';
