@@ -13,8 +13,15 @@ $description = $_POST["description"];
 
 $sql = 'INSERT INTO threat (thrDesc) VALUES ("' . $description . '")';
 
+mysqli_query($connection, $sql);
+
+$thrID = mysqli_insert_id($connection);
+$hazID = $_GET['hazard'];
+
+$sql = 'INSERT INTO comment_links (thrID, hazID) VALUES ("' . $thrID . '", "' . $hazID . '")';
+
 if (mysqli_query($connection, $sql)) {
-  header('Location: RiskView.php?hazID=' . . '');
+  header('Location: RiskView.php?hazID=' . $hazID );
   exit;
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($connection);
