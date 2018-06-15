@@ -96,10 +96,8 @@ while ($row3 = mysqli_fetch_array($result1)) {
   echo '</td>';
   echo '</tr>';
 }
-?>
-     <tr>
-     <td>
-<?php 
+  echo '<td>';
+  echo '<tr>';
 echo '<form method="POST" action="addnewthreat.php?hazard=' . $hazard . '">'; 
 ?>
           <textarea name="description" rows="5" cols="60">Enter new threat here.</textarea>

@@ -18,7 +18,7 @@ mysqli_query($connection, $sql);
 $thrID = mysqli_insert_id($connection);
 $hazID = $_GET['hazard'];
 
-$sql = 'INSERT INTO hazard_consequence (thrID, hazID) VALUES ("' . $thrID . '", "' . $hazID . '")';
+$sql = 'INSERT INTO threat_hazard (thrID, hazID) VALUES ("' . $thrID . '", "' . $hazID . '")';
 
 if (mysqli_query($connection, $sql)) {
   header('Location: RiskView.php?hazID=' . $hazID );
